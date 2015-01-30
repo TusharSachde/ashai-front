@@ -21,6 +21,30 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'proarmy'
         }).
+         when('/aboutUs', {
+            templateUrl: 'views/template.html',
+            controller: 'aboutUs'
+        }).
+         when('/ExplorestuckHeader', {
+            templateUrl: 'views/template.html',
+            controller: 'ExplorestuckHeader'
+        }).
+        when('/ExplorestuckHeader', {
+            templateUrl: 'views/template.html',
+            controller: 'ExplorestuckHeader'
+        }).
+         when('/campaign', {
+            templateUrl: 'views/template.html',
+            controller: 'campaign'
+        }).
+        when('/myprofile', {
+            templateUrl: 'views/template.html',
+            controller: 'myprofile'
+        }).
+         when('/rewards', {
+            templateUrl: 'views/template.html',
+            controller: 'rewards'
+        }).
         otherwise({
             redirectTo: '/explore'
         });

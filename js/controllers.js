@@ -6,6 +6,7 @@ phonecatControllers.controller('explore',
         $scope.menutitle = NavigationService.makeactive("Explore projects");
         TemplateService.title = $scope.menutitle;
         TemplateService.content = 'views/explore.html';
+        TemplateService.header = 'views/header.html';
         $scope.navigation = NavigationService.getnav();
     }
 );
@@ -23,8 +24,64 @@ phonecatControllers.controller('proarmy',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Join the pro army");
         TemplateService.title = $scope.menutitle;
+     TemplateService.header='views/header3.html';
+        $scope.title="Join The PFO Army";
         TemplateService.content = 'views/proarmy.html';
         $scope.navigation = NavigationService.getnav();
+    }
+);
+phonecatControllers.controller('aboutUs',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+//        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+        TemplateService.title = $scope.menutitle;
+       TemplateService.header='views/header3.html';
+        $scope.title="About Us";
+        TemplateService.content = 'views/aboutus.html';
+        $scope.navigation = NavigationService.getnav();
+    
+    }
+);
+phonecatControllers.controller('ExplorestuckHeader',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+//        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+//        TemplateService.title = $scope.menutitle;
+        TemplateService.content = 'views/ExplorestuckHeader.html';
+        $scope.navigation = NavigationService.getnav();
+//    $scope.display="About Us";
+    }
+);
+phonecatControllers.controller('campaign',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+        TemplateService.title = $scope.menutitle;
+        TemplateService.content = 'views/campaign.html';
+        $scope.navigation = NavigationService.getnav();
+//    $scope.display="About Us";
+    }
+);
+phonecatControllers.controller('myprofile',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+//        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+ TemplateService.title = $scope.menutitle;
+ TemplateService.content = 'views/myprofile.html';
+
+$scope.navigation = NavigationService.getnav();
+//    $scope.display="About Us";
+    }
+);
+
+phonecatControllers.controller('rewards',
+    function($scope,$location, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+//        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+        TemplateService.title = $scope.menutitle;
+        TemplateService.content = 'views/rewards.html';
+       $scope.navigation = NavigationService.getnav();
+
     }
 );
 
