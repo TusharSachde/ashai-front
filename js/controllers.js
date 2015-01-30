@@ -48,6 +48,7 @@ phonecatControllers.controller('ExplorestuckHeader',
 //        $scope.menutitle = NavigationService.makeactive("Join the pro army");
 //        TemplateService.title = $scope.menutitle;
         TemplateService.content = 'views/ExplorestuckHeader.html';
+     TemplateService.header='views/headerblack.html';
         $scope.navigation = NavigationService.getnav();
 //    $scope.display="About Us";
     }
@@ -55,9 +56,10 @@ phonecatControllers.controller('ExplorestuckHeader',
 phonecatControllers.controller('campaign',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
-        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+//        $scope.menutitle = NavigationService.makeactive("Join the pro army");
         TemplateService.title = $scope.menutitle;
         TemplateService.content = 'views/campaign.html';
+          TemplateService.header='views/header3.html';
         $scope.navigation = NavigationService.getnav();
 //    $scope.display="About Us";
     }
@@ -68,7 +70,7 @@ phonecatControllers.controller('myprofile',
 //        $scope.menutitle = NavigationService.makeactive("Join the pro army");
  TemplateService.title = $scope.menutitle;
  TemplateService.content = 'views/myprofile.html';
-
+   TemplateService.header='views/header3.html';
 $scope.navigation = NavigationService.getnav();
 //    $scope.display="About Us";
     }
@@ -78,6 +80,7 @@ phonecatControllers.controller('rewards',
     function($scope,$location, TemplateService, NavigationService) {
         $scope.template = TemplateService;
 //        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+       TemplateService.header='views/headerblack.html'
         TemplateService.title = $scope.menutitle;
         TemplateService.content = 'views/rewards.html';
        $scope.navigation = NavigationService.getnav();
