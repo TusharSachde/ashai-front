@@ -6,7 +6,6 @@
     background: #f9f9f9;
     padding: 10px;
 }
-
 .rewardsdet img {
     padding-bottom: 10px;
 }
@@ -80,11 +79,9 @@ ul.pagecategory {
     display: flex;
     text-align: center;
 }
-
 .pagecategory li {
     padding: 15px 10px 3px;
 }
-
 .pagecategory a {
     padding: 15px;
     -webkit-border-radius: 3px;
@@ -107,9 +104,7 @@ ul.pagecategory {
     color: black;
     background: #ffc926;
 }
-.contentexplorestuck li {
-}
-.contentexplorestuck {
+.contentexplorestuck li {} .contentexplorestuck {
     background: #f9f9f9;
     border-bottom: 1px solid #efefef;
 }
@@ -270,7 +265,7 @@ a.list-group-item {
     border: 0px solid #ddd;
 }
 .cate {
-    margin: 11px -18px 0px 0px;
+    /* margin: 11px -18px 0px 0px; */
 }
 a.list-group-item:hover,
 a.list-group-item:focus {
@@ -347,7 +342,7 @@ body .navbar-default .navbar-nav > li > a:focus {
     height: auto;
     padding: 10px 11px 10px 11px;
     margin: 20px 0px 0px 0px;
-    border: 2px solid #e6e6e6;
+    border: 1px solid #e6e6e6;
 }
 .readterms {
     font-size: 12px;
@@ -374,7 +369,7 @@ a.readterms {
     background: #f9f9f9;
     border: 1px solid #e6e6e6;
     padding: 0px 0px 0px 0px;
-    margin: -15px 0px -5px 0px;
+    /* margin: -16px 0px -5px 0px; */
 }
 .proceed_1.pull-right {
     margin: 20px 20px 10px 10px;
@@ -454,24 +449,22 @@ span.icon.fa.fa-check.pull-right {
 .content.ng-scope {
     margin: 16px 0px 30px 0px;
 }
-
-.figure{
+.figure {
     position: relative;
     margin: 10px;
 }
-.figure-caption{
+.figure-caption {
     position: absolute;
-    top:50%;
-    left:50%;
-    color:white;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 .donation input.form-control {
     background: #f9f9f9;
-    border:1px solid grey;
+    border: 1px solid grey;
 }
-
 .donation .btn {
     margin-top: 0px !important;
 }
@@ -481,18 +474,16 @@ span.icon.fa.fa-check.pull-right {
 .apply button.btn.btn-warning {
     background-color: #ffc926;
     border: #ffc926;
-  
     border-radius: 6px;
     padding: 12px;
 }
-.figure-img{
-     position: absolute;
-    top:35%;
-    left:50%;
-    color:white;
-    transform: translate(-50%,-50%);
+.figure-img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
     text-align: center;
-    
 }
 .check input[type="checkbox"] {
     border: 2px solid rgb(77, 213, 232);
@@ -502,17 +493,16 @@ span.icon.fa.fa-check.pull-right {
     border-radius: 3px;
     padding: 4px;
 }
-input[type="checkbox"]:checked{
- background: url(../images/checked23.png)  no-repeat center;
+input[type="checkbox"]:checked {
+    background: url(../images/checked23.png) no-repeat center;
     border: 2px solid rgb(77, 213, 232);
 }
-.list1 .cat-list:hover{
-     background-color: #ffc926;
+.list1 .cat-list:hover {
+    background-color: #ffc926;
 }
-
-.titleCenter{
- text-align: center;  
-color:white;
+.titleCenter {
+    text-align: center;
+    color: white;
 }
 .header1 {
     border-top: 3px solid #ffc926;
@@ -520,15 +510,32 @@ color:white;
     padding: 15px 0px 0px 0px;
 }
 .sliderheader {
-background: url(http://localhost/angular-powerforone-master/images/bg_layer.png) no-repeat center;
-background-size: cover;
-background-position: top;
-min-height: 200px;
-width: 100%;
+    background: url(../images/bg_layer.png) no-repeat center;
+    background-size: cover;
+    background-position: top;
+    min-height: 220px;
+    width: 100%;
 }
 ul.list1 {
-padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 img.starter-template.img-responsive.imhheight {
     min-width: 100%;
+}
+.left {
+    padding: 10px 0px 0px 0px;
+}
+.cate {
+    padding: 20px 0px 0px 0px;
+}
+.headmargin.pull-right a {
+    color: white;
+}
+.header-black .nav>li>a,
+.header-black .login {
+    color: black !important;
+}
+.header.header-black {
+    border-top: 5px solid #ffc926;
+    border-bottom: 1px solid #bbbbbb;
 }
