@@ -1,5 +1,6 @@
 .cat-justify p {
     text-align: justify;
+    line-height: 180%;
 }
 .list1 li {
     display: block;
@@ -19,10 +20,7 @@
 .pull-left.profileimg {
     padding: 10px 10px 0px 15px;
 }
-.info {
-    padding: 20px 0px 0px 0px;
-    color: #111111;
-}
+
 .name p {
     color: #c3c3c3;
 }
@@ -108,14 +106,15 @@ ul.pagecategory {
     background: #f9f9f9;
     border-bottom: 1px solid #efefef;
 }
+
 .connectfacebook {
-    background: url(../images/fullblock.png) no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 464px;
-    margin-bottom: x;
+background: url(../images/fullblock.png) no-repeat center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+min-height: 464px;
+position: relative;
 }
 .connectfacebook {} .connectfacebook p {
     padding: 190px 0px 0px 250px;
@@ -123,12 +122,19 @@ ul.pagecategory {
     font-size: 025px;
 }
 .connectfacebook button {
-    margin: 210px 0px 0px 370px;
-    width: 200px;
-    background: #4274b7;
-    border: #4274b7;
-    color: white;
-    height: 40px
+width: 200px;
+background: #4274b7;
+border: #4274b7;
+color: white;
+height: 40px;
+position: absolute;
+top: 50%;
+right: 15%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
 }
 .causes {
     margin: 15px;
@@ -369,7 +375,7 @@ a.readterms {
     background: #f9f9f9;
     border: 1px solid #e6e6e6;
     padding: 0px 0px 0px 0px;
-    /* margin: -16px 0px -5px 0px; */
+    margin: 10px 0px 0px 0px;
 }
 .proceed_1.pull-right {
     margin: 20px 20px 10px 10px;
@@ -446,9 +452,8 @@ span.icon.fa.fa-check.pull-right {
     text-shadow: 0 0px 0 #286090;
     background: #ffbf00;
 }
-.content.ng-scope {
-    margin: 16px 0px 30px 0px;
-}
+ 
+
 .figure {
     position: relative;
     margin: 10px;
@@ -538,4 +543,67 @@ img.starter-template.img-responsive.imhheight {
 .header.header-black {
     border-top: 5px solid #ffc926;
     border-bottom: 1px solid #bbbbbb;
+}
+h2.ng-scope {
+    text-align: center;
+    padding: 100px;
+    font-size: 70px;
+}
+p.viewAll {
+    text-align: center;
+    margin: -25px 0px 0px 0px;
+}
+.row.mainCause {
+    margin: 35px 0px 0px 0px;
+}
+p.Paraabout {
+    padding: 15px 0px 15px 0px;
+}
+.apply {
+    margin: 0px 0px 15px 0px;
+}
+p.abotuspar {
+    margin: 15px 0px 0px 0px;
+}
+input#inputEmail {
+    margin: 10px 0px 10px 0px;
+}
+ul.list1 {
+    border: 1px solid #efefef;
+}
+.bottom1 .row {
+    margin: 30px 0px 0px 0px;
+}
+p {
+    text-align: justify;
+}
+.txt3 span {
+    margin: 10px;
+}
+.row.rewardrow {
+    margin: 0px 0px 30px 0px;
+}
+p.parapadding {
+    padding: 10px 0px 10px 0px;
+}
+.mumbai-in {
+    position: absolute;
+   color:white;
+    bottom: 287px;
+    left: 131px;
+    width: 100%;
+}
+
+.pic img {
+    position: relative;
+}
+.list-inline  p{
+    text-align: center;
+}
+.mumbai-in h5 {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: -134px;
 }
