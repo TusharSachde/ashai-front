@@ -590,8 +590,9 @@ p.parapadding {
     position: absolute;
    color:white;
     bottom: 287px;
-    left: 131px;
+    right: 0%;
     width: 100%;
+    text-align: center;
 }
 
 .pic img {
@@ -611,4 +612,10 @@ h2.commingsoon {
     text-align: center;
     padding: 100px;
     font-size: 40px;
+}
+.pic img {
+    position: relative;
+}
+.mumbai-in h4 {
+font-size: 14px;
 }
