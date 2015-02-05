@@ -20,6 +20,7 @@
 .pull-left.profileimg {
     padding: 10px 10px 0px 15px;
 }
+
 .name p {
     color: #c3c3c3;
 }
@@ -37,10 +38,10 @@ p.NGOName {
     padding: 0px 0px 30px 0px;
 }
 .mid_top {
-    margin: -170px 0px 0px 0px !important;
+    margin: -33% 0px 0px 0px !important;
 }
 .col-md-3.LeftCont {
-    margin: -150px 0px 0px 0px !important;
+    margin: -256px 0px 0px 0px !important;
     background: #f9f9f9;
     border: #f9f9f9;
 }
@@ -105,14 +106,15 @@ ul.pagecategory {
     background: #f9f9f9;
     border-bottom: 1px solid #efefef;
 }
+
 .connectfacebook {
-    background: url(../images/fullblock.png) no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 464px;
-    position: relative;
+background: url(../images/fullblock.png) no-repeat center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+min-height: 464px;
+position: relative;
 }
 .connectfacebook {} .connectfacebook p {
     padding: 190px 0px 0px 250px;
@@ -120,19 +122,19 @@ ul.pagecategory {
     font-size: 025px;
 }
 .connectfacebook button {
-    width: 200px;
-    background: #4274b7;
-    border: #4274b7;
-    color: white;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    right: 15%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
+width: 200px;
+background: #4274b7;
+border: #4274b7;
+color: white;
+height: 40px;
+position: absolute;
+top: 50%;
+right: 15%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
 }
 .causes {
     margin: 15px;
@@ -257,14 +259,9 @@ body .navbar-default .navbar-nav > li > a {
 a.list-group-item.active {
     background: #ffbf00;
     color: #fff;
-    text-shadow: none;
 }
 a.list-group-item {
     color: #21cbcb;
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease;
 }
 .list-group-item {
     position: relative;
@@ -338,7 +335,7 @@ body .navbar-default .navbar-nav > li > a:focus {
     text-align: center;
 }
 .head-cont {
-    margin: 0 15px 0px 15px;
+    margin: 0px 15px 0px 15px;
 }
 .pick {
     text-align: center;
@@ -455,6 +452,8 @@ span.icon.fa.fa-check.pull-right {
     text-shadow: 0 0px 0 #286090;
     background: #ffbf00;
 }
+ 
+
 .figure {
     position: relative;
     margin: 10px;
@@ -464,10 +463,6 @@ span.icon.fa.fa-check.pull-right {
     top: 50%;
     left: 50%;
     color: white;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -484,8 +479,6 @@ span.icon.fa.fa-check.pull-right {
 .apply button.btn.btn-warning {
     background-color: #ffc926;
     border: #ffc926;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
     border-radius: 6px;
     padding: 12px;
 }
@@ -494,10 +487,6 @@ span.icon.fa.fa-check.pull-right {
     top: 35%;
     left: 50%;
     color: white;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -506,8 +495,6 @@ span.icon.fa.fa-check.pull-right {
     -webkit-appearance: none;
     width: 17px;
     height: 17px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     padding: 4px;
 }
@@ -529,9 +516,6 @@ input[type="checkbox"]:checked {
 }
 .sliderheader {
     background: url(../images/bg_layer.png) no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-position: top;
     min-height: 220px;
@@ -559,6 +543,11 @@ img.starter-template.img-responsive.imhheight {
 .header.header-black {
     border-top: 5px solid #ffc926;
     border-bottom: 1px solid #bbbbbb;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+   
+    background: #fff;
 }
 h2.ng-scope {
     text-align: center;
@@ -604,16 +593,17 @@ p.parapadding {
 }
 .mumbai-in {
     position: absolute;
-    color: white;
+   color:white;
     bottom: 287px;
     right: 0%;
     width: 100%;
     text-align: center;
 }
+
 .pic img {
     position: relative;
 }
-.list-inline p {
+.list-inline  p{
     text-align: center;
 }
 .mumbai-in h5 {
@@ -632,5 +622,11 @@ h2.commingsoon {
     position: relative;
 }
 .mumbai-in h4 {
-    font-size: 14px;
+font-size: 14px;
+}
+.content.ng-scope {
+    margin: 99px 0px 0px 0px;
+}
+.middle {
+margin-top: -83px !important;
 }
