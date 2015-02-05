@@ -28,7 +28,7 @@
     padding: 20px 0px 80px 0px;
 }
 .name p {
-    color: #111111;
+    color: #888888;
 }
 p.NGOName {
     padding: 0px 0px 0px 100px;
@@ -37,11 +37,9 @@ p.NGOName {
 .main1 {
     padding: 0px 0px 30px 0px;
 }
-.mid_top {
-    margin: -33% 0px 0px 0px !important;
-}
+
 .col-md-3.LeftCont {
-    margin: -256px 0px 0px 0px !important;
+    /* margin: -256px 0px 0px 0px !important; */
     background: #f9f9f9;
     border: #f9f9f9;
 }
@@ -105,6 +103,7 @@ ul.pagecategory {
 .contentexplorestuck li {} .contentexplorestuck {
     background: #f9f9f9;
     border-bottom: 1px solid #efefef;
+    position: fixed;  width: 100%;  z-index: 99;
 }
 
 .connectfacebook {
@@ -624,9 +623,29 @@ h2.commingsoon {
 .mumbai-in h4 {
 font-size: 14px;
 }
-.content.ng-scope {
-    margin: 99px 0px 0px 0px;
+
+
+.fixhead {
+    height: 88px;
 }
-.middle {
-margin-top: -83px !important;
+.exploreheader.ng-scope {
+    height: 60px;
+}
+
+.col-md-3.causehelped {
+    color: #65c6bb;
+}
+
+.col-md-3.totaldonate {
+    color: #ffd65c;
+}
+.col-md-3.JoinedPfo {
+    color: #e0882f;
+}
+ul.mypro {
+    list-style: none;
+}
+.mypro li:hover {
+    background: #f9f9f9;
+    
 }
