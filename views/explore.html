@@ -1,4 +1,18 @@
-<section>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				$("#example14").zAccordion({
+					tabWidth: "15%",
+					width: "100%",
+					height: "100%"
+				});
+				$(window).resize(function() {
+					$("#example14").height($(window).height());
+					$("#example14 li").height($(window).height());
+					$("#example14 img").height($(window).height());
+				});
+			});
+		</script>
+   <section>
     <div class="container wholebody">
         <div class="ychoseus">
             <p>WHY CHOOSE US?</p>
@@ -53,7 +67,7 @@
                         <div class="pic">
                             <img src="images/explore.jpg">
                          <div class="mumbai-in">
-                             <h4><i class="fa fa-map-marker"></i>&nbsp;Mumbai, IN</h4>
+                             <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                         </div>
                         </div>
                         <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
@@ -86,7 +100,7 @@
                         <div class="pic">
                             <img src="images/explore.jpg">
                          <div class="mumbai-in">
-                        <h4><i class="fa fa-map-marker"></i>&nbsp;Mumbai, IN</h4>
+                        <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                         </div>
                         </div>
                         <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
@@ -118,9 +132,8 @@
                         <div class="pic">
                             <img src="images/explore.jpg">
                          <div class="mumbai-in">
-                        <h4><i class="fa fa-map-marker"></i>&nbsp;Mumbai, IN</h4>
+                        <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                         </div>
-                        
                         </div>
                         <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
                         <div class="info">
@@ -164,98 +177,15 @@
             <div class="hrl"></div>
         </div>
         
-        <div class="row">
+      <ul id="example14">
+				<li><img src="images/health.jpg" width="100%" height="50%" alt=""/></li>
+				<li><img src="images/earth.png" width="100%" height="50%" alt="" /></li>
+				<li><img src="images/education.jpg" width="100%" height="50%" alt="" /></li>
+				<li><img src="images/welfare_of_elderly.png" width="100%" height="50%" alt="" /></li>
+				<li><img src="images/women_employment.png" width="100%" height="50%" alt="" /></li>
+			</ul>
 
-           
-                <div class="col-md-4">
-                    <div class="figure">
-                        <img src="images/child_welfare.png" alt="" class="img-responsive">
-                    <div class="figure-caption">
-                           <h2 >Child welfare</h2>
-                        </div>
-                         <div class="figure-img">
-                            <img src="images/childwelfare_icon.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="col-md-8">
-
-
-                <div class="health_sanitation">
-                    <div class="figure">
-                         <img src="images/health_sanitation.png" alt="" class="img-responsive">
-                    <div class="figure-caption">
-                           <h2>Health Sanitation</h2>
-                        </div>
-                        <div class="figure-img">
-                            <img src="images/health_icon.png" alt="">
-                        </div>
-                    </div>
-                  
-                   
-                </div>
-
-
-                <div class="education">
-                   <div class="figure">
-                        <img src="images/education.png" alt="" class="img-responsive">
-                    <div class="figure-caption">
-                           <h2> education</h2>
-                        </div>
-                         <div class="figure-img" >
-                            <img src="images/edu_icon.png" alt="">
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="mainCause">
-                <div class="col-md-4">
-                    <div class="figure">
-                        <img src="images/earth.png" alt="" class="img-responsive">
-                        <div class="figure-caption">
-                            <h2 >Earth</h2>
-                        </div>
-                        <div class="figure-img">
-                            <img src="images/earth_icon.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                   <div class="figure">
-                         <img src="images/women_employment.png" alt="" class="img-responsive">
-                        <div class="figure-caption">
-                            <h2 >women employment</h2>
-                        </div>
-                        <div class="figure-img">
-                            <img src="images/womenemp_icon.png" alt="">
-                        </div>
-                    </div>
-                  
-                    
-                    <!--        <img  class="women-img" src="images/womenemp_icon.png" alt="">-->
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="figure">
-                          <img src="images/welfare_of_elderly.png" alt="" class="img-responsive">
-                        <div class="figure-caption">
-                           <h2 >welfare of elderly</h2>
-                        </div>
-                        <div class="figure-img">
-                            <img src="images/elderly_icon.png" alt="">
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-
-    </div>
+   
 
     </div>
 <div class="learnmore">
@@ -282,7 +212,8 @@
         </div>
 
     </div>
-    
+    </div> 
+   
 </section>
 
 
