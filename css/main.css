@@ -42,6 +42,7 @@ p.NGOName {
     /* margin: -256px 0px 0px 0px !important; */
     background: #f9f9f9;
     border: #f9f9f9;
+    margin: 0px 0px 0px 0px;
 }
 .profile {
     margin: 20px 0px 0px 0px;
@@ -728,4 +729,74 @@ color: #05C7C7;
 }
 img.log {
     margin: 15px 0px 0px 0px;
+}
+.sliderheadercampaign {
+background: url(../images/bg_layer.png) no-repeat center;
+background-size: cover;
+background-position: top;
+min-height: 578px;
+width: 100%;
+}
+.short h2 {
+    text-align: center;
+    color: white;
+    margin: 46px 0px 0px 0px;
+    text-transform: uppercase;
+}
+.datapoint .col-md-4 {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    color: white;
+    padding-left: 89px;
+    padding-right: 94px;
+}
+
+.explore p {
+    text-align: center;
+    margin: 0px;
+    font-size: 13px;
+}
+.explore {
+    text-align: center;
+}
+.explore .fa {
+    font-size: 29px;
+}
+
+img.Salaamlogo {
+    transform: translate(0%,-20%);
+}
+.salammum p {
+    text-align: center;
+    padding: 0px 110px 0px 0px;
+}
+p.ngoname{
+    color:#3fd4d4;
+}
+.tata {
+    padding: 10px 0px 0px 0px;
+}
+p.suppoerted {
+    margin: 60px 0px 12px 0px;
+}
+
+.tata p {
+    text-align: center;
+    padding: 0px 121px 0px 0px;
+}
+img.tat {
+    padding: 0px 0px 0px 11px;
+}
+p.contributionimg{
+    font-size: 85px;
+}
+p.txt5 {
+color: #00c8c8;
+font-weight: bold;
+font-size: 23px;
+margin-top: 10px;
+text-align: center;
+}
+.txt3 {
+    padding: 15px 42px 15px 0px;
 }

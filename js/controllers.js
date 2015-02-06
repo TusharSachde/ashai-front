@@ -60,7 +60,7 @@ phonecatControllers.controller('campaign',
 //        $scope.menutitle = NavigationService.makeactive("Join the pro army");
         TemplateService.title = $scope.menutitle;
         TemplateService.content = 'views/campaign.html';
-          TemplateService.header='views/headertext.html';
+          TemplateService.header='views/HeaderCampaign.html';
         $scope.navigation = NavigationService.getnav();
 //    $scope.display="About Us";
     }
