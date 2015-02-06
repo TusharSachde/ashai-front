@@ -25,7 +25,7 @@
     color: #c3c3c3;
 }
 .name {
-    padding: 20px 0px 80px 0px;
+    padding: 20px 0px 40px 0px;
 }
 .name p {
     color: #888888;
@@ -107,20 +107,27 @@ ul.pagecategory {
 }
 
 .connectfacebook {
-background: url(../images/fullblock.png) no-repeat center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-min-height: 464px;
 position: relative;
 }
-.connectfacebook {} .connectfacebook p {
+.connectbutton{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    width: 70%;
+    height: 50%;
+}
+.connectbutton p {
     padding: 190px 0px 0px 250px;
     color: #111111;
     font-size: 025px;
+    float: left;
+    bottom: 24%;
+    left: -21%;
+    position: absolute;
 }
-.connectfacebook button {
+.connectbutton button {
 width: 200px;
 background: #4274b7;
 border: #4274b7;
@@ -128,7 +135,7 @@ color: white;
 height: 40px;
 position: absolute;
 top: 50%;
-right: 15%;
+right: 4%;
 -webkit-transform: translateY(-50%);
 -moz-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
@@ -146,11 +153,12 @@ transform: translateY(-50%);
 .causes .pic img {
     margin: auto;
     width: 100%;
+    position: relative;
 }
 .causes h3 {
     font-weight: bold;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
 }
 .causes .info {
     color: gray;
@@ -160,7 +168,7 @@ transform: translateY(-50%);
     font-weight: bold;
     color: #b2b7b9;
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 .causes .info .elements {
     background-color: #f9f9f9;
@@ -593,7 +601,7 @@ p.parapadding {
 .mumbai-in {
     position: absolute;
    color:white;
-    bottom: 287px;
+    bottom: 5px;
     right: 0%;
     width: 100%;
     text-align: center;
@@ -609,8 +617,9 @@ p.parapadding {
     text-align: center;
     width: 100%;
     position: absolute;
-    bottom: 0px;
+    bottom: -9px;
  
+    font-size: 13px;
 }
 h2.commingsoon {
     text-align: center;
@@ -635,6 +644,12 @@ font-size: 14px;
 .col-md-3.causehelped {
     color: #65c6bb;
 }
+.headerhome {
+    background: black;
+    opacity: 0.4;
+    height: 500px;
+   
+}
 
 .col-md-3.totaldonate {
     color: #ffd65c;
@@ -645,7 +660,72 @@ font-size: 14px;
 ul.mypro {
     list-style: none;
 }
-.mypro li:hover {
+.mypro li:hover,.mypro li.active {
     background: #f9f9f9;
     
+}
+
+.elements.row {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+.info h5 {
+    margin: 20px;
+}
+.helpout button {
+    position: absolute;
+    bottom: 80%;
+    width: 100px;
+    left: 35%;
+    border-radius: 3px;
+    background: #ffc926;
+    border: 1px solid #ffc926;
+    padding: 6px;
+    color: white;
+    font-size: -10px;
+}
+.info p {
+    font-size: 12px;
+    text-align: center;
+}
+p.Funded {
+    color: #494949;
+    font-size: 13px;
+}
+.head-on.home {
+margin: 7% auto;
+width: 40%;
+}
+.terms {
+    padding: 16px 0px 16px 0px;
+}
+.name p {
+    text-align: left;
+    font-size: 13px;
+}
+.subbtn{
+background: #FFC926;
+border: 1px solid #FFC926;
+font: inherit;
+color: white;
+padding: 12px 25px 10px;
+}
+input{
+font: inherit;
+width: 100%;
+padding: 10px 10px;
+border: 1px solid darkgrey;
+display: block;
+margin: 10px auto;
+font-size: 0.9em;
+font-weight: 300;
+color: #05C7C7;
+}
+.formprarmy h2 {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px 0 7px 0px;
+}
+img.log {
+    margin: 15px 0px 0px 0px;
 }

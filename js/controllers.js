@@ -89,6 +89,19 @@ phonecatControllers.controller('rewards',
     }
 );
 
+phonecatControllers.controller('TermsAndCondition',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+//        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+        TemplateService.title = $scope.menutitle;
+       TemplateService.header='views/headertext.html';
+        $scope.title="Terms And Condition";
+        TemplateService.content = 'views/terms.html';
+        $scope.navigation = NavigationService.getnav();
+    
+    }
+);
+
 phonecatControllers.controller('headerctrl',
     function($scope, TemplateService) {
         $scope.template = TemplateService;

@@ -9,7 +9,7 @@ var firstapp = angular.module('firstapp', [
 firstapp.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
-        when('/explore', {
+        when('/Home', {
             templateUrl: 'views/template.html',
             controller: 'explore'
         }).
@@ -44,6 +44,10 @@ firstapp.config(['$routeProvider',
          when('/rewards', {
             templateUrl: 'views/template.html',
             controller: 'rewards'
+        }).
+        when('/TermsAndCondition', {
+            templateUrl: 'views/template.html',
+            controller: 'TermsAndCondition'
         }).
         otherwise({
             redirectTo: '/explore'
