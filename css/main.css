@@ -797,8 +797,9 @@ img.tat {
 }
 p.contributionimg{
     font-size: 42px;
-    position: relative;
-    padding: 61px 0px 0px 50px;
+    position: absolute;
+    left: 55%;
+    top: 8002%;
 }
 p.txt5 {
 color: #00c8c8;
@@ -843,8 +844,7 @@ select.recurring {
 .txtcategories {
     font-size: 19px;
 }
- {
-}
+ 
 .contribution img {
     position: absolute;
     bottom: 10%;
@@ -863,6 +863,7 @@ select.recurring {
     color: #fff;    
     font-size: 14px;
     padding: 24px 0px 0px 57px;
+    font-weight: 300;
 }
 .datapoint1 {
     display: flex;
