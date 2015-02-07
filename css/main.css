@@ -881,7 +881,7 @@ select.recurring {
     font-size: 12px;
 }
 label.anonynimous {
-    margin-top: 5px;
+    margin-top: 0px;
 }
 .share span {
     padding: 10px;
@@ -903,4 +903,13 @@ label.anonynimous {
 }
 span.shares {
     font-weight: normal;
+}
+.donation {
+    margin: 0px 0px 10px 0px;
+}
+.check h5 {
+    font-weight: 300;
+}
+h5.keepit {
+    margin: 1px;
 }
