@@ -205,7 +205,7 @@ transform: translateY(-50%);
     font-weight: bold;
     font-size: 12px;
     color: black;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .view1 {
     text-align: center;
@@ -476,10 +476,13 @@ span.icon.fa.fa-check.pull-right {
 }
 .donation input.form-control {
     background: #f9f9f9;
-    border: 1px solid grey;
+    border: 2px solid #e4e7e8;
 }
 .donation .btn {
     margin-top: 0px !important;
+    background: rgb(77, 213, 232);
+    border: rgb(77, 213, 232);
+    padding: 7px;
 }
 .learnmore {
     margin: 25px 0px 0px 0px;
@@ -505,6 +508,7 @@ span.icon.fa.fa-check.pull-right {
     height: 17px;
     border-radius: 3px;
     padding: 4px;
+    margin-top: 18px;
 }
 input[type="checkbox"]:checked {
     background: url(../images/checked23.png) no-repeat center;
@@ -734,14 +738,15 @@ img.log {
 background: url(../images/bg_layer.png) no-repeat center;
 background-size: cover;
 background-position: top;
-min-height: 578px;
+min-height: 400px;
 width: 100%;
 }
 .short h2 {
     text-align: center;
     color: white;
-    margin: 46px 0px 0px 0px;
+    margin: 53px 0px 0px 0px;
     text-transform: uppercase;
+    font-size: 44px;
 }
 .datapoint .col-md-4 {
     text-align: center;
@@ -754,13 +759,16 @@ width: 100%;
 .explore p {
     text-align: center;
     margin: 0px;
-    font-size: 13px;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 53;
 }
 .explore {
     text-align: center;
 }
 .explore .fa {
-    font-size: 29px;
+    font-size: 20px;
 }
 
 img.Salaamlogo {
@@ -788,7 +796,9 @@ img.tat {
     padding: 0px 0px 0px 11px;
 }
 p.contributionimg{
-    font-size: 85px;
+    font-size: 42px;
+    position: relative;
+    padding: 61px 0px 0px 50px;
 }
 p.txt5 {
 color: #00c8c8;
@@ -799,4 +809,98 @@ text-align: center;
 }
 .txt3 {
     padding: 15px 42px 15px 0px;
+}
+/*
+.donation select {
+    height: 35px;
+    width: 90px;
+    border: 2px solid #e4e7e8;
+    -webkit-appearance: none;
+    background: url(../images/dropdownicon.png) no-repeat #f9f9f9;
+    background-position: 64px 9px;
+    background-size: 15px;
+}
+*/
+select.recurring {
+    margin: -19px 0px 0px 20px;
+    height: 20px;
+    width: 192px;
+    border: none;
+    background: #dedede;
+    color:#fff;
+    font-size: 12px;
+}
+ {
+}
+ {
+}
+.anonynimous input[type="checkbox"] {
+    margin-top: 2px;
+}
+.txtpleded {
+    font-size: 24px;
+}
+.txtcategories {
+    font-size: 19px;
+}
+ {
+}
+.contribution img {
+    position: absolute;
+    bottom: 10%;
+    opacity: 0.8;
+    top: 21px;
+    left: -101px;
+    height: 145px;
+    width: 368px;
+}
+.contribution h6 {
+    position: absolute;     
+    width: 200px;     
+    text-align: center;    
+    top: 31px;     
+    left: -29px;    
+    color: #fff;    
+    font-size: 14px;
+    padding: 24px 0px 0px 57px;
+}
+.datapoint1 {
+    display: flex;
+    margin: 38px auto;
+    width: 100%;
+    text-align: center;
+}
+.img1 {
+    margin: auto;
+}
+
+.img1 p {
+    color: white;
+ 
+    text-transform: uppercase;
+    font-size: 12px;
+}
+label.anonynimous {
+    margin-top: 5px;
+}
+.share span {
+    padding: 10px;
+}
+.txt4 {
+    margin: 10px 0px 0px 0px;
+}
+.share {
+    font-weight: 800;
+    font-size: 23px;
+    margin: 10px 0px 10px 0px;
+}
+.Bordr h4 {
+    font-size: 16px;
+}
+
+.txtpleded b {
+    font-size: 17px;
+}
+span.shares {
+    font-weight: normal;
 }
