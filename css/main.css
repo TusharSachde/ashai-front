@@ -974,9 +974,10 @@ object.embed-responsive-item {
 .relativetxt {
     position: absolute;
     transform: translate(-50%,-50%);
-    left: 50%;
+    left: 60%;
     bottom: 50%;
     color: white;
+    width: 200px;
 }
 .relativeimg {
     position: absolute;      
