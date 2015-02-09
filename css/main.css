@@ -741,9 +741,10 @@ input {
     color: #05C7C7;
 }
 .formprarmy h2 {
-    text-align: center;
     font-size: 25px;
     padding: 5px 0 7px 0px;
+    text-align: left;
+    text-transform: uppercase;
 }
 img.log {
     margin: 15px 0px 0px 0px;
@@ -886,7 +887,7 @@ select.recurring {
     display: -ms-flexbox;
     display: flex;
     margin: 38px auto;
-    width: 100%;
+    width: 50%;
     text-align: center;
 }
 .img1 {
@@ -1043,3 +1044,8 @@ object.embed-responsive-item {
     text-align: center;
     text-transform: uppercase;
 }
+.subbtn:hover {
+    border:1px solid fff #FFC926;
+    color: #FFC926;
+    background: #fff;
+   

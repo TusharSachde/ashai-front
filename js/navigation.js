@@ -3,7 +3,7 @@ var navigationservice = angular.module('navigationservice', [])
 .factory('NavigationService', function () {
     var navigation = [{
         name: "Explore projects",
-        classis: "",
+         classis: "active",
         link:"#/explore",
         subnav: []
     }, {
@@ -26,7 +26,7 @@ var navigationservice = angular.module('navigationservice', [])
             for(var i=0;i<navigation.length;i++) {
                 if(navigation[i].name==menuname)
                 {
-                    navigation[i].classis="";
+                    navigation[i].classis="active";
                 }
                 else {
                     navigation[i].classis="";
