@@ -113,6 +113,10 @@ ul.pagecategory {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background: white;
     width: 70%;
@@ -471,6 +475,10 @@ span.icon.fa.fa-check.pull-right {
     top: 50%;
     left: 50%;
     color: white;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -490,6 +498,8 @@ span.icon.fa.fa-check.pull-right {
 .apply button.btn.btn-warning {
     background-color: #ffc926;
     border: #ffc926;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
     border-radius: 6px;
     padding: 12px;
 }
@@ -498,6 +508,10 @@ span.icon.fa.fa-check.pull-right {
     top: 35%;
     left: 50%;
     color: white;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -506,6 +520,8 @@ span.icon.fa.fa-check.pull-right {
     -webkit-appearance: none;
     width: 17px;
     height: 17px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
     padding: 4px;
     margin-top: 18px;
@@ -528,6 +544,9 @@ input[type="checkbox"]:checked {
 }
 .sliderheader {
     background: url(../images/bg_layer.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-position: top;
     min-height: 220px;
@@ -673,6 +692,8 @@ ul.mypro {
     bottom: 80%;
     width: 100px;
     left: 35%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
     background: #ffc926;
     border: 1px solid #ffc926;
@@ -686,7 +707,8 @@ ul.mypro {
 }
 p.Funded {
     color: #494949;
-    font-size: 13px;
+    font-size: 12px;
+    margin: 0;
 }
 .head-on.home {
     margin: 7% auto;
@@ -728,6 +750,9 @@ img.log {
 }
 .sliderheadercampaign {
     background: url(../images/bg_layer.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-position: top;
     min-height: 400px;
@@ -762,6 +787,10 @@ img.log {
     font-size: 20px;
 }
 img.Salaamlogo {
+    -webkit-transform: translate(0%, -20%);
+    -moz-transform: translate(0%, -20%);
+    -ms-transform: translate(0%, -20%);
+    -o-transform: translate(0%, -20%);
     transform: translate(0%, -20%);
 }
 .salammum p {
@@ -851,6 +880,10 @@ select.recurring {
     font-weight: 300;
 }
 .datapoint1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 38px auto;
     width: 100%;
@@ -905,6 +938,10 @@ h5.keepit {
     /* TWEENER - IE 10 */
     display: -webkit-flex;
     /* NEW - Chrome */
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 100%;
     overflow-x: hidden;
@@ -938,6 +975,7 @@ h5.keepit {
     transition: all 300ms ease;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 .flexside:hover {
     -webkit-flex-basis: 4%;
@@ -952,6 +990,9 @@ object.embed-responsive-item {
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -973,23 +1014,32 @@ object.embed-responsive-item {
 }
 .relativetxt {
     position: absolute;
-    transform: translate(-50%,-50%);
-    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
     bottom: 50%;
     color: white;
-    width: 200px;
+    width: 100%;
 }
 .relativeimg {
-    position: absolute;      
-    transform: translate(-50%,-50%);      
-    left: 0%;      
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 0%;
     bottom: 0%;
     width: auto;
 }
-.relativetxt p{
-    font-family: "futura-pt",sans-serif;
-font-style: normal;
-
+.relativetxt p {
+    font-style: normal;
+    margin: 0;
     font-weight: 500;
-font-size: 20px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
 }
