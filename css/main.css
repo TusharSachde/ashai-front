@@ -679,8 +679,10 @@ ul.mypro {
     list-style: none;
     padding: 0;
 }
-.mypro li {padding: 6px;
-    border-radius: 3px;}
+.mypro li {
+    padding: 6px;
+    border-radius: 3px;
+}
 .mypro li:hover,
 .mypro li.active {
     background: #f9f9f9;
@@ -1053,3 +1055,25 @@ object.embed-responsive-item {
     border: 1px solid fff #FFC926;
     color: #FFC926;
     background: #fff;
+}
+.col-md-3.fontwt {
+    font-weight: 500;
+}
+.form-horizontal textarea {
+    font: inherit;
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid darkgrey;
+    display: block;
+    margin: 10px auto;
+    font-size: 0.9em;
+    font-weight: 300;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.border-yellow {
+    border-top: 5px solid #ffc926;
+  
+}
