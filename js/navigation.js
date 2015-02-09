@@ -1,7 +1,6 @@
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function () {
-    
     var navigation = [{
         name: "Explore projects",
         classis: "",

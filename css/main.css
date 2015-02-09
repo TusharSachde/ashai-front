@@ -362,12 +362,14 @@ body .navbar-default .navbar-nav > li > a:focus {
     font-size: 12px;
 }
 a.readterms {
-    color: #65c6bb;
+    color: #ffbf00;
 }
 .box-tag {
-    color: #34495e;
+    color: #111111;
     padding: 5px 0px;
     border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+    font-weight: 100;
 }
 .expiry {
     color: #747070;
@@ -437,10 +439,11 @@ i.fa.fa-plus {
 }
 .description-bill-amount {
     font-size: 12px;
-    color: #919bac;
+    color: #111111;
     margin-bottom: 5px;
     line-height: 12px;
     margin-top: 5px;
+    font-weight: 400;
 }
 a.list-group-item:hover,
 a.list-group-item:focus {
