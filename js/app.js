@@ -9,9 +9,9 @@ var firstapp = angular.module('firstapp', [
 firstapp.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
-        when('/Home', {
+        when('/home', {
             templateUrl: 'views/template.html',
-            controller: 'explore'
+            controller: 'home'
         }).
         when('/works', {
             templateUrl: 'views/template.html',
@@ -25,15 +25,11 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'aboutUs'
         }).
-         when('/ExplorestuckHeader', {
+         when('/explore', {
             templateUrl: 'views/template.html',
-            controller: 'ExplorestuckHeader'
+            controller: 'Explore'
         }).
-        when('/ExplorestuckHeader', {
-            templateUrl: 'views/template.html',
-            controller: 'ExplorestuckHeader'
-        }).
-         when('/campaign', {
+        when('/campaign', {
             templateUrl: 'views/template.html',
             controller: 'campaign'
         }).
@@ -45,11 +41,11 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'rewards'
         }).
-        when('/TermsAndCondition', {
+        when('/termsandcondition', {
             templateUrl: 'views/template.html',
             controller: 'TermsAndCondition'
         }).
         otherwise({
-            redirectTo: '/explore'
+            redirectTo: '/home'
         });
   }]);

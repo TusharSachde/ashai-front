@@ -1,11 +1,11 @@
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice']);
 
-phonecatControllers.controller('explore',
+phonecatControllers.controller('home',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Explore projects");
         TemplateService.title = $scope.menutitle;
-        TemplateService.content = 'views/explore.html';
+        TemplateService.content = 'views/home.html';
         TemplateService.header = 'views/header.html';
         $scope.navigation = NavigationService.getnav();
     }
@@ -43,12 +43,12 @@ phonecatControllers.controller('aboutUs',
     
     }
 );
-phonecatControllers.controller('ExplorestuckHeader',
+phonecatControllers.controller('Explore',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
 //        $scope.menutitle = NavigationService.makeactive("Join the pro army");
 //        TemplateService.title = $scope.menutitle;
-        TemplateService.content = 'views/ExplorestuckHeader.html';
+        TemplateService.content = 'views/Explore.html';
      TemplateService.header='views/headerblack.html';
         $scope.navigation = NavigationService.getnav();
 //    $scope.display="About Us";
