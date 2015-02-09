@@ -4,6 +4,7 @@ phonecatControllers.controller('home',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         TemplateService.title = $scope.menutitle;
+        $scope.menutitle = NavigationService.makeactive("");
         TemplateService.content = 'views/home.html';
         TemplateService.header = 'views/header.html';
         $scope.navigation = NavigationService.getnav();
@@ -33,7 +34,6 @@ phonecatControllers.controller('proarmy',
 phonecatControllers.controller('aboutUs',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
-        //        $scope.menutitle = NavigationService.makeactive("Join the pro army");
         TemplateService.title = $scope.menutitle;
         TemplateService.header = 'views/headertext.html';
         $scope.title = "About Us";
@@ -45,10 +45,9 @@ phonecatControllers.controller('aboutUs',
 phonecatControllers.controller('Explore',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
-        //        $scope.menutitle = NavigationService.makeactive("Join the pro army");
-        //        TemplateService.title = $scope.menutitle;
-        TemplateService.content = 'views/Explore.html';
         $scope.menutitle = NavigationService.makeactive("Explore projects");
+        TemplateService.title = $scope.menutitle;
+        TemplateService.content = 'views/Explore.html';
         TemplateService.header = 'views/headerblack.html';
         $scope.navigation = NavigationService.getnav();
         //    $scope.display="About Us";
