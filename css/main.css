@@ -534,6 +534,7 @@ input[type="checkbox"]:checked {
 }
 .list1 .cat-list:hover {
     background-color: #ffc926;
+    color: white;
 }
 .titleCenter {
     text-align: center;
@@ -1076,4 +1077,11 @@ object.embed-responsive-item {
 .border-yellow {
     border-top: 5px solid #ffc926;
   
+}
+.catlist:hover {
+    color: white;
+}
+ul.list1 a:hover {
+    text-decoration: none;
+    color: white;
 }
