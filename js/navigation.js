@@ -4,7 +4,7 @@ var navigationservice = angular.module('navigationservice', [])
     var navigation = [{
         name: "Explore projects",
         classis: "",
-        link:"#/ExplorestuckHeader",
+        link:"#/explore",
         subnav: []
     }, {
         name: "How it works",
