@@ -8,7 +8,7 @@
     padding: 10px;
 }
 .rewardsdet img {
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 .profile {
     padding: 0px 0px 10px 30px;
@@ -163,6 +163,7 @@ ul.pagecategory {
     font-weight: bold;
     text-align: center;
     font-size: 14px;
+    margin: 12px 0 10px;
 }
 .causes .info {
     color: gray;
@@ -208,7 +209,8 @@ ul.pagecategory {
     font-weight: bold;
     font-size: 12px;
     color: black;
-    margin-top: 10px;
+    margin-top: 13px;
+    padding-right: 0;
 }
 .view1 {
     text-align: center;
@@ -675,10 +677,16 @@ h2.commingsoon {
 }
 ul.mypro {
     list-style: none;
+    padding: 0;
 }
+.mypro li {padding: 6px;
+    border-radius: 3px;}
 .mypro li:hover,
 .mypro li.active {
     background: #f9f9f9;
+}
+.mypro li+li {
+    margin-top: 10px;
 }
 .elements.row {
     border-top: 1px solid #cccccc;
@@ -715,9 +723,6 @@ p.Funded {
     width: 40%;
     margin-top: 156px;
 }
-.terms {
-    padding: 16px 0px 16px 0px;
-}
 .name p {
     text-align: left;
     font-size: 13px;
@@ -729,7 +734,7 @@ p.Funded {
     color: white;
     padding: 12px 25px 10px;
 }
-input {
+.form-horizontal input {
     font: inherit;
     width: 100%;
     padding: 10px 10px;
@@ -738,7 +743,7 @@ input {
     margin: 10px auto;
     font-size: 0.9em;
     font-weight: 300;
-    color: #05C7C7;
+    outline: 0 !important;
 }
 .formprarmy h2 {
     font-size: 25px;
@@ -1045,7 +1050,6 @@ object.embed-responsive-item {
     text-transform: uppercase;
 }
 .subbtn:hover {
-    border:1px solid fff #FFC926;
+    border: 1px solid fff #FFC926;
     color: #FFC926;
     background: #fff;
-   
