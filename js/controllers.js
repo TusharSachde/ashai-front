@@ -16,7 +16,7 @@ phonecatControllers.controller('works',
         $scope.menutitle = NavigationService.makeactive("How it works");
         $scope.title = "How it works";
         TemplateService.content = 'views/works.html';
-        TemplateService.header = 'views/header.html';
+        TemplateService.header = 'views/worksheader.html';
         $scope.navigation = NavigationService.getnav();
     }
 );

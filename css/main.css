@@ -145,6 +145,7 @@ ul.pagecategory {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+    outline: none;
 }
 .causes {
     margin: 15px;
@@ -817,16 +818,16 @@ p.suppoerted {
 }
 .tata p {
     text-align: center;
-    padding: 0px 121px 0px 0px;
+    padding: 0px 48px 0px 0px;
 }
 img.tat {
-    padding: 0px 0px 0px 11px;
+    padding: 10px 0px 0px 23px;
 }
 p.contributionimg {
     font-size: 42px;
     position: absolute;
-    left: 55%;
-    top: 8002%;
+    left: 75%;
+    top: 45%;
 }
 p.txt5 {
     color: #00c8c8;
@@ -869,24 +870,22 @@ select.recurring {
     font-size: 19px;
 }
 .contribution img {
-    position: absolute;
     bottom: 10%;
     opacity: 0.8;
-    top: 21px;
-    left: -101px;
-    height: 145px;
+    height: 200px;
     width: 368px;
 }
 .contribution h6 {
     position: absolute;
     width: 200px;
     text-align: center;
-    top: 31px;
-    left: -29px;
+    top: 27px;
+    left: 77px;
     color: #fff;
     font-size: 14px;
-    padding: 24px 0px 0px 57px;
+    padding: 35px 0px 0px 57px;
     font-weight: 300;
+    text-transform: capitalize;
 }
 .datapoint1 {
     display: -webkit-box;
@@ -908,6 +907,7 @@ select.recurring {
 }
 label.anonynimous {
     margin-top: 0px;
+    display: inline-flex;
 }
 .share span {
     padding: 10px;
@@ -918,7 +918,7 @@ label.anonynimous {
 .share {
     font-weight: 800;
     font-size: 23px;
-    margin: 10px 0px 10px 0px;
+    margin: 20px 0px 10px 0px;
 }
 .Bordr h4 {
     font-size: 16px;
@@ -936,7 +936,7 @@ span.shares {
     font-weight: 300;
 }
 h5.keepit {
-    margin: 1px;
+    margin: 3px 0px 0px 6px;
 }
 .sliderside {
     display: -webkit-box;
@@ -1084,4 +1084,80 @@ object.embed-responsive-item {
 ul.list1 a:hover {
     text-decoration: none;
     color: white;
+}
+.profileimg{
+    background: url(../images/myprofile.png) no-repeat;
+    width:100px;
+    height: 100px;
+    vertical-align:middle;
+}
+.profileimg{
+    background: url(../images/myprofile.png) no-repeat;
+    width: 31px;
+    height: 34px;
+    vertical-align:middle;
+    display: inline-block;
+}
+.profile span {
+    padding-left: 20px;
+}
+.rewards1{
+     background: url(../images/myrewards.png) no-repeat;
+    
+     width: 28px;
+    height: 34px;
+    vertical-align:middle;
+    display: inline-block;
+    
+}
+li.cat-list a {
+    color: #00c8c8;
+}
+.cat-justify {
+    padding-bottom: 22px;
+}
+.check input[type="radio"] {
+    border: 2px solid rgb(77, 213, 232);  -webkit-appearance: none;  width: 17px;  height: 17px;  -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;  
+    /* border-radius: 100%; */
+}
+ {
+    margin: 0px 0px 0px 0px;
+}
+input[type="radio"]:checked {
+    background: url(../images/checked23.png) no-repeat center;
+    border: 2px solid rgb(77, 213, 232);
+}
+.radioalign {
+    margin-left: -20px;
+}
+.donate{
+    background: url(../images/donate.png) no-repeat;
+    width: 42px;
+height: 31px;
+display: inline-block;
+vertical-align: middle;
+}
+.shareicon{
+      background: url(../images/share.png) no-repeat;
+    width: 42px;
+
+      height: 44px;
+display: inline-block;
+vertical-align: middle;
+    
+}
+.Bordr p {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+.imgabsolute{
+    position: absolute;
+    left: 42%;
+    top: 50%;
+    
+}
+.imgabsolute img {
+    width: 50px;
+    height: 50px;
 }
