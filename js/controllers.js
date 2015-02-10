@@ -92,7 +92,27 @@ phonecatControllers.controller('TermsAndCondition',
 
     }
 );
+phonecatControllers.controller('workwithus',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "Work With Us";
+        TemplateService.content = 'views/workwithus.html';
+        $scope.navigation = NavigationService.getnav();
 
+    }
+);
+
+phonecatControllers.controller('Contactus',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "Contact Us";
+        TemplateService.content = 'views/Contactus.html';
+        $scope.navigation = NavigationService.getnav();
+
+    }
+);
 phonecatControllers.controller('headerctrl',
     function($scope, TemplateService) {
         $scope.template = TemplateService;

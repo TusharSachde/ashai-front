@@ -1159,5 +1159,15 @@ vertical-align: middle;
 }
 .imgabsolute img {
     width: 50px;
-    height: 50px;
+    height: 42px;
+}
+ul.list-inline p {
+    width: 210px;
+    text-align: center;
+}
+.form-horizontal select {
+    font: inherit;  width: 100%;  padding: 10px 10px;  border: 1px solid darkgrey;  display: block;  margin: 10px auto;  font-size: 0.9em;  font-weight: 300;  outline: 0 !important;
+}
+.cat-justify.spacing {
+    margin: 20px 0px 20px 0px;
 }
