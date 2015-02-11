@@ -683,6 +683,8 @@ ul.mypro {
 }
 .mypro li {
     padding: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
 }
 .mypro li:hover,
@@ -812,22 +814,23 @@ p.ngoname {
 }
 .tata {
     padding: 10px 0px 0px 0px;
+    text-align: center;
 }
 p.suppoerted {
-    margin: 60px 0px 12px 0px;
+    margin: 45px 0px 12px 0px;
 }
 .tata p {
     text-align: center;
-    padding: 0px 48px 0px 0px;
+    padding: 0px 0 0px 0px;
 }
 img.tat {
-    padding: 10px 0px 0px 23px;
+    padding: 10px 0px 0px;
 }
 p.contributionimg {
-    font-size: 42px;
+    font-size: 35px;
     position: absolute;
-    left: 75%;
-    top: 45%;
+    right: 45px;
+    bottom: 25px;
 }
 p.txt5 {
     color: #00c8c8;
@@ -872,18 +875,18 @@ select.recurring {
 .contribution img {
     bottom: 10%;
     opacity: 0.8;
-    height: 200px;
-    width: 368px;
+    height: 180px;
+    width: 100%;
 }
 .contribution h6 {
     position: absolute;
-    width: 200px;
+    width: 205px;
     text-align: center;
     top: 27px;
     left: 77px;
     color: #fff;
     font-size: 14px;
-    padding: 35px 0px 0px 57px;
+    padding: 30px 0 0 35px;
     font-weight: 300;
     text-transform: capitalize;
 }
@@ -907,6 +910,10 @@ select.recurring {
 }
 label.anonynimous {
     margin-top: 0px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .share span {
@@ -1076,7 +1083,6 @@ object.embed-responsive-item {
 }
 .border-yellow {
     border-top: 5px solid #ffc926;
-  
 }
 .catlist:hover {
     color: white;
@@ -1085,30 +1091,28 @@ ul.list1 a:hover {
     text-decoration: none;
     color: white;
 }
-.profileimg{
+.profileimg {
     background: url(../images/myprofile.png) no-repeat;
-    width:100px;
+    width: 100px;
     height: 100px;
-    vertical-align:middle;
+    vertical-align: middle;
 }
-.profileimg{
+.profileimg {
     background: url(../images/myprofile.png) no-repeat;
     width: 31px;
     height: 34px;
-    vertical-align:middle;
+    vertical-align: middle;
     display: inline-block;
 }
 .profile span {
     padding-left: 20px;
 }
-.rewards1{
-     background: url(../images/myrewards.png) no-repeat;
-    
-     width: 28px;
+.rewards1 {
+    background: url(../images/myrewards.png) no-repeat;
+    width: 28px;
     height: 34px;
-    vertical-align:middle;
+    vertical-align: middle;
     display: inline-block;
-    
 }
 li.cat-list a {
     color: #00c8c8;
@@ -1117,10 +1121,16 @@ li.cat-list a {
     padding-bottom: 22px;
 }
 .check input[type="radio"] {
-    border: 2px solid rgb(77, 213, 232);  -webkit-appearance: none;  width: 17px;  height: 17px;  -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;  
+    border: 2px solid rgb(77, 213, 232);
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     /* border-radius: 100%; */
 }
- {
+{
     margin: 0px 0px 0px 0px;
 }
 input[type="radio"]:checked {
@@ -1130,35 +1140,32 @@ input[type="radio"]:checked {
 .radioalign {
     margin-left: -20px;
 }
-.donate{
+.donate {
     background: url(../images/donate.png) no-repeat;
     width: 42px;
-height: 31px;
-display: inline-block;
-vertical-align: middle;
+    height: 31px;
+    display: inline-block;
+    vertical-align: middle;
 }
-.shareicon{
-      background: url(../images/share.png) no-repeat;
+.shareicon {
+    background: url(../images/share.png) no-repeat;
     width: 42px;
-
-      height: 44px;
-display: inline-block;
-vertical-align: middle;
-    
+    height: 44px;
+    display: inline-block;
+    vertical-align: middle;
 }
 .Bordr p {
     font-size: 15px;
     text-align: center;
     padding: 10px 0px 0px 0px;
 }
-.imgabsolute{
+.imgabsolute {
     position: absolute;
     left: 42%;
     top: 50%;
-    
 }
 .imgabsolute img {
-    width: 50px;
+    width: auto;
     height: 42px;
 }
 ul.list-inline p {
@@ -1166,8 +1173,19 @@ ul.list-inline p {
     text-align: center;
 }
 .form-horizontal select {
-    font: inherit;  width: 100%;  padding: 10px 10px;  border: 1px solid darkgrey;  display: block;  margin: 10px auto;  font-size: 0.9em;  font-weight: 300;  outline: 0 !important;
+    font: inherit;
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid darkgrey;
+    display: block;
+    margin: 10px auto;
+    font-size: 0.9em;
+    font-weight: 300;
+    outline: 0 !important;
 }
 .cat-justify.spacing {
     margin: 20px 0px 20px 0px;
+}
+.margin-bot {
+    margin-bottom: 15px;
 }
