@@ -33,12 +33,12 @@
 @lighterblack: #6F6F6F;
 @color: #99801a;
 @gray: #b2b2b2;
-@yellow: #00c8c8;
-@ListTxt: #00c8c8;
+@teal: #05c7c7;
+@ListTxt: @teal;
 @font-size: 12px;
 @font-body: 'Gotham',sans-serif;
 @width: 6%;
-@border: 4px solid @yellow;
+@border: 4px solid @teal;
 @line-height: 180%;
 
 .transition { transition: all 300ms ease; }
@@ -252,7 +252,7 @@ body {
             a {
                 color: black;
 
-                .privcy { color: @yellow; }
+                .privcy { color: @teal; }
             }
         }
 
@@ -290,7 +290,7 @@ body {
 
         .ListHead {
             color: white;
-            background-color: @yellow;
+            background-color: @teal;
             height: 30px;
             padding-left: 15px;
             padding-top: 5px;
@@ -675,7 +675,7 @@ body {
 }
 
 .btn-yellow {
-    background: @yellow;
+    background: @teal;
     padding: 7px 20px;
     margin-top: 5px;
     border: 0px;
@@ -685,7 +685,7 @@ body {
 .btn { .transition(); }
 
 .terms a:hover {
-    color: @yellow;
+    color: @teal;
     .transition();
 }
 
@@ -726,4 +726,16 @@ footer { font-size: @font-size; }
 .mypro li, .subbtn {
     .transition();
     cursor: pointer;
+}
+.head-fix {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 5px solid @teal;
+}
+
+.head-hold {
+    height: 87px;
 }
