@@ -923,6 +923,7 @@ span.shares {
 }
 .check h5 {
     font-weight: 300;
+    width: 200px;
 }
 h5.keepit {
     margin: -16px 0px 0px 22px;
@@ -1379,7 +1380,8 @@ p.contributionimg {
     padding: 10px 0px 0px 0px;
 }
 .map h2 {
-    margin: 12px 0px 0px 0px;
+    margin: 22px 0px 0px 0px;
+    font-size: 25px;
 }
 .paddbottom {
     margin: 10px 0px 0px 0px;
@@ -1418,4 +1420,7 @@ h2.pteam {
 }
 .content {
     margin-bottom: 20px;
+}
+p.or {
+    margin: 3px 0px 0px 53px;
 }
