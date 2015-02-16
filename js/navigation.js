@@ -3,7 +3,7 @@ var navigationservice = angular.module('navigationservice', [])
 .factory('NavigationService', function () {
     var navigation = [{
         name: "Explore projects",
-         classis: "active",
+         classis: "",
         link:"#/explore",
         subnav: []
     }, {
@@ -12,7 +12,7 @@ var navigationservice = angular.module('navigationservice', [])
         link:"#/works",
         subnav: []
     }, {
-        name: "Join the pro army",
+        name: "Join the pfo army",
         classis: "",
         link:"#/proarmy",
         subnav: []

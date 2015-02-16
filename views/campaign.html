@@ -24,7 +24,7 @@
                     <p class="contributionimg"><b>2x</b>
                     </p>
                     <div class="contribution">
-                        <img src="images/yellow-layer.png" width=100%>
+                        <img src="" width=100%>
                         <h6>Your contribution will be <span><b>doubled</b></span> by tata who also support this cause</h6>
                     </div>
                 </div>
@@ -48,6 +48,19 @@
                 <p class="parapadding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consequuntur odio, quam cupiditate natus corporis doloremque voluptatibus mollitia, fugiat laudantium impedit. Ullam ratione labore aut repellat dolores praesentium sed quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque non iure rerum, sunt commodi itaque earum dignissimos esse a magni quod, asperiores eaque necessitatibus ipsam placeat rem modi perspiciatis! Quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe alias sequi tempora, ex rerum, possimus ullam ab iusto in unde. Velit, aliquid, laudantium quisquam animi corporis praesentium eligendi pariatur.</p>
                 <p class="parapadding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consequuntur odio, quam cupiditate natus corporis doloremque voluptatibus mollitia, fugiat laudantium impedit. Ullam ratione labore aut repellat dolores praesentium sed quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque non iure rerum, sunt commodi itaque earum dignissimos esse a magni quod, asperiores eaque necessitatibus ipsam placeat rem modi perspiciatis! Quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe alias sequi tempora, ex rerum, possimus ullam ab iusto in unde. Velit, aliquid, laudantium quisquam animi corporis praesentium eligendi pariatur.</p>
             </div>
+            <div class="galleryimg">
+                <img src="images/educationgallery.jpg"  width="100%" height="100%" alt="">
+            </div>
+            <div class="row ">
+               <div class="gallerytag">
+                <div class="col-md-2"> <img src="images/educationgallery.jpg"  width="100%" height="100%" alt=""></div>
+                <div class="col-md-2"> <img src="images/educationgallery.jpg"  width="100%" height="100%" alt=""></div>
+                <div class="col-md-2"> <img src="images/educationgallery.jpg"  width="100%" height="100%" alt=""></div>
+                <div class="col-md-2"> <img src="images/educationgallery.jpg"  width="100%" height="100%" alt=""></div>
+                <div class="col-md-2"> <img src="images/educationgallery.jpg"  width="100%" height="100%" alt=""></div>
+                <div class="col-md-2"> <img src="images/educationgallery.jpg"  width="100%" height="100%" alt=""></div>
+                </div>
+            </div>
 
         </div>
         <div class="col-md-3">
@@ -57,34 +70,74 @@
                         <div class="txt3"><i class="donate"></i> <span>DONATE</span></div>
                     </div>
                     <div class="checkbox check">
+<!--
                        <div class="radioalign">
                         <label class="anonynimous">
-                            <input type="radio" name="1">
-                            <h5 class="keepit">Indian Donor</h5>
+                           <div class="row">
+                               <div class="col-md-2 indiandonor"> <input type="radio" name="1" ></div>
+                               <div class="col-md-10 "> <h5 class="keepit">Indian Donor</h5></div>
+                           </div>
+                           
+                           
                         </label>
                         <label class="anonynimous">
-                            <input type="radio" name="1">
-                            <h5 class="keepit">Foreign Donor</h5>
+                           <div class="row">
+                               <div class="col-md-2 foriegndonar ">  <input type="radio" name="1" class="radanoyminous" ></div>
+                               <div class="col-md-10"><h5 class="keepit">Indian Donor</h5></div>
+                           </div>
                         </label>
                      </div>
+-->
+                     <label class="anonynimous">
+                             <div class="row foregin">
+                               <div class="col-md-2 radanoyminous"><input type="radio" ng-model="indiandonar" name="1" ></div>
+                               <div class="col-md-10"><h5 class="keepit">Indian Donor</h5></div>
+                           </div>
+                         </label> 
+                         
+                      <label class="anonynimous">
+                             <div class="row foregin">
+                               <div class="col-md-2 radanoyminous">   <input type="radio" name="1" ng-model="forigndonar" class="radanoyminous" ></div>
+                               <div class="col-md-10"><h5 class="keepit">Foreign Donor</h5></div>
+                           </div>
+                         </label>
                 
                         <label>
-                            <input type="checkbox">
-                            <h5>Make a Recurring Donation</h5>
-                        </label>
-                        <select class="recurring" name="" id="">
+                            <div class="row monthly">
+                               <div class="col-md-2 radanoyminous"> <input type="checkbox" class="radanoyminous" ></div>
+                               <div class="col-md-10 recurring2"><h5>Make a Recurring Donation</h5></div>
+                                <select class="recurring" name="" id="">
                             <option value="">Monthy</option>
-
-                        </select>
+                             <option value=""> One time</option>
+                              <option value="">Quarterly</option>
+                               <option value="">Yearly</option>
+ 
+                               </select>
+                           </div>
+                              
+                           
+                        </label>
+                       
 
                         <label class="anonynimous">
-                            <input type="checkbox">
-                            <h5 class="keepit">Keep It Anonymous</h5>
+                             <div class="row monthly">
+                               <div class="col-md-2 radanoyminous">   <input type="checkbox"></div>
+                               <div class="col-md-10"> <h5 class="keep">Keep It Anonymous</h5></div>
+                           </div>
+                          
+                            
                         </label>
                     </div>
                     <div class="donation">
+<!--
+                        <span ng-if="indiandonar">
                         <input type="text" class="form-control" placeholder="$00">
-                        <span><button type="button" class="btn btn-info"> GIVE</button></span> 
+                        </span>
+                        <span ng-if="forigndonar">
+                         <input type="text" class="form-control" placeholder="Rs00">
+                        </span>
+-->
+                         <input type="text" class="form-control" placeholder="Rs00"> <span ><button type="button" class="btn btn-info"> GIVE</button></span> 
 
                     </div>
                     <span class="t1"> Remember, your donation will be doubled by </span>
@@ -110,7 +163,7 @@
                 <div class="funded">
                     <h4>FUNDED </h4>
                     <div class="circle">
-                        <div class="txt2">230%</div>
+                        <div class="circlepercnt">230%</div>
                     </div>
                     <div class="Bordr">
                         <p>PLEDGED</p>
@@ -119,9 +172,9 @@
                         </div>
                     </div>
                     <div class="Bordr">
-                        <p>CATEGORIES</p>
+                        <p>TARGET</p>
                         <div class="txtpleded">
-                            <h4>EDUCATION</h4>
+                            <h4>24</h4>
                         </div>
                     </div>
                     <div class="Bordr">

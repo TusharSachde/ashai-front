@@ -1,4 +1,4 @@
-var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice']);
+var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice','ui.bootstrap']);
 
 phonecatControllers.controller('home',
     function($scope, TemplateService, NavigationService) {
@@ -8,15 +8,28 @@ phonecatControllers.controller('home',
         TemplateService.content = 'views/home.html';
         TemplateService.header = 'views/header.html';
         $scope.navigation = NavigationService.getnav();
-    }
-);
+
+          $scope.myInterval = 5000;
+          $scope.slides =[{
+              "image":"images/image1.png",
+              "name":"first Slide"
+          },{
+              "image":"images/image2.png",
+              "name":"second Slide"
+          }];
+        
+        $scope.slides[0].active = "active";
+
+});
+    
+
 phonecatControllers.controller('works',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("How it works");
         $scope.title = "How it works";
         TemplateService.content = 'views/works.html';
-        TemplateService.header = 'views/worksheader.html';
+        TemplateService.header = 'views/headertext.html';
         $scope.navigation = NavigationService.getnav();
     }
 );
@@ -45,7 +58,7 @@ phonecatControllers.controller('Explore',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Explore projects");
         $scope.title = "Explore projects";
-        TemplateService.content = 'views/Explore.html';
+        TemplateService.content = 'views/explore.html';
         TemplateService.header = 'views/headerblack.html';
         $scope.navigation = NavigationService.getnav();
     }
@@ -109,6 +122,16 @@ phonecatControllers.controller('Contactus',
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Contact Us";
         TemplateService.content = 'views/Contactus.html';
+        $scope.navigation = NavigationService.getnav();
+
+    }
+);
+phonecatControllers.controller('Teampage',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "Power for one Team";
+        TemplateService.content = 'views/teampage.html';
         $scope.navigation = NavigationService.getnav();
 
     }

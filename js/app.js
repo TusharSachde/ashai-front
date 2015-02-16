@@ -21,6 +21,10 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'workwithus'
         }).
+         when('/teampage', {
+            templateUrl: 'views/template.html',
+            controller: 'Teampage'
+        }).
         
         when('/contactus', {
             templateUrl: 'views/template.html',
