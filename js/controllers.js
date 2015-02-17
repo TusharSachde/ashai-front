@@ -53,6 +53,20 @@ phonecatControllers.controller('aboutUs',
 
     }
 );
+
+
+phonecatControllers.controller('blog',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "blog";
+        TemplateService.content = 'views/blog.html';
+        $scope.navigation = NavigationService.getnav();
+
+    }
+);
+
+
 phonecatControllers.controller('Explore',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
