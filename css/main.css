@@ -711,9 +711,8 @@ p.Funded {
     margin: 0;
 }
 .head-on.home {
-    margin: 7% auto;
+    margin: 12% auto;
     width: 40%;
-    margin-top: 75px;
 }
 .name p {
     text-align: left;
@@ -1247,9 +1246,9 @@ h5.keep {
     margin: 0px 0px 0px -5px;
 }
 button.btn.btn-warning.btn-yellow {
-    background: #0E8B8B;
+    background: #05C7C7;
     color: white;
-    border: #0E8B8B;
+    border: #05C7C7;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -1265,9 +1264,10 @@ button.btn.btn-warning.btn-yellow {
     margin-top: -8px;
 }
 .educat {
-    height: 40px;
-    width: 50px;
+    height: 34px;
+    width: 34px;
     background: url(../images/projects.png) no-repeat;
+    text-align: center;
 }
 .child {
     height: 50px;
@@ -1285,17 +1285,17 @@ button.btn.btn-warning.btn-yellow {
     display: -ms-inline-flexbox;
     display: inline-flex;
 }
-.cat-justify p {
+.content-page p {
     width: 100%;
     text-align: justify;
     font-weight: 300;
 }
-.ucase {
+.content-page h2 {
     text-transform: uppercase;
     font-size: 25px;
 }
 .bordercol {
-    border-bottom: 5px solid teal;
+    border-bottom: 5px solid #05c7c7;
     width: 73px;
     margin: 15px 0px 15px 63px;
 }
@@ -1338,14 +1338,6 @@ i.fa.fa-twitter-square.colorchnage {
 }
 i.fa.fa-twitter-square.colorchnage:hover {
     color: grey;
-}
-.colredwidth {
-    width: 100px;
-    -webkit-transform: translate(-32%, -105%);
-    -moz-transform: translate(-32%, -105%);
-    -ms-transform: translate(-32%, -105%);
-    -o-transform: translate(-32%, -105%);
-    transform: translate(-32%, -105%);
 }
 i.fa.fa-facebook-square.colorchnage {
     font-size: 27px;
@@ -1390,7 +1382,6 @@ h2.paddbottom {
     margin: 16px 0px 20px 0px;
 }
 .teamcircle {
-    height: 80px;
     margin: 20px 0px 0px 0px;
 }
 h3.circleig {
@@ -1404,7 +1395,7 @@ p.ceocontent {
     width: 300px;
 }
 span.team {
-    color: teal;
+    color: #05c7c7;
     font-size: 20px;
 }
 h2.pteam {
@@ -1412,7 +1403,6 @@ h2.pteam {
     font-size: 23px;
 }
 .colredwidth {
-    margin: 10px 0px 0px 275px;
     display: inline;
 }
 .aligndown {
@@ -1423,4 +1413,22 @@ h2.pteam {
 }
 p.or {
     margin: 3px 0px 0px 53px;
+}
+.mypro span {
+    font-size: 13px;
+}
+.facebook:hover {
+    color: #4870A6;
+}
+.twitter:hover {
+    color: #00BBEF;
+}
+.pinterest:hover {
+    color: #CB2027;
+}
+.instagram:hover {
+    color: #517FA4;
+}
+.teamcircle img {
+    width: 50%;
 }

@@ -130,7 +130,7 @@ phonecatControllers.controller('Teampage',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
-        $scope.title = "Power for one Team";
+        $scope.title = "Our Team";
         TemplateService.content = 'views/teampage.html';
         $scope.navigation = NavigationService.getnav();
 
