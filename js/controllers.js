@@ -33,6 +33,7 @@ phonecatControllers.controller('works',
         $scope.navigation = NavigationService.getnav();
     }
 );
+
 phonecatControllers.controller('proarmy',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;

@@ -27,6 +27,18 @@
     font-weight: 700;
 }
 
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url('@{path-fonts}/Satisfy-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Hello Goodbye';
+    src: url('@{path-fonts}/hellogoodbye.otf') format('truetype');
+}
+
 @base: #fff;
 @bgcolor: #fff;
 @lightblack: #222;
@@ -37,6 +49,8 @@
 @ListTxt: @teal;
 @font-size: 12px;
 @font-body: 'Gotham',sans-serif;
+@font-satisfy: 'Satisfy',sans-serif;
+@font-hello: 'Hello Goodbye',sans-serif;
 @width: 6%;
 @border: 4px solid @teal;
 @line-height: 180%;
@@ -934,4 +948,158 @@ margin: 1px 0px 25px -4px;
 body a:hover {
 text-decoration: none;
 background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box {
+border: 2px solid;
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+
+
+
+
+.oneround {
+background: @teal;
+color: white;
+height: 32px;
+line-height: 32px;
+    width: 32px;
+border-radius: 100%;
+    font-family: @font-hello;
+    font-size: 25px;
+    position:absolute;
+top:0;
+    left: 0;
+    transform: translateY(-50%);
+    
+    
+
+}
+
+
+
+.box {
+margin-bottom: 32px;
+height: 280px;
+overflow: hidden;
+}
+
+h1.esy {
+font-size: 55px;
+margin: 23px 14px 23px 10px;
+}
+
+
+
+.cont {
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 13px;
+width: 23em;
+}
+
+
+
+.midtitle {
+text-align: center;
+}
+
+img.mainimg {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 13px;
+}
+
+.paddingtop {
+margin: 22px 10px 10px 10px;
+}
+
+
+.esy {
+text-align: center;
+}
+
+.cont1 {
+
+text-align: center;
+}
+
+h4.works-title {
+margin: 25px 0px 15px 0px;
+font-weight: 700;
+}
+
+
+
+
+a.explorep {
+background: #4cd8d8;
+color: white;
+font-weight: 400;
+text-transform: capitalize;
+padding: 15px 00px;
+border-radius: 6px;
+display: block;
+width: 60%;
+margin: 0 auto;
+font-weight: 700;
+font-size: 18px;
+text-align: center;
+}
+.whycons { background:url("@{path-media}/whyus.png") top left no-repeat;display: inline-block;}
+.w5{ width:99px; height:106px; background-position:-10px -10px; }
+.w4{ width:119px; height:106px; background-position:-10px -126px; }
+.w3{ width:129px; height:106px; background-position:-10px -242px; }
+.w2{ width:106px; height:106px; background-position:-10px -358px; }
+.w1{ width:79px; height:106px; background-position:-10px -474px; }
+
+
+
+
+
+.w5 {
+width: 94px;
+height: 106px;
+background-position: -17px -6px;
+}
+
+
+.w4 {
+width: 120px;
+height: 106px;
+background-position: -10px -126px;
+    
+    .w3 {
+width: 125px;
+height: 106px;
+background-position: -10px -242px;
+
+.w2 {
+width: 102px;
+height: 106px;
+background-position: -10px -358px;
+}
+        
+        
+        .w1 {
+width: 74px;
+height: 106px;
+background-position: -10px -474px;
 }
