@@ -1019,9 +1019,10 @@ object.embed-responsive-item {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     left: 50%;
-    bottom: 50%;
+    top: 50%;
     color: white;
     width: 100%;
+    text-align: center;
 }
 .relativeimg {
     position: absolute;
