@@ -33,6 +33,10 @@ firstapp.config(['$routeProvider',
             controller: 'Teampage'
         }).
         
+         when('/thankyou', {
+            templateUrl: 'views/template.html',
+            controller: 'thankyou'
+        }).
         when('/contactus', {
             templateUrl: 'views/template.html',
             controller: 'Contactus'
@@ -61,7 +65,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'rewards'
         }).
-        when('/termsandcondition', {
+         when('/termsandcondition', {
             templateUrl: 'views/template.html',
             controller: 'TermsAndCondition'
         }).

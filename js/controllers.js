@@ -141,6 +141,20 @@ phonecatControllers.controller('Contactus',
 
     }
 );
+
+phonecatControllers.controller('thankyou',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        TemplateService.header = 'views/headertext.html';
+     $scope.title = "thank you";
+       TemplateService.content = 'views/thankyou.html';
+   $scope.navigation = NavigationService.getnav();
+
+    }
+);
+
+
+
 phonecatControllers.controller('Teampage',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
