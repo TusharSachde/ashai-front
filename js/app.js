@@ -85,4 +85,10 @@ firstapp.config(['$routeProvider',
         otherwise({
             redirectTo: '/home'
         });
+      
+      
+      
+      
+      
+      
   }]);
