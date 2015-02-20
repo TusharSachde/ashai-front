@@ -24,6 +24,19 @@ firstapp.config(['$routeProvider',
             controller: 'blog'
         }).
         
+        when('/login', {
+            templateUrl: 'views/template.html',
+            controller: 'login'
+        }).
+        
+        
+          when('/register', {
+            templateUrl: 'views/template.html',
+            controller: 'register'
+        }).
+        
+        
+        
          when('/workwithus', {
             templateUrl: 'views/template.html',
             controller: 'workwithus'

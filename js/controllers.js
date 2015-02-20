@@ -86,6 +86,13 @@ phonecatControllers.controller('Explore',
         $scope.navigation = NavigationService.getnav();
     }
 );
+
+
+
+
+
+
+
 phonecatControllers.controller('campaign',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -160,6 +167,38 @@ phonecatControllers.controller('Contactus',
     }
 );
 
+phonecatControllers.controller('login',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+         $scope.menutitle = NavigationService.makeactive("ogin");
+        TemplateService.header = 'views/headertext.html';
+     $scope.title = "login";
+       TemplateService.content = 'views/login.html';
+        TemplateService.title = "Login";
+   $scope.navigation = NavigationService.getnav();
+
+    }
+);
+
+
+phonecatControllers.controller('register',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+         $scope.menutitle = NavigationService.makeactive("register");
+        TemplateService.header = 'views/headertext.html';
+     $scope.title = "register";
+       TemplateService.content = 'views/register.html';
+        TemplateService.title = "Register";
+   $scope.navigation = NavigationService.getnav();
+
+    }
+);
+
+
+
+
+
+
 phonecatControllers.controller('thankyou',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -172,6 +211,7 @@ phonecatControllers.controller('thankyou',
 
     }
 );
+
 
 
 
