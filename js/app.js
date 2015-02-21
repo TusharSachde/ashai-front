@@ -86,9 +86,5 @@ firstapp.config(['$routeProvider',
             redirectTo: '/home'
         });
       
-      
-      
-      
-      
-      
+    
   }]);

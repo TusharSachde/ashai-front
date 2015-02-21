@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="firstapp">
 
 <head ng-controller="headerctrl">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title ng-bind="'Power for one - '+template.title">Power for one</title>
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -13,9 +14,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="lib/js/jquery-1.11.1.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
     <script src="lib/js/angular.min.js"></script>
     <!--<script src="lib/js/angular-animate.js"></script>-->
+    
     <script src="lib/js/angular-route.min.js"></script>
     <!--<script src="lib/js/angular-resource.min.js"></script>-->
 
@@ -26,22 +30,16 @@
     <script src="js/controllers.js"></script>
     <script src="js/templateservice.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/sliderdirective.js"></script>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="js/jquery.zaccordion.js"></script>
-    
-     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
-    <script src="example.js"></script>
-
-
 </head>
 
 <body>
-
-
     <div class="repeated-item" ng-view></div>
+</body>
 
 
 </html>
