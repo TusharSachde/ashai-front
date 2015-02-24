@@ -1116,7 +1116,6 @@ input[type="radio"]:checked {
     height: 42px;
 }
 ul.list-inline p {
-    width: 210px;
     text-align: center;
 }
 .form-horizontal select {

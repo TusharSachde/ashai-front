@@ -28,12 +28,10 @@
 
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <div class="logo2">
-                                        <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu" ng-show=""></ul>
-                                        
-                                        <ul class="nav navbar-nav nav-power thin text-center" ng-hide="">
-                                            <li><a href="#"><img src="images/donate123.png">&nbsp; Donate</a></li>
-                                            <li><a href="#"><img src="images/share123.png">&nbsp; Donate with share</a></li>
-                                            <li><a href="#"> {{scroll}}</a></li>
+                                        <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu" ng-hide="scrolled > greatHeight"></ul>                           
+                                        <ul class="nav navbar-nav nav-power thin text-center inliner" ng-show="scrolled > greatHeight">
+                                            <li><img src="images/donate123.png"><a ng-click="gotoElement('atdonate')">&nbsp; Donate</a></li>
+                                            <li><img src="images/share123.png"><a ng-click="gotoElement('atshare')">&nbsp; Donate with share</a></li>
                                         </ul>
                                     </div>
                                 </div>

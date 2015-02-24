@@ -1,4 +1,4 @@
-var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap','MyApp']);
+var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp']);
 
 phonecatControllers.controller('home',
     function($scope, TemplateService, NavigationService) {
@@ -87,7 +87,7 @@ phonecatControllers.controller('Explore',
 );
 
 phonecatControllers.controller('campaign',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $window, $location, $anchorScroll, anchorSmoothScroll) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Campaign");
         $scope.title = "Campaign";
@@ -95,9 +95,22 @@ phonecatControllers.controller('campaign',
         TemplateService.header = 'views/HeaderCampaign.html';
         TemplateService.title = "Campaign";
         $scope.navigation = NavigationService.getnav();
-        $scope.scroll = 0;
+
+        angular.element($window).bind("scroll", function() {
+            $scope.scrolled = this.pageYOffset;
+            $scope.greatHeight = angular.element('.sliderheadercampaign').height() - angular.element('.headerzindex').height();
+            $scope.$apply();
+        });
+
+        $scope.gotoElement = function(id) {
+            $location.hash(id);
+            //            $anchorScroll();
+            anchorSmoothScroll.scrollTo(id);
+        }
+
     }
 );
+
 phonecatControllers.controller('myprofile',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;

@@ -44,21 +44,38 @@
 @color: #99801a;
 @gray: #b2b2b2;
 @teal: #05c7c7;
+@hoverteal: #32C7C7;
 @ListTxt: @teal;
 @font-size: 12px;
-@font-body: 'Gotham',sans-serif;
-@font-satisfy: 'Satisfy',sans-serif;
-@font-hello: 'Hello Goodbye',sans-serif;
+@font-body: 'Gotham', sans-serif;
+@font-satisfy: 'Satisfy', sans-serif;
+@font-hello: 'Hello Goodbye', sans-serif;
 @width: 6%;
-@border: 4px solid @teal;
+@border: 4px solid@teal;
 @line-height: 180%;
 
 .transition { transition: all 300ms ease; }
 
-body {
-    a { .transition(); }
+button { outline: 0 !important; }
 
-    a:hover { text-decoration: none!important; }
+body {
+    a {
+        color: @teal;
+        .transition();
+    }
+
+    a:hover {
+        text-decoration: none!important;
+        color: @hoverteal;
+    }
+
+    a:focus {
+        text-decoration: none!important;
+        color: inherit;
+        outline: 0;
+    }
+
+    input:focus { outline: 0; }
 
     margin: auto;
 
@@ -679,11 +696,10 @@ body {
 }
 
 .btn-dark:hover {
-    background: rgba(0, 0, 0, 1);
+    background: @teal;
     color: white;
     font-weight: 300;
     padding: 10px 15px;
-    color: @teal;
 }
 
 .nav > li > a:after {
@@ -760,7 +776,7 @@ footer { font-size: @font-size; }
     left: 0;
     top: 0px;
     background: rgba(0, 0, 0, 0.5);
-    border-top: 5px solid @teal;
+    border-top: 5px solid@teal;
 }
 
 .head-hold { height: 87px; }
@@ -1013,45 +1029,28 @@ a.explorep {
 }
 
 //thankyou Page
-a.fb {
-    background: #2152a8;
+a.socio-btn {
     color: white;
     font-weight: 400;
     text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
+    padding: 10px 20px 8px;
     border-radius: 3px;
-    box-shadow: 0px 4px 2px #173e83;
+    text-align: center;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
 
-a.twit {
-    background: #51dbff;
+a.socio-btn:hover {
     color: white;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
-    border-radius: 3px;
-    box-shadow: 0px 4px 2px #3cb2da;
+    border-width: 4px;
 }
 
-a.goog {
-    background: #cb0f00;
-    color: white;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
-    border-radius: 3px;
-    box-shadow: 0px 4px 2px #a90200;
-}
+a.fb { background: #2152a8; }
 
-a.pin {
-    background: #df0000;
-    color: white;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
-    border-radius: 3px;
-    box-shadow: 0px 4px 2px #b30000;
-}
+a.twit { background: #51dbff; }
+
+a.goog { background: #cb0f00; }
+
+a.pin { background: #df0000; }
 
 .story {
     background: #ffc926;
@@ -1094,12 +1093,6 @@ h5.nxtcont {
     line-height: 31px;
 }
 
-.social {
-    text-align: center;
-    /* line-height: 82px; */
-    margin-top: 40px;
-    margin-bottom: 19px;
-}
 
 .nxt {
     background: #00d9d9;
@@ -1112,45 +1105,8 @@ h5.nxtcont {
 //thankyou Page
 .social {
     text-align: center;
-    /* line-height: 82px; */
-    margin-top: 40px;
-    margin-bottom: 19px;
-}
-
-a.fb {
-    background: #2152a8;
-    color: white;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
-    border-radius: 3px;
-}
-
-a.twit {
-    background: #51dbff;
-    color: white;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
-    border-radius: 3px;
-}
-
-a.goog {
-    background: #cb0f00;
-    color: white;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
-    border-radius: 3px;
-}
-
-a.pin {
-    background: #df0000;
-    color: white;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 10px 13px 11px 8px;
-    border-radius: 3px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .dear {
@@ -1175,10 +1131,10 @@ span.dear2 {
 }
 
 ol.nxt1cont {
-    font-weight: 800;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 31px;
-    margin: 12px 12px 12px 12px;
+    margin: 12px;
 }
 
 .next1:after {
@@ -1200,11 +1156,12 @@ ol.nxt1cont {
 
 .next1 {
     background: #00d9d9;
-    padding: 5PX 0px 5px 0px;
+    padding: 5PX 0px;
     text-align: center;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     position: relative;
+    text-transform: uppercase;
 }
 
 .story91:after {
@@ -1229,7 +1186,7 @@ ol.nxt1cont {
     padding: 5PX 0px 5px 0px;
     text-align: center;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     position: relative;
 }
 
@@ -1244,14 +1201,14 @@ ol.nxt1cont {
 }
 
 h3.createtitle {
-    font-family: latoregular,Arial,sans-serif;
+    font-family: latoregular, Arial, sans-serif;
     margin-top: -7px;
     font-size: 24px;
     line-height: 1.1;
 }
 
 h5.createcont {
-    font-family: latoregular,Arial,sans-serif;
+    font-family: latoregular, Arial, sans-serif;
     font-size: 12px;
     margin-bottom: 40px;
 }
@@ -1261,7 +1218,7 @@ h5.createcont {
     padding-right: 75px;
     margin-right: 60px;
     position: relative;
-    background: url(../images/or.png) center right no-repeat;
+    background: url(../images/or.png) top right no-repeat;
 }
 
 input.custom-input.signin-input {
@@ -1276,12 +1233,13 @@ input.custom-input.signin-input {
     padding: 2px 10px;
 }
 
+a.createacc:hover { background-color: @hoverteal; }
+
 a.createacc {
     background: #4cd8d8;
     color: white;
-    font-weight: 400;
     text-transform: capitalize;
-    padding: 14px 00px;
+    padding: 14px 0px;
     border-radius: 0px;
     display: block;
     width: 100%;
@@ -1291,16 +1249,26 @@ a.createacc {
     text-align: center;
 }
 
-a.btngoogle {
+.btnsoc {
     font-size: 16px;
-    padding: 15px;
+    padding: 15px 0 13px;
     color: #fff;
-    margin-top: 149px;
-    background-color: #dd4d3b;
-    padding-right: 83px;
+    margin-top: 0;
+    width: 100%;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    display: block;
+    text-align: center;
 }
 
-.gogbtn { margin: 116px 10px 10px 117px; }
+.gplus { background-color: #dd4d3b; }
+
+.fbook { background-color: #2152a8; }
+
+.gogbtn>.btnsoc+.btnsoc { margin: 10px 0 0; }
+
+a.createacc:hover, .gogbtn a:hover { color: white; }
+
+.gogbtn { margin: 15% 0 0; }
 
 a.forgetlink {
     margin-top: 10px;
@@ -1313,7 +1281,7 @@ p.already {
     margin-top: 10px;
     padding: 00px 45px 00px -18px;
     font-size: 12px;
-    font-family: latoregular,Arial,sans-serif;
+    font-family: latoregular, Arial, sans-serif;
 }
 
 .border1 { border-top: 1px solid #eaedef; }
@@ -1333,3 +1301,8 @@ p.pull-right.abc { margin-top: -27px; }
 
 //gallery
 #video { width: 100%; }
+
+.margin-top { margin-top: 10px; }
+
+.e-vouchers img+img { margin-left: 10px; }
+.inliner a {display: inline-block !important;cursor: pointer;}
