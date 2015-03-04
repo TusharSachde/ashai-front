@@ -1224,6 +1224,10 @@ textarea.custom-input.signin-input {
   width: 50%;
   margin: 0 auto;
 }
+.checkbox label,
+.radio label {
+  font-weight: 300;
+}
 a.createacc:hover {
   background-color: #32c7c7;
 }
