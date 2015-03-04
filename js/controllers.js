@@ -200,6 +200,19 @@ phonecatControllers.controller('register',
     }
 );
 
+phonecatControllers.controller('checkout',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        $scope.menutitle = NavigationService.makeactive("checkout");
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "checkout";
+        TemplateService.content = 'views/checkout.html';
+        TemplateService.title = "Checkout";
+        $scope.navigation = NavigationService.getnav();
+
+    }
+);
+
 phonecatControllers.controller('thankyou',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;

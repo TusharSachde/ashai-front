@@ -343,7 +343,7 @@ body {
     //    campaign1
     .cont52 {
         font-size: 14px;
-        color: #b2b2b2;
+        color: #605555;
         margin: 35px 0 0;
         line-height: 180%;
     }
@@ -496,10 +496,38 @@ body {
     .donation {
         .form-control {
             display: inline-block;
-            width: 50%;
+            width: 48%;
             height: 34px;
             border-radius: 0px;
             margin-right: 0px;
+        }
+        .form-control:focus{
+            border:0px;
+            webkit-box-shadow:none;
+            box-shadow:none;
+            border-color: transparent;
+outline: 0;
+        }
+        .selectbg{
+            background: rgb(249, 249, 249);
+            border: 2px solid rgb(136, 130, 130);
+            margin-left:-5px;
+        }
+        
+        .input-group{
+            margin-left:14px;
+        }
+        .input-group-addon{
+            background-color: #F9F9F9;
+            border: 2px solid #888282;
+            border-radius: 0px;
+            padding:3px;
+        }
+        .bdr-right{
+            border-right:transparent!important;
+        }
+        .bdr-left{
+            border-left:transparent!important;
         }
 
         .btn {
@@ -530,8 +558,9 @@ body {
 
         .causes {
             margin: 15px;
-            padding: 12px;
+            padding: 12px 12px 0 12px;
             border: 1px solid lightgray;
+            
 
             .pic img {
                 margin: auto;
@@ -561,9 +590,8 @@ body {
                         border-color: #a3d900;
                         border-radius: 30px;
                         height: 60px;
-                        margin-top: 5px;
+                        margin: 5px auto 0 auto;
                         width: 60px;
-                        margin-left: 13%;
                     }
 
                     .txt2 {
@@ -585,7 +613,7 @@ body {
         .author {
             margin: 3% 4%;
             float: right;
-
+    
             .cont52 {
                 font-size: 14px;
                 color: @gray;
@@ -593,7 +621,11 @@ body {
                 line-height: @line-height;
             }
         }
+        
     }
+    .authorbg{
+            background: #D5D6D7!important;
+        }
 
     //    end
     .thunderheart {
@@ -922,16 +954,16 @@ body a:hover { text-decoration: none; }
 .oneround {
     background: @teal;
     color: white;
-    height: 32px;
-    line-height: 32px;
-    width: 32px;
+    height: 50px;
+    line-height: 49px;
+    width: 50px;
     border-radius: 100%;
     font-family: @font-hello;
     font-size: 25px;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-37%);
 }
 
 .box {
@@ -1220,7 +1252,14 @@ h5.createcont {
     position: relative;
     background: url(../images/or.png) top right no-repeat;
 }
-
+.worksor{
+position: absolute;
+height: 170px;
+width: 20px;
+top: 50px;
+right: -8px;
+background: url(http://localhost/angular-powerforone/images/or.png) top right no-repeat;
+}
 input.custom-input.signin-input {
     width: 100%;
     background: #fafafa;

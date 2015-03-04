@@ -35,6 +35,11 @@ firstapp.config(['$routeProvider',
             controller: 'register'
         }).
         
+        when('/checkout', {
+            templateUrl: 'views/template.html',
+            controller: 'checkout'
+        }).
+        
         
         
          when('/workwithus', {
