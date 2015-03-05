@@ -73,7 +73,7 @@ ul.pagecategory {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -moz-box;
-   
+   margin-bottom:0px;
     text-align: center;
 }
 
@@ -90,7 +90,7 @@ ul.pagecategory {
     color:black;
 }
 .pagecategory li{
-    padding:10px 5px;
+    padding:10px 6px;
     margin:0 1px;
 }
 .pagecategory li.active,
@@ -98,7 +98,7 @@ ul.pagecategory {
     color: black;
     background: #05c7c7;
     margin:0 1px;
-    padding:10px 5px;
+    padding:10px 6px;
 border-radius: 3px;
 }
 .pagecategory li:hover a{
