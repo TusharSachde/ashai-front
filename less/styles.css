@@ -659,6 +659,9 @@ body .head-on h3 {
 body .thunderheart .list-inline {
   display: flex;
 }
+body .thunderheart .list-inline li {
+  flex: 1;
+}
 body .pic {
   margin: -12px -12px 0;
   position: relative;
