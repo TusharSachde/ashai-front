@@ -50,6 +50,9 @@ p.NGOName {
 .list-inline a {
     color: #858585;
 }
+.list-inline .active a{
+    color:black;
+}
 .cat-heart {
     background: url(../images/category.png) no-repeat;
     height: 27px;
@@ -70,14 +73,11 @@ ul.pagecategory {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -moz-box;
-    display: flex;
+   
     text-align: center;
 }
-.pagecategory li {
-    padding: 15px 10px 3px;
-}
+
 .pagecategory a {
-    padding: 15px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -86,15 +86,27 @@ ul.pagecategory {
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
 }
-.pagecategory .active a,
-.pagecategory li:hover a {
+.pagecategory li a:hover{
+    color:black;
+}
+.pagecategory li{
+    padding:10px 5px;
+    margin:0 1px;
+}
+.pagecategory li.active,
+.pagecategory li:hover{
     color: black;
     background: #05c7c7;
+    margin:0 1px;
+    padding:10px 5px;
+border-radius: 3px;
+}
+.pagecategory li:hover a{
+    color: black;
 }
 .contentexplorestuck li {} .contentexplorestuck {
     background: #f9f9f9;
-    border-bottom: 1px solid #efefef;
-    position: fixed;
+    padding:5px 0;
     width: 100%;
     z-index: 99;
 }
@@ -467,7 +479,7 @@ span.icon.fa.fa-check.pull-right {
 }
 .donation input.form-control {
     background: #f9f9f9;
-    border: 2px solid rgb(136, 130, 130);
+    
 }
 .donation .btn {
     margin-top: 0px !important;
@@ -573,7 +585,7 @@ p.viewAll {
     margin: 0px 0px 0px 0px;
 }
 .row.mainCause {
-    margin: 7% 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 p.Paraabout {
     padding: 15px 0px 15px 0px;
@@ -681,7 +693,7 @@ ul.mypro {
     font-size: -10px;
 }
 .info p {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
 }
 p.Funded {
@@ -832,7 +844,35 @@ select.recurring {
 .img1 p {
    
     text-transform: uppercase;
+    font-size: 10px;
+}
+.leftcirle
+{
+    left:-14px;
+}
+.vrline{
+    height:80px;
+    width:5px;
+    position: absolute;
+    top: 50px;
+    right: -8px;
+    border-left: 1px solid black;
+}
+.vrline1{
+    height:80px;
+    width:5px;
+    position: absolute;
+    top:73%;
+    right: -8px;
+    border-left: 1px solid black;
+}
+.vrcircle
+{
+    position: absolute;
+    top: 60%;
     font-size: 12px;
+    padding:2px;
+    right: -16px;
 }
 label.anonynimous {
     margin-top: 0px;
@@ -863,7 +903,9 @@ span.shares {
     font-weight: normal;
 }
 .donation {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 10px 23px;
+    width: 85%;
+    
 }
 .check h5 {
     font-weight: 300;
@@ -1373,13 +1415,65 @@ p.or {
     background: url("../images/caticons-w.png") no-repeat;
     display: inline-block;
 }
-.caticons.black {
+.caticonsb{
     background: url("../images/caticons-b.png") no-repeat;
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    -o-transform: scale(0.6);
-    transform: scale(0.6);
+    display: inline-block;
+}
+.caticonsb.black {
+    
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    transform: scale(0.4);
+}
+.b-educa
+{
+    height: 26px;
+    width: 30px;
+    vertical-align: middle!important;
+    background-position: -1px 1px;
+}
+.b-child{
+     height: 26px;
+    width: 30px;
+    vertical-align: middle!important;
+    background-position: -1px -84px;
+}
+.b-emplo{
+    height: 26px;
+    width: 30px;
+    vertical-align: middle!important;
+    background-position: -1px -166px;
+}
+.b-enivr{
+     height: 26px;
+    width: 30px;
+    vertical-align: middle!important;
+    background-position: -1px -111px;
+}
+.b-healt{
+    height: 26px;
+    width: 30px;
+    vertical-align: middle!important;
+    background-position: -1px -28px;
+}
+.b-welfa{
+    height: 26px;
+    width: 30px;
+    vertical-align: middle!important;
+    background-position: -1px -140px;
+}
+.b-women{
+    height: 26px;
+    width: 30px;
+    vertical-align: middle!important;
+    background-position: -1px -56px;
+}
+.cathrt
+{
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 .educa {
     height: 50px;
@@ -1424,14 +1518,17 @@ background-position: -1px -325px;
 }
 .helpbox
 {
-    width: 70%;
-margin: 95px auto 10px auto;
 background: #E5E1E1;
 padding: 10px;
-    box-shadow: 2px 2px 2px 2px grey;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.64);
+    margin:10px 0;
 }
 .give-btn{
-    background: rgb(77, 213, 232);
-    margin:0 15px;
-    border:2px solid rgb(136, 130, 130);
+    background: #65c6bb;
+    margin:0 12px 0 14px;
+    border:2px solid #575757;
+    border-top:0px;
+}
+.pos{
+    position: relative;
 }
