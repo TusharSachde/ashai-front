@@ -90,16 +90,19 @@ ul.pagecategory {
     color:black;
 }
 .pagecategory li{
+    flex:1;
     padding:10px 7px;
     margin:0 1px;
 }
 .pagecategory li.active,
 .pagecategory li:hover{
+/*
     color: black;
     background: #05c7c7;
     margin:0 1px;
     padding:10px 7px;
 border-radius: 3px;
+*/
 }
 .pagecategory li:hover a{
     color: black;
@@ -110,6 +113,7 @@ border-radius: 3px;
     width: 100%;
     z-index: 99;
     position:fixed;
+    left:0;
 }
 .connectfacebook {
     position: relative;
@@ -640,7 +644,7 @@ h2.commingsoon {
 }
 .exp-fixhead
 {
-    height: 65px;
+    height: 100px;
 }
 .exploreheader.ng-scope {
     height: 60px;
@@ -1426,52 +1430,52 @@ p.or {
 }
 .caticonsb.black {
     
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    -ms-transform: scale(0.4);
-    -o-transform: scale(0.4);
-    transform: scale(0.4);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
 }
 .b-educa
 {
-    height: 26px;
-    width: 30px;
+    height: 27px;
+    width: 28px;
     vertical-align: middle!important;
     background-position: -1px 1px;
 }
 .b-child{
-     height: 26px;
-    width: 30px;
+     height: 28px;
+    width: 29px;
     vertical-align: middle!important;
     background-position: -1px -84px;
 }
 .b-emplo{
-    height: 26px;
-    width: 30px;
+    height: 24px;
+    width: 28px;
     vertical-align: middle!important;
-    background-position: -1px -166px;
+    background-position: -1px -167px;
 }
 .b-enivr{
-     height: 26px;
-    width: 30px;
+     height: 27px;
+    width: 29px;
     vertical-align: middle!important;
-    background-position: -1px -111px;
+    background-position: -1px -112px;
 }
 .b-healt{
-    height: 26px;
+    height: 30px;
     width: 30px;
     vertical-align: middle!important;
     background-position: -1px -28px;
 }
 .b-welfa{
-    height: 26px;
+    height: 30px;
     width: 30px;
     vertical-align: middle!important;
-    background-position: -1px -140px;
+    background-position: -1px -138px;
 }
 .b-women{
-    height: 26px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     vertical-align: middle!important;
     background-position: -1px -56px;
 }
@@ -1536,4 +1540,15 @@ padding: 10px;
 }
 .pos{
     position: relative;
+}
+.exp-menus
+{
+    color: black;
+background: #05c7c7;
+margin: 0 1px;
+padding: 10px 7px;
+border-radius: 3px;
+    display:none;
+    position: absolute;
+/*    opacity: 0;*/
 }

@@ -1,4 +1,5 @@
    <div class="contentexplorestuck">
+   <div class="container">
     <ul class="list-inline pagecategory">
         <li class="active" style="margin-left:15px">
            <a href="#">
@@ -6,48 +7,50 @@
            All
             </a>
         </li>
-        <li>
+        <li class="education">
             <a href="#">
-                <i class="b-educa caticonsb"></i>Education
+                <i class="b-educa caticonsb"></i>
+                <div class="edu exp-menus">Education</div>
             </a>
         </li>
-        <li>
+        <li class="child-welfare">
            <a href="#">
             <i class="b-child caticonsb"></i>
-                Child Welfare
+                <div class="cw exp-menus">Child Welfare</div>
             </a>
         </li>
-        <li>
+        <li class="employment">
               <a href="#">
                <i class="b-emplo caticonsb"></i>
-                Employment
+                <div class="emp exp-menus">Employment</div>
                 </a>
         </li>
-        <li>
+        <li class="envt-animal">
            <a href="#">
                 <i class="b-enivr caticonsb"></i>
-                Environment and Animal Welfare
+                <div class="ena exp-menus">Environment and Animal Welfare</div>
             </a>
         </li>
-        <li>
+        <li class="health">
            <a href="#">
                 <i class="b-healt caticonsb"></i>
-                Health and Sanitation
+                <div class="hns exp-menus">Health and Sanitation</div>
             </a>
         </li>
-        <li>
+        <li class="elderly">
            <a href="#">
                 <i class="b-welfa caticonsb"></i>
-                Welfare of the Elderly
+                <div class="woe exp-menus">Welfare of the Elderly</div>
             </a>
         </li>
-        <li>
+        <li class="woman">
            <a href="#">
                 <i class="b-women caticonsb"></i>
-                Woman Empowerment
+                <div class="we exp-menus">Woman Empowerment</div>
             </a>
         </li>
     </ul>
+    </div>
 </div>
 <div class="exp-fixhead"></div>
 
@@ -144,3 +147,35 @@
         </div>
     </div>
 
+<script>
+    $( document ).ready(function() {
+            $('.pagecategory .education').mouseover(function() { 
+               $('.edu').show();
+            }).mouseleave(function() {$('.edu').hide()});
+            
+        $('.pagecategory .child-welfare').mouseover(function() { 
+               $('.cw').show();
+            }).mouseleave(function() {$('.cw').hide()});
+       
+        $('.pagecategory .employment').mouseover(function() { 
+               $('.emp').show();
+            }).mouseleave(function() {$('.emp').hide()});
+       
+        $('.pagecategory .envt-animal').mouseover(function() { 
+               $('.ena').show();
+            }).mouseleave(function() {$('.ena').hide()});
+       
+        $('.pagecategory .health').mouseover(function() { 
+               $('.hns').show();
+            }).mouseleave(function() {$('.hns').hide()});
+      
+        $('.pagecategory .elderly').mouseover(function() { 
+               $('.woe').show();
+            }).mouseleave(function() {$('.woe').hide()});
+                
+        $('.pagecategory .woman').mouseover(function() { 
+               $('.we').show();
+            }).mouseleave(function() {$('.we').hide()});
+        
+            });
+</script>
