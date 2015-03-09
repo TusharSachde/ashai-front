@@ -69,11 +69,6 @@ p.NGOName {
     background-position: 0px;
 }
 ul.pagecategory {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: -moz-box;
-    display: flex;
     margin-bottom: 0px;
     text-align: center;
 }
@@ -90,10 +85,7 @@ ul.pagecategory {
     color: black;
 }
 .pagecategory li {
-    flex: 1;
-    -moz-box-flex: 1;
-    -webkit-box-flex: 1;
-    width:20%;
+    width: 20%;
     padding: 10px 7px;
     margin: 0 1px;
     position: relative;
@@ -914,6 +906,14 @@ h5.keepit {
     margin: -16px 0px 0px 22px;
 }
 .sliderside {
+    width: 100%;
+    overflow-x: hidden;
+}
+/*allflex*/
+
+.sliderside,
+ul.pagecategory,
+.thunderheart .list-inline {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
     /* OLD - Firefox 19- (buggy but mostly works) */
@@ -926,9 +926,21 @@ h5.keepit {
     display: -ms-inline-flexbox;
     display: -moz-inline-box;
     display: inline-flex;
-    width: 100%;
-    overflow-x: hidden;
+    width: 100%
 }
+.flexside,
+ul.pagecategory>li,
+.thunderheart .list-inline li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -webkit-flex: 1;
+    /* Safari 6.1+ */
+    -ms-flex: 1;
+    -moz-box-flex: 1;
+    flex: 1;
+}
+/*allflex*/
+
 .flexside img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -948,13 +960,6 @@ h5.keepit {
     padding-left: 1px;
 }
 .flexside {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -webkit-flex: 1;
-    /* Safari 6.1+ */
-    -ms-flex: 1;
-    -moz-box-flex: 1;
-    flex: 1;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
@@ -1515,6 +1520,8 @@ p.or {
 .helpbox {
     background: #E5E1E1;
     padding: 10px;
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.64);
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.64);
     margin: 10px 0;
 }
@@ -1532,11 +1539,17 @@ p.or {
     background: #05c7c7;
     margin: 0 1px;
     padding: 10px 7px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
     display: none;
     position: absolute;
     left: 50%;
     width: 100%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     margin-top: 10px;
 }
@@ -1549,5 +1562,9 @@ p.or {
     position: absolute;
     top: -9px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
