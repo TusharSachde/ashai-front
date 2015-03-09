@@ -73,6 +73,8 @@ ul.pagecategory {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -moz-box;
+    display: flex;
+   
    margin-bottom:0px;
     text-align: center;
 }
@@ -91,18 +93,14 @@ ul.pagecategory {
 }
 .pagecategory li{
     flex:1;
+    -moz-box-flex: 1; 
+    -webkit-box-flex: 1;
     padding:10px 7px;
     margin:0 1px;
+    position:relative;
 }
-.pagecategory li.active,
-.pagecategory li:hover{
-/*
-    color: black;
-    background: #05c7c7;
-    margin:0 1px;
-    padding:10px 7px;
-border-radius: 3px;
-*/
+.pagecategory li:hover .exp-menus {
+    display: block;
 }
 .pagecategory li:hover a{
     color: black;
@@ -1550,5 +1548,19 @@ padding: 10px 7px;
 border-radius: 3px;
     display:none;
     position: absolute;
-/*    opacity: 0;*/
+left: 50%;
+width: 100%;
+transform: translateX(-50%);
+margin-top: 10px;
+}
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #05c7c7;
+    position: absolute;
+top: -9px;
+    left: 50%;
+transform: translateX(-50%);
 }
