@@ -455,6 +455,7 @@ body .LeftCont .t1 {
   color: #05c7c7;
   font-weight: normal;
   font-size: 12px;
+  padding: 0 10px;
 }
 body .LeftCont .icon1 {
   margin: 20px;
@@ -596,7 +597,7 @@ body .bottom1 .author .cont52 {
   line-height: 180%;
 }
 body .authorbg {
-  background: #D5D6D7!important;
+  background: #F4F4F4 !important;
 }
 body .thunderheart p {
   margin-top: 25px;
@@ -999,7 +1000,7 @@ body a:hover {
 }
 .box {
   margin-bottom: 32px;
-  height: 280px;
+  height: 315px;
 }
 h1.esy {
   font-size: 55px;
