@@ -176,7 +176,7 @@ phonecatControllers.controller('Contactus',
 phonecatControllers.controller('login',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
-        $scope.menutitle = NavigationService.makeactive("ogin");
+        $scope.menutitle = NavigationService.makeactive("login");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "login";
         TemplateService.content = 'views/login.html';
