@@ -50,8 +50,8 @@ p.NGOName {
 .list-inline a {
     color: #858585;
 }
-.list-inline .active a{
-    color:black;
+.list-inline .active a {
+    color: black;
 }
 .cat-heart {
     background: url(../images/category.png) no-repeat;
@@ -74,11 +74,9 @@ ul.pagecategory {
     display: -ms-flexbox;
     display: -moz-box;
     display: flex;
-   
-   margin-bottom:0px;
+    margin-bottom: 0px;
     text-align: center;
 }
-
 .pagecategory a {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -88,30 +86,31 @@ ul.pagecategory {
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
 }
-.pagecategory li a:hover{
-    color:black;
+.pagecategory li a:hover {
+    color: black;
 }
-.pagecategory li{
-    flex:1;
-    -moz-box-flex: 1; 
+.pagecategory li {
+    flex: 1;
+    -moz-box-flex: 1;
     -webkit-box-flex: 1;
-    padding:10px 7px;
-    margin:0 1px;
-    position:relative;
+    width:20%;
+    padding: 10px 7px;
+    margin: 0 1px;
+    position: relative;
 }
 .pagecategory li:hover .exp-menus {
     display: block;
 }
-.pagecategory li:hover a{
+.pagecategory li:hover a {
     color: black;
 }
 .contentexplorestuck li {} .contentexplorestuck {
     background: #f9f9f9;
-    padding:5px 0;
+    padding: 5px 0;
     width: 100%;
     z-index: 99;
-    position:fixed;
-    left:0;
+    position: fixed;
+    left: 0;
 }
 .connectfacebook {
     position: relative;
@@ -199,7 +198,6 @@ ul.pagecategory {
     height: 60px;
     margin-top: 11px;
     width: 60px;
-   
 }
 .causes .info .elements .txt2 {
     font-weight: bold;
@@ -482,7 +480,6 @@ span.icon.fa.fa-check.pull-right {
 }
 .donation input.form-control {
     background: #f9f9f9;
-    
 }
 .donation .btn {
     margin-top: 0px !important;
@@ -640,8 +637,7 @@ h2.commingsoon {
 .fixhead {
     height: 88px;
 }
-.exp-fixhead
-{
+.exp-fixhead {
     height: 100px;
 }
 .exploreheader.ng-scope {
@@ -849,36 +845,33 @@ select.recurring {
     margin: auto;
 }
 .img1 p {
-   
     text-transform: uppercase;
     font-size: 10px;
 }
-.leftcirle
-{
-    left:-14px;
+.leftcirle {
+    left: -14px;
 }
-.vrline{
-    height:80px;
-    width:5px;
+.vrline {
+    height: 80px;
+    width: 5px;
     position: absolute;
     top: 50px;
     right: -8px;
     border-left: 1px solid black;
 }
-.vrline1{
-    height:80px;
-    width:5px;
+.vrline1 {
+    height: 80px;
+    width: 5px;
     position: absolute;
-    top:73%;
+    top: 73%;
     right: -8px;
     border-left: 1px solid black;
 }
-.vrcircle
-{
+.vrcircle {
     position: absolute;
     top: 60%;
     font-size: 12px;
-    padding:2px;
+    padding: 2px;
     right: -16px;
 }
 label.anonynimous {
@@ -912,7 +905,6 @@ span.shares {
 .donation {
     margin: 0px 0px 10px 23px;
     width: 85%;
-    
 }
 .check h5 {
     font-weight: 300;
@@ -1422,63 +1414,60 @@ p.or {
     background: url("../images/caticons-w.png") no-repeat;
     display: inline-block;
 }
-.caticonsb{
+.caticonsb {
     background: url("../images/caticons-b.png") no-repeat;
     display: inline-block;
 }
 .caticonsb.black {
-    
     -webkit-transform: scale(0.6);
     -moz-transform: scale(0.6);
     -ms-transform: scale(0.6);
     -o-transform: scale(0.6);
     transform: scale(0.6);
 }
-.b-educa
-{
+.b-educa {
     height: 27px;
     width: 28px;
     vertical-align: middle!important;
     background-position: -1px 1px;
 }
-.b-child{
-     height: 28px;
+.b-child {
+    height: 28px;
     width: 29px;
     vertical-align: middle!important;
     background-position: -1px -84px;
 }
-.b-emplo{
+.b-emplo {
     height: 24px;
     width: 28px;
     vertical-align: middle!important;
     background-position: -1px -167px;
 }
-.b-enivr{
-     height: 27px;
+.b-enivr {
+    height: 27px;
     width: 29px;
     vertical-align: middle!important;
     background-position: -1px -112px;
 }
-.b-healt{
+.b-healt {
     height: 30px;
     width: 30px;
     vertical-align: middle!important;
     background-position: -1px -28px;
 }
-.b-welfa{
+.b-welfa {
     height: 30px;
     width: 30px;
     vertical-align: middle!important;
     background-position: -1px -138px;
 }
-.b-women{
+.b-women {
     height: 25px;
     width: 25px;
     vertical-align: middle!important;
     background-position: -1px -56px;
 }
-.cathrt
-{
+.cathrt {
     margin-top: 15px;
     margin-bottom: 5px;
 }
@@ -1512,55 +1501,53 @@ p.or {
     width: 58px;
     background-position: -1px -106px;
 }
-.emplo{
-height: 52px;
-width: 58px;
-background-position: -1px -325px;
+.emplo {
+    height: 52px;
+    width: 58px;
+    background-position: -1px -325px;
 }
-.mt5{
+.mt5 {
     margin-top: 20px;
 }
 .relativetxt i+p {
     margin-top: 16px;
 }
-.helpbox
-{
-background: #E5E1E1;
-padding: 10px;
+.helpbox {
+    background: #E5E1E1;
+    padding: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.64);
-    margin:10px 0;
+    margin: 10px 0;
 }
-.give-btn{
+.give-btn {
     background: #65c6bb;
-    margin:0 12px 0 14px;
-    border:2px solid #575757;
-    border-top:0px;
+    margin: 0 12px 0 14px;
+    border: 2px solid #575757;
+    border-top: 0px;
 }
-.pos{
+.pos {
     position: relative;
 }
-.exp-menus
-{
+.exp-menus {
     color: black;
-background: #05c7c7;
-margin: 0 1px;
-padding: 10px 7px;
-border-radius: 3px;
-    display:none;
+    background: #05c7c7;
+    margin: 0 1px;
+    padding: 10px 7px;
+    border-radius: 3px;
+    display: none;
     position: absolute;
-left: 50%;
-width: 100%;
-transform: translateX(-50%);
-margin-top: 10px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    margin-top: 10px;
 }
 .arrow-up {
-	width: 0; 
-	height: 0; 
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid #05c7c7;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #05c7c7;
     position: absolute;
-top: -9px;
+    top: -9px;
     left: 50%;
-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
