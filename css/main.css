@@ -1328,12 +1328,7 @@ i.fa.fa-facebook-square.colorchnage {
 i.fa.fa-facebook-square.colorchnage:hover {
     color: grey;
 }
-.fa-facebook-square:before{
-    color: #4870A6!important;
-}
-.fa-twitter:before{
-    color: #00BBEF !important;
-}
+
 p.contributionimg {
     font-size: 52px;
     color: #05C7C7;
@@ -1618,8 +1613,23 @@ z-index: 999999;
     color: #00BBEF !important;
 }
 .list-unstyled .instagram a{
-    color: rgb(77, 65, 17) !important;
+   
 }
 .list-unstyled .linked a{
+    color: #007bb6 !important;
+}
+.fa-facebook-square:before{
+    color: #4870A6!important;
+}
+.fa-twitter:before{
+    color: #00BBEF !important;
+}
+.fa-pinterest:before{
+    color: #CB2027 !important;
+}
+.fa-instagram:before{
+     color: rgb(77, 65, 17) !important;
+}
+.fa-linkedin:before{
     color: #007bb6 !important;
 }
