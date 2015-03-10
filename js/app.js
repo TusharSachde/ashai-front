@@ -40,6 +40,10 @@ firstapp.config(['$routeProvider',
             controller: 'checkout'
         }).
         
+        when('/faq', {
+            templateUrl: 'views/template.html',
+            controller: 'faq'
+        }).
         
         
          when('/workwithus', {

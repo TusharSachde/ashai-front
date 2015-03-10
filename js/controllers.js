@@ -213,6 +213,19 @@ phonecatControllers.controller('checkout',
     }
 );
 
+phonecatControllers.controller('faq',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        $scope.menutitle = NavigationService.makeactive("faq");
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "faq";
+        TemplateService.content = 'views/faq.html';
+        TemplateService.title = "FAQ";
+        $scope.navigation = NavigationService.getnav();
+
+    }
+);
+
 phonecatControllers.controller('thankyou',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;

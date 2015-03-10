@@ -491,6 +491,7 @@ body .donation .selectbg {
   background: #f9f9f9;
   border: 2px solid #575757;
   margin-left: -5px;
+  -webkit-appearance: none;
 }
 body .donation .input-group {
   margin-left: 14px;
