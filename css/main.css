@@ -635,7 +635,7 @@ h2.commingsoon {
 .exploreheader.ng-scope {
     height: 60px;
 }
-.col-md-3.causehelped {
+.col-md-9.causehelped {
     color: #65c6bb;
 }
 .headerhome {
@@ -643,10 +643,10 @@ h2.commingsoon {
     opacity: 0.4;
     height: 500px;
 }
-.col-md-3.totaldonate {
+.col-md-9.totaldonate {
     color: #ffd65c;
 }
-.col-md-3.JoinedPfo {
+.col-md-9.JoinedPfo {
     color: #e0882f;
 }
 ul.mypro {
@@ -1052,7 +1052,7 @@ object.embed-responsive-item {
     color: #05c7c7;
     background: #fff;
 }
-.col-md-3.fontwt {
+.col-md-9.fontwt {
     font-weight: 500;
 }
 .form-horizontal textarea {
@@ -1328,6 +1328,12 @@ i.fa.fa-facebook-square.colorchnage {
 i.fa.fa-facebook-square.colorchnage:hover {
     color: grey;
 }
+.fa-facebook-square:before{
+    color: #4870A6!important;
+}
+.fa-twitter:before{
+    color: #00BBEF !important;
+}
 p.contributionimg {
     font-size: 52px;
     color: #05C7C7;
@@ -1594,7 +1600,7 @@ z-index: 999999;
     margin-top:5px;
 }
 .faqpg .holder {
-    border: 1px solid #eaedef;
+    border: 0px solid #eaedef;
     padding: 40px 40px 20px;
     background-color: #FFF;
     width: 885px;
