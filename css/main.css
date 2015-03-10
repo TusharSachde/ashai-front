@@ -1568,7 +1568,12 @@ content: "";
 pointer-events: none;
 z-index: 999999;
 }
-
+.causelnk a{
+    color:#333;
+}
+.causelnk a:hover{
+    color:#333;
+}
 .arrow-up {
     width: 0;
     height: 0;
