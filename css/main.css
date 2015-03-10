@@ -630,7 +630,7 @@ h2.commingsoon {
     height: 88px;
 }
 .exp-fixhead {
-    height: 100px;
+    height: 80px;
 }
 .exploreheader.ng-scope {
     height: 60px;
@@ -1020,7 +1020,7 @@ object.embed-responsive-item {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
     z-index: 1;
@@ -1230,7 +1230,7 @@ a.linked:hover {
     /* padding: 5px 0; */
 }
 .gallerytag {
-    margin: 15px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
 }
 .col-md-2.radanoyminous {
     margin: 0px 0px 0px 1px;
@@ -1432,43 +1432,43 @@ p.or {
 }
 .b-educa {
     height: 27px;
-    width: 28px;
+    width: 26px;
     vertical-align: middle!important;
     background-position: -1px 1px;
 }
 .b-child {
     height: 28px;
-    width: 29px;
+    width: 27px;
     vertical-align: middle!important;
     background-position: -1px -84px;
 }
 .b-emplo {
     height: 24px;
-    width: 28px;
+    width: 24px;
     vertical-align: middle!important;
     background-position: -1px -167px;
 }
 .b-enivr {
     height: 27px;
-    width: 29px;
+    width: 27px;
     vertical-align: middle!important;
     background-position: -1px -112px;
 }
 .b-healt {
     height: 30px;
-    width: 30px;
+    width: 26px;
     vertical-align: middle!important;
     background-position: -1px -28px;
 }
 .b-welfa {
     height: 30px;
-    width: 30px;
+    width: 24px;
     vertical-align: middle!important;
     background-position: -1px -138px;
 }
 .b-women {
     height: 25px;
-    width: 25px;
+    width: 24px;
     vertical-align: middle!important;
     background-position: -1px -56px;
 }
@@ -1589,6 +1589,10 @@ z-index: 999999;
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
+.pagecategory .txtall{
+    margin-left:15px;
+    margin-top:5px;
+}
 .faqpg .holder {
     border: 1px solid #eaedef;
     padding: 40px 40px 20px;
@@ -1596,4 +1600,20 @@ z-index: 999999;
     width: 885px;
     height: auto;
     margin: 0;
+}
+.list-unstyled .facebook a
+{
+    color: #4870A6 !important;
+}
+.list-unstyled .pinterest a{
+    color: #CB2027 !important;
+}
+.list-unstyled .twitter a{
+    color: #00BBEF !important;
+}
+.list-unstyled .instagram a{
+    color: rgb(77, 65, 17) !important;
+}
+.list-unstyled .linked a{
+    color: #007bb6 !important;
 }

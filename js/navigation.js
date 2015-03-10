@@ -12,9 +12,9 @@ var navigationservice = angular.module('navigationservice', [])
         link:"#/works",
         subnav: []
     }, {
-        name: "Join the pfo army",
+        name: "The fellowship",
         classis: "",
-        link:"#/proarmy",
+        link:"#/fellowship",
         subnav: []
     }];
 

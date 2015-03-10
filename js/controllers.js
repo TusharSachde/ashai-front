@@ -34,14 +34,14 @@ phonecatControllers.controller('works',
     }
 );
 
-phonecatControllers.controller('proarmy',
+phonecatControllers.controller('fellowship',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
-        $scope.menutitle = NavigationService.makeactive("Join the pro army");
+        $scope.menutitle = NavigationService.makeactive("The fellowship");
         TemplateService.header = 'views/headertext.html';
-        $scope.title = "Join The PFO Army";
-        TemplateService.content = 'views/proarmy.html';
-        TemplateService.title = "ProArmy";
+        $scope.title = "The fellowship";
+        TemplateService.content = 'views/fellowship.html';
+        TemplateService.title = "The fellowship";
         $scope.navigation = NavigationService.getnav();
     }
 );
