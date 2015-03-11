@@ -89,7 +89,7 @@ firstapp.config(['$routeProvider',
         }).
          when('/termsandcondition', {
             templateUrl: 'views/template.html',
-            controller: 'TermsAndCondition'
+            controller: 'termsandcondition'
         }).
         otherwise({
             redirectTo: '/home'
