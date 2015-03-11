@@ -536,7 +536,7 @@ input[type="checkbox"]:checked {
     -moz-background-size: cover!important;
     -o-background-size: cover!important;
     background-size: cover!important;
-    background-position: center;
+    background-position-y: -225px;
     min-height: 220px;
     width: 100%;
 }
@@ -855,13 +855,13 @@ select.recurring {
     height: 80px;
     width: 5px;
     position: absolute;
-    top: 73%;
+    top: 55%;
     right: -8px;
     border-left: 1px solid black;
 }
 .vrcircle {
     position: absolute;
-    top: 60%;
+    top: 45%;
     font-size: 12px;
     padding: 2px;
     right: -16px;
@@ -1665,4 +1665,9 @@ p.or {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-right: 10px solid #333;
+}
+.wrapper{ 
+    overflow-y:auto; 
+    position:relative;
+    height: 120px;
 }

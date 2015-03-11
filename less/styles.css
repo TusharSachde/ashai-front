@@ -1013,6 +1013,7 @@ h1.esy {
   margin-bottom: 13px;
   padding: 0 15px;
   text-align: justify;
+  overflow: hidden;
 }
 .midtitle {
   text-align: center;
@@ -1231,7 +1232,7 @@ ol.nxt1cont {
   padding: 40px 40px 20px;
   background-color: #FFF;
   width: 885px;
-  height: 470px;
+  height: auto;
   margin: 50px 0px 50px 115px;
 }
 h3.createtitle {
