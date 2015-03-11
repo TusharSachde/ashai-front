@@ -1691,3 +1691,7 @@ border-radius: 1px;
 .donation select option{
     padding:15px 10px;
 }
+.contribution img{
+    margin-top: -25px;
+    margin-left: 10px;
+}
