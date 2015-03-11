@@ -207,6 +207,19 @@ phonecatControllers.controller('register',
     }
 );
 
+phonecatControllers.controller('policy',
+    function($scope, TemplateService, NavigationService) {
+        $scope.template = TemplateService;
+        $scope.menutitle = NavigationService.makeactive("policy");
+        TemplateService.header = 'views/headerblack.html';
+        $scope.title = "register";
+        TemplateService.content = 'views/policy.html';
+        TemplateService.title = "Privacy Policy";
+        $scope.navigation = NavigationService.getnav();
+
+    }
+);
+
 phonecatControllers.controller('checkout',
     function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;

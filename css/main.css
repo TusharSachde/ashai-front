@@ -1695,3 +1695,11 @@ border-radius: 1px;
     margin-top: -25px;
     margin-left: 10px;
 }
+.list1 .active
+{
+    background-color: #05c7c7;
+    color: white;
+}
+.list1 .active a{
+    color:white!important;
+}

@@ -55,6 +55,11 @@ firstapp.config(['$routeProvider',
             controller: 'Teampage'
         }).
         
+         when('/policy', {
+            templateUrl: 'views/template.html',
+            controller: 'policy'
+        }).
+        
          when('/thankyou', {
             templateUrl: 'views/template.html',
             controller: 'thankyou'
