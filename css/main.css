@@ -1328,7 +1328,6 @@ i.fa.fa-facebook-square.colorchnage {
 i.fa.fa-facebook-square.colorchnage:hover {
     color: grey;
 }
-
 p.contributionimg {
     font-size: 52px;
     color: #05C7C7;
@@ -1555,25 +1554,25 @@ p.or {
     margin-top: 10px;
 }
 .donation .input-group:after {
-position: absolute;
-top: 50%;
-right: 16px;
-margin-top: -3px;
-width: 0;
-height: 0;
-border-top: 5px solid;
-border-right: 5px solid rgba(0, 0, 0, 0);
-border-left: 5px solid rgba(0, 0, 0, 0);
-color: #999;
-content: "";
-pointer-events: none;
-z-index: 999999;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    color: #999;
+    content: "";
+    pointer-events: none;
+    z-index: 999999;
 }
-.causelnk a{
-    color:#333;
+.causelnk a {
+    color: #333;
 }
-.causelnk a:hover{
-    color:#333;
+.causelnk a:hover {
+    color: #333;
 }
 .arrow-up {
     width: 0;
@@ -1590,9 +1589,9 @@ z-index: 999999;
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-.pagecategory .txtall{
-    margin-left:15px;
-    margin-top:5px;
+.pagecategory .txtall {
+    margin-left: 15px;
+    margin-top: 5px;
 }
 .faqpg .holder {
     border: 0px solid #eaedef;
@@ -1602,34 +1601,70 @@ z-index: 999999;
     height: auto;
     margin: 0;
 }
-.list-unstyled .facebook a
-{
+.list-unstyled .facebook a {
     color: #4870A6 !important;
 }
-.list-unstyled .pinterest a{
+.list-unstyled .pinterest a {
     color: #CB2027 !important;
 }
-.list-unstyled .twitter a{
+.list-unstyled .twitter a {
     color: #00BBEF !important;
 }
-.list-unstyled .instagram a{
-   
-}
-.list-unstyled .linked a{
+.list-unstyled .instagram a {} .list-unstyled .linked a {
     color: #007bb6 !important;
 }
-.fa-facebook-square:before{
+.fa-facebook-square:before {
     color: #4870A6!important;
 }
-.fa-twitter:before{
+.fa-twitter:before {
     color: #00BBEF !important;
 }
-.fa-pinterest:before{
+.fa-pinterest:before {
     color: #CB2027 !important;
 }
-.fa-instagram:before{
-     color: rgb(77, 65, 17) !important;
+.fa-instagram:before {
+    color: rgb(77, 65, 17) !important;
 }
-.fa-linkedin:before{
+.fa-linkedin:before {
     color: #007bb6 !important;
+}
+.popup-indiandonar {
+    display: none;
+    height: 100px;
+    position: absolute;
+    width: 150px;
+    left: 82%;
+    border-radius: 5px;
+    top: -57px;
+    color: white;
+    padding: 10px;
+    background: rgb(101, 198, 187);
+    z-index: 9999999;
+}
+.popup-foreigndonar {
+    display: none;
+    height: 100px;
+    border-radius: 5px;
+    position: absolute;
+    width: 150px;
+    left: 86%;
+    top: -57px;
+    color: white;
+    padding: 10px;
+    background: rgb(101, 198, 187);
+    z-index: 9999999;
+}
+.popup:hover .popup-indiandonar,
+.popup:hover .popup-foreigndonar {
+    display: block;
+}
+.arrow-left {
+    width: 0;
+    position: absolute;
+    left: -6%;
+    height: 0;
+    top: 40px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgb(101, 198, 187);
 }
