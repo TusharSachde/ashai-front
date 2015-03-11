@@ -1688,3 +1688,6 @@ width: 22px;
 height: 2px;
 border-radius: 1px;
 }
+.donation select option{
+    padding:15px 10px;
+}
