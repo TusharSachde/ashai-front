@@ -479,7 +479,7 @@ body .donation .form-control {
   height: 34px;
   border-radius: 0px;
   margin-right: 0px;
-  padding: 6px 0;
+  padding: 6px 5px;
 }
 body .donation .form-control:focus {
   border: 2px solid black;

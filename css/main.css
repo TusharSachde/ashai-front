@@ -1636,6 +1636,7 @@ p.or {
     top: -40px;
     border:1px solid #333;
     padding: 7px;
+    background-color:#fff;
     z-index: 9999999;
 }
 .popup-foreigndonar {
@@ -1648,6 +1649,7 @@ p.or {
     left: 86%;
     top: -40px;
     padding: 7px;
+    background-color:#fff;
     z-index: 9999999;
 }
 .popup:hover .popup-indiandonar,
