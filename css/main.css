@@ -593,6 +593,7 @@ input#inputEmail {
 }
 ul.list1 {
     border: 1px solid #efefef;
+    margin-top:20px;
 }
 .bottom1 .row {
     margin: 30px 0px 0px 0px;
