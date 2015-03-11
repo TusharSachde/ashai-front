@@ -1630,28 +1630,26 @@ p.or {
 }
 .popup-indiandonar {
     display: none;
-    height: 100px;
+    height: 60px;
     position: absolute;
     width: 150px;
     left: 82%;
     border-radius: 5px;
-    top: -57px;
-    color: white;
-    padding: 10px;
-    background: rgb(101, 198, 187);
+    top: -40px;
+    border:1px solid #333;
+    padding: 7px;
     z-index: 9999999;
 }
 .popup-foreigndonar {
     display: none;
-    height: 100px;
+    height: 60px;
     border-radius: 5px;
     position: absolute;
+     border:1px solid #333;
     width: 150px;
     left: 86%;
-    top: -57px;
-    color: white;
-    padding: 10px;
-    background: rgb(101, 198, 187);
+    top: -40px;
+    padding: 7px;
     z-index: 9999999;
 }
 .popup:hover .popup-indiandonar,
@@ -1661,10 +1659,10 @@ p.or {
 .arrow-left {
     width: 0;
     position: absolute;
-    left: -6%;
+    left: -7%;
     height: 0;
-    top: 40px;
+    top: 21px;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 10px solid rgb(101, 198, 187);
+    border-right: 10px solid #333;
 }
