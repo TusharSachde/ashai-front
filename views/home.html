@@ -172,16 +172,65 @@
 
     </div>
         <div class="container-fluid">
-            <div class="author row">
-                <div class="col-xs-2 text-center">
-                    <img src="images/face.png" class="img-responsive">
-                </div>
-                <div class="col-xs-10">
-                    <div class="cont52">
-                        "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+<!--
+           <div class="owl-carousel testimonials">
+                    <div class="author">
+                        <div class="col-xs-2 text-center">
+                            <img src="images/face.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="cont52">
+                                "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="author">
+                        <div class="col-xs-2 text-center">
+                            <img src="images/face.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="cont52">
+                                "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="col-xs-2 text-center">
+                            <img src="images/face.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="cont52">
+                                "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+                            </div>
+                        </div>
+                    </div>
+                    
             </div>
+-->
+       <wrap-owlcarousel class="owl-carousel"   
+            data-options="{autoPlay: 5000, stopOnHover: true,  
+        slideSpeed : 300, paginationSpeed : 400, singleItem : true}">  
+                    <div class="author">
+                        <div class="col-xs-2 text-center">
+                            <img src="images/face.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="cont52">
+                                "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="col-xs-2 text-center">
+                            <img src="images/face.png" class="img-responsive">
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="cont52">
+                                "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+                            </div>
+                        </div>
+                    </div>    
+        </wrap-owlcarousel>  
         </div>
    
 
@@ -201,7 +250,21 @@
         </div>
     </div>
 -->
+<script>
+$(document).ready(function() {
+ $(".testimonials").owlCarousel({
+ 
+//      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true,
+      pagination:false,
+      autoPlay:true,
+ 
+  });
 
+});    
+</script>
 
 </section>
 
