@@ -851,6 +851,7 @@ footer {
 .socials i {
   color: #05c7c7;
   font-size: 24px;
+  margin-top: 125px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
