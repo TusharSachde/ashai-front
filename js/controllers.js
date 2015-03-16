@@ -57,6 +57,30 @@ phonecatControllers.controller('aboutUs',
         TemplateService.content = 'views/aboutus.html';
         TemplateService.title = "About Us";
         $scope.navigation = NavigationService.getnav();
+    
+        $scope.aboutus="active";
+    
+        $scope.changeaboutus = function (){
+            $scope.title="About Us";
+            $scope.aboutus="active";
+            $scope.team="";
+            $scope.faq="";
+            
+        }
+        $scope.changeteam = function (){
+            $scope.title="Our team";
+            $scope.aboutus="";
+            $scope.team="active";
+            $scope.faq="";
+            
+        }
+        $scope.changefaq = function (){
+            $scope.title="FAQ";
+            $scope.aboutus="";
+            $scope.team="";
+            $scope.faq="active";
+            
+        }
 
     }
 );

@@ -1703,3 +1703,11 @@ border-radius: 1px;
 .list1 .active a{
     color:white!important;
 }
+.cpointer{
+    cursor: pointer;
+}
+.gallery_width{
+    height: 468px;
+    overflow-y: auto;
+    position: relative;
+}
