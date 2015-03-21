@@ -1620,7 +1620,7 @@ p.or {
     color: #4870A6!important;
 }
 .fa-twitter:before {
-    color: #00BBEF !important;
+    color: #FFFFFF !important;
 }
 .fa-pinterest:before {
     color: #CB2027 !important;
@@ -1721,4 +1721,12 @@ border-radius: 1px;
     height: 468px;
     overflow-y: auto;
     position: relative;
+}
+.contribut {
+    margin-top: 20px;
+}
+.flexside, ul.pagecategory>li.active span {
+    background: rgb(5, 199, 199);
+    -webkit-transition: all 1s ease;
+    padding: 10px 10px 13px 9px;
 }
