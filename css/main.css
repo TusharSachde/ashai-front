@@ -1729,4 +1729,5 @@ border-radius: 1px;
     background: rgb(5, 199, 199);
     -webkit-transition: all 1s ease;
     padding: 10px 10px 13px 9px;
+    border-radius: 5px;
 }
