@@ -21,6 +21,8 @@ phonecatControllers.controller('home',
         $scope.slides[0].active = "active";
 
         var displayproject = function(data, status) {
+            console.log(data.queryresult);
+            console.log(data.queryresult);
             $scope.displayproject = data.queryresult;
         };
         NavigationService.displayfrmdb(displayproject);
@@ -43,6 +45,11 @@ phonecatControllers.controller('home',
     
         $scope.gotoexplore = function (){
             $location.url("/explore/0");
+        }
+        
+        //  TO EXPLORE PAGE
+        $scope.toexplore = function(cat) {
+            $location.url("/explore/"+ cat.id);
         }
     
         //  PARTITION DIV
@@ -144,7 +151,7 @@ phonecatControllers.controller('blog',
 
 
 phonecatControllers.controller('Explore',
-    function($scope, TemplateService, NavigationService, $routeParams, $localtion) {
+    function($scope, TemplateService, NavigationService, $routeParams, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Explore projects");
         $scope.title = "Explore projects";
@@ -154,8 +161,34 @@ phonecatControllers.controller('Explore',
         $scope.navigation = NavigationService.getnav();
     
         //  DECLARATION
+        $scope.projects = [];
+    
+        //  GET ALL PROJECT
         console.log($routeParams.id);
-        
+        var projectsuccess = function (data, status){
+            console.log(data);
+            $scope.projects = data.queryresult;
+        }
+        NavigationService.getallproject($routeParams.id).success(projectsuccess);
+    
+        //  GET ALL CATEGORY
+        var allcategoriessuccess = function (data, status) {
+            console.log("categories");
+            console.log(data);
+            $scope.categories = data.queryresult;
+            for(var i=0;i<$scope.categories.length;i++ )
+            {
+                $scope.categories[0].active = "";
+            }
+            
+        }
+        NavigationService.getallcategory().success(allcategoriessuccess);
+    
+        //  TO CATEGORY FILTER
+        $scope.tocategory = function(cat){
+            cat.active = "active";
+            NavigationService.getallproject(cat.id).success(projectsuccess);
+        }
     
     }
 );

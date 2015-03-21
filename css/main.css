@@ -1451,7 +1451,7 @@ p.or {
     vertical-align: middle!important;
     background-position: -1px -167px;
 }
-.b-enivr {
+.b-envir {
     height: 27px;
     width: 27px;
     vertical-align: middle!important;
@@ -1469,7 +1469,7 @@ p.or {
     vertical-align: middle!important;
     background-position: -1px -138px;
 }
-.b-women {
+.b-woman {
     height: 25px;
     width: 24px;
     vertical-align: middle!important;
@@ -1489,7 +1489,7 @@ p.or {
     width: 58px;
     background-position: -1px -160px;
 }
-.enivr {
+.envir {
     height: 52px;
     width: 58px;
     background-position: -2px -217px;
@@ -1504,7 +1504,7 @@ p.or {
     width: 58px;
     background-position: -1px -272px;
 }
-.women {
+.woman {
     height: 52px;
     width: 58px;
     background-position: -1px -106px;
@@ -1725,7 +1725,7 @@ border-radius: 1px;
 .contribut {
     margin-top: 20px;
 }
-.flexside, ul.pagecategory>li.active span {
+sul.pagecategory>li.active span {
     background: rgb(5, 199, 199);
     -webkit-transition: all 1s ease;
     padding: 10px 10px 13px 9px;

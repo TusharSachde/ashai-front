@@ -7,46 +7,18 @@
            All
             
         </li></span>
+<!--
         <li class="active">
             
                 <span><i class="b-educa caticonsb"></i></span>
                 <div class="exp-menus"><div class="arrow-up"></div>Education</div>
             
         </li>
-        <li>
+-->
+        <li ng-repeat="cat in categories" ng-click="tocategory(cat)" ng-class="{{cat.active}}">
            
-           <span> <i class="b-child caticonsb"></i></span>
-                <div class="exp-menus"><div class="arrow-up"></div>Child Welfare</div>
-            
-        </li>
-        <li>
-              
-               <span><i class="b-emplo caticonsb"></i></span>
-                <div class="exp-menus"><div class="arrow-up"></div>Employment</div>
-                
-        </li>
-        <li>
-           
-                <span><i class="b-enivr caticonsb"></i></span>
-                <div class="exp-menus"><div class="arrow-up"></div>Environment and Animal Welfare</div>
-            
-        </li>
-        <li>
-           
-                <span><i class="b-healt caticonsb"></i></span>
-                <div class="exp-menus"><div class="arrow-up"></div>Health and Sanitation</div>
-            
-        </li>
-        <li>
-           
-                <span><i class="b-welfa caticonsb"></i></span>
-                <div class="exp-menus"><div class="arrow-up"></div>Welfare of the Elderly</div>
-            
-        </li>
-        <li>
-           
-                <span><i class="b-women caticonsb"></i></span>
-                <div class="exp-menus"><div class="arrow-up"></div>Woman Empowerment</div>
+           <span> <i class="b-{{cat.name | fourletter | lowercase}} caticonsb"></i></span>
+                <div class="exp-menus"><div class="arrow-up"></div>{{cat.name}}</div>
             
         </li>
     </ul>
@@ -57,8 +29,8 @@
     <div class="container">
         
         <div class="row mainCause">
-            <div class="col-md-4 causelnk">
-               <a href="#/campaign">
+            <div class="col-md-4 causelnk" ng-repeat="project in projects">
+               <a href="#/campaign/{{project.id}}">
                 <div class="causes text-center">
                     <div class="pic">
                         <img src="images/explore.jpg">
@@ -70,49 +42,9 @@
                     <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
                     <div class="info">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                        <h5>NGO NAME</h5>
+                        <h5>{{project.ngoname}}</h5>
                         <img src="images/tata_icon.png">
 
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col-md-4 causelnk">
-               <a href="#/campaign">
-                <div class="causes text-center">
-                    <div class="pic">
-                        <img src="images/explore.jpg">
-
-                        <div class="mumbai-in">
-                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
-                        </div>
-                    </div>
-                    <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
-                    <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                        <h5>NGO NAME</h5>
-                        <img src="images/tata_icon.png">
-                      
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col-md-4 causelnk">
-               <a href="#/campaign">
-                <div class="causes text-center">
-                    <div class="pic">
-                        <img src="images/explore.jpg">
-
-                        <div class="mumbai-in">
-                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
-                        </div>
-                    </div>
-                    <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
-                    <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                        <h5>NGO NAME</h5>
-                        <img src="images/tata_icon.png">
-                        
                     </div>
                 </div>
                 </a>

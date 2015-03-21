@@ -114,9 +114,24 @@ firstapp.directive('wrapOwlcarousel', function () {
     };  
 });  
 
+firstapp.filter('categoryimagepath', function () {
+    return function (input) {
+        if (input == null) {
+            return "http://wohlig.co.in/angular-powerforone/images/categoryimg/childwelfare.jpg";
+        } else {
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
 firstapp.filter('fourletter', function () {
         return function (input) {
             return input.substring(0, 5);
 
         };
     });
+firstapp.filter('rawHtml', ['$sce', function($sce){
+  return function(val) {
+    return $sce.trustAsHtml(val);
+  };
+}]);

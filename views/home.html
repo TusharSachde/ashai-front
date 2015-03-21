@@ -41,11 +41,11 @@
     <div class="sliderside">
         <div class="flexside" ng-repeat="cat in categories">
             <div class="imgslider">
-                <img src="images/categoryimg/childwelfare.jpg">
+                <img src="{{cat.image | categoryimagepath}}">
                 <div class="black-overlay"></div>
             </div>
 
-            <div class="relativetxt">
+            <div class="relativetxt" ng-click="toexplore(cat)">
                 <i class="{{cat.name | fourletter | lowercase}} caticons"></i>
                 <p>{{cat.name}}</p>
             </div>

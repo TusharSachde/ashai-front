@@ -29,7 +29,7 @@
             </div>
             <div class="paragraph">
                 <h3>PROBLEM</h3>
-                <p class="parapadding">{{data.content}}</p>
+                <p class="parapadding" ng-bind-html="project.content | rawHtml"></p>
             </div>
 <!--
             <div class="paragraph">
@@ -192,11 +192,11 @@
     </div>
     <div class="row">
 
-        <div class="ychoseus">
+        <div class="ychoseus" ng-if="similarcauses!=''">
             <p>SIMILAR CAUSES.</p>
             <div class="hrl"></div>
         </div>
-        <p class="viewAll">(View All)</p>
+        <p class="viewAll" ng-if="similarcauses!=''">(View All)</p>
         <div class="col-md-4 causelnk"  ng-repeat="causes in similarcauses">
             <a href="#/campaign">
                 <div class="causes text-center">
