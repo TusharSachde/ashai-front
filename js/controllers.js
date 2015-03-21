@@ -1,7 +1,7 @@
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute']);
 
 phonecatControllers.controller('home',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Home");
         $scope.title = "Home";
@@ -18,24 +18,36 @@ phonecatControllers.controller('home',
             "name": "second Slide"
         }];
 
-       $scope.slides[0].active = "active";
+        $scope.slides[0].active = "active";
+
+        var displayproject = function(data, status) {
+            $scope.displayproject = data.queryresult;
+        };
+        NavigationService.displayfrmdb(displayproject);
+
+        var displaytestmonial1 = function(data, status) {
+            $scope.testimonial1 = data.queryresult[0];
+            $scope.testimonial2 = data.queryresult[1];
+        };
+        NavigationService.displaytestmonial(displaytestmonial1);
+
+        //  GET ALL CATEGORY
+        var allcategoriessuccess = function (data, status) {
+            console.log("categories");
+            console.log(data);
+            $scope.categories = data.queryresult;
+        }
+        NavigationService.getallcategory().success(allcategoriessuccess);
     
-      var displayproject=function(data,status) {
-//           console.log("welcome here");
-           console.log(data);
-        $scope.displayproject=data.queryresult;
-    };
-   NavigationService.displayfrmdb(displayproject);
+        //  VIEW ALL PROJECT
     
-     var displaytestmonial1=function(data,status) {
-           console.log("welcome here");
-           console.log(data);
-        $scope.testimonial1=data.queryresult[0];
-        $scope.testimonial2=data.queryresult[1];
-    };
-   NavigationService.displaytestmonial(displaytestmonial1);
+        $scope.gotoexplore = function (){
+            $location.url("/explore/0");
+        }
     
-    function partitionarray(myarray, number) {
+        //  PARTITION DIV
+
+        function partitionarray(myarray, number) {
             var arrlength = myarray.length;
             var newarray = [];
             var j = -1;
@@ -48,7 +60,7 @@ phonecatControllers.controller('home',
             }
             return newarray;
         };
-    
+
     });
 
 phonecatControllers.controller('works',
@@ -56,12 +68,12 @@ phonecatControllers.controller('works',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("How it works");
         $scope.title = "How it works";
-        $scope.backgroundimg="How-it-works.jpg";
+        $scope.backgroundimg = "How-it-works.jpg";
         TemplateService.content = 'views/works.html';
         TemplateService.header = 'views/headertext.html';
         TemplateService.title = "How It Works";
         $scope.navigation = NavigationService.getnav();
-    
+
     }
 );
 
@@ -71,7 +83,7 @@ phonecatControllers.controller('fellowship',
         $scope.menutitle = NavigationService.makeactive("The fellowship");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "The fellowship";
-    $scope.backgroundimg="Fellowship.jpg";
+        $scope.backgroundimg = "Fellowship.jpg";
         TemplateService.content = 'views/fellowship.html';
         TemplateService.title = "The fellowship";
         $scope.navigation = NavigationService.getnav();
@@ -83,33 +95,33 @@ phonecatControllers.controller('aboutUs',
         $scope.menutitle = NavigationService.makeactive("About us");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "About Us";
-        $scope.backgroundimg="About-us.jpg"
+        $scope.backgroundimg = "About-us.jpg"
         TemplateService.content = 'views/aboutus.html';
         TemplateService.title = "About Us";
         $scope.navigation = NavigationService.getnav();
-    
-        $scope.aboutus="active";
-    
-        $scope.changeaboutus = function (){
-            $scope.title="About Us";
-            $scope.aboutus="active";
-            $scope.team="";
-            $scope.faq="";
-            
+
+        $scope.aboutus = "active";
+
+        $scope.changeaboutus = function() {
+            $scope.title = "About Us";
+            $scope.aboutus = "active";
+            $scope.team = "";
+            $scope.faq = "";
+
         }
-        $scope.changeteam = function (){
-            $scope.title="Our team";
-            $scope.aboutus="";
-            $scope.team="active";
-            $scope.faq="";
-            
+        $scope.changeteam = function() {
+            $scope.title = "Our team";
+            $scope.aboutus = "";
+            $scope.team = "active";
+            $scope.faq = "";
+
         }
-        $scope.changefaq = function (){
-            $scope.title="FAQ";
-            $scope.aboutus="";
-            $scope.team="";
-            $scope.faq="active";
-            
+        $scope.changefaq = function() {
+            $scope.title = "FAQ";
+            $scope.aboutus = "";
+            $scope.team = "";
+            $scope.faq = "active";
+
         }
 
     }
@@ -132,7 +144,7 @@ phonecatControllers.controller('blog',
 
 
 phonecatControllers.controller('Explore',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $routeParams, $localtion) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Explore projects");
         $scope.title = "Explore projects";
@@ -140,6 +152,11 @@ phonecatControllers.controller('Explore',
         TemplateService.header = 'views/headerblack.html';
         TemplateService.title = "Explore The Project ";
         $scope.navigation = NavigationService.getnav();
+    
+        //  DECLARATION
+        console.log($routeParams.id);
+        
+    
     }
 );
 
@@ -152,12 +169,12 @@ phonecatControllers.controller('campaign',
         TemplateService.header = 'views/HeaderCampaign.html';
         TemplateService.title = "Campaign";
         $scope.navigation = NavigationService.getnav();
-    
+
         console.log($routeParams.id);
 
         angular.element($window).bind("scroll", function() {
             $scope.scrolled = this.pageYOffset;
-            $scope.greatHeight = angular.element('.sliderheadercampaign').height()-angular.element('.headerzindex').height();
+            $scope.greatHeight = angular.element('.sliderheadercampaign').height() - angular.element('.headerzindex').height();
             $scope.$apply();
         });
 
@@ -166,17 +183,17 @@ phonecatControllers.controller('campaign',
             //            $anchorScroll();
             anchorSmoothScroll.scrollTo(id);
         }
-    var displaystaticpage=function(data,status) {
-           console.log("welcome here");
-           console.log(data);
-        $scope.datapoint=data.datapoint; 
-        $scope.project=data.project;
-        
-        $scope.projectimages=data.projectimages;
-        $scope.similarcauses=data.similarcauses;
-       
-    };
-   NavigationService.getsingleproject($routeParams.id,displaystaticpage);
+        var displaystaticpage = function(data, status) {
+            console.log("welcome here");
+            console.log(data);
+            $scope.datapoint = data.datapoint;
+            $scope.project = data.project;
+
+            $scope.projectimages = data.projectimages;
+            $scope.similarcauses = data.similarcauses;
+
+        };
+        NavigationService.getsingleproject($routeParams.id, displaystaticpage);
 
     }
 );
@@ -186,7 +203,7 @@ phonecatControllers.controller('myprofile',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("My Profile");
         $scope.title = "My Profile";
-        $scope.backgroundimg="Profile.jpg";
+        $scope.backgroundimg = "Profile.jpg";
         TemplateService.content = 'views/myprofile.html';
         TemplateService.header = 'views/headertext.html';
         TemplateService.title = "My Profile";
@@ -214,7 +231,7 @@ phonecatControllers.controller('termsandcondition',
         $scope.menutitle = NavigationService.makeactive("Terms & Condition");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Terms & Condition";
-        $scope.backgroundimg="T&C.jpg";
+        $scope.backgroundimg = "T&C.jpg";
         TemplateService.content = 'views/terms.html';
         TemplateService.title = "Terms";
         $scope.navigation = NavigationService.getnav();
@@ -226,7 +243,7 @@ phonecatControllers.controller('workwithus',
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Work With Us";
-        $scope.backgroundimg="Work-with-us.jpg";
+        $scope.backgroundimg = "Work-with-us.jpg";
         TemplateService.content = 'views/workwithus.html';
         $scope.navigation = NavigationService.getnav();
 
@@ -239,7 +256,7 @@ phonecatControllers.controller('Contactus',
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Contact Us";
-        $scope.backgroundimg="Contact.jpg";
+        $scope.backgroundimg = "Contact.jpg";
         TemplateService.content = 'views/Contactus.html';
         TemplateService.title = "Contact Us";
         $scope.navigation = NavigationService.getnav();
@@ -320,7 +337,7 @@ phonecatControllers.controller('thankyou',
         $scope.menutitle = NavigationService.makeactive("Thank You");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "thank you";
-        $scope.backgroundimg="Thank-you.jpg";
+        $scope.backgroundimg = "Thank-you.jpg";
         TemplateService.content = 'views/thankyou.html';
         TemplateService.title = "Thank you";
         $scope.navigation = NavigationService.getnav();
@@ -335,7 +352,7 @@ phonecatControllers.controller('Teampage',
         $scope.menutitle = NavigationService.makeactive("Team Page");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Our Team";
-        $scope.backgroundimg="Team-&-Advisors.jpg";
+        $scope.backgroundimg = "Team-&-Advisors.jpg";
         TemplateService.content = 'views/teampage.html';
         TemplateService.title = "Team Page";
         $scope.navigation = NavigationService.getnav();

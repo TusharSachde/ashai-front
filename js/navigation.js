@@ -33,6 +33,11 @@ var navigationservice = angular.module('navigationservice', [])
              
               $http.get(admin_url+ 'json/viewtestimonialjson').success(callback);
           },
+         getallcategory:function()
+          {
+             
+              return $http.get(admin_url+ 'json/getallcategory',{});
+          },
          getsingleproject:function(id,callback)
           {
              

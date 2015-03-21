@@ -39,17 +39,18 @@
 
 
     <div class="sliderside">
-        <div class="flexside">
+        <div class="flexside" ng-repeat="cat in categories">
             <div class="imgslider">
                 <img src="images/categoryimg/childwelfare.jpg">
                 <div class="black-overlay"></div>
             </div>
 
             <div class="relativetxt">
-                <i class="educa caticons"></i>
-                <p>Education</p>
+                <i class="{{cat.name | fourletter | lowercase}} caticons"></i>
+                <p>{{cat.name}}</p>
             </div>
         </div>
+<!--
         <div class="flexside">
             <div class="imgslider">
                 <img src="images/categoryimg/educationnew.jpg">
@@ -111,6 +112,7 @@
                 <p>Woman Empowerment</p>
             </div>
         </div>
+-->
     </div>
 
     <div class="container wholebody">
@@ -121,10 +123,10 @@
         </div>
 
         <div class="bottom1">
-            <p class="viewAll">(View All)</p>
+            <p class="viewAll" ng-click="gotoexplore()">(View All)</p>
             <div class="row mainCause">
-                <div class="col-md-4 causelnk" ng-repeat="data in displayproject">
-                    <a href="#/campaign/{{data.id}}">
+                <div class="col-md-4 causelnk" ng-if="displayproject[0]">
+                    <a href="#/campaign/{{displayproject[0].id}}">
                         <div class="causes text-center">
                             <div class="pic">
 
@@ -135,11 +137,11 @@
                                 </div>
 
                             </div>
-                            <h3>{{data.tagline}}</h3>
+                            <h3>{{displayproject[0].tagline}}</h3>
 
                             <div class="info">
-                                <p>{{data.tagline}}</p>
-                                <h5>{{data.cardtagline}}</h5>
+                                <p>{{displayproject[0].tagline}}</p>
+                                <h5>{{displayproject[0].cardtagline}}</h5>
                                 <img src="images/tata_icon.png">
 
                                 <!--
@@ -162,6 +164,89 @@
                     </a>
 
                 </div>
+                
+                
+                <div class="col-md-4 causelnk" ng-if="displayproject[1]">
+                    <a href="#/campaign/{{displayproject[1].id}}">
+                        <div class="causes text-center">
+                            <div class="pic">
+
+                                <img src="images/explore.jpg">
+
+                                <div class="mumbai-in">
+                                    <h5><i class="fa fa-map-marker"></i> Mumbai, IN</h5>
+                                </div>
+
+                            </div>
+                            <h3>{{displayproject[1].tagline}}</h3>
+
+                            <div class="info">
+                                <p>{{displayproject[1].tagline}}</p>
+                                <h5>{{displayproject[1].cardtagline}}</h5>
+                                <img src="images/tata_icon.png">
+
+                                <!--
+                            <div class="elements row">
+                                <div class="col-xs-6">
+                                    <p class="Funded">FUNDED</p>
+                                    <div class="circle">
+                                        <div class="txt2">230%</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <p class="Funded">CATEGORY</p>
+                                    <i class="b-educa caticonsb mt5"></i>
+                                </div>
+                            </div>
+-->
+
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            
+                <div class="col-md-4 causelnk" ng-if="displayproject[2]">
+                    <a href="#/campaign/{{displayproject[2].id}}">
+                        <div class="causes text-center">
+                            <div class="pic">
+
+                                <img src="images/explore.jpg">
+
+                                <div class="mumbai-in">
+                                    <h5><i class="fa fa-map-marker"></i> Mumbai, IN</h5>
+                                </div>
+
+                            </div>
+                            <h3>{{displayproject[2].tagline}}</h3>
+
+                            <div class="info">
+                                <p>{{displayproject[2].tagline}}</p>
+                                <h5>{{displayproject[2].cardtagline}}</h5>
+                                <img src="images/tata_icon.png">
+
+                                <!--
+                            <div class="elements row">
+                                <div class="col-xs-6">
+                                    <p class="Funded">FUNDED</p>
+                                    <div class="circle">
+                                        <div class="txt2">230%</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <p class="Funded">CATEGORY</p>
+                                    <i class="b-educa caticonsb mt5"></i>
+                                </div>
+                            </div>
+-->
+
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                
             </div>
 
 

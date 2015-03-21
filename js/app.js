@@ -77,7 +77,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'aboutUs'
         }).
-         when('/explore', {
+         when('/explore/:id', {
             templateUrl: 'views/template.html',
             controller: 'Explore'
         }).
@@ -112,4 +112,11 @@ firstapp.directive('wrapOwlcarousel', function () {
             $(element).owlCarousel(options);  
         }  
     };  
-});    
+});  
+
+firstapp.filter('fourletter', function () {
+        return function (input) {
+            return input.substring(0, 5);
+
+        };
+    });
