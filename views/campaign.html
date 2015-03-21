@@ -211,18 +211,7 @@
                         <p>{{causes.cardtagline}}</p>
                         <h5>{{causes.ngoname}}</h5>
                         <img src="images/tata_icon.png">
-                        <div class="elements row">
-                            <div class="col-xs-6">
-                                <p class="Funded">FUNDED</p>
-                                <div class="circle">
-                                    <div class="txt2">230%</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <p class="Funded">CATEGORY</p>
-                                <i class="b-educa caticonsb mt5"></i>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </a>
@@ -293,40 +282,32 @@
     </div>
 </div>
 -->
-<div class="container-fluid">
-    <div class="owl-carousel testimonials">
-        <div class="author">
-            <div class="col-xs-2 text-center">
+    <div class="container">
+    
+    <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,  
+            slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
+        <div class="row">
+            <div class="col-md-2 text-center">
                 <img src="images/face.png" class="img-responsive">
             </div>
-            <div class="col-xs-10">
+            <div class="col-md-10">
                 <div class="cont52">
-                    "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+                    {{testimonial1.content}}
                 </div>
             </div>
         </div>
-        <div class="author">
-            <div class="col-xs-2 text-center">
+        <div class="row">
+            <div class="col-md-2 text-center">
                 <img src="images/face.png" class="img-responsive">
             </div>
-            <div class="col-xs-10">
+            <div class="col-md-10">
                 <div class="cont52">
-                    "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
-                </div>
-            </div>
-        </div>
-        <div class="author">
-            <div class="col-xs-2 text-center">
-                <img src="images/face.png" class="img-responsive">
-            </div>
-            <div class="col-xs-10">
-                <div class="cont52">
-                    "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
+                  {{testimonial1.content}}
                 </div>
             </div>
         </div>
 
-    </div>
+    </wrap-owlcarousel>
 </div>
 <script>
     $(document).ready(function () {

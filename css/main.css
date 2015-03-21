@@ -162,7 +162,7 @@ ul.pagecategory {
     font-weight: bold;
     text-align: center;
     font-size: 14px;
-    height: 28px;
+    height: 30px;
     margin: 12px 0 10px;
     overflow: hidden;
 }
@@ -692,7 +692,7 @@ ul.mypro {
 }
 .info p {
     font-size: 14px;
-    height: 28px;
+    height: 45px;
     overflow: hidden;
     text-align: center;
 }
@@ -1334,9 +1334,10 @@ p.contributionimg {
     font-size: 52px;
     color: #05C7C7;
     text-align: center;
-    margin: 20px 0 0 0;
+    margin: 60px 0 0 0;
     padding: 0;
     line-height: 100%;
+    position: relative;
 }
 .contribution h6 {
     font-size: 14px;
@@ -1345,7 +1346,7 @@ p.contributionimg {
     text-transform: capitalize;
 }
 .contribution {
-    width: 90%;
+    width: 100%;
 }
 .circlepercnt {
     font-size: 25px;
