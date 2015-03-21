@@ -34,6 +34,21 @@ phonecatControllers.controller('home',
         $scope.testimonial2=data.queryresult[1];
     };
    NavigationService.displaytestmonial(displaytestmonial1);
+    
+    function partitionarray(myarray, number) {
+            var arrlength = myarray.length;
+            var newarray = [];
+            var j = -1;
+            for (var i = 0; i < arrlength; i++) {
+                if (i % number == 0) {
+                    j++;
+                    newarray[j] = [];
+                }
+                newarray[j].push(myarray[i]);
+            }
+            return newarray;
+        };
+    
     });
 
 phonecatControllers.controller('works',
