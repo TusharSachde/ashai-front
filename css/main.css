@@ -162,7 +162,9 @@ ul.pagecategory {
     font-weight: bold;
     text-align: center;
     font-size: 14px;
+    height: 28px;
     margin: 12px 0 10px;
+    overflow: hidden;
 }
 .causes .info {
     color: gray;
@@ -690,6 +692,8 @@ ul.mypro {
 }
 .info p {
     font-size: 14px;
+    height: 28px;
+    overflow: hidden;
     text-align: center;
 }
 p.Funded {
@@ -1632,6 +1636,8 @@ p.or {
     position: absolute;
     width: 150px;
     left: 82%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     border-radius: 5px;
     top: -40px;
     border:1px solid #333;
@@ -1642,6 +1648,8 @@ p.or {
 .popup-foreigndonar {
     display: none;
     height: 60px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     border-radius: 5px;
     position: absolute;
      border:1px solid #333;
@@ -1686,6 +1694,8 @@ p.or {
     display: block;
 width: 22px;
 height: 2px;
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
 border-radius: 1px;
 }
 .donation select option{

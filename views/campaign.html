@@ -7,13 +7,13 @@
                         <img class="Salaamlogo" src="images/salaam_bombay.png">
                         <p>CAMPAIGN BY
                         </p>
-                        <p class="ngoname nameng">NGO NAME
+                        <p class="ngoname nameng">{{project.ngoname}}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-8 contribut">
                     <div class="text-center" style="width:55%">
-                        <p class="contributionimg"><b>2x</b>
+                        <p class="contributionimg"><b>{{project.times}}</b>
                         </p>
                     </div>
                     <div class="contribution">
@@ -28,8 +28,9 @@
             </div>
             <div class="paragraph">
                 <h3>PROBLEM</h3>
-                <p class="parapadding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consequuntur odio, quam cupiditate natus corporis doloremque voluptatibus mollitia, fugiat laudantium impedit. Ullam ratione labore aut repellat dolores praesentium sed quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque non iure rerum, sunt commodi itaque earum dignissimos esse a magni quod, asperiores eaque necessitatibus ipsam placeat rem modi perspiciatis! Quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe alias sequi tempora, ex rerum, possimus ullam ab iusto in unde. Velit, aliquid, laudantium quisquam animi corporis praesentium eligendi pariatur.</p>
+                <p class="parapadding">{{data.content}}</p>
             </div>
+<!--
             <div class="paragraph">
                 <h3>SOLUTION</h3>
                 <p class="parapadding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consequuntur odio, quam cupiditate natus corporis doloremque voluptatibus mollitia, fugiat laudantium impedit. Ullam ratione labore aut repellat dolores praesentium sed quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque non iure rerum, sunt commodi itaque earum dignissimos esse a magni quod, asperiores eaque necessitatibus ipsam placeat rem modi perspiciatis! Quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe alias sequi tempora, ex rerum, possimus ullam ab iusto in unde. Velit, aliquid, laudantium quisquam animi corporis praesentium eligendi pariatur.</p>
@@ -45,6 +46,7 @@
                 <p class="parapadding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consequuntur odio, quam cupiditate natus corporis doloremque voluptatibus mollitia, fugiat laudantium impedit. Ullam ratione labore aut repellat dolores praesentium sed quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque non iure rerum, sunt commodi itaque earum dignissimos esse a magni quod, asperiores eaque necessitatibus ipsam placeat rem modi perspiciatis! Quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe alias sequi tempora, ex rerum, possimus ullam ab iusto in unde. Velit, aliquid, laudantium quisquam animi corporis praesentium eligendi pariatur.</p>
                 <p class="parapadding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consequuntur odio, quam cupiditate natus corporis doloremque voluptatibus mollitia, fugiat laudantium impedit. Ullam ratione labore aut repellat dolores praesentium sed quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque non iure rerum, sunt commodi itaque earum dignissimos esse a magni quod, asperiores eaque necessitatibus ipsam placeat rem modi perspiciatis! Quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe alias sequi tempora, ex rerum, possimus ullam ab iusto in unde. Velit, aliquid, laudantium quisquam animi corporis praesentium eligendi pariatur.</p>
             </div>
+-->
 
             <div class="row">
                 <div class="col-xs-10">
@@ -82,11 +84,12 @@
                     </div>
 
                     <div class="checkbox check">
-
+                       
                         <label class="anonynimous">
+                            
                             <div class="row foregin">
                                 <div class="col-md-2 radanoyminous">
-                                    <input type="radio" ng-model="checked" name="1">
+                                    <input type="radio" ng-model="project.indiandoner" name="1">
                                 </div>
                                 <div class="col-md-10 popup">
                                     <h5 class="keepit">Indian Donor [?]</h5>
@@ -100,7 +103,7 @@
                         <label class="anonynimous">
                             <div class="row foregin">
                                 <div class="col-md-2 radanoyminous">
-                                    <input type="radio" ng-model="checked" name="1">
+                                    <input type="radio" ng-model="project.foreigndoner" name="1">
                                 </div>
                                 <div class="col-md-10 popup">
                                     <h5 class="keepit">Foreign Donor [?]</h5>
@@ -161,7 +164,7 @@
                         <button type="button" class="btn btn-primary"><i class="fa fa-facebook fa-lg"></i>&nbsp;&nbsp; Share on Facebook</button>
                         <button type="button" class="btn btn-info"> <i class="fa fa-twitter fa-lg"></i>&nbsp;&nbsp;Tweet on Twitter</button>
                     </div>
-                    <div class="txt4">102</div>
+                    <div class="txt4">{{project.share}}</div>
                     <span class="shares"> Shares</span>
                     <p class="txt5">1 Share=Rs.200</p>
                     <span class="t1"> Remember,for every share tata will donate Rs.200</span>
@@ -178,7 +181,7 @@
                     <div class="Bordr">
                         <p>PLEDGED</p>
                         <div class="txtpleded">
-                            <h4>Rs.2,30,0000</h4>
+                            <h4>{{project.contribution}}</h4>
                         </div>
                     </div>
 
@@ -193,7 +196,7 @@
             <div class="hrl"></div>
         </div>
         <p class="viewAll">(View All)</p>
-        <div class="col-md-4 causelnk">
+        <div class="col-md-4 causelnk"  ng-repeat="causes in similarcauses">
             <a href="#/campaign">
                 <div class="causes text-center">
                     <div class="pic">
@@ -203,10 +206,10 @@
                             <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                         </div>
                     </div>
-                    <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
+                    <h3>{{causes.tagline}}</h3>
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                        <h5>NGO NAME</h5>
+                        <p>{{causes.cardtagline}}</p>
+                        <h5>{{causes.ngoname}}</h5>
                         <img src="images/tata_icon.png">
                         <div class="elements row">
                             <div class="col-xs-6">
@@ -224,6 +227,7 @@
                 </div>
             </a>
         </div>
+<!--
         <div class="col-md-4 causelnk">
             <a href="#/campaign">
                 <div class="causes text-center">
@@ -288,6 +292,7 @@
         </div>
     </div>
 </div>
+-->
 <div class="container-fluid">
     <div class="owl-carousel testimonials">
         <div class="author">

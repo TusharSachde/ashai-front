@@ -81,7 +81,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'Explore'
         }).
-        when('/campaign', {
+        when('/campaign/:id', {
             templateUrl: 'views/template.html',
             controller: 'campaign'
         }).

@@ -16,13 +16,13 @@
                     <p>Donate Small Amounts Regularly</p>
                 </li>
                 <li>
-                   
+
                     <i class="whycons w4"></i>
 
                     <p>Double Your Impact</p>
                 </li>
                 <li>
-                     <i class="whycons w3"></i>
+                    <i class="whycons w3"></i>
                     <p>Get Rewarded</p>
                 </li>
                 <li> <i class="whycons w5"></i>
@@ -123,25 +123,26 @@
         <div class="bottom1">
             <p class="viewAll">(View All)</p>
             <div class="row mainCause">
-                <div class="col-md-4 causelnk">
-                   <a href="#/campaign">
-                    <div class="causes text-center">
-                        <div class="pic">
+                <div class="col-md-4 causelnk" ng-repeat="data in displayproject">
+                    <a href="#/campaign/{{data.id}}">
+                        <div class="causes text-center">
+                            <div class="pic">
 
-                            <img src="images/explore.jpg">
+                                <img src="images/explore.jpg">
 
-                            <div class="mumbai-in">
-                                <h5><i class="fa fa-map-marker"></i> Mumbai, IN</h5>
+                                <div class="mumbai-in">
+                                    <h5><i class="fa fa-map-marker"></i> Mumbai, IN</h5>
+                                </div>
+
                             </div>
+                            <h3>{{data.tagline}}</h3>
 
-                        </div>
-                        <h3>CAMPAIGN SHORT TITLE WILL GO HERE, IF IN TWO LINES</h3>
+                            <div class="info">
+                                <p>{{data.tagline}}</p>
+                                <h5>{{data.cardtagline}}</h5>
+                                <img src="images/tata_icon.png">
 
-                        <div class="info">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                            <h5>NGO NAME</h5>
-                            <img src="images/tata_icon.png">
-
+                                <!--
                             <div class="elements row">
                                 <div class="col-xs-6">
                                     <p class="Funded">FUNDED</p>
@@ -154,25 +155,26 @@
                                     <i class="b-educa caticonsb mt5"></i>
                                 </div>
                             </div>
+-->
 
+                            </div>
                         </div>
-                    </div>
-                   </a> 
-                    
+                    </a>
+
                 </div>
             </div>
 
 
 
-            
-            
-           
+
+
+
         </div>
 
 
     </div>
-        <div class="container-fluid">
-<!--
+    <div class="container-fluid">
+        <!--
            <div class="owl-carousel testimonials">
                     <div class="author">
                         <div class="col-xs-2 text-center">
@@ -207,34 +209,35 @@
                     
             </div>
 -->
-       <wrap-owlcarousel class="owl-carousel"   
-            data-options="{autoPlay: true, stopOnHover: true,  
-        slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">  
-                    <div class="author">
-                        <div class="col-xs-2 text-center">
-                            <img src="images/face.png" class="img-responsive">
-                        </div>
-                        <div class="col-xs-10">
-                            <div class="cont52">
-                                "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
-                            </div>
+        <div class="container">
+            <wrap-owlcarousel class="owl-carousel" data-options="{autoPlay: true, stopOnHover: true,  
+            slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src="images/face.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="cont52">
+                            {{testimonial1.content}}
                         </div>
                     </div>
-                    <div class="author">
-                        <div class="col-xs-2 text-center">
-                            <img src="images/face.png" class="img-responsive">
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src="images/face.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="cont52">
+                            {{testimonial2.content}}
                         </div>
-                        <div class="col-xs-10">
-                            <div class="cont52">
-                                "Duis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi ea praesentium, obcaecati rem aspernatur. Sint obcaecati quis id, molestias, ex excepturi."
-                            </div>
-                        </div>
-                    </div>    
-        </wrap-owlcarousel>  
+                    </div>
+                </div>
+            </wrap-owlcarousel>
         </div>
-   
+    </div>
 
-<!--
+
+    <!--
     <div class="ychoseus">
         <p>CONNECT</p>
         <div class="hrl"></div>
@@ -250,7 +253,7 @@
         </div>
     </div>
 -->
-<!--
+    <!--
 <script>
 $(document).ready(function() {
  $(".testimonials").owlCarousel({

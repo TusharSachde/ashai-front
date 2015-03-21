@@ -56,18 +56,12 @@
                 </div>
                 <div class="col-md-3">
                     <div class="helpbox text-center">
-                    <h3>Help Anand get clean water in his village.</h3>
+                    <h3>{{project.tagline}}</h3>
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantiumLorem ipsum dolor sit amet, consectetur adipisicing elit.In ipsam laudantiumLorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
+                        <p>{{project.cardtagline}}</p>
                         <div class="datapoint1">
-                        <div class="img1"><i class="icon-star"></i>
-                            <p>Data Point</p>
-                        </div>
-                        <div class="img1"><i class="icon-star"></i>
-                            <p>Data Point</p>
-                        </div>
-                        <div class="img1"><i class="icon-star"></i>
-                            <p>Data Point</p>
+                        <div class="img1" ng-repeat="data in datapoint "><i class="icon-star"></i>
+                            <p>{{data.name}}</p>
                         </div>
                     </div>
                         

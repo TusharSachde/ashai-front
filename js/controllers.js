@@ -1,4 +1,4 @@
-var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp']);
+var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute']);
 
 phonecatControllers.controller('home',
     function($scope, TemplateService, NavigationService) {
@@ -18,8 +18,22 @@ phonecatControllers.controller('home',
             "name": "second Slide"
         }];
 
-        $scope.slides[0].active = "active";
-
+       $scope.slides[0].active = "active";
+    
+      var displayproject=function(data,status) {
+//           console.log("welcome here");
+           console.log(data);
+        $scope.displayproject=data.queryresult;
+    };
+   NavigationService.displayfrmdb(displayproject);
+    
+     var displaytestmonial1=function(data,status) {
+           console.log("welcome here");
+           console.log(data);
+        $scope.testimonial1=data.queryresult[0];
+        $scope.testimonial2=data.queryresult[1];
+    };
+   NavigationService.displaytestmonial(displaytestmonial1);
     });
 
 phonecatControllers.controller('works',
@@ -32,6 +46,7 @@ phonecatControllers.controller('works',
         TemplateService.header = 'views/headertext.html';
         TemplateService.title = "How It Works";
         $scope.navigation = NavigationService.getnav();
+    
     }
 );
 
@@ -114,7 +129,7 @@ phonecatControllers.controller('Explore',
 );
 
 phonecatControllers.controller('campaign',
-    function($scope, TemplateService, NavigationService, $window, $location, $anchorScroll, anchorSmoothScroll) {
+    function($scope, TemplateService, NavigationService, $window, $location, $anchorScroll, anchorSmoothScroll, $routeParams) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Campaign");
         $scope.title = "Campaign";
@@ -122,10 +137,12 @@ phonecatControllers.controller('campaign',
         TemplateService.header = 'views/HeaderCampaign.html';
         TemplateService.title = "Campaign";
         $scope.navigation = NavigationService.getnav();
+    
+        console.log($routeParams.id);
 
         angular.element($window).bind("scroll", function() {
             $scope.scrolled = this.pageYOffset;
-            $scope.greatHeight = angular.element('.sliderheadercampaign').height() - angular.element('.headerzindex').height();
+            $scope.greatHeight = angular.element('.sliderheadercampaign').height()-angular.element('.headerzindex').height();
             $scope.$apply();
         });
 
@@ -134,6 +151,17 @@ phonecatControllers.controller('campaign',
             //            $anchorScroll();
             anchorSmoothScroll.scrollTo(id);
         }
+    var displaystaticpage=function(data,status) {
+           console.log("welcome here");
+           console.log(data);
+        $scope.datapoint=data.datapoint; 
+        $scope.project=data.project;
+        
+        $scope.projectimages=data.projectimages;
+        $scope.similarcauses=data.similarcauses;
+       
+    };
+   NavigationService.getsingleproject($routeParams.id,displaystaticpage);
 
     }
 );

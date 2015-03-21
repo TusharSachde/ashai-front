@@ -1,6 +1,7 @@
+var admin_url = "http://wohlig.co.in/powerforone/index.php/";
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function () {
+.factory('NavigationService', function ($http) {
     var navigation = [{
         name: "Explore projects",
          classis: "",
@@ -22,6 +23,21 @@ var navigationservice = angular.module('navigationservice', [])
         getnav: function() {
             return navigation;
         },
+         displayfrmdb:function(callback)
+          {
+             
+              $http.get(admin_url+ 'json/viewprojectjson').success(callback);
+          },
+         displaytestmonial:function(callback)
+          {
+             
+              $http.get(admin_url+ 'json/viewtestimonialjson').success(callback);
+          },
+         getsingleproject:function(id,callback)
+          {
+             
+              $http.get(admin_url+ 'json/getsingleproject?id='+id).success(callback);
+          },
         makeactive: function(menuname) {
             for(var i=0;i<navigation.length;i++) {
                 if(navigation[i].name==menuname)
