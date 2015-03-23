@@ -124,6 +124,16 @@ firstapp.filter('categoryimagepath', function () {
     };
 });
 
+firstapp.filter('testimonialimagepath', function () {
+    return function (input) {
+        if (input == null) {
+            return "http://wohlig.co.in/angular-powerforone/images/face.png";
+        } else {
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
 firstapp.filter('fourletter', function () {
         return function (input) {
             return input.substring(0, 5);

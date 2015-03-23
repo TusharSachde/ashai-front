@@ -28,6 +28,10 @@ phonecatControllers.controller('home',
         NavigationService.displayfrmdb(displayproject);
 
         var displaytestmonial1 = function(data, status) {
+            
+            console.log("testimonial");
+            console.log(data);
+            $scope.testimonials = data.queryresult;
             $scope.testimonial1 = data.queryresult[0];
             $scope.testimonial2 = data.queryresult[1];
         };
