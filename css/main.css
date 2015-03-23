@@ -737,7 +737,7 @@ img.log {
     margin: 10px 0px 0px 0px;
 }
 .sliderheadercampaign {
-    background: url(../images/bg_layer.png) no-repeat center;
+/*    background: url(../images/bg_layer.png) no-repeat center;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

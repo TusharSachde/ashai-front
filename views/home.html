@@ -130,7 +130,7 @@
                         <div class="causes text-center">
                             <div class="pic">
 
-                                <img src="images/explore.jpg">
+                                <img ng-src="{{displayproject[0].image | projectbannerimagepath}}">
 
                                 <div class="mumbai-in">
                                     <h5><i class="fa fa-map-marker"></i> Mumbai, IN</h5>
@@ -141,8 +141,8 @@
 
                             <div class="info">
                                 <p>{{displayproject[0].tagline}}</p>
-                                <h5>{{displayproject[0].cardtagline}}</h5>
-                                <img src="images/tata_icon.png">
+                                <h5>{{displayproject[0].ngoname}}</h5>
+                                <img ng-src="{{displayproject[0].ngoimage | ngoimagepath}}" height="50px" width="50px">
 
                                 <!--
                             <div class="elements row">
@@ -171,7 +171,7 @@
                         <div class="causes text-center">
                             <div class="pic">
 
-                                <img src="images/explore.jpg">
+                                <img ng-src="{{displayproject[1].image | projectbannerimagepath}}">
 
                                 <div class="mumbai-in">
                                     <h5><i class="fa fa-map-marker"></i> Mumbai, IN</h5>
@@ -182,8 +182,8 @@
 
                             <div class="info">
                                 <p>{{displayproject[1].tagline}}</p>
-                                <h5>{{displayproject[1].cardtagline}}</h5>
-                                <img src="images/tata_icon.png">
+                                <h5>{{displayproject[1].ngoname}}</h5>
+                                <img ng-src="{{displayproject[1].ngoimage | ngoimagepath}}" height="50px" width="50px">
 
                                 <!--
                             <div class="elements row">
@@ -211,7 +211,7 @@
                         <div class="causes text-center">
                             <div class="pic">
 
-                                <img src="images/explore.jpg">
+                                <img ng-src="{{displayproject[2].image | projectbannerimagepath}}">
 
                                 <div class="mumbai-in">
                                     <h5><i class="fa fa-map-marker"></i> Mumbai, IN</h5>
@@ -221,9 +221,9 @@
                             <h3>{{displayproject[2].tagline}}</h3>
 
                             <div class="info">
-                                <p>{{displayproject[2].tagline}}</p>
-                                <h5>{{displayproject[2].cardtagline}}</h5>
-                                <img src="images/tata_icon.png">
+                                <p>{{displayproject[2].cardtagline}}</p>
+                                <h5>{{displayproject[2].ngoname}}</h5>
+                                <img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
 
                                 <!--
                             <div class="elements row">

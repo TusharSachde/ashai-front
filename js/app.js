@@ -14,7 +14,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'home'
         }).
-        when('/works', {
+        when('/works/:id', {
             templateUrl: 'views/template.html',
             controller: 'works'
         }).
@@ -47,7 +47,7 @@ firstapp.config(['$routeProvider',
         }).
         
         
-         when('/workwithus', {
+         when('/workwithus/:id', {
             templateUrl: 'views/template.html',
             controller: 'workwithus'
         }).
@@ -65,7 +65,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'thankyou'
         }).
-        when('/contactus', {
+        when('/contactus/:id', {
             templateUrl: 'views/template.html',
             controller: 'Contactus'
         }).
@@ -73,7 +73,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'fellowship'
         }).
-         when('/aboutUs', {
+         when('/aboutUs/:id', {
             templateUrl: 'views/template.html',
             controller: 'aboutUs'
         }).
@@ -134,6 +134,26 @@ firstapp.filter('testimonialimagepath', function () {
     };
 });
 
+firstapp.filter('projectbannerimagepath', function () {
+    return function (input) {
+        if (input == null) {
+            return "http://wohlig.co.in/angular-powerforone/images/salaam_bombay.png";
+        } else {
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
+firstapp.filter('ngoimagepath', function () {
+    return function (input) {
+        if (input == null || input == '') {
+            return "http://wohlig.co.in/angular-powerforone/images/face.png";
+        } else {
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
 firstapp.filter('fourletter', function () {
         return function (input) {
             return input.substring(0, 5);
@@ -145,3 +165,17 @@ firstapp.filter('rawHtml', ['$sce', function($sce){
     return $sce.trustAsHtml(val);
   };
 }]);
+
+function partitionarray(myarray, number) {
+            var arrlength = myarray.length;
+            var newarray = [];
+            var j = -1;
+            for (var i = 0; i < arrlength; i++) {
+                if (i % number == 0) {
+                    j++;
+                    newarray[j] = [];
+                }
+                newarray[j].push(myarray[i]);
+            }
+            return newarray;
+        };

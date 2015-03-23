@@ -2,7 +2,7 @@
 
     <div class="header">
 
-        <div class="sliderheadercampaign">
+        <div class="sliderheadercampaign" ng-style="bgimage">
 
             <div class="container">
                <div class="fixhead"></div>
@@ -59,11 +59,11 @@
                     <h3>{{project.tagline}}</h3>
                     <div class="info">
                         <p>{{project.cardtagline}}</p>
-                        <div class="datapoint1">
-                        <div class="img1" ng-repeat="data in datapoint "><i class="icon-star"></i>
-                            <p>{{data.name}}</p>
+                        <div class="datapoint1" ng-repeat = "datap in datapoint">
+                            <div class="img1" ng-repeat="data in datap"><i class="icon-star"></i>
+                                <p>{{data.name}}</p>
+                            </div>
                         </div>
-                    </div>
                         
                     </div>
                 </div>

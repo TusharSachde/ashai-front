@@ -9,6 +9,39 @@ phonecatControllers.controller('home',
         TemplateService.header = 'views/header.html';
         $scope.navigation = NavigationService.getnav();
 
+        //  AUTHENTICATE
+        var authsuccess = function (data, status){
+            console.log("auth auth auth");
+            console.log(data);
+            if(data == "false"){
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }else{
+                $scope.register = "Welcome, "+data.name;
+                $scope.login = "Logout";
+            }
+        }
+        NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+            }
+        }
+        
         $scope.myInterval = 5000;
         $scope.slides = [{
             "image": "images/image1.png",
@@ -55,6 +88,7 @@ phonecatControllers.controller('home',
         $scope.toexplore = function(cat) {
             $location.url("/explore/"+ cat.id);
         }
+        
     
         //  PARTITION DIV
 
@@ -75,7 +109,7 @@ phonecatControllers.controller('home',
     });
 
 phonecatControllers.controller('works',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $routeParams) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("How it works");
         $scope.title = "How it works";
@@ -85,6 +119,10 @@ phonecatControllers.controller('works',
         TemplateService.title = "How It Works";
         $scope.navigation = NavigationService.getnav();
 
+        var staticsuccess = function(data, stauts){
+            $scope.content = data[0];
+        }
+        NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
     }
 );
 
@@ -101,7 +139,7 @@ phonecatControllers.controller('fellowship',
     }
 );
 phonecatControllers.controller('aboutUs',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $routeParams) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("About us");
         TemplateService.header = 'views/headertext.html';
@@ -111,9 +149,10 @@ phonecatControllers.controller('aboutUs',
         TemplateService.title = "About Us";
         $scope.navigation = NavigationService.getnav();
 
-        $scope.aboutus = "active";
+//        $scope.aboutus = "active";
 
         $scope.changeaboutus = function() {
+            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
             $scope.title = "About Us";
             $scope.aboutus = "active";
             $scope.team = "";
@@ -121,6 +160,7 @@ phonecatControllers.controller('aboutUs',
 
         }
         $scope.changeteam = function() {
+            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
             $scope.title = "Our team";
             $scope.aboutus = "";
             $scope.team = "active";
@@ -128,12 +168,43 @@ phonecatControllers.controller('aboutUs',
 
         }
         $scope.changefaq = function() {
+            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
             $scope.title = "FAQ";
             $scope.aboutus = "";
             $scope.team = "";
             $scope.faq = "active";
 
         }
+        
+        //  DECLARATION
+        console.log($routeParams.id);
+        $scope.content = [];
+        
+        //  GET ABOUT US
+        var staticsuccess = function(data, status) {
+            console.log(data);
+            $scope.content = data[0];
+        }
+        switch($routeParams.id){
+                case "1" : {
+                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                    $scope.aboutus = "active";
+                    break;
+                }
+                case "2" : {
+                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                    $scope.faq = "active";
+                    break;
+                }
+                case "3" : {
+                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                    $scope.team = "active";
+                    break;
+                }
+        }
+    
+        //  GET ONE PAGE
+//            NavigationService.getsinglestaticpage()
 
     }
 );
@@ -172,6 +243,8 @@ phonecatControllers.controller('Explore',
         var projectsuccess = function (data, status){
             console.log(data);
             $scope.projects = data.queryresult;
+            $scope.projects = partitionarray($scope.projects,3);
+            console.log($scope.projects);
         }
         NavigationService.getallproject($routeParams.id).success(projectsuccess);
     
@@ -206,6 +279,11 @@ phonecatControllers.controller('campaign',
         TemplateService.header = 'views/HeaderCampaign.html';
         TemplateService.title = "Campaign";
         $scope.navigation = NavigationService.getnav();
+    
+        //   TO CATEGORY PAGE
+        $scope.tocategory = function () {
+            $location.url("/explore/"+$scope.project.category);
+        }
 
         console.log($routeParams.id);
 
@@ -224,9 +302,24 @@ phonecatControllers.controller('campaign',
             console.log("welcome here");
             console.log(data);
             $scope.datapoint = data.datapoint;
+            $scope.datapoint = partitionarray($scope.datapoint,3);
             $scope.project = data.project;
+            $scope.bgimage = {
+                "background": 'url(http://wohlig.co.in/powerforone/uploads/' + $scope.project.image + ') no-repeat',
+                "-webkit-background-size": 'cover',
+                "-moz-background-size": 'cover',
+                "-o-background-size": 'cover',
+                "background-size": 'cover',
+                "background-position": 'top',
+                "min-height": '400px',
+                "width": '100%'
+            };
 
             $scope.projectimages = data.projectimages;
+            $scope.mainimage = $scope.projectimages[0].image;
+            $scope.tomainimage = function (bigimg){
+                $scope.mainimage = bigimg.image;
+            }
             $scope.similarcauses = data.similarcauses;
 
         };
@@ -276,7 +369,7 @@ phonecatControllers.controller('termsandcondition',
     }
 );
 phonecatControllers.controller('workwithus',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $routeParams) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Work With Us";
@@ -284,11 +377,15 @@ phonecatControllers.controller('workwithus',
         TemplateService.content = 'views/workwithus.html';
         $scope.navigation = NavigationService.getnav();
 
+        var staticsuccess = function(data, status){
+            $scope.content = data[0];
+        }
+        NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
     }
 );
 
 phonecatControllers.controller('Contactus',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $routeParams) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.header = 'views/headertext.html';
@@ -297,12 +394,17 @@ phonecatControllers.controller('Contactus',
         TemplateService.content = 'views/Contactus.html';
         TemplateService.title = "Contact Us";
         $scope.navigation = NavigationService.getnav();
-
+    
+        
+        var staticsuccess = function(data, status){
+            $scope.content = data[0];
+        }
+        NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
     }
 );
 
 phonecatControllers.controller('login',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("login");
         TemplateService.header = 'views/headerblack.html';
@@ -311,12 +413,29 @@ phonecatControllers.controller('login',
         TemplateService.title = "Login";
         $scope.navigation = NavigationService.getnav();
 
+        //  DECLARATION
+        $scope.user = [];
+    
+        //  ON LOGIN
+        var loginsuccess = function (data, status) {
+            console.log(data);
+            if(data == "false")
+            {
+                alert("Invalid Id Or Password");
+            }else{
+                $location.url("/home");
+            }
+        }
+        $scope.userlogin = function (user) {
+            console.log(user);
+            NavigationService.login(user).success(loginsuccess);
+        }
     }
 );
 
 
 phonecatControllers.controller('register',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("register");
         TemplateService.header = 'views/headerblack.html';
@@ -325,6 +444,22 @@ phonecatControllers.controller('register',
         TemplateService.title = "Register";
         $scope.navigation = NavigationService.getnav();
 
+        //  DECLARATION
+        $scope.user = [];
+        
+        //  ON REGISTER
+        var registersuccess = function (data, status) {
+            console.log(data);
+            if(data == "false")
+            {
+                alert("Enable To Create User");
+            }else{
+                $location.url("/login");
+            }
+        }
+        $scope.createuser = function (user) {
+            NavigationService.register(user).success(registersuccess);
+        }
     }
 );
 
@@ -399,5 +534,45 @@ phonecatControllers.controller('Teampage',
 phonecatControllers.controller('headerctrl',
     function($scope, TemplateService) {
         $scope.template = TemplateService;
+    
+        $scope.demo = "fsdfasfa";
+    
+    }
+);
+
+phonecatControllers.controller('footer',
+    function($scope, TemplateService, $location, NavigationService) {
+        $scope.template = TemplateService;
+    
+        //  DECLARATION
+    
+    
+        //  ALL FOOTER
+        var pagesuccess = function(data, status){
+            console.log(data);
+            $scope.pages = data;
+        }
+        NavigationService.getstaticpages().success(pagesuccess);
+    
+        //  TO OTHER PAGES
+        $scope.topages = function(page){
+            switch(page.id){
+                    case "1" :
+                    case "2" :
+                    case "3" : {
+                        $location.url("/aboutUs/"+page.id);
+                        break;
+                    }
+                    case "4" : {
+                        $location.url("/works/"+page.id);
+                    }
+                    case "5" : {
+                        $location.url("/workwithus/"+page.id);
+                    }
+                    case "6" : {
+                        $location.url("/contactus/"+page.id);
+                    }
+            }
+        }
     }
 );
