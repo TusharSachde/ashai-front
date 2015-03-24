@@ -152,7 +152,7 @@ phonecatControllers.controller('aboutUs',
 //        $scope.aboutus = "active";
 
         $scope.changeaboutus = function() {
-            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+            NavigationService.getsinglestaticpage(1).success(staticsuccess);
             $scope.title = "About Us";
             $scope.aboutus = "active";
             $scope.team = "";
@@ -160,7 +160,7 @@ phonecatControllers.controller('aboutUs',
 
         }
         $scope.changeteam = function() {
-            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+            NavigationService.getsinglestaticpage(3).success(staticsuccess);
             $scope.title = "Our team";
             $scope.aboutus = "";
             $scope.team = "active";
@@ -168,7 +168,7 @@ phonecatControllers.controller('aboutUs',
 
         }
         $scope.changefaq = function() {
-            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+            NavigationService.getsinglestaticpage(2).success(staticsuccess);
             $scope.title = "FAQ";
             $scope.aboutus = "";
             $scope.team = "";
@@ -238,7 +238,6 @@ phonecatControllers.controller('Explore',
         //  DECLARATION
         $scope.projects = [];
         $scope.catg = [];
-        $scope.catid = [];
     
         //  GET ALL PROJECT
         console.log($routeParams.id);
@@ -248,7 +247,7 @@ phonecatControllers.controller('Explore',
             $scope.projects = partitionarray($scope.projects,3);
             console.log($scope.projects);
         }
-        NavigationService.getprojectbycategoryarray($routeParams.id).success(projectsuccess);
+        NavigationService.getallproject($routeParams.id).success(projectsuccess);
     
         //  GET ALL CATEGORY
         var allcategoriessuccess = function (data, status) {
@@ -288,22 +287,14 @@ phonecatControllers.controller('Explore',
                 console.log($scope.catg);
             }
             
-            $scope.catid = $scope.catg[0].id;
-            for (var i = 1; i < $scope.catg.length; i++) {
-                $scope.catid += "," + $scope.catg[i].id;
-            }
+            
 
             if(cat.active == "active"){
                 cat.active = "";
             }else{
                 cat.active = "active";
             }
-            NavigationService.getprojectbycategoryarray($scope.catid).success(projectsuccess);
-        }
-        
-        //  GET ALL CATEGORY ON ALL
-        $scope.getallproject = function () {
-            NavigationService.getprojectbycategoryarray(0).success(projectsuccess);
+            NavigationService.getallproject(cat.id).success(projectsuccess);
         }
     
     }
@@ -604,12 +595,15 @@ phonecatControllers.controller('footer',
                     }
                     case "4" : {
                         $location.url("/works/"+page.id);
+                        break;
                     }
                     case "5" : {
                         $location.url("/workwithus/"+page.id);
+                        break;
                     }
                     case "6" : {
                         $location.url("/contactus/"+page.id);
+                        break;
                     }
             }
         }
