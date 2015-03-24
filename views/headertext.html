@@ -1,59 +1,58 @@
-
-
-
 <header>
- <div class="header">
-       <div class="sliderheader border-yellow" style="background-image: url(images/backgrounds/{{backgroundimg}});">
+    <div class="header">
+        <div class="sliderheader border-yellow" style="background-image: url(images/backgrounds/{{backgroundimg}});">
 
-       <div class="headerzindex head-fix ">
-        <div class="container">
-                 <div class="row ">
-                    <div class="col-xs-3">
-                        <div class="logo">
-                            <a href="#/Home"><img  src="images/logo.png" /></a>
+            <div class="headerzindex head-fix ">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-xs-3">
+                            <div class="logo">
+                                <a href="#/Home">
+                                    <img src="images/logo.png" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-7">
+                            <nav class="navbar navbar-default nav-custom">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                    <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu"></ul>
+
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="col-xs-2">
+                            <div class="hidden-xs hidden-sm headmargin pull-right ">
+
+                                <a ng-click="onregister()" class="login">{{register}}</button>
+                                <a ng-click="onlogin()" class="login">{{login}}</a>
+                            </div>
+
                         </div>
                     </div>
-
-                    <div class="col-xs-7">
-                        <nav class="navbar navbar-default nav-custom">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">                        
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                               
-                                    <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu"></ul>
-                               
-                            </div>
-                        </nav>
-                    </div>
-                
-                    <div class="col-xs-2">
-                        <div class="hidden-xs hidden-sm headmargin pull-right ">
-                          
-                            <a href="#/register" class="login">Register</button>
-                                <a href="#/login" class="login">Login</a>
-                                </div>
-                       
-                    </div>
-                </div>
                 </div>
             </div>
-           
+
             <div class="conatiner">
                 <div class="head-on">
-                   <div class="headerdynamic">
-                    <h3>{{title}}</h3>
+                    <div class="headerdynamic">
+                        <h3>{{title}}</h3>
                     </div>
                 </div>
 
             </div>
-   
+
         </div>
     </div>
     <div class="headerfixed">

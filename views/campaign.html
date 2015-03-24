@@ -17,11 +17,12 @@
                         </p>
                     </div>
                     <div class="contribution">
-                       
+
                         <div class="pull-left">
                             <h6>Your contribution will be <span><b>doubled</b></span> by</h6>
                         </div>
-                        <div><img ng-src="{{project.ngoimage | ngoimagepath}}" height="50px" width="50px">
+                        <div>
+                            <img ng-src="{{project.ngoimage | ngoimagepath}}" height="50px" width="50px">
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -31,7 +32,7 @@
                 <h3>PROBLEM</h3>
                 <p class="parapadding" ng-bind-html="project.content | rawHtml"></p>
             </div>
-<!--
+            <!--
             <div class="paragraph">
                 <h3>SOLUTION</h3>
                 <p class="parapadding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consequuntur odio, quam cupiditate natus corporis doloremque voluptatibus mollitia, fugiat laudantium impedit. Ullam ratione labore aut repellat dolores praesentium sed quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque non iure rerum, sunt commodi itaque earum dignissimos esse a magni quod, asperiores eaque necessitatibus ipsam placeat rem modi perspiciatis! Quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe alias sequi tempora, ex rerum, possimus ullam ab iusto in unde. Velit, aliquid, laudantium quisquam animi corporis praesentium eligendi pariatur.</p>
@@ -49,17 +50,19 @@
             </div>
 -->
 
-            <div class="row">
+            <div class="row" ng-if="projectimages">
                 <div class="col-xs-10">
                     <div class="galleryimg">
                         <img ng-src="{{mainimage | ngoimagepath}}" width="100%" height="100%" alt="">
                     </div>
                 </div>
                 <div class="col-xs-2 gallery_width">
-                <ul class="list-unstyled">
-<!--                    <li><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>-->
-                    <li class="gallerytag" ng-repeat = "proimg in projectimages | orderBy : 'order'"><img src="{{proimg.image | ngoimagepath}}" width="100%" height="100%" alt="" ng-click = "tomainimage(proimg)"></li>
-<!--
+                    <ul class="list-unstyled">
+                        <!--                    <li><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>-->
+                        <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
+                            <img src="{{proimg.image | ngoimagepath}}" width="100%" height="100%" alt="" ng-click="tomainimage(proimg)">
+                        </li>
+                        <!--
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -69,10 +72,10 @@
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
 -->
-                </ul>
+                    </ul>
 
 
-                    
+
 
                 </div>
             </div>
@@ -83,13 +86,13 @@
             <div class="LeftCont">
                 <div class="donatecontentChange" id="atdonate">
 
-                    <div class="txt3"><i class="donate"></i> <span>Donate</span>
+                    <div class="txt3"><i class="donate"></i>  <span>Donate</span>
                     </div>
 
                     <div class="checkbox check">
-                       
+
                         <label class="anonynimous">
-                            
+
                             <div class="row foregin">
                                 <div class="col-md-2 radanoyminous">
                                     <input type="radio" ng-model="project.indiandoner" name="1">
@@ -214,7 +217,7 @@
                         <p>{{similarcauses[0].cardtagline}}</p>
                         <h5>{{similarcauses[0].ngoname}}</h5>
                         <img ng-src="{{similarcauses[0].ngoimage | ngoimagepath}}" height="50px" width="50px">
-                       
+
                     </div>
                 </div>
             </a>
@@ -234,7 +237,7 @@
                         <p>{{similarcauses[1].cardtagline}}</p>
                         <h5>{{similarcauses[1].ngoname}}</h5>
                         <img ng-src="{{similarcauses[1].ngoimage | ngoimagepath}}" height="50px" width="50px">
-                       
+
                     </div>
                 </div>
             </a>
@@ -254,50 +257,50 @@
                         <p>{{similarcauses[2].cardtagline}}</p>
                         <h5>{{similarcauses[2].ngoname}}</h5>
                         <img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
-                       
+
                     </div>
                 </div>
             </a>
         </div>
-    <div class="container">
-    
-    <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,  
+        <div class="container">
+
+            <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,  
             slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
-        <div class="row">
-            <div class="col-md-2 text-center">
-                <img src="images/face.png" class="img-responsive">
-            </div>
-            <div class="col-md-10">
-                <div class="cont52">
-                    {{testimonial1.content}}
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src="images/face.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="cont52">
+                            {{testimonial1.content}}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 text-center">
-                <img src="images/face.png" class="img-responsive">
-            </div>
-            <div class="col-md-10">
-                <div class="cont52">
-                  {{testimonial1.content}}
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src="images/face.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="cont52">
+                            {{testimonial1.content}}
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+            </wrap-owlcarousel>
         </div>
+        <script>
+            $(document).ready(function() {
+                $(".testimonials").owlCarousel({
 
-    </wrap-owlcarousel>
-</div>
-<script>
-    $(document).ready(function () {
-        $(".testimonials").owlCarousel({
+                    //      navigation : true, // Show next and prev buttons
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    singleItem: true,
+                    pagination: false,
+                    autoPlay: true,
 
-            //      navigation : true, // Show next and prev buttons
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-            pagination: false,
-            autoPlay: true,
+                });
 
-        });
-
-    });
-</script>
+            });
+        </script>
