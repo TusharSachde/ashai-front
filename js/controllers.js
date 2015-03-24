@@ -131,7 +131,7 @@ phonecatControllers.controller('fellowship',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("The fellowship");
         TemplateService.header = 'views/headertext.html';
-        $scope.title = "The fellowship";
+//        $scope.title = "The fellowship";
         $scope.backgroundimg = "learn_more.png";
         TemplateService.content = 'views/fellowship.html';
         TemplateService.title = "The fellowship";
