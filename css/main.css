@@ -1760,3 +1760,10 @@ border-radius: 1px;
     display: block;
     overflow: hidden;
 }
+p.abc {
+    padding-top: 12px;
+}
+p.already {
+    padding-top: 10px;
+    font-size: 12px;
+}
