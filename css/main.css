@@ -1348,8 +1348,11 @@ p.contributionimg {
     text-align: center;
     text-transform: capitalize;
 }
-.contribution {
-    width: 100%;
+.contribution img {
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    display: inline;
 }
 .circlepercnt {
     font-size: 25px;
@@ -1743,4 +1746,11 @@ border-radius: 1px;
     overflow: hidden;
     width: 162px;
     height: 162px;
+}
+.galleryimg img {
+    height: 468px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    overflow: hidden;
 }
