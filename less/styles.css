@@ -539,7 +539,7 @@ body .bottom1 .view {
   font-style: italic;
 }
 body .bottom1 .causes {
-  margin: 15px;
+  margin: 0 0 20px;
   padding: 12px 12px 0 12px;
   border: 1px solid lightgray;
 }
@@ -550,6 +550,7 @@ body .bottom1 .causes .pic img {
 body .bottom1 .causes .info {
   color: gray;
   text-align: center;
+  padding-bottom: 10px;
 }
 body .bottom1 .causes .info h5 {
   font-weight: bold;
@@ -1291,6 +1292,7 @@ a.createacc {
   font-weight: 500;
   font-size: 17px;
   text-align: center;
+  height: 45px;
 }
 .btnsoc {
   font-size: 16px;
@@ -1301,6 +1303,7 @@ a.createacc {
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
   display: block;
   text-align: center;
+  height: 45px;
 }
 .gplus {
   background-color: #dd4d3b;
@@ -1362,4 +1365,7 @@ p.pull-right.abc {
 .inliner a {
   display: inline-block !important;
   cursor: pointer;
+}
+.owl-carousel {
+  padding: 20px 0 15px;
 }
