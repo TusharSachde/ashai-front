@@ -144,6 +144,16 @@ firstapp.filter('projectbannerimagepath', function () {
     };
 });
 
+firstapp.filter('cardimageimagepath', function () {
+    return function (input) {
+        if (input == null || input == '') {
+            return "http://wohlig.co.in/angular-powerforone/images/salaam_bombay.png";
+        } else {
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
 firstapp.filter('bannerimagepath', function () {
     return function (input) {
         if (input == null || input == '') {

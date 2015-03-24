@@ -29,7 +29,7 @@ phonecatControllers.controller('home',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                $location.url("/profile");
+                $location.url("/myprofile");
             }
         }
     
@@ -142,7 +142,7 @@ phonecatControllers.controller('works',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -199,7 +199,7 @@ phonecatControllers.controller('fellowship',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -247,7 +247,7 @@ phonecatControllers.controller('aboutUs',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -356,7 +356,7 @@ phonecatControllers.controller('blog',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -406,7 +406,7 @@ phonecatControllers.controller('Explore',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -533,7 +533,7 @@ phonecatControllers.controller('campaign',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -574,7 +574,7 @@ phonecatControllers.controller('campaign',
             $scope.datapoint = partitionarray($scope.datapoint,3);
             $scope.project = data.project;
             $scope.bgimage = {
-                "background": 'url(http://wohlig.co.in/powerforone/uploads/' + $scope.project.image + ') no-repeat',
+                "background": 'url(http://wohlig.co.in/powerforone/uploads/' + $scope.project.cardimage + ') no-repeat',
                 "-webkit-background-size": 'cover',
                 "-moz-background-size": 'cover',
                 "-o-background-size": 'cover',
@@ -631,7 +631,7 @@ phonecatControllers.controller('myprofile',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -679,7 +679,7 @@ phonecatControllers.controller('rewards',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -729,7 +729,7 @@ phonecatControllers.controller('termsandcondition',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -776,7 +776,7 @@ phonecatControllers.controller('workwithus',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -831,7 +831,7 @@ phonecatControllers.controller('Contactus',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -969,7 +969,7 @@ phonecatControllers.controller('policy',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -1018,7 +1018,7 @@ phonecatControllers.controller('checkout',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -1066,7 +1066,7 @@ phonecatControllers.controller('faq',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -1115,7 +1115,7 @@ phonecatControllers.controller('thankyou',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
@@ -1165,7 +1165,7 @@ phonecatControllers.controller('Teampage',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/myprofile");
             }
         }
     
