@@ -132,7 +132,7 @@ phonecatControllers.controller('fellowship',
         $scope.menutitle = NavigationService.makeactive("The fellowship");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "The fellowship";
-        $scope.backgroundimg = "Fellowship.jpg";
+        $scope.backgroundimg = "learn_more.png";
         TemplateService.content = 'views/fellowship.html';
         TemplateService.title = "The fellowship";
         $scope.navigation = NavigationService.getnav();
@@ -257,7 +257,7 @@ phonecatControllers.controller('Explore',
             $scope.categories = data.queryresult;
             for(var i=0;i<$scope.categories.length;i++ )
             {
-                $scope.categories[0].active = "";
+                $scope.categories[i].active = "";
             }
             
         }
@@ -303,6 +303,10 @@ phonecatControllers.controller('Explore',
         
         //  GET ALL CATEGORY ON ALL
         $scope.getallproject = function () {
+            for(var i=0;i<$scope.categories.length;i++ )
+            {
+                $scope.categories[i].active = "";
+            }
             NavigationService.getprojectbycategoryarray(0).success(projectsuccess);
         }
     
