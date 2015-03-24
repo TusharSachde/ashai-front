@@ -237,6 +237,7 @@ phonecatControllers.controller('Explore',
     
         //  DECLARATION
         $scope.projects = [];
+        $scope.catg = [];
     
         //  GET ALL PROJECT
         console.log($routeParams.id);
@@ -263,7 +264,36 @@ phonecatControllers.controller('Explore',
     
         //  TO CATEGORY FILTER
         $scope.tocategory = function(cat){
-            cat.active = "active";
+            
+            if ($scope.catg.length == 0) {
+                $scope.catg.push(cat);
+                console.log("in push");
+                console.log($scope.catg);
+            } else {
+                for (var i = 0; i < $scope.catg.length; i++) {
+                    if ($scope.catg[i].id == cat.id) {
+                        $scope.catg.splice(i,1);
+                        $scope.in = 0;
+                    }else {
+                        $scope.in = 1;
+
+                    }
+                }
+
+                if ($scope.in == 1) {
+                    $scope.catg.push(cat);
+                }
+                console.log("in else part");
+                console.log($scope.catg);
+            }
+            
+            
+
+            if(cat.active == "active"){
+                cat.active = "";
+            }else{
+                cat.active = "active";
+            }
             NavigationService.getallproject(cat.id).success(projectsuccess);
         }
     

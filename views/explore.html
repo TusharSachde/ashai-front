@@ -2,32 +2,32 @@
    <div class="container">
     <ul class="list-inline pagecategory">
         <span><li class="txtall">
-           
+
 <!--           <i class="cathrt cat-heart black"></i>-->
            All
-            
+
         </li></span>
 <!--
         <li class="active">
-            
+
                 <span><i class="b-educa caticonsb"></i></span>
                 <div class="exp-menus"><div class="arrow-up"></div>Education</div>
-            
+
         </li>
 -->
-        <li ng-repeat="cat in categories" ng-click="tocategory(cat)" class="{{cat.active}}">
-           
+         <li ng-repeat="cat in categories" ng-click="tocategory(cat)" class="{{cat.active}}">
+
            <span> <i class="b-{{cat.name | fourletter | lowercase}} caticonsb"></i></span>
                 <div class="exp-menus"><div class="arrow-up"></div>{{cat.name}}</div>
-            
-        </li>
+
+        </li> 
     </ul>
     </div>
 </div>
 <div class="exp-fixhead"></div>
 
     <div class="container">
-        
+
         <div class="row mainCause" ng-repeat = "project in projects">
             <div class="col-md-4 causelnk" ng-repeat="pro in project">
                <a href="#/campaign/{{pro.id}}">

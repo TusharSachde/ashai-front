@@ -1725,7 +1725,7 @@ border-radius: 1px;
 .contribut {
     margin-top: 20px;
 }
-sul.pagecategory>li.active span {
+.pagecategory>li.active span {
     background: rgb(5, 199, 199);
     -webkit-transition: all 1s ease;
     padding: 10px 10px 13px 9px;
