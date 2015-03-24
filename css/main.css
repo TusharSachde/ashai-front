@@ -157,6 +157,9 @@ ul.pagecategory {
     margin: auto;
     width: 100%;
     position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 200px;
 }
 .causes h3 {
     font-weight: bold;
@@ -1730,4 +1733,14 @@ border-radius: 1px;
     -webkit-transition: all 1s ease;
     padding: 10px 10px 13px 9px;
     border-radius: 5px;
+}
+.info img {
+    width: 12%;
+    height: 40px;
+}
+.salammum img {
+    text-align: center;
+    overflow: hidden;
+    width: 162px;
+    height: 162px;
 }
