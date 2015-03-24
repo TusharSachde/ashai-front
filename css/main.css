@@ -89,6 +89,7 @@ ul.pagecategory {
     padding: 10px 7px;
     margin: 0 1px;
     position: relative;
+    -webkit-transition: all 1s ease;
 }
 .pagecategory li:hover .exp-menus {
     display: block;
@@ -943,6 +944,8 @@ ul.pagecategory>li,
     -ms-flex: 1;
     -moz-box-flex: 1;
     flex: 1;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
 }
 /*allflex*/
 
@@ -1545,9 +1548,9 @@ p.or {
 }
 .exp-menus {
     color: black;
-    background: #05c7c7;
+    background: #05C7C7;
     margin: 0 1px;
-    padding: 10px 7px;
+    padding: 7px 0px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -1561,6 +1564,9 @@ p.or {
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
     margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease-out;
 }
 .donation .input-group:after {
     position: absolute;
@@ -1738,7 +1744,7 @@ border-radius: 1px;
     border-radius: 5px;
 }
 .info img {
-    width: 12%;
+    width: auto;
     height: 40px;
 }
 .salammum img {
