@@ -3,6 +3,6 @@
 <li ng-repeat="menu in navigation" class="{{menu.classis}}"><a href="{{menu.link}}" class="ifbold">{{menu.name}}</a>
 </li>
 <div class="visible-xs visible-sm headmargin" style="display:none;">
-    <a href="#/register" class="login">Register</button>
-                        <a href="#/login" class="login">Login</a>
+    <a ng-click="onregister()" class="login">{{register}}</button>
+                                    <a ng-click="onlogin()" class="login">{{login}}</a>
 </div>

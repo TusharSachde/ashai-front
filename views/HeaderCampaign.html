@@ -43,10 +43,10 @@
                             </nav>
                         </div>
 
-                        <div class="col-xs-2">
+                        <div class="col-xs-2 reg-set">
                             <div class="hidden-xs hidden-sm headmargin pull-right">
-                                <div class="padingregister">{{demo}}
-                                    <a ng-click="onregister()" class="login">{{register}}</button>
+                                <div class="padingregister">
+                                    <a ng-click="onregister()" class="login">{{register | cut:true:8:' ...'}}</button>
                                     <a ng-click="onlogin()" class="login">{{login}}</a>
                                 </div>
                             </div>
