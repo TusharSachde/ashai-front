@@ -116,7 +116,7 @@ firstapp.directive('wrapOwlcarousel', function () {
 
 firstapp.filter('categoryimagepath', function () {
     return function (input) {
-        if (input == null) {
+        if (input == null || input == '') {
             return "http://wohlig.co.in/angular-powerforone/images/categoryimg/childwelfare.jpg";
         } else {
             return "http://wohlig.co.in/powerforone/uploads/" + input;
@@ -126,7 +126,7 @@ firstapp.filter('categoryimagepath', function () {
 
 firstapp.filter('testimonialimagepath', function () {
     return function (input) {
-        if (input == null) {
+        if (input == null || input == '') {
             return "http://wohlig.co.in/angular-powerforone/images/face.png";
         } else {
             return "http://wohlig.co.in/powerforone/uploads/" + input;
@@ -136,10 +136,24 @@ firstapp.filter('testimonialimagepath', function () {
 
 firstapp.filter('projectbannerimagepath', function () {
     return function (input) {
-        if (input == null) {
+        if (input == null || input == '') {
             return "http://wohlig.co.in/angular-powerforone/images/salaam_bombay.png";
         } else {
             return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
+firstapp.filter('bannerimagepath', function () {
+    return function (input) {
+        if (input == null || input == '') {
+            return "http://wohlig.co.in/angular-powerforone/images/salaam_bombay.png";
+        } else {
+            if(input == "learn_more.png"){
+                return "images/backgrounds/"+input;
+            }else{
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            }
         }
     };
 });

@@ -29,7 +29,7 @@ phonecatControllers.controller('home',
             if($scope.register == "Register"){
                 $location.url("/register");
             }else{
-                
+                $location.url("/profile");
             }
         }
     
@@ -40,6 +40,8 @@ phonecatControllers.controller('home',
                 console.log("login");
             }else{
                 NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
             }
         }
         
@@ -135,10 +137,32 @@ phonecatControllers.controller('works',
         }
         NavigationService.authenticate().success(authsuccess);
     
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
+    
     
         //  GET WORKS PAGE
         var staticsuccess = function(data, stauts){
             $scope.content = data[0];
+            $scope.backgroundimg = data[0].image;
         }
         NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
     }
@@ -169,6 +193,27 @@ phonecatControllers.controller('fellowship',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
     }
 );
 phonecatControllers.controller('aboutUs',
@@ -196,11 +241,32 @@ phonecatControllers.controller('aboutUs',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
 //        $scope.aboutus = "active";
 
         $scope.changeaboutus = function() {
-            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+            NavigationService.getsinglestaticpage(1).success(staticsuccess);
             $scope.title = "About Us";
             $scope.aboutus = "active";
             $scope.team = "";
@@ -208,7 +274,7 @@ phonecatControllers.controller('aboutUs',
 
         }
         $scope.changeteam = function() {
-            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+            NavigationService.getsinglestaticpage(3).success(staticsuccess);
             $scope.title = "Our team";
             $scope.aboutus = "";
             $scope.team = "active";
@@ -216,7 +282,7 @@ phonecatControllers.controller('aboutUs',
 
         }
         $scope.changefaq = function() {
-            NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+            NavigationService.getsinglestaticpage(2).success(staticsuccess);
             $scope.title = "FAQ";
             $scope.aboutus = "";
             $scope.team = "";
@@ -232,6 +298,7 @@ phonecatControllers.controller('aboutUs',
         var staticsuccess = function(data, status) {
             console.log(data);
             $scope.content = data[0];
+            $scope.backgroundimg = data[0].image;
         }
         switch($routeParams.id){
                 case "1" : {
@@ -283,6 +350,27 @@ phonecatControllers.controller('blog',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
@@ -312,6 +400,27 @@ phonecatControllers.controller('Explore',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
     
         //  DECLARATION
         $scope.projects = [];
@@ -365,10 +474,13 @@ phonecatControllers.controller('Explore',
                 console.log("in else part");
                 console.log($scope.catg);
             }
-            
-            $scope.catid = $scope.catg[0].id;
-            for (var i = 1; i < $scope.catg.length; i++) {
-                $scope.catid += "," + $scope.catg[i].id;
+            if($scope.catg == ''){
+                $scope.catid = 0;
+            }else{
+                $scope.catid = $scope.catg[0].id;
+                for (var i = 1; i < $scope.catg.length; i++) {
+                    $scope.catid += "," + $scope.catg[i].id;
+                }
             }
 
             if(cat.active == "active"){
@@ -415,6 +527,27 @@ phonecatControllers.controller('campaign',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
     
         //   TO CATEGORY PAGE
         $scope.tocategory = function () {
@@ -492,6 +625,27 @@ phonecatControllers.controller('myprofile',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
     }
 );
 
@@ -519,6 +673,27 @@ phonecatControllers.controller('rewards',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
@@ -548,6 +723,27 @@ phonecatControllers.controller('termsandcondition',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
@@ -574,9 +770,31 @@ phonecatControllers.controller('workwithus',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
         var staticsuccess = function(data, status){
             $scope.content = data[0];
+            $scope.backgroundimg = data[0].image;
         }
         NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
     }
@@ -608,9 +826,31 @@ phonecatControllers.controller('Contactus',
         }
         NavigationService.authenticate().success(authsuccess);
     
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
+    
         
         var staticsuccess = function(data, status){
             $scope.content = data[0];
+            $scope.backgroundimg = data[0].image;
         }
         NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
     }
@@ -636,6 +876,7 @@ phonecatControllers.controller('login',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
 
         //  DECLARATION
         $scope.user = [];
@@ -678,6 +919,7 @@ phonecatControllers.controller('register',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
 
         //  DECLARATION
         $scope.user = [];
@@ -721,6 +963,27 @@ phonecatControllers.controller('policy',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
@@ -749,6 +1012,27 @@ phonecatControllers.controller('checkout',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
@@ -776,6 +1060,27 @@ phonecatControllers.controller('faq',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
@@ -804,6 +1109,27 @@ phonecatControllers.controller('thankyou',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
@@ -833,6 +1159,27 @@ phonecatControllers.controller('Teampage',
             }
         }
         NavigationService.authenticate().success(authsuccess);
+    
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                
+            }
+        }
+    
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
 
     }
 );
