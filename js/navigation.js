@@ -11,7 +11,7 @@ var navigationservice = angular.module('navigationservice', [])
     }, {
         name: "How it works",
         active: "",
-        link:"#/works",
+        link:"#/works/4",
         subnav: []
     }, {
         name: "The fellowship",
@@ -41,13 +41,13 @@ var navigationservice = angular.module('navigationservice', [])
           {
               return $http.get(admin_url+ 'json/getstaticpages',{});
           },
-         getallproject:function(category)
-          {
-              return $http.get(admin_url+ 'json/getprojectbycategory?category=' + category,{});
-          },
          getprojectbycategoryarray:function(category)
           {
               return $http.get(admin_url+ 'json/getprojectbycategoryarray?category=' + category,{});
+          },
+         getallproject:function(category)
+          {
+              return $http.get(admin_url+ 'json/getprojectbycategory?category=' + category,{});
           },
          getsinglestaticpage:function(id)
           {

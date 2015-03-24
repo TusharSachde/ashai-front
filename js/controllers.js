@@ -604,12 +604,15 @@ phonecatControllers.controller('footer',
                     }
                     case "4" : {
                         $location.url("/works/"+page.id);
+                        break;
                     }
                     case "5" : {
                         $location.url("/workwithus/"+page.id);
+                        break;
                     }
                     case "6" : {
                         $location.url("/contactus/"+page.id);
+                        break;
                     }
             }
         }
