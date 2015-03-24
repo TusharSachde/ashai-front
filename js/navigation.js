@@ -45,6 +45,10 @@ var navigationservice = angular.module('navigationservice', [])
           {
               return $http.get(admin_url+ 'json/getprojectbycategory?category=' + category,{});
           },
+         getprojectbycategoryarray:function(category)
+          {
+              return $http.get(admin_url+ 'json/getprojectbycategoryarray?category=' + category,{});
+          },
          getsinglestaticpage:function(id)
           {
               return $http.get(admin_url+ 'json/getsinglestaticpage?id=' + id,{});

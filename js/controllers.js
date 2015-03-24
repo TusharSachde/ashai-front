@@ -238,6 +238,7 @@ phonecatControllers.controller('Explore',
         //  DECLARATION
         $scope.projects = [];
         $scope.catg = [];
+        $scope.catid = [];
     
         //  GET ALL PROJECT
         console.log($routeParams.id);
@@ -247,7 +248,7 @@ phonecatControllers.controller('Explore',
             $scope.projects = partitionarray($scope.projects,3);
             console.log($scope.projects);
         }
-        NavigationService.getallproject($routeParams.id).success(projectsuccess);
+        NavigationService.getprojectbycategoryarray($routeParams.id).success(projectsuccess);
     
         //  GET ALL CATEGORY
         var allcategoriessuccess = function (data, status) {
@@ -287,14 +288,22 @@ phonecatControllers.controller('Explore',
                 console.log($scope.catg);
             }
             
-            
+            $scope.catid = $scope.catg[0].id;
+            for (var i = 1; i < $scope.catg.length; i++) {
+                $scope.catid += "," + $scope.catg[i].id;
+            }
 
             if(cat.active == "active"){
                 cat.active = "";
             }else{
                 cat.active = "active";
             }
-            NavigationService.getallproject(cat.id).success(projectsuccess);
+            NavigationService.getprojectbycategoryarray($scope.catid).success(projectsuccess);
+        }
+        
+        //  GET ALL CATEGORY ON ALL
+        $scope.getallproject = function () {
+            NavigationService.getprojectbycategoryarray(0).success(projectsuccess);
         }
     
     }
