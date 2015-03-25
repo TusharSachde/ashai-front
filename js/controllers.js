@@ -8,7 +8,6 @@ phonecatControllers.controller('home',
         TemplateService.content = 'views/home.html';
         TemplateService.header = 'views/header.html';
         $scope.navigation = NavigationService.getnav();
-    $scope.demo = "hey hey";
 
         //  AUTHENTICATE
         var authsuccess = function (data, status){
@@ -609,13 +608,15 @@ $scope.myinterval = 5000;
         NavigationService.displaytestmonial(displaytestmonial1);
     
         //  POST ON FACEBOOK
-        $scope.facebooksare = function(){
-            var ref = window.open('http://wohlig.co.in/powerforone/index.php/hauth/postfb?message=hey hello&returnurl=http://wohlig.co.in/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
+        $scope.facebookshare = function(text){
+            window.location.href=admin_url+"hauth/postfb?message="+$scope.project.facebooktext+"&returnurl=";
+//            var ref = window.open('http://localhost/powerforone/index.php/hauth/postfb?message=hey hello&returnurl=http://localhost/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
         }
         
         //  POST ON Twiter
-        $scope.facebooksare = function(){
-            var ref = window.open('http://wohlig.co.in/powerforone/index.php/hauth/posttweet?message=hey hello&returnurl=http://wohlig.co.in/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
+        $scope.twittershare = function(){
+            window.location.href=admin_url+"hauth/posttweet?message="+$scope.project.twittertext+"&returnurl="+window.location.href;
+//            var ref = window.open('http://localhost/powerforone/index.php/hauth/posttweet?message=hey hello&returnurl=http://localhost/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
         }
 
     }
