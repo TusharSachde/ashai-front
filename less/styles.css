@@ -1063,7 +1063,7 @@ a.explorep {
 .w5 {
   width: 100%;
   height: 106px;
-  background-position: -10px -10px;
+  background-position: 55% -7px;
 }
 .w4 {
   width: 119px;
@@ -1084,11 +1084,6 @@ a.explorep {
   width: 79px;
   height: 106px;
   background-position: -10px -474px;
-}
-.w5 {
-  width: 100%;
-  height: 106px;
-  background-position: -17px -6px;
 }
 a.socio-btn {
   color: white;
