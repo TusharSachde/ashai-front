@@ -108,6 +108,8 @@ phonecatControllers.controller('home',
             }
             return newarray;
         };
+     $scope.myInterval = 5000;
+  var slides = $scope.slides = [];
 
     });
 

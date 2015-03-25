@@ -260,6 +260,46 @@
     </div>
     <div class="container">
     
+<div>
+  <div style="height: 305px">
+    <carousel interval="myInterval">
+      <slide ng-repeat="testimonial in testimonials" active="slide.active">
+        <img ng-src="testimonial.image | testimonialimagepath" style="margin:auto;">
+        <div class="carousel-caption">
+         {{testimonial.name}}
+        </div>
+      </slide>
+    </carousel>
+  </div>
+  
+</div>
+
+
+
+
+<!--
+        <div class="imageset">
+          
+                <div class="row" ng-repeat="testimonial in testimonials">
+                <div class="col-md-2 text-center">
+                <div ng-show="$index<4" class="pickweek">
+                
+                   <img src="testimonial.image | testimonialimagepath" class="img-responsive" ng-show="showslideset1==0">
+                </div>
+                </div>
+                <div class="col-md-10">
+                <span ng-show="$index>=4" class="pickweek">
+                    <div class="cont52">
+                     {{testimonial.name}}
+                     </div>
+                </span>
+               </div>
+                </div>
+           
+        </div>
+-->
+ 
+<!--
     <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,  
             slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
         <div class="row" ng-repeat = "testimonial in testimonials">
@@ -274,6 +314,7 @@
         </div>
 
     </wrap-owlcarousel>
+-->
 </div>
     
     
@@ -386,3 +427,20 @@ $(document).ready(function() {
 </section>
 
 
+<script>
+angular.module('ui.bootstrap.demo').controller('CarouselDemoCtrl', function ($scope) {
+  $scope.myInterval = 5000;
+  var slides = $scope.slides = [];
+  $scope.addSlide = function() {
+    var newWidth = 600 + slides.length + 1;
+    slides.push({
+      image: 'http://placekitten.com/' + newWidth + '/300',
+      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
+        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+    });
+  };
+  for (var i=0; i<4; i++) {
+    $scope.addSlide();
+  }
+});
+</script>
