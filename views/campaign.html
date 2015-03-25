@@ -86,7 +86,7 @@
             <div class="LeftCont">
                 <div class="donatecontentChange" id="atdonate">
 
-                    <div class="txt3"><i class="donate"></i> <span>Donate</span>
+                    <div class="txt3"><i class="donate"></i>  <span>Donate</span>
                     </div>
 
                     <div class="checkbox check">
@@ -263,25 +263,24 @@
             </a>
         </div>
     </div>
-        
-        <div class="container">
- <div style="height:200px">
-    <carousel interval="myInterval" style="height:200px">
-      <slide ng-repeat="testimonial in testimonials" active="slide.active">
-       <div class="row" style="height:200px">
-           <div class="col-md-2">
-               <img ng-src="{{testimonial.image | testimonialimagepath}}" class="test-img" >
-           </div>
-           <div class="col-md-10 cont52">
-                {{testimonial.name}}
-                {{testimonial.content}}
-           </div>
-       </div>
-      </slide>
-    </carousel>
-  </div>
 
-            <!--
+    <div class="container">
+        <div style="height:200px">
+            <carousel interval="myInterval">
+                <slide ng-repeat="testimonial in testimonials" active="slide.active">
+                    <div class="row" style="height:200px">
+                        <div class="col-md-2">
+                            <img ng-src="{{testimonial.image | testimonialimagepath}}" class="test-img">
+                        </div>
+                        <div class="col-md-10 cont52">
+                            {{testimonial.name}} {{testimonial.content}}
+                        </div>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+
+        <!--
             <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,  
             slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
                 <div class="row">
@@ -307,8 +306,6 @@
 
             </wrap-owlcarousel>
 -->
-        <script>
-                $scope.myInterval = 5000;
-            </script>
-        </div>
+
+    </div>
 </div>

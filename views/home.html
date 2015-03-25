@@ -50,7 +50,7 @@
                 <p>{{cat.name}}</p>
             </div>
         </div>
-<!--
+        <!--
         <div class="flexside">
             <div class="imgslider">
                 <img src="images/categoryimg/educationnew.jpg">
@@ -164,8 +164,8 @@
                     </a>
 
                 </div>
-                
-                
+
+
                 <div class="col-md-4 causelnk" ng-if="displayproject[1]">
                     <a href="#/campaign/{{displayproject[1].id}}">
                         <div class="causes text-center">
@@ -205,7 +205,7 @@
                     </a>
 
                 </div>
-            
+
                 <div class="col-md-4 causelnk" ng-if="displayproject[2]">
                     <a href="#/campaign/{{displayproject[2].id}}">
                         <div class="causes text-center">
@@ -246,7 +246,7 @@
 
                 </div>
 
-                
+
             </div>
 
 
@@ -259,28 +259,27 @@
 
     </div>
     <div class="container">
-    
-  <div style="height:auto">
-    <carousel interval="myInterval">
-      <slide ng-repeat="testimonial in testimonials" active="slide.active">
-       <div class="row">
-           <div class="col-md-2">
-               <img ng-src="{{testimonial.image | testimonialimagepath}}" class="test-img" >
-           </div>
-           <div class="col-md-10 cont52">
-                {{testimonial.name}}
-                {{testimonial.content}}
-           </div>
-       </div>
-      </slide>
-    </carousel>
-  </div>
-  
+
+        <div style="height:auto">
+            <carousel interval="myInterval">
+                <slide ng-repeat="testimonial in testimonials" active="slide.active">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img ng-src="{{testimonial.image | testimonialimagepath}}" class="test-img">
+                        </div>
+                        <div class="col-md-10 cont52">
+                            {{testimonial.name}} {{testimonial.content}}
+                        </div>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
 
 
 
 
-<!--
+
+        <!--
         <div class="imageset">
           
                 <div class="row" ng-repeat="testimonial in testimonials">
@@ -301,8 +300,8 @@
            
         </div>
 -->
- 
-<!--
+
+        <!--
     <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,  
             slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
         <div class="row" ng-repeat = "testimonial in testimonials">
@@ -318,15 +317,15 @@
 
     </wrap-owlcarousel>
 -->
-</div>
-    
-    
-    
-<!--
+    </div>
+
+
+
+    <!--
     
     <div class="container-fluid">
 -->
-        <!--
+    <!--
            <div class="owl-carousel testimonials">
                     <div class="author">
                         <div class="col-xs-2 text-center">
@@ -361,8 +360,8 @@
                     
             </div>
 -->
-        
-<!--
+
+    <!--
             <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,  
             slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
                <div class="author">
