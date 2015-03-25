@@ -266,7 +266,7 @@
         
         <div class="container">
  <div style="height:200px">
-    <carousel interval="myinterval" style="height:200px">
+    <carousel interval="myInterval" style="height:200px">
       <slide ng-repeat="testimonial in testimonials" active="slide.active">
        <div class="row" style="height:200px">
            <div class="col-md-2">
@@ -307,5 +307,8 @@
 
             </wrap-owlcarousel>
 -->
+        <script>
+                $scope.myInterval = 5000;
+            </script>
         </div>
 </div>

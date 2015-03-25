@@ -81,84 +81,118 @@
             </div>
 
             <div class="col-md-4">
-               <div class="view1">Contributed</div>
-                <wrap-owlcarousel class="owl-carousel" data-options="{autoPlay: true, stopOnHover: true,  
-        slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
 
-                <div class="row mainCause no-margin">
-                    <div class="col-md-12 causelnk">
-                        <a href="#/campaign">
-                            <div class="causes text-center">
-                                <div class="pic">
-                                    <img src="images/explore.jpg">
 
-                                    <div class="mumbai-in">
-                                        <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
-                                    </div>
-                                </div>
-                                <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
-                                <div class="info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                                    <h5>NGO NAME</h5>
-                                    <img src="images/tata_icon.png">
-                            
+                <div class="view1">Contributed</div>
+                <div style="height:auto">
+                    <carousel interval="myInterval">
+                        <slide ng-repeat="testimonial in testimonials" active="slide.active">
+                            <div class="row mainCause" ng-repeat="project in projects">
+                                <div class="causelnk" ng-repeat="pro in project">
+                                    <a href="#/campaign/{{pro.id}}">
+                                        <div class="causes text-center">
+                                            <div class="pic">
+                                                <img ng-src="{{pro.image | projectbannerimagepath}}">
+
+                                                <div class="mumbai-in">
+                                                    <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                                                </div>
+                                            </div>
+                                            <h3>{{pro.tagline}}</h3>
+                                            <div class="info">
+                                                <p>{{pro.cardtagline}}</p>
+                                                <h5>{{pro.ngoname}}</h5>
+                                                <img ng-src="{{pro.ngoimage | ngoimagepath}}">
+
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
-                        </a>
-                    </div>
+                        </slide>
+                    </carousel>
                 </div>
-                
-                <div class="row mainCause no-margin">
-                    <div class="col-md-12 causelnk">
-                        <a href="#/campaign">
-                            <div class="causes text-center">
-                                <div class="pic">
-                                    <img src="images/explore.jpg">
+                <!--
+                <wrap-owlcarousel class="owl-carousel" data-options="autoPlay: true, stopOnHover: true,slideSpeed : 300, paginationSpeed:400,pagination:false, singleItem : true">
 
-                                    <div class="mumbai-in">
-                                        <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                    <div class="row mainCause no-margin">
+                        <div class="col-md-12 causelnk">
+                            <a href="#/campaign">
+                                <div class="causes text-center">
+                                    <div class="pic">
+                                        <img src="images/explore.jpg">
+
+                                        <div class="mumbai-in">
+                                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                                        </div>
+                                    </div>
+                                    <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
+                                    <div class="info">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
+                                        <h5>NGO NAME</h5>
+                                        <img src="images/tata_icon.png">
+
                                     </div>
                                 </div>
-                                <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
-                                <div class="info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                                    <h5>NGO NAME</h5>
-                                    <img src="images/tata_icon.png">
-                                    
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="row mainCause no-margin">
-                    <div class="col-md-12 causelnk">
-                        <a href="#/campaign">
-                            <div class="causes text-center">
-                                <div class="pic">
-                                    <img src="images/explore.jpg">
 
-                                    <div class="mumbai-in">
-                                        <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                    <div class="row mainCause no-margin">
+                        <div class="col-md-12 causelnk">
+                            <a href="#/campaign">
+                                <div class="causes text-center">
+                                    <div class="pic">
+                                        <img src="images/explore.jpg">
+
+                                        <div class="mumbai-in">
+                                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                                        </div>
+                                    </div>
+                                    <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
+                                    <div class="info">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
+                                        <h5>NGO NAME</h5>
+                                        <img src="images/tata_icon.png">
+
                                     </div>
                                 </div>
-                                <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
-                                <div class="info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
-                                    <h5>NGO NAME</h5>
-                                    <img src="images/tata_icon.png">
-                                    
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
+                    <div class="row mainCause no-margin">
+                        <div class="col-md-12 causelnk">
+                            <a href="#/campaign">
+                                <div class="causes text-center">
+                                    <div class="pic">
+                                        <img src="images/explore.jpg">
+
+                                        <div class="mumbai-in">
+                                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                                        </div>
+                                    </div>
+                                    <h3>CAMPAIGN SHORT TITLE   WILL GO HERE, IF IN TWO LINES</h3>
+                                    <div class="info">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium</p>
+                                        <h5>NGO NAME</h5>
+                                        <img src="images/tata_icon.png">
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                 </wrap-owlcarousel>
-
-                
-                
-
+-->
             </div>
+
+
+
+            <script>
+                $scope.myInterval = 5000;
+            </script>
+
+
         </div>
     </div>
+</div>
