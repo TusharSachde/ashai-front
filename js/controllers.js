@@ -113,7 +113,7 @@ phonecatControllers.controller('home',
     });
 
 phonecatControllers.controller('works',
-    function($scope, TemplateService, NavigationService, $routeParams) {
+    function($scope, TemplateService, NavigationService, $routeParams, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("How it works");
         $scope.title = "How it works";
@@ -170,7 +170,7 @@ phonecatControllers.controller('works',
 );
 
 phonecatControllers.controller('fellowship',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("The fellowship");
         TemplateService.header = 'views/headertext.html';
@@ -218,7 +218,7 @@ phonecatControllers.controller('fellowship',
     }
 );
 phonecatControllers.controller('aboutUs',
-    function($scope, TemplateService, NavigationService, $routeParams) {
+    function($scope, TemplateService, NavigationService, $routeParams, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("About us");
         TemplateService.header = 'views/headertext.html';
@@ -327,7 +327,7 @@ phonecatControllers.controller('aboutUs',
 
 
 phonecatControllers.controller('blog',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Blog");
 
@@ -607,13 +607,23 @@ $scope.myinterval = 5000;
             $scope.testimonial2 = data.queryresult[1];
         };
         NavigationService.displaytestmonial(displaytestmonial1);
+    
+        //  POST ON FACEBOOK
+        $scope.facebooksare = function(){
+            var ref = window.open('http://wohlig.co.in/powerforone/index.php/hauth/postfb?message=hey hello&returnurl=http://wohlig.co.in/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
+        }
+        
+        //  POST ON Twiter
+        $scope.facebooksare = function(){
+            var ref = window.open('http://wohlig.co.in/powerforone/index.php/hauth/posttweet?message=hey hello&returnurl=http://wohlig.co.in/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
+        }
 
     }
 //                              
 );
 
 phonecatControllers.controller('myprofile',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("My Profile");
         $scope.title = "My Profile";
@@ -671,7 +681,7 @@ phonecatControllers.controller('myprofile',
 );
 
 phonecatControllers.controller('rewards',
-    function($scope, $location, TemplateService, NavigationService) {
+    function($scope, $location, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Rewards");
         TemplateService.header = 'views/headerblack.html';
@@ -720,7 +730,7 @@ phonecatControllers.controller('rewards',
 );
 
 phonecatControllers.controller('termsandcondition',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Terms & Condition");
         TemplateService.header = 'views/headertext.html';
@@ -769,7 +779,7 @@ phonecatControllers.controller('termsandcondition',
     }
 );
 phonecatControllers.controller('workwithus',
-    function($scope, TemplateService, NavigationService, $routeParams) {
+    function($scope, TemplateService, NavigationService, $routeParams, $location) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Work With Us";
@@ -822,7 +832,7 @@ phonecatControllers.controller('workwithus',
 );
 
 phonecatControllers.controller('Contactus',
-    function($scope, TemplateService, NavigationService, $routeParams) {
+    function($scope, TemplateService, NavigationService, $routeParams, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.header = 'views/headertext.html';
@@ -962,7 +972,7 @@ phonecatControllers.controller('register',
 );
 
 phonecatControllers.controller('policy',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("policy");
         TemplateService.header = 'views/headerblack.html';
@@ -1010,7 +1020,7 @@ phonecatControllers.controller('policy',
 );
 
 phonecatControllers.controller('checkout',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("checkout");
         TemplateService.header = 'views/headertext.html';
@@ -1059,7 +1069,7 @@ phonecatControllers.controller('checkout',
 );
 
 phonecatControllers.controller('faq',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("faq");
         TemplateService.header = 'views/headerblack.html';
@@ -1107,7 +1117,7 @@ phonecatControllers.controller('faq',
 );
 
 phonecatControllers.controller('thankyou',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Thank You");
         TemplateService.header = 'views/headertext.html';
@@ -1156,7 +1166,7 @@ phonecatControllers.controller('thankyou',
 );
 
 phonecatControllers.controller('Teampage',
-    function($scope, TemplateService, NavigationService) {
+    function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
 
         $scope.menutitle = NavigationService.makeactive("Team Page");
