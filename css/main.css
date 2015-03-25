@@ -1788,3 +1788,7 @@ a.right.carousel-control {
 .left{
     padding:0px !important;
 }
+@media screen and (max-width: 767px) {
+ 
+    
+}
