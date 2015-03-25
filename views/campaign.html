@@ -19,7 +19,7 @@
                     <div class="contribution">
 
                         <div class="pull-left">
-                            <h6>Your contribution will be <span><b>doubled</b></span> by</h6>
+                            <h6>Your contribution will be <span><b>{{project.timesinword}}</b></span> by</h6>
                         </div>
                         <div>
                             <img ng-src="{{project.ngoimage | ngoimagepath}}" height="50px" width="50px">
@@ -158,7 +158,7 @@
                     </div>
                     <span class="t1"> Remember, your donation will be doubled by </span>
                     <div class="icon1">
-                        <img src="images/tata_icon.png" height="40px" width="40px">
+                        <img src="{{project.ngoimage | ngoimagepath}}" height="40px" width="40px">
                     </div>
                 </div>
 
@@ -172,10 +172,10 @@
                     </div>
                     <div class="txt4">{{project.share}}</div>
                     <span class="shares"> Shares</span>
-                    <p class="txt5">1 Share=Rs.200</p>
-                    <span class="t1"> Remember,for every share tata will donate Rs.200</span>
+                    <p class="txt5">{{project.share}} Share=Rs.{{project.sharevalue}}</p>
+                    <span class="t1"> Remember,for every share tata will donate Rs.{{project.sharevalue}}</span>
                     <div class="icon1">
-                        <img src="images/tata_icon.png" height="40px" width="40px">
+                        <img src="{{project.ngoimage | ngoimagepath}}" height="40px" width="40px">
                     </div>
                 </div>
 
