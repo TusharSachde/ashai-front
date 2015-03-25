@@ -596,6 +596,17 @@ $scope.myinterval = 5000;
 
         };
         NavigationService.getsingleproject($routeParams.id, displaystaticpage);
+    
+        //  TESTIMONIALS
+        var displaytestmonial1 = function(data, status) {
+            
+            console.log("testimonial");
+            console.log(data);
+            $scope.testimonials = data.queryresult;
+            $scope.testimonial1 = data.queryresult[0];
+            $scope.testimonial2 = data.queryresult[1];
+        };
+        NavigationService.displaytestmonial(displaytestmonial1);
 
     }
 //                              
@@ -613,7 +624,8 @@ phonecatControllers.controller('myprofile',
         $scope.navigation = NavigationService.getnav();
         //    $scope.display="About Us";
     
-        
+        $scope.projects = [];    
+    
         //  AUTHENTICATE
         var authsuccess = function (data, status){
             console.log("auth auth auth");
@@ -648,6 +660,12 @@ phonecatControllers.controller('myprofile',
                 $scope.login = "Login";
             }
         }
+        
+        var projectsuccess = function (data, status){
+            $scope.projects = data.queryresult;
+            console.log($scope.projects);
+        }
+        NavigationService.getprojectbycategoryarray(1).success(projectsuccess);
     }
 );
 
@@ -1231,5 +1249,13 @@ phonecatControllers.controller('footer',
                     }
             }
         }
+        
+        //  GET ALL CATEGORY
+        var allcategoriessuccess = function (data, status) {
+            console.log("categories");
+            console.log(data);
+            $scope.categories = data.queryresult;
+        }
+        NavigationService.getallcategory().success(allcategoriessuccess);
     }
 );
