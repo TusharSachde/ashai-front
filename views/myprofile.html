@@ -86,10 +86,10 @@
                 <div class="view1">Contributed</div>
                 <div style="height:auto">
                     <carousel interval="myInterval">
-                        <slide ng-repeat="testimonial in testimonials" active="slide.active">
-                            <div class="row mainCause" ng-repeat="project in projects">
-                                <div class="causelnk" ng-repeat="pro in project">
-                                    <a href="#/campaign/{{pro.id}}">
+                        <slide active="slide.active" ng-repeat="pro in projects">
+                            <div class="row mainCause no-margin">
+                                <div class="causelnk">
+                                    <a href="#/campaign">
                                         <div class="causes text-center">
                                             <div class="pic">
                                                 <img ng-src="{{pro.image | projectbannerimagepath}}">
@@ -108,11 +108,10 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>
                         </slide>
                     </carousel>
-                </div>
-                <!--
+                    </div>
+                    <!--
                 <wrap-owlcarousel class="owl-carousel" data-options="autoPlay: true, stopOnHover: true,slideSpeed : 300, paginationSpeed:400,pagination:false, singleItem : true">
 
                     <div class="row mainCause no-margin">
@@ -184,13 +183,13 @@
                         </div>
                 </wrap-owlcarousel>
 -->
+                </div>
+
+
+
+
+
+
             </div>
-
-
-
-           
-
-
         </div>
     </div>
-</div>

@@ -624,7 +624,8 @@ phonecatControllers.controller('myprofile',
         $scope.navigation = NavigationService.getnav();
         //    $scope.display="About Us";
     
-        $scope.projects = [];    
+        $scope.projects = [];   
+        $scope.myInterval = 5000;
     
         //  AUTHENTICATE
         var authsuccess = function (data, status){
