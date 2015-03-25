@@ -223,7 +223,7 @@
                             <div class="info">
                                 <p>{{displayproject[2].cardtagline}}</p>
                                 <h5>{{displayproject[2].ngoname}}</h5>
-                                <img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
+                                <img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}">
 
                                 <!--
                             <div class="elements row">
@@ -260,19 +260,22 @@
     </div>
     <div class="container">
     
-<div>
-  <div style="height: 305px">
-    <carousel interval="myInterval">
+  <div style="height:200px">
+    <carousel interval="myInterval" style="height:200px">
       <slide ng-repeat="testimonial in testimonials" active="slide.active">
-        <img ng-src="testimonial.image | testimonialimagepath" style="margin:auto;">
-        <div class="carousel-caption">
-         {{testimonial.name}}
-        </div>
+       <div class="row" style="height:200px">
+           <div class="col-md-2">
+               <img ng-src="{{testimonial.image | testimonialimagepath}}" class="test-img" >
+           </div>
+           <div class="col-md-10 cont52">
+                {{testimonial.name}}
+                {{testimonial.content}}
+           </div>
+       </div>
       </slide>
     </carousel>
   </div>
   
-</div>
 
 
 
@@ -427,20 +430,5 @@ $(document).ready(function() {
 </section>
 
 
-<script>
-angular.module('ui.bootstrap.demo').controller('CarouselDemoCtrl', function ($scope) {
-  $scope.myInterval = 5000;
-  var slides = $scope.slides = [];
-  $scope.addSlide = function() {
-    var newWidth = 600 + slides.length + 1;
-    slides.push({
-      image: 'http://placekitten.com/' + newWidth + '/300',
-      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-    });
-  };
-  for (var i=0; i<4; i++) {
-    $scope.addSlide();
-  }
-});
-</script>
+
+

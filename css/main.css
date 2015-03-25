@@ -552,9 +552,11 @@ ul.list1 {
 img.starter-template.img-responsive.imhheight {
     min-width: 100%;
 }
+/*
 .left {
     padding: 10px 0px 0px 0px;
 }
+*/
 .cate {
     padding: 20px 0px 0px 0px;
 }
@@ -1770,4 +1772,19 @@ p.already {
 .reg-set{
 padding-left: 0;
     padding-right: 0;
+}
+.test-img{
+    height:141px;
+    width:136px;
+    border-radius: 50%;
+}
+a.left.carousel-control {
+    background-image: none;
+}
+
+a.right.carousel-control {
+    background-image: none;
+}
+.left{
+    padding:0px !important;
 }

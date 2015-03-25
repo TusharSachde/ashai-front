@@ -109,7 +109,6 @@ phonecatControllers.controller('home',
             return newarray;
         };
      $scope.myInterval = 5000;
-  var slides = $scope.slides = [];
 
     });
 
@@ -514,7 +513,7 @@ phonecatControllers.controller('campaign',
         TemplateService.header = 'views/HeaderCampaign.html';
         TemplateService.title = "Campaign";
         $scope.navigation = NavigationService.getnav();
-    
+     
         
         //  AUTHENTICATE
         var authsuccess = function (data, status){
@@ -563,7 +562,7 @@ phonecatControllers.controller('campaign',
             $scope.greatHeight = angular.element('.sliderheadercampaign').height() - angular.element('.headerzindex').height();
             $scope.$apply();
         });
-
+$scope.myinterval = 5000;
         $scope.gotoElement = function(id) {
             $location.hash(id);
             //            $anchorScroll();
@@ -599,6 +598,7 @@ phonecatControllers.controller('campaign',
         NavigationService.getsingleproject($routeParams.id, displaystaticpage);
 
     }
+//                              
 );
 
 phonecatControllers.controller('myprofile',
