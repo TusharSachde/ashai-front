@@ -1749,6 +1749,9 @@ border-radius: 1px;
     width: auto;
     height: 40px;
 }
+.info .datapoint1 img{
+    width:100%;
+}
 .salammum img {
     text-align: center;
     overflow: hidden;
