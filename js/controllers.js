@@ -170,17 +170,23 @@ phonecatControllers.controller('works',
         NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
     }
 );
-
 phonecatControllers.controller('fellowship',
-    function($scope, TemplateService, NavigationService, $location) {
+    function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("The fellowship");
         TemplateService.header = 'views/headertext.html';
-//        $scope.title = "The fellowship";
+        //        $scope.title = "The fellowship";
         $scope.backgroundimg = "learn_more.png";
         TemplateService.content = 'views/fellowship.html';
         TemplateService.title = "The fellowship";
+	$scope.form2 = {};
         $scope.navigation = NavigationService.getnav();
+	var submitpfo = function (data, status){
+			console.log(data);
+		}
+	  $scope.submitpfo = function(form2) {
+            NavigationService.submitpfo(form2).success(submitpfo);
+  };
     
         
         //  AUTHENTICATE
@@ -783,13 +789,21 @@ phonecatControllers.controller('termsandcondition',
     }
 );
 phonecatControllers.controller('workwithus',
-    function($scope, TemplateService, NavigationService, $routeParams, $location) {
+    function($scope, TemplateService, NavigationService, $routeParams) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Work With Us";
+	$scope.form1 = {};
         $scope.backgroundimg = "Work-with-us.jpg";
         TemplateService.content = 'views/workwithus.html';
-        $scope.navigation = NavigationService.getnav();
+        $scope.navigation = NavigationService.getnav(); 
+	var submitworkwithus = function (data, status){
+			console.log(data);
+		}
+	$scope.submitworkwithus = function(form1) {
+		console.log(form1);
+            NavigationService.submitworkwithus(form1).success(submitworkwithus);
+  };
     
         
         //  AUTHENTICATE
@@ -836,7 +850,7 @@ phonecatControllers.controller('workwithus',
 );
 
 phonecatControllers.controller('Contactus',
-    function($scope, TemplateService, NavigationService, $routeParams, $location) {
+    function($scope, TemplateService, NavigationService, $routeParams) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.header = 'views/headertext.html';
@@ -844,7 +858,16 @@ phonecatControllers.controller('Contactus',
         $scope.backgroundimg = "Contact.jpg";
         TemplateService.content = 'views/Contactus.html';
         TemplateService.title = "Contact Us";
+        $scope.form = {};
+        $scope.form.name = "Pooja";
         $scope.navigation = NavigationService.getnav();
+		var submitcontactform = function (data, status){
+			console.log(data);
+		}
+        $scope.submitcontactform = function(form) {
+            //console.log(form);
+            NavigationService.submitcontactform(form).success(submitcontactform);
+        };
     
         
         //  AUTHENTICATE

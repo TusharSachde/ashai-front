@@ -30,11 +30,11 @@
                    <div class="col-md-5">
                    <div class="formprarmy">
                    <h2>APPLY NOW</h2>
-                   <form  class="form-horizontal">
-                   <input type="text" placeholder="Name">
-                   <input type="text" placeholder="Number">
-                   <input type="text" placeholder="Email">
-                   <select name="" id="">
+                 <form  class="form-horizontal">
+                   <input type="text" ng-model="form2.name" placeholder="Name">
+                   <input type="text" ng-model="form2.contact" placeholder="Number">
+                   <input type="text" ng-model="form2.email" placeholder="Email">
+                   <select name=""  ng-model="form2.country" id="">
                        <option value="">Select Country</option>
                                                 <option value="Afganistan">Afghanistan</option>
                                                 <option value="Albania">Albania</option>
@@ -284,9 +284,9 @@
                                                 <option value="Zambia">Zambia</option>
                                                 <option value="Zimbabwe">Zimbabwe</option>
                    </select>
-                   <input type="text" placeholder="City">
-                   <textarea placeholder="Message" required=""></textarea>
-                   <button class="subbtn">SEND</button>
+                    <input type="text" ng-model="form2.city" placeholder="City">
+                   <textarea ng-model="form2.message" placeholder="Message" required=""></textarea>
+                   <button class="subbtn" ng-click="submitpfo(form2);">SEND</button>
                    </form>
                     </div>
                </div>

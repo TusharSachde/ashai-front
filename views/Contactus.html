@@ -18,16 +18,16 @@
                 <p class="weightchange">Number - 022 67080507</p>
             </div>
 -->
-        </div>
+      </div>
         <div class="col-md-5">
 
             <div class="formprarmy">
                 <h2>GET IN TOUCH</h2>
                 <form class="form-horizontal">
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Number">
-                    <input type="text" placeholder="Email">
-                    <select name="" id="">
+                    <input type="text" ng-model="form.name" placeholder="Name" >
+                    <input type="text" ng-model="form.contact" placeholder="Number">
+                    <input type="text" ng-model="form.email" placeholder="Email">
+                    <select ng-model="form.country"  id="" >
                         <option value="">Select Country</option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -276,10 +276,10 @@
                         <option value="Zaire">Zaire</option>
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
-                    </select>
-                    <input type="text" placeholder="City">
-                    <textarea placeholder="Message" required=""></textarea>
-                    <button class="subbtn">SEND</button>
+                      </select>
+                    <input type="text" placeholder="City" ng-model="form.city">
+                    <textarea placeholder="Message" ng-model="form.message" ></textarea>
+                    <button class="subbtn" ng-click="submitcontactform(form);">SEND</button>
                 </form>
             </div>
         </div>

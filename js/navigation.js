@@ -1,5 +1,5 @@
 var admin_url = "http://wohlig.co.in/powerforone/index.php/";
-//var admin_url = "http://localhost/powerforone/index.php/";
+var admin_url = "http://localhost/powerforone/index.php/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
@@ -108,6 +108,14 @@ var navigationservice = angular.module('navigationservice', [])
             }
             return menuname;
         },
-
+ 		submitcontactform: function(form) {
+            return $http.post(admin_url + "json/createcontactus",form);
+        },
+		  submitworkwithus: function(form1) {
+            return $http.post(admin_url + "json/createworkwithus",form1);
+        },
+		  submitpfo: function(form2) {
+            return $http.post(admin_url + "json/createpfo",form2);
+        },
     }
 });
