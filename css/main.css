@@ -2185,12 +2185,13 @@ a.right.carousel-control {
 
 .mem_logout {
     position: absolute;
-    display: none;
+     display: none; 
     width: 70%;
-    left: 8px;
+    left: 50%;
+    transform: translatex(-50%);
     background:#000;
     color: #fff;
-    top: 55px;
+    top: 28px;
     padding: 7px;
     border-radius: 3px;
 }

@@ -410,6 +410,56 @@ phonecatControllers.controller('blog',
     }
 );
 
+phonecatControllers.controller('bloginner',
+    function($scope, TemplateService, NavigationService, $location) {
+        $scope.template = TemplateService;
+        $scope.menutitle = NavigationService.makeactive("Blog");
+
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "blog";
+        TemplateService.content = 'views/bloginner.html';
+        TemplateService.title = "Blog Inner Page";
+        $scope.navigation = NavigationService.getnav();
+
+
+        //  AUTHENTICATE
+        var authsuccess = function (data, status){
+            console.log("auth auth auth");
+            console.log(data);
+            if(data == "false"){
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }else{
+                $scope.register = data.name;
+                $scope.login = "Logout";
+            }
+        }
+        NavigationService.authenticate().success(authsuccess);
+
+        //  REGISTER CLICK
+        $scope.onregister = function(){
+            if($scope.register == "Register"){
+                $location.url("/register");
+            }else{
+                $location.url("/myprofile");
+            }
+        }
+
+        //  LOGIN CLICK
+        $scope.onlogin = function(){
+            if($scope.login == "Login"){
+                $location.url("/login");
+                console.log("login");
+            }else{
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
+
+    }
+);
+
 
 phonecatControllers.controller('Explore',
     function($scope, TemplateService, NavigationService, $routeParams, $location) {
