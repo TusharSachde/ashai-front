@@ -1866,7 +1866,7 @@ p.or {
     display: none;
     position: absolute;
     left: 50%;
-    width: 100%;
+/*    width: 100%;*/
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
