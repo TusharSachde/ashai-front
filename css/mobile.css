@@ -12,13 +12,20 @@
     body .cont52 {
         width: 80%;
         margin: 0 auto;
+        text-align: justify;
+    }
+    img.logtext {
+        padding: 10px 0px 0px 50px;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
     .bottom1 .causes {
         width: 100%!important;
         margin: 10px auto !important;
+    }
+    .gallery_width {
+        height: auto;
     }
     .thunderheart .list-inline li {
         display: block!important;
@@ -54,5 +61,14 @@
     }
     body .head-on h3 {
         font-size: 20px;
-        )
     }
+    .col-md-6.pull-left.pad-up {
+        float: none!important;
+    }
+    body .rights {
+        text-align: center;
+    }
+    .terms a {
+        font-size: 12px;
+    }
+}
