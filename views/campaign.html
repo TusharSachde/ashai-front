@@ -265,10 +265,10 @@
     </div>
 
     <div class="container">
-        <div style="height:200px">
+        <div style="height:auto">
             <carousel interval="myInterval">
                 <slide ng-repeat="testimonial in testimonials" active="slide.active">
-                    <div class="row" style="height:200px">
+                    <div class="row">
                         <div class="col-md-2">
                             <img ng-src="{{testimonial.image | testimonialimagepath}}" class="test-img">
                         </div>
