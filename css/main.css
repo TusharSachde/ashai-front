@@ -2158,10 +2158,10 @@ a.right.carousel-control {
 
 .sharebtn i.fa.fa-twitter.fa-lg {
     background: rgba(57, 177, 214, 1);
-    position: absolute;
-    padding: 10px 7px;
-    left: -1px;
-    top: -1px;
+   position: absolute;
+  padding: 9px 7px;
+  left: 0px;
+  top: 0px;
 }
 
 .sharebtn span {
