@@ -1,39 +1,52 @@
 <header>
-        <div class="header header-black">
-          
-           <div class="container">
-                 <div class="row">
-                       <div class="col-xs-3">
-                            <div class="logo">
-                               <a href="#/Home"> <img class="logblack" src="images/logo_black.png" /></a>
-                            </div>
+    <div class="header header-black">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="logo">
+                        <a href="#/Home"> <img class="logblack" src="images/logo_black.png" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-7">
+                    <nav class="navbar navbar-default nav-custom">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar b"></span>
+                                <span class="icon-bar b"></span>
+                                <span class="icon-bar b"></span>
+                            </button>
                         </div>
 
-                        <div class="col-xs-7">
-                            <nav class="navbar navbar-default nav-custom">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar b"></span>
-                                        <span class="icon-bar b"></span>
-                                        <span class="icon-bar b"></span>
-                                    </button>
-                                </div>
-
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu"></ul>
-                                </div>
-                            </nav>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu"></ul>
                         </div>
+                    </nav>
+                </div>
 
-                        <div class="col-xs-2 reg-set">
-                            <div class="hidden-xs hidden-sm headmargin pull-right">
-                                <a ng-click="onregister()" class="login cpointer">{{register | cut:true:8:' ...'}}</button>
+                <div class="col-xs-2 reg-set">
+                    <div class="hidden-xs hidden-sm headmargin pull-right">
+                        <a ng-click="onregister()" class="login cpointer">{{register | cut:true:8:' ...'}}</button>
                                 <a ng-click="onlogin()" class="login cpointer">{{login}}</a>
-                            </div>
+                    </div>
+                    <div class="hidden-xs hidden-sm logout" style="display:none">
+                        <span class="member_name cpointer">Power for one</span>
+                        <div class="mem_logout">
+                            <div class="arrow_log"></div>
+                            <ul class="list-unstyled">
+                                <li><a href="#">My Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-             </div>
-             <div class="fixhead"></div>
-    </header>
+            </div>
+        </div>
+    </div>
+    <div class="fixhead"></div>
+</header>
