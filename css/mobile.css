@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) {
+    .bottom1 .causes {
+        width: 60%;
+        margin: 10px auto !important;
+    }
+}
+
+@media screen and and (max-device-width: 480px) {
+    .bottom1 .causes {
+        width: 100%;
+        margin: 10px auto !important;
+    }
+}
