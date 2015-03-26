@@ -165,7 +165,7 @@ phonecatControllers.controller('works',
         //  GET WORKS PAGE
         var staticsuccess = function(data, stauts){
             $scope.content = data[0];
-            $scope.backgroundimg = data[0].image;
+            $scope.backgroundimg = data[0].bannerimage;
         }
         NavigationService.getsinglestaticpage(4).success(staticsuccess);
     }
@@ -307,7 +307,7 @@ phonecatControllers.controller('aboutUs',
         var staticsuccess = function(data, status) {
             console.log(data);
             $scope.content = data[0];
-            $scope.backgroundimg = data[0].image;
+            $scope.backgroundimg = data[0].bannerimage;
         }
         switch($routeParams.id){
                 case "1" : {
@@ -785,6 +785,13 @@ phonecatControllers.controller('termsandcondition',
                 $scope.login = "Login";
             }
         }
+        
+        //  GET TERMS AND CONDITION PAGE
+        var staticsuccess = function(data, status){
+            $scope.content = data[0];
+            $scope.backgroundimg = data[0].bannerimage;
+        }
+        NavigationService.getsinglestaticpage(7).success(staticsuccess);
 
     }
 );
@@ -843,7 +850,7 @@ phonecatControllers.controller('workwithus',
 
         var staticsuccess = function(data, status){
             $scope.content = data[0];
-            $scope.backgroundimg = data[0].image;
+            $scope.backgroundimg = data[0].bannerimage;
         }
         NavigationService.getsinglestaticpage(5).success(staticsuccess);
     }
@@ -908,7 +915,7 @@ phonecatControllers.controller('Contactus',
         
         var staticsuccess = function(data, status){
             $scope.content = data[0];
-            $scope.backgroundimg = data[0].image;
+            $scope.backgroundimg = data[0].bannerimage;
         }
         NavigationService.getsinglestaticpage(6).success(staticsuccess);
     }
@@ -1042,6 +1049,13 @@ phonecatControllers.controller('policy',
                 $scope.login = "Login";
             }
         }
+        
+        //  GET TERMS AND CONDITION PAGE
+        var staticsuccess = function(data, status){
+            $scope.content = data[0];
+            $scope.backgroundimg = data[0].bannerimage;
+        }
+        NavigationService.getsinglestaticpage(8).success(staticsuccess);
 
     }
 );
