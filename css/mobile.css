@@ -3,6 +3,10 @@
         width: 60%;
         margin: 10px auto !important;
     }
+    .head-on.home {
+        margin: 8% auto;
+        width: 80%;
+    }
 }
 
 @media screen and and (max-device-width: 480px) {
