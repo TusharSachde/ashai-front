@@ -20,13 +20,13 @@
       </div>
         <div class="col-md-5">
 
-            <div class="formprarmy">
+            <div class="formprarmy form-horizontal">
                 <h2>GET IN TOUCH</h2>
-                <form class="form-horizontal">
-                    <input type="text" ng-model="form.name" placeholder="Name" >
-                    <input type="text" ng-model="form.contact" placeholder="Number">
-                    <input type="text" ng-model="form.email" placeholder="Email">
-                    <select ng-model="form.country"  id="" >
+<!--                <form class="form-horizontal">-->
+                    <input type="text" ng-model="form.name" placeholder="Name *" ng-class="allvalidation[0].validation" required>
+                    <input type="text" ng-model="form.contact" placeholder="Number *" ng-class="allvalidation[1].validation" required>
+                    <input type="text" ng-model="form.email" placeholder="Email *" ng-class="allvalidation[2].validation" required>
+                    <select ng-model="form.country" ng-class="allvalidation[3].validation" required>
                         <option value="">Select Country</option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -276,10 +276,10 @@
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                       </select>
-                    <input type="text" placeholder="City" ng-model="form.city">
-                    <textarea placeholder="Message" ng-model="form.message" ></textarea>
+                    <input type="text" placeholder="City *" ng-model="form.city" ng-class="allvalidation[4].validation" required>
+                    <textarea placeholder="Message *" ng-model="form.message" ng-class="allvalidation[5].validation" required></textarea>
                     <button class="subbtn" ng-click="submitcontactform(form);">SEND</button>
-                </form>
+<!--                </form>-->
             </div>
         </div>
 

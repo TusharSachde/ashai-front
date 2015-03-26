@@ -866,14 +866,40 @@ phonecatControllers.controller('Contactus',
         TemplateService.content = 'views/Contactus.html';
         TemplateService.title = "Contact Us";
         $scope.form = {};
-        $scope.form.name = "Pooja";
         $scope.navigation = NavigationService.getnav();
 		var submitcontactform = function (data, status){
 			console.log(data);
 		}
+        $scope.allvalidation = [];
         $scope.submitcontactform = function(form) {
             //console.log(form);
-            NavigationService.submitcontactform(form).success(submitcontactform);
+            //  VALIDATION
+            $scope.allvalidation = [{
+                field: $scope.form.name,
+                validation: ""
+            }, {
+                field: $scope.form.contact,
+                validation: ""
+            }, {
+                field: $scope.form.email,
+                validation: ""
+            }, {
+                field: $scope.form.country,
+                validation: ""
+            }, {
+                field: $scope.form.city,
+                validation: ""
+            }, {
+                field: $scope.form.message,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.submitcontactform(form).success(submitcontactform);
+            };
+        
+            
         };
     
         

@@ -13,6 +13,8 @@
     padding-bottom: 0;
 }
 
+.ng-invalid.ng-dirty { border: 1px solid red; }
+
 .profile {
     padding: 0px 0px 10px 30px;
     border-left: 1px solid #bbbbbb;
