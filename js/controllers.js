@@ -618,7 +618,7 @@ $scope.myinterval = 5000;
     
         //  POST ON FACEBOOK
         $scope.facebookshare = function(text){
-            window.location.href=admin_url+"hauth/postfb?message="+$scope.project.facebooktext+"&returnurl=";
+            window.location.href=admin_url+"hauth/postfb?message="+$scope.project.facebooktext+"&returnurl="+window.location.href;
 //            var ref = window.open('http://localhost/powerforone/index.php/hauth/postfb?message=hey hello&returnurl=http://localhost/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
         }
         
