@@ -1081,6 +1081,7 @@ phonecatControllers.controller('login',
 
         //  DECLARATION
         $scope.user = [];
+		$scope.allvalidation = [];
 
         //  ON LOGIN
         var loginsuccess = function (data, status) {
@@ -1093,9 +1094,10 @@ phonecatControllers.controller('login',
             }
         }
 		
-        $scope.allvalidation = [];
-        $scope.userlogin = function (user) {
+        
+        $scope.userlogin = function(user) {
 			console.log(user);
+			
 			
             $scope.allvalidation = [{
                 field: $scope.user.email,
@@ -1103,13 +1105,14 @@ phonecatControllers.controller('login',
             }, {
                 field: $scope.user.password,
                 validation: ""
-			}];
+            }];
             var check = formvalidation($scope.allvalidation);
 
             if (check) {
                 NavigationService.login(user).success(loginsuccess);
-			}
-    
+            };
+
+			
         }
     }
 );
@@ -1151,7 +1154,28 @@ phonecatControllers.controller('register',
             }
         }
         $scope.createuser = function (user) {
-            NavigationService.register(user).success(registersuccess);
+            
+			
+			
+			  $scope.createuser = function(user) {
+			console.log(user);
+			
+			
+            $scope.allvalidation = [{
+                field: $scope.user.name,
+                validation: ""
+            },{
+                field: $scope.user.email,
+                validation: ""
+            }, {
+                field: $scope.user.password,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.register(user).success(registersuccess);
+            };
         }
     }
 );
