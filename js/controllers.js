@@ -184,9 +184,35 @@ phonecatControllers.controller('fellowship',
 	var submitpfo = function (data, status){
 			console.log(data);
 		}
-	  $scope.submitpfo = function(form2) {
-            NavigationService.submitpfo(form2).success(submitpfo);
-  };
+	 $scope.allvalidation = [];
+        $scope.submitpfo = function(form2) {
+            //console.log(form);
+            //  VALIDATION
+            $scope.allvalidation = [{
+                field: $scope.form2.name,
+                validation: ""
+            }, {
+                field: $scope.form2.contact,
+                validation: ""
+            }, {
+                field: $scope.form2.email,
+                validation: ""
+            }, {
+                field: $scope.form2.country,
+                validation: ""
+            }, {
+                field: $scope.form2.city,
+                validation: ""
+            }, {
+                field: $scope.form2.message,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.submitpfo(form2).success(submitpfo);
+            };
+    };
     
         
         //  AUTHENTICATE
@@ -807,11 +833,39 @@ phonecatControllers.controller('workwithus',
 	var submitworkwithus = function (data, status){
 			console.log(data);
 		}
-	$scope.submitworkwithus = function(form1) {
-		console.log(form1);
-            NavigationService.submitworkwithus(form1).success(submitworkwithus);
-  };
-    
+	
+           // NavigationService.submitworkwithus(form1).success(submitworkwithus);
+  
+	
+	 $scope.allvalidation = [];
+        $scope.submitworkwithus = function(form1) {
+            //console.log(form);
+            //  VALIDATION
+            $scope.allvalidation = [{
+                field: $scope.form1.name,
+                validation: ""
+            }, {
+                field: $scope.form1.contact,
+                validation: ""
+            }, {
+                field: $scope.form1.email,
+                validation: ""
+            }, {
+                field: $scope.form1.country,
+                validation: ""
+            }, {
+                field: $scope.form1.city,
+                validation: ""
+            }, {
+                field: $scope.form1.message,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.submitworkwithus(form1).success(submitworkwithus);
+            };
+    };
         
         //  AUTHENTICATE
         var authsuccess = function (data, status){

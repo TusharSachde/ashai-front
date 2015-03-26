@@ -14,13 +14,13 @@
             </div>
         </div>
         <div class="col-md-5">
-            <div class="formprarmy content-page">
+            <div class="formprarmy content-page form-horizontal">
                 <h2>APPLY NOW</h2>
-                <form class="form-horizontal">
-                    <input type="text" ng-model="form1.name" placeholder="Name">
-                    <input type="text" ng-model="form1.contact" placeholder="Number">
-                    <input type="text" ng-model="form1.email" placeholder="Email">
-                    <select ng-model="form1.country"  name="" id="">
+<!--                <form class="form-horizontal">-->
+                    <input type="text" ng-model="form1.name" placeholder="Name *" ng-class="allvalidation[0].validation" required>
+                    <input type="text" ng-model="form1.contact" placeholder="Number *" ng-class="allvalidation[1].validation" required>
+                    <input type="text" ng-model="form1.email" placeholder="Email *" ng-class="allvalidation[2].validation" required>
+                    <select ng-model="form1.country"  name="" id="" ng-class="allvalidation[3].validation" required>
                         <option value="">Select Country</option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -270,10 +270,10 @@
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
-                      <input type="text" ng-model="form1.city" placeholder="City">
-                    <textarea ng-model="form1.message"  placeholder="Message" required=""></textarea>
+                      <input type="text" ng-model="form1.city" placeholder="City *" ng-class="allvalidation[4]validation" required>
+                    <textarea ng-model="form1.message"  placeholder="Message *" ng-class="allvalidation[5].validation" required></textarea>
                     <button class="subbtn" ng-click="submitworkwithus(form1);">SEND</button>
-                </form>
+<!--                </form>-->
             </div>
         </div>
     </div>
