@@ -1329,7 +1329,6 @@ phonecatControllers.controller('Teampage',
             }else{
                 $scope.register = data.name;
                 $scope.login = "Logout";
-<<<<<<< HEAD
 				}
 			}
 			NavigationService.authenticate().success(authsuccess);
@@ -1345,23 +1344,6 @@ phonecatControllers.controller('Teampage',
 
 			//  LOGIN CLICK
 			$scope.onlogin = function(){
-=======
-            }
-        }
-        NavigationService.authenticate().success(authsuccess);
-
-        //  REGISTER CLICK
-        $scope.onregister = function(){
-            if($scope.register == "Register"){
-                $location.url("/register");
-            }else{
-                $location.url("/myprofile");
-            }
-        }
-
-        //  LOGIN CLICK
-        $scope.onlogin = function(){
->>>>>>> origin/master
             if($scope.login == "Login"){
                 $location.url("/login");
                 console.log("login");
@@ -1452,9 +1434,5 @@ phonecatControllers.controller('footer',
                 NavigationService.submitnewsletter(news).success(submitnewsletter);
             }
     }
-<<<<<<< HEAD
-	
-    }
-=======
->>>>>>> origin/master
+}
 );
