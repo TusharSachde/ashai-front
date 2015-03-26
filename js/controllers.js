@@ -167,7 +167,7 @@ phonecatControllers.controller('works',
             $scope.content = data[0];
             $scope.backgroundimg = data[0].image;
         }
-        NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+        NavigationService.getsinglestaticpage(4).success(staticsuccess);
     }
 );
 phonecatControllers.controller('fellowship',
@@ -845,7 +845,7 @@ phonecatControllers.controller('workwithus',
             $scope.content = data[0];
             $scope.backgroundimg = data[0].image;
         }
-        NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+        NavigationService.getsinglestaticpage(5).success(staticsuccess);
     }
 );
 
@@ -910,7 +910,7 @@ phonecatControllers.controller('Contactus',
             $scope.content = data[0];
             $scope.backgroundimg = data[0].image;
         }
-        NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+        NavigationService.getsinglestaticpage(6).success(staticsuccess);
     }
 );
 

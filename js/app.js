@@ -14,7 +14,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'home'
         }).
-        when('/works/:id', {
+        when('/works', {
             templateUrl: 'views/template.html',
             controller: 'works'
         }).
@@ -47,7 +47,7 @@ firstapp.config(['$routeProvider',
         }).
         
         
-         when('/workwithus/:id', {
+         when('/workwithus', {
             templateUrl: 'views/template.html',
             controller: 'workwithus'
         }).
@@ -65,7 +65,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'thankyou'
         }).
-        when('/contactus/:id', {
+        when('/contactus', {
             templateUrl: 'views/template.html',
             controller: 'Contactus'
         }).
