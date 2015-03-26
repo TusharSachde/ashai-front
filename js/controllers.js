@@ -1036,9 +1036,24 @@ phonecatControllers.controller('login',
                 $location.url("/home");
             }
         }
+		
+        $scope.allvalidation = [];
         $scope.userlogin = function (user) {
-            console.log(user);
-            NavigationService.login(user).success(loginsuccess);
+			console.log(user);
+			
+            $scope.allvalidation = [{
+                field: $scope.user.email,
+                validation: ""
+            }, {
+                field: $scope.user.password,
+                validation: ""
+			}];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.login(user).success(loginsuccess);
+			}
+    
         }
     }
 );
@@ -1308,21 +1323,21 @@ phonecatControllers.controller('Teampage',
             }else{
                 $scope.register = data.name;
                 $scope.login = "Logout";
-            }
-        }
-        NavigationService.authenticate().success(authsuccess);
-    
-        //  REGISTER CLICK
-        $scope.onregister = function(){
-            if($scope.register == "Register"){
-                $location.url("/register");
-            }else{
-                $location.url("/myprofile");
-            }
-        }
-    
-        //  LOGIN CLICK
-        $scope.onlogin = function(){
+				}
+			}
+			NavigationService.authenticate().success(authsuccess);
+
+			//  REGISTER CLICK
+			$scope.onregister = function(){
+				if($scope.register == "Register"){
+					$location.url("/register");
+				}else{
+					$location.url("/myprofile");
+				}
+			}
+
+			//  LOGIN CLICK
+			$scope.onlogin = function(){
             if($scope.login == "Login"){
                 $location.url("/login");
                 console.log("login");
@@ -1389,5 +1404,30 @@ phonecatControllers.controller('footer',
             $scope.categories = data.queryresult;
         }
         NavigationService.getallcategory().success(allcategoriessuccess);
+	
+		//	ON NEWSLETTER
+		
+	var submitnewsletter = function (data, status){
+			console.log(data);
+		}
+	
+	
+	 $scope.allvalidation = [];
+	 $scope.news = [];
+        $scope.submitnewsletter = function(news) {
+            console.log(news);
+            //  VALIDATION
+            $scope.allvalidation = [{
+                field: $scope.news.email,
+                validation: ""
+         
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.submitnewsletter(news).success(submitnewsletter);
+            }
+    }
+	
     }
 );

@@ -117,5 +117,8 @@ var navigationservice = angular.module('navigationservice', [])
 		  submitpfo: function(form2) {
             return $http.post(admin_url + "json/createpfo",form2);
         },
+		submitnewsletter: function(news) {
+			     return $http.post(admin_url + "json/createnewsletter",news);
+        }
     }
 });

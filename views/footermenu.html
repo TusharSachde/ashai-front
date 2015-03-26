@@ -38,8 +38,8 @@
                         <h5>NEWSLETTER SIGNUP</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit
-                            <input type="email" class="form-control emailEnter" id="inputEmail" placeholder="Enter your e-mail address">
-                            <button type="button" class="btn btn-warning btn-yellow">SIGNUP</button>
+                            <input type="email" class="form-control emailEnter" placeholder="Enter your e-mail address *" ng-class="allvalidation[0].validation" required ng-model="news.email">
+                            <button type="button" class="btn btn-warning btn-yellow" ng-click="submitnewsletter(news)">SIGNUP</button>
                         </p>
                     </div>
                     <div class="col-md-3">
