@@ -1,5 +1,5 @@
-//var admin_url = "http://wohlig.co.in/powerforone/index.php/";
-var admin_url = "http://localhost/powerforone/index.php/";
+var admin_url = "http://wohlig.co.in/powerforone/index.php/";
+// var admin_url = "http://localhost/powerforone/index.php/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
@@ -11,7 +11,7 @@ var navigationservice = angular.module('navigationservice', [])
     }, {
         name: "How it works",
         active: "",
-        link:"#/works/4",
+        link:"#/works",
         subnav: []
     }, {
         name: "The fellowship",
