@@ -107,6 +107,9 @@ phonecatControllers.controller('home',
             }
             return newarray;
         };
+    
+    //  INTERVAL
+    
      $scope.myInterval = 5000;
 
     });
