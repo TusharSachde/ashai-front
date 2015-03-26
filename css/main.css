@@ -2141,9 +2141,11 @@ a.right.carousel-control {
 }
 
 .cat-btm {
-    border-bottom: 1px solid #08B3B3;
+    border-bottom: 1px solid #b2b2b2;
 }
-
+.cat-btm:last-child{
+    border:none;
+}
 .head-on.home p {
     padding-bottom: 20px;
 }
