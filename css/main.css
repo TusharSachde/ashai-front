@@ -2190,7 +2190,7 @@ a.right.carousel-control {
     left: 8px;
     background:#000;
     color: #fff;
-    top: 60px;
+    top: 55px;
     padding: 7px;
     border-radius: 3px;
 }
@@ -2213,4 +2213,10 @@ a.right.carousel-control {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #000;
+}
+.mem_logout ul{
+    margin-bottom:0px;
+}
+.mem_logout ul li{
+    padding:4px 10px;
 }
