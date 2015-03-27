@@ -4,7 +4,7 @@
             <div class="wrap row">
                 <div class="col-md-2">
                     <h5>ABOUT US</h5>
-<!--
+                    <!--
                     <ul class="list-unstyled">
                         <li ng-repeat="page in pages"><a ng-click="topages(page)" class="cpointer">{{page.name}}</a>
                         </li>
@@ -21,53 +21,55 @@
                         </li>
                         <li><a href="#/workwithus">Work with us</a>
                         </li>
+                        <li><a href="#/blog">Blog</a>
+                        </li>
                         <li><a href="#/contactus">Contact us</a>
                         </li>
                     </ul>
                 </div>
-                    <div class="col-md-4">
-                        <h5>RECENT TWEETS</h5>
-                        <p>
-                            <span class="best">@bestwebsoft</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit magni incidunt</br> <span class="time">5 minutes ago</span>
-                        </p>
-                        <p>
-                            <span class="best">@bestwebsoft</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit magni incidunt</br> <span class="time1">1 day ago</span>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <h5>NEWSLETTER SIGNUP</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit
-                            <input type="email" class="form-control emailEnter" placeholder="Enter your e-mail address *" ng-class="allvalidation[0].validation" required ng-model="news.email">
-                            <button type="button" class="btn btn-warning btn-yellow" ng-click="submitnewsletter(news)">SIGNUP</button>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <h5>CATEGORIES</h5>
-                                <ul class="list-unstyled">
-                                    <li class="cat-btm" ng-repeat = "cat in categories"><a href="#/explore/{{cat.id}}">{{cat.name}}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6 last">
-                                <ul class="list-unstyled">
-                                    <li ><a href="https://www.facebook.com/powerforone" class="facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
-                                    </li>
-                                    <li><a href="https://www.pinterest.com/powerforone/" class="pinterest"><i class="fa fa-pinterest"></i> Pinterest</a>
-                                    </li>
-                                    <li><a href="https://twitter.com/mypowerforone" class="twitter"><i class="fa fa-twitter"></i> Twitter</a>
-                                    </li>
-                                    <li><a href="#" class="instagram"><i class="fa fa-instagram"   ></i> Instagram</a>
-                                    </li>
-                                    <li><a href="#" class="linked" ><i class="fa fa-linkedin"></i> Linkedin</a>
-                                    </li>
+                <div class="col-md-4">
+                    <h5>RECENT TWEETS</h5>
+                    <p>
+                        <span class="best">@bestwebsoft</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit magni incidunt</br> <span class="time">5 minutes ago</span>
+                    </p>
+                    <p>
+                        <span class="best">@bestwebsoft</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit magni incidunt</br> <span class="time1">1 day ago</span>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5>NEWSLETTER SIGNUP</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit
+                        <input type="email" class="form-control emailEnter" placeholder="Enter your e-mail address *" ng-class="allvalidation[0].validation" required ng-model="news.email">
+                        <button type="button" class="btn btn-warning btn-yellow" ng-click="submitnewsletter(news)">SIGNUP</button>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h5>CATEGORIES</h5>
+                            <ul class="list-unstyled">
+                                <li class="cat-btm" ng-repeat="cat in categories"><a href="#/explore/{{cat.id}}">{{cat.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 last">
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.facebook.com/powerforone" class="facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                </li>
+                                <li><a href="https://www.pinterest.com/powerforone/" class="pinterest"><i class="fa fa-pinterest"></i> Pinterest</a>
+                                </li>
+                                <li><a href="https://twitter.com/mypowerforone" class="twitter"><i class="fa fa-twitter"></i> Twitter</a>
+                                </li>
+                                <li><a href="#" class="instagram"><i class="fa fa-instagram"   ></i> Instagram</a>
+                                </li>
+                                <li><a href="#" class="linked"><i class="fa fa-linkedin"></i> Linkedin</a>
+                                </li>
 
-                                </ul>
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
