@@ -17,6 +17,41 @@
     img.logtext {
         padding: 10px 0px 0px 50px;
     }
+    .helpbox {
+        width: 65%;
+        margin: 0 auto 30px auto!important;
+    }
+    .salammum p {
+        text-align: center!important;
+        padding: 0!important;
+    }
+    .salammum img {
+        margin-left: 18%!important;
+        transform: translatex(80%)!important;
+    }
+    .contribution {
+        width: 80%;
+        margin: 20px 0 0 32%;
+        transform: translatex(2%);
+    }
+    .contri_time {
+        margin: 0 auto!important;
+    }
+    .paragraph {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .gallery_div {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .LeftCont {
+        width: 80%;
+        margin: 20px auto 0 auto!important;
+    }
+    body .LeftCont .circle{
+        margin:10px auto!important;
+    }
 }
 
 @media screen and (max-width: 550px) {

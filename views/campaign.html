@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-9">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <div class="salammum">
                         <img class="Salaamlogo" ng-src="{{project.advertiserimage | projectbannerimagepath}}">
                         <p>CAMPAIGN BY
@@ -11,8 +11,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-8 contribut">
-                    <div class="text-center" style="width:55%">
+                <div class="col-sm-8 contribut">
+                    <div class="text-center contri_time" style="width:55%">
                         <p class="contributionimg"><b>{{project.times}}</b>
                         </p>
                     </div>
@@ -50,7 +50,7 @@
             </div>
 -->
 
-            <div class="row" ng-if="projectimages">
+            <div class="row gallery_div" ng-if="projectimages">
                 <div class="col-xs-10">
                     <div class="galleryimg">
                         <img ng-src="{{mainimage | ngoimagepath}}" width="100%" height="100%" alt="">
@@ -202,6 +202,7 @@
             <div class="hrl"></div>
         </div>
         <p class="viewAll" ng-if="similarcauses!=''" ng-click="tocategory()">(View All)</p>
+        <div class="bottom1">
         <div class="col-md-4 causelnk" ng-if="similarcauses[0]">
             <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
                 <div class="causes text-center">
@@ -222,6 +223,7 @@
                 </div>
             </a>
         </div>
+        
         <div class="col-md-4 causelnk" ng-if="similarcauses[1]">
             <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
                 <div class="causes text-center">
@@ -261,6 +263,7 @@
                     </div>
                 </div>
             </a>
+        </div>
         </div>
     </div>
 
