@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 989px) {
     .bottom1 .causes {
         width: 60%;
         margin: 10px auto !important;
@@ -25,16 +25,16 @@
         text-align: center!important;
         padding: 0!important;
     }
-    .sliderheader{
-          background-position-y: -40px!important;
+    .sliderheader {
+        background-position-y: -40px!important;
     }
     body .head-on h3 {
-        margin-top:20%;
+        margin-top: 20%;
     }
-    .signinor{
-        background:none!important;
-        width:100%;
-        padding-right:0px;
+    .signinor {
+        background: none!important;
+        width: 100%;
+        padding-right: 0px;
     }
     .salammum img {
         position: relative;
@@ -104,8 +104,8 @@
     .gallery_width {
         height: 290px!important;
     }
-      body .head-on h3 {
-        margin-top:25%;
+    body .head-on h3 {
+        margin-top: 25%;
     }
     .galleryimg img {
         height: 290px!important;
