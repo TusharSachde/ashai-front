@@ -28,11 +28,19 @@
     .salammum img {
         position: relative;
         left: 50%;
+        -webkit-transform: translatex(-50%)!important;
+        -moz-transform: translatex(-50%)!important;
+        -ms-transform: translatex(-50%)!important;
+        -o-transform: translatex(-50%)!important;
         transform: translatex(-50%)!important;
     }
     .contribution {
         width: 80%;
         left: 50%;
+        -webkit-transform: translatex(-50%)!important;
+        -moz-transform: translatex(-50%)!important;
+        -ms-transform: translatex(-50%)!important;
+        -o-transform: translatex(-50%)!important;
         transform: translatex(-50%)!important;
         position: relative;
     }
@@ -49,7 +57,7 @@
         margin: 0 auto;
     }
     .LeftCont {
-        width: 80%;
+        width: 65%;
         margin: 20px auto 0 auto!important;
     }
     body .LeftCont .circle {
@@ -66,7 +74,7 @@
 
 @media screen and (max-width: 550px) {
     .bottom1 .causes {
-        width: 100%!important;
+        width: 90%!important;
         margin: 10px auto !important;
     }
     .gallery_width {
@@ -82,10 +90,6 @@
         padding-bottom: 0!important;
         font-size: 12px;
     }
-    .bottom1 .causes {
-        width: 100%!important;
-        margin: 10px auto !important;
-    }
     .head-on h3 {
         font-size: 20px;
     }
@@ -98,8 +102,15 @@
     .exp-menus {
         padding: 7px 8px;
     }
+    img.logtext {
+        padding: 10px 20px!important;
+    }
     .ychoseus p {
         font-size: 32px!important;
+    }
+    .LeftCont {
+        width: 90%;
+        margin: 20px auto 0 auto!important;
     }
     .head-on.home {
         margin: 3% auto;
@@ -115,5 +126,17 @@
     }
     .terms a {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contri_time {
+        width: 55%!important;
+    }
+    .contribution {
+        width: 100%;
+    }
+    .contribut {
+        width: 100%;
     }
 }

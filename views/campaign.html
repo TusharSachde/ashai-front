@@ -86,7 +86,7 @@
             <div class="LeftCont">
                 <div class="donatecontentChange" id="atdonate">
 
-                    <div class="txt3"><i class="donate"></i>  <span>Donate</span>
+                    <div class="txt3"><i class="donate"></i> <span>Donate</span>
                     </div>
 
                     <div class="checkbox check">
@@ -167,8 +167,10 @@
                     <div class="share"><i class="shareicon"></i><span>Raise Awareness</span>
                     </div>
                     <div class="sharebtn">
-                        <button type="button" class="btn btn-primary" ng-click="facebookshare()"><i class="fa fa-facebook fa-lg"></i><span>Share on Facebook</span></button>
-                        <button type="button" class="btn btn-info" ng-click="twittershare()"> <i class="fa fa-twitter fa-lg"></i><span>Tweet on Twitter</span></button>
+                        <button type="button" class="btn btn-primary" ng-click="facebookshare()"><i class="fa fa-facebook fa-lg"></i><span>Share on Facebook</span>
+                        </button>
+                        <button type="button" class="btn btn-info" ng-click="twittershare()"> <i class="fa fa-twitter fa-lg"></i><span>Tweet on Twitter</span>
+                        </button>
                     </div>
                     <div class="txt4">{{project.share}}</div>
                     <span class="shares"> Shares</span>
@@ -203,67 +205,67 @@
         </div>
         <p class="viewAll" ng-if="similarcauses!=''" ng-click="tocategory()">(View All)</p>
         <div class="bottom1">
-        <div class="col-md-4 causelnk" ng-if="similarcauses[0]">
-            <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
-                <div class="causes text-center">
-                    <div class="pic">
-                        <img ng-src="{{similarcauses[0].image | projectbannerimagepath}}">
+            <div class="col-md-4 causelnk" ng-if="similarcauses[0]">
+                <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
+                    <div class="causes text-center">
+                        <div class="pic">
+                            <img ng-src="{{similarcauses[0].image | projectbannerimagepath}}">
 
-                        <div class="mumbai-in">
-                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                            <div class="mumbai-in">
+                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                            </div>
+                        </div>
+                        <h3>{{similarcauses[0].tagline}}</h3>
+                        <div class="info">
+                            <p>{{similarcauses[0].cardtagline}}</p>
+                            <h5>{{similarcauses[0].ngoname}}</h5>
+                            <img ng-src="{{similarcauses[0].ngoimage | ngoimagepath}}" height="50px" width="50px">
+
                         </div>
                     </div>
-                    <h3>{{similarcauses[0].tagline}}</h3>
-                    <div class="info">
-                        <p>{{similarcauses[0].cardtagline}}</p>
-                        <h5>{{similarcauses[0].ngoname}}</h5>
-                        <img ng-src="{{similarcauses[0].ngoimage | ngoimagepath}}" height="50px" width="50px">
+                </a>
+            </div>
 
-                    </div>
-                </div>
-            </a>
-        </div>
-        
-        <div class="col-md-4 causelnk" ng-if="similarcauses[1]">
-            <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
-                <div class="causes text-center">
-                    <div class="pic">
-                        <img ng-src="{{similarcauses[1].image | projectbannerimagepath}}">
+            <div class="col-md-4 causelnk" ng-if="similarcauses[1]">
+                <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
+                    <div class="causes text-center">
+                        <div class="pic">
+                            <img ng-src="{{similarcauses[1].image | projectbannerimagepath}}">
 
-                        <div class="mumbai-in">
-                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                            <div class="mumbai-in">
+                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                            </div>
+                        </div>
+                        <h3>{{similarcauses[1].tagline}}</h3>
+                        <div class="info">
+                            <p>{{similarcauses[1].cardtagline}}</p>
+                            <h5>{{similarcauses[1].ngoname}}</h5>
+                            <img ng-src="{{similarcauses[1].ngoimage | ngoimagepath}}" height="50px" width="50px">
+
                         </div>
                     </div>
-                    <h3>{{similarcauses[1].tagline}}</h3>
-                    <div class="info">
-                        <p>{{similarcauses[1].cardtagline}}</p>
-                        <h5>{{similarcauses[1].ngoname}}</h5>
-                        <img ng-src="{{similarcauses[1].ngoimage | ngoimagepath}}" height="50px" width="50px">
+                </a>
+            </div>
+            <div class="col-md-4 causelnk" ng-if="similarcauses[2]">
+                <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
+                    <div class="causes text-center">
+                        <div class="pic">
+                            <img ng-src="{{similarcauses[2].image | projectbannerimagepath}}">
 
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 causelnk" ng-if="similarcauses[2]">
-            <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
-                <div class="causes text-center">
-                    <div class="pic">
-                        <img ng-src="{{similarcauses[2].image | projectbannerimagepath}}">
+                            <div class="mumbai-in">
+                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                            </div>
+                        </div>
+                        <h3>{{similarcauses[2].tagline}}</h3>
+                        <div class="info">
+                            <p>{{similarcauses[2].cardtagline}}</p>
+                            <h5>{{similarcauses[2].ngoname}}</h5>
+                            <img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
 
-                        <div class="mumbai-in">
-                            <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                         </div>
                     </div>
-                    <h3>{{similarcauses[2].tagline}}</h3>
-                    <div class="info">
-                        <p>{{similarcauses[2].cardtagline}}</p>
-                        <h5>{{similarcauses[2].ngoname}}</h5>
-                        <img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
-
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -311,9 +313,9 @@
 -->
 
 
-        </div>
-
-
     </div>
+
+
+</div>
 
 </div>
