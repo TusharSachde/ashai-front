@@ -1362,6 +1362,26 @@ p.pull-right.abc {
   display: inline-block !important;
   cursor: pointer;
 }
+.all_set {
+  background-color: #0b6b0b;
+  color: #fff;
+  font-size: :12px;
+  padding: 7px;
+  margin-top: 10px;
+}
+.error {
+  background-color: #DA3C3C;
+  color: #fff;
+  font-size: 12px;
+  padding: 7px;
+  margin-top: 10px;
+}
 .owl-carousel {
   padding: 20px 0 15px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .nav-sm,
+  .nav-sm a {
+    font-size: 10px;
+  }
 }

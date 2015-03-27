@@ -2,7 +2,7 @@
 </li>
 <li ng-repeat="menu in navigation" class="{{menu.classis}}"><a href="{{menu.link}}" class="ifbold">{{menu.name}}</a>
 </li>
-<div class="visible-xs visible-sm headmargin" ng-if="login=='Login'">
+<div class="visible-xs visible-sm nav-sm headmargin" ng-if="login=='Login'">
     <a ng-click="onregister()" class="login cpointer">{{register}}</button>
     <a ng-click="onlogin()" class="login cpointer">{{login}}</a>
 </div>
