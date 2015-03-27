@@ -2221,3 +2221,7 @@ a.right.carousel-control {
 .mem_logout ul li{
     padding:4px 10px;
 }
+.blog_img{
+    width:100%;
+    height:auto;
+}
