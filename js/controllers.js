@@ -406,6 +406,13 @@ phonecatControllers.controller('blog',
                 $scope.login = "Login";
             }
         }
+        
+        //  GET ALL BLOGS
+        var blogsuccess = function(data, status){
+            console.log(data);
+        }
+        NavigationService.getblog().success(blogsuccess);
+        
 
     }
 );
@@ -981,6 +988,9 @@ phonecatControllers.controller('Contactus',
 			console.log(data);
 		}
         $scope.allvalidation = [];
+    
+//        ngToast.create('A toast message...');
+    
         $scope.submitcontactform = function(form) {
             //console.log(form);
             //  VALIDATION
