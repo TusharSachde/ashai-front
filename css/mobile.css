@@ -25,6 +25,12 @@
         text-align: center!important;
         padding: 0!important;
     }
+    .sliderheader{
+          background-position-y: -40px!important;
+    }
+    body .head-on h3 {
+        margin-top:20%;
+    }
     .salammum img {
         position: relative;
         left: 50%;
@@ -70,8 +76,15 @@
         width: 100%!important;
         height: auto;
     }
+    .im-checkout-btn.btn--light {
+        width: 90%!important;
+        margin: 0 auto!important;
+    }
     .contri_time {
         width: 90%!important;
+    }
+    .donation select.form-control.selectbg {
+        width: 51%;
     }
 }
 
@@ -85,6 +98,9 @@
     }
     .gallery_width {
         height: 290px!important;
+    }
+      body .head-on h3 {
+        margin-top:25%;
     }
     .galleryimg img {
         height: 290px!important;

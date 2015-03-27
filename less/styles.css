@@ -1365,7 +1365,7 @@ p.pull-right.abc {
 .all_set {
   background-color: #0b6b0b;
   color: #fff;
-  font-size: :12px;
+  font-size: : 12px;
   padding: 7px;
   margin-top: 10px;
 }
