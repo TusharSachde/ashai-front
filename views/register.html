@@ -7,13 +7,13 @@
                     <h3 class="createtitle">Create an account</h3>
                     <div class="signinor">
                         <form>
-                           <input name="name" type="text" class="custom-input signin-input" ng-model="user.name" placeholder="Name" ng-class="allvalidation[0].validation" required>
+                           <input name="name" type="text" class="custom-input signin-input" ng-model="user.name" placeholder="Name">
                            
                             <br>
-                             <input name="email" class="custom-input signin-input" ng-model="user.email" placeholder="Enter your email" ng-class="allvalidation[1].validation" required>
+                             <input name="email" class="custom-input signin-input" ng-model="user.email" placeholder="Enter your email">
                             <br>
                            
-                            <input type="password" name="password" class="custom-input signin-input" ng-model="user.password" placeholder="Password" ng-class="allvalidation[2].validation" required>
+                            <input type="password" name="password" class="custom-input signin-input" ng-model="user.password" placeholder="Password">
                             <br>
                             <a class="createacc cpointer" ng-click="createuser(user)"> CREATE AN ACCOUNT </a>
                         </form>
