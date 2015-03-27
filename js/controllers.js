@@ -361,7 +361,7 @@ phonecatControllers.controller('aboutUs',
 
 
 phonecatControllers.controller('blog',
-    function($scope, TemplateService, NavigationService, $location) {
+    function($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Blog");
 
@@ -371,7 +371,9 @@ phonecatControllers.controller('blog',
         TemplateService.title = "Blog";
         $scope.navigation = NavigationService.getnav();
 
-
+        //  DECLARATIONS
+        $scope.blogs = [];
+    
         //  AUTHENTICATE
         var authsuccess = function (data, status){
             console.log("auth auth auth");
@@ -410,6 +412,10 @@ phonecatControllers.controller('blog',
         //  GET ALL BLOGS
         var blogsuccess = function(data, status){
             console.log(data);
+            $scope.blogs = data.queryresult;
+            for(var i=0;i<$scope.blogs.length;i++){
+                $scope.blogs[i].description = $filter('rawHtml')($scope.blogs[i].description);
+            }
         }
         NavigationService.getblog().success(blogsuccess);
         

@@ -37,6 +37,10 @@ var navigationservice = angular.module('navigationservice', [])
           {
               return $http.get(admin_url+ 'json/authenticate',{});
           },
+         getblog:function()
+          {
+              return $http.get(admin_url+ 'json/getallblog',{});
+          },
          getstaticpages:function()
           {
               return $http.get(admin_url+ 'json/getstaticpages',{});

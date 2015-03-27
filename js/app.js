@@ -25,7 +25,7 @@ firstapp.config(['$routeProvider',
             controller: 'blog'
         }).
         
-         when('/bloginner', {
+         when('/bloginner/:id', {
             templateUrl: 'views/template.html',
             controller: 'bloginner'
         }).

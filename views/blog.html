@@ -2,26 +2,27 @@
 
     <div class="col-md-9">
         <div class="content1">
-            <div class="row">
-                <div class="tagged"> <span class="glyphicon glyphicon-tags"></span>TAGGED UNDER :<span class="featured">FEATURED1, GRID </span> 
+            <div class="row" ng-repeat="blog in blogs">
+                <div class="tagged"> <span class="glyphicon glyphicon-tags"></span>TAGGED UNDER :<span class="featured">{{blog.blogcategoryname}} </span> 
                 </div>
 
                 <h1>
-        <div class="amazing">The Amazing Natural Sunset Is A Glorius Moment</div>
+        <div class="amazing">{{blog.title}}</div>
      </h1>
                 <div class="col-md-3">
 
                     <img src="images/amazing.png">
                 </div>
                 <div class="col-md-9">
-                    <span class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eligendi eius esse nam nostrum commodi, dolor dolorum voluptas labore obcaecati consectetur similique assumenda praesentium, ut officiis voluptatibus placeat corporis! Rem!</span> 
+                    <span class="para">{{blog.description}}</span>
                     <br>
                     <br>
-                    <a href="#/bloginner" class="read"> READ MORE <i class="fa fa-arrow-circle-o-right"></i></a>
+                    <a href="#/bloginner/{{blog.id}}" class="read"> READ MORE <i class="fa fa-arrow-circle-o-right"></i></a>
 
                 </div>
             </div>
 
+<!--
             <div class="row">
 
                 <div class="tagged1"><span class="glyphicon glyphicon-tags"></span>TAGGED UNDER :<span class="featured1">FEATURED1 </span> 
@@ -44,6 +45,7 @@
                 
                 
             </div>
+-->
 
                     <br>
                     <br>
