@@ -29,6 +29,10 @@ var navigationservice = angular.module('navigationservice', [])
               var category = 0;
               $http.get(admin_url+ 'json/getprojectbycategory?category=' + category,{}).success(callback);
           },
+         getsingleblog:function(id)
+          {
+              return $http.get(admin_url+ 'json/getsingleblog?id=' + id,{});
+          },
          viewstaticpage:function(id)
           {
               return $http.get(admin_url+ 'json/viewstaticpage?id=' + id,{});

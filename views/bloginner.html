@@ -3,18 +3,18 @@
     <div class="col-md-9">
         <div class="content1">
             <div class="row">
-                <div class="tagged"> <span class="glyphicon glyphicon-tags"></span>TAGGED UNDER :<span class="featured">FEATURED1, GRID </span>
+                <div class="tagged"> <span class="glyphicon glyphicon-tags"></span>TAGGED UNDER :<span class="featured">{{blog.blogcategoryname}} </span>
                 </div>
 
                 <h1>
-        <div class="amazing">The Amazing Natural Sunset Is A Glorius Moment</div>
+        <div class="amazing">{{blog.title}}</div>
      </h1>
                 <div class="col-xs-3">
 
-                    <img src="images/amazing.png">
+                    <img src="{{blog.image | testimonialimagepath}}">
                 </div>
                 <div class="col-xs-9">
-                    <span class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eligendi eius esse nam nostrum commodi, dolor dolorum voluptas labore obcaecati consectetur similique assumenda praesentium, ut officiis voluptatibus placeat corporis! Rem!</span>
+                    <span class="para">{{blog.description}}</span>
                     
                     
 
