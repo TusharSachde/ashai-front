@@ -58,6 +58,10 @@
     .faq_team .col-md-4 {
         text-align: center;
     }
+    .blog_img{
+        width:100%!important;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 550px) {
