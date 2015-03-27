@@ -26,16 +26,19 @@
         padding: 0!important;
     }
     .salammum img {
-        margin-left: 18%!important;
-        transform: translatex(80%)!important;
+        position: relative;
+        left: 50%;
+        transform: translatex(-50%)!important;
     }
     .contribution {
         width: 80%;
-        margin: 20px 0 0 32%;
-        transform: translatex(2%);
+        left: 50%;
+        transform: translatex(-50%)!important;
+        position: relative;
     }
-    .contri_time {
-        margin: 0 auto!important;
+    .contribut {
+        width: 70%;
+        margin: 0 auto;
     }
     .paragraph {
         width: 90%;
@@ -49,8 +52,11 @@
         width: 80%;
         margin: 20px auto 0 auto!important;
     }
-    body .LeftCont .circle{
-        margin:10px auto!important;
+    body .LeftCont .circle {
+        margin: 10px auto!important;
+    }
+    .faq_team .col-md-4 {
+        text-align: center;
     }
 }
 
