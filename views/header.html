@@ -45,13 +45,13 @@
                     </div>
 
                     <div class="hidden-xs hidden-sm logout pos" ng-if="login=='Logout'">
-                        <span class="member_name cpointer">Power for one</span>
+                        <span class="member_name cpointer">{{register}}</span>
                         <div class="mem_logout">
                             <div class="arrow_log"></div>
                             <ul class="list-unstyled">
-                                <li><a href="#">My Profile</a>
+                                <li><a ng-click="onregister()">My Profile</a>
                                 </li>
-                                <li><a href="#">Logout</a>
+                                <li><a ng-click="onlogin()">Logout</a>
                                 </li>
                             </ul>
                         </div>
