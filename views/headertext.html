@@ -33,12 +33,12 @@
                         </div>
 
                         <div class="col-xs-2 reg-set">
-                            <div class="hidden-xs hidden-sm headmargin pull-right ">
+                            <div class="hidden-xs hidden-sm headmargin pull-right" ng-if="login=='Login'">
 
                                 <a ng-click="onregister()" class="login cpointer">{{register | cut:true:8:' ...'}}</button>
                                 <a ng-click="onlogin()" class="login cpointer">{{login}}</a>
                             </div>
-                            <div class="hidden-xs hidden-sm logout pos" style="display:none;">
+                            <div class="hidden-xs hidden-sm logout pos" ng-if="login=='Logout'">
                                     <span class="member_name cpointer">Power for one</span>
                                     <div class="mem_logout">
                                         <div class="arrow_log"></div>
