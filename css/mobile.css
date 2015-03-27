@@ -66,9 +66,12 @@
     .faq_team .col-md-4 {
         text-align: center;
     }
-    .blog_img{
-        width:100%!important;
+    .blog_img {
+        width: 100%!important;
         height: auto;
+    }
+    .contri_time {
+        width: 90%!important;
     }
 }
 
@@ -80,6 +83,12 @@
     .gallery_width {
         height: auto;
     }
+    .gallery_width {
+        height: 290px!important;
+    }
+    .galleryimg img {
+        height: 290px!important;
+    }
     .thunderheart .list-inline li {
         display: block!important;
     }
@@ -89,6 +98,11 @@
     .head-on.home p {
         padding-bottom: 0!important;
         font-size: 12px;
+    }
+    .text-right.pad-up {
+        padding: 15px 0;
+        float: none!important;
+        text-align: center;
     }
     .head-on h3 {
         font-size: 20px;
@@ -127,12 +141,19 @@
     .terms a {
         font-size: 12px;
     }
+    .contribution {
+        width: 100%;
+    }
+    .contri_time {
+        width: 100%!important;
+    }
+    .contribut {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    .contri_time {
-        width: 55%!important;
-    }
     .contribution {
         width: 100%;
     }
