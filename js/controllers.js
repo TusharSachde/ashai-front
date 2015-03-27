@@ -1,4 +1,4 @@
-var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute']);
+var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute','ngSanitize']);
 
 phonecatControllers.controller('home',
     function($scope, TemplateService, NavigationService, $location) {
@@ -361,7 +361,7 @@ phonecatControllers.controller('aboutUs',
 
 
 phonecatControllers.controller('blog',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function($scope, TemplateService, NavigationService, $location, $filter, $sce) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Blog");
 
@@ -413,9 +413,6 @@ phonecatControllers.controller('blog',
         var blogsuccess = function(data, status){
             console.log(data);
             $scope.blogs = data.queryresult;
-            for(var i=0;i<$scope.blogs.length;i++){
-                $scope.blogs[i].description = $filter('rawHtml')($scope.blogs[i].description);
-            }
         }
         NavigationService.getblog().success(blogsuccess);
         

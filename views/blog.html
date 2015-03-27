@@ -11,10 +11,10 @@
      </h1>
                 <div class="col-md-3">
 
-                    <img src="images/amazing.png">
+                    <img src="{{blog.image | testimonialimagepath}}">
                 </div>
                 <div class="col-md-9">
-                    <span class="para">{{blog.description}}</span>
+                    <span class="para">{{blog.description | cut:true:200:'...'}}</span>
                     <br>
                     <br>
                     <a href="#/bloginner/{{blog.id}}" class="read"> READ MORE <i class="fa fa-arrow-circle-o-right"></i></a>
