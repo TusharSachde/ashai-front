@@ -1,3 +1,4 @@
+var adminurl = "http://localhost/powerforone/index.php/";
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute', 'ngSanitize']);
 
 phonecatControllers.controller('home',
@@ -722,7 +723,7 @@ phonecatControllers.controller('campaign',
 
         //  POST ON FACEBOOK
         $scope.facebookshare = function(text) {
-            window.location.href = "http://localhost/powerforone/index.php/" + "hauth/postfb?message=" + $scope.project.facebooktext + "&returnurl=" + window.location.href+"&project="+$scope.project.id;
+            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext + "&returnurl=" + window.location.href+"&project="+$scope.project.id;
             //            var ref = window.open('http://localhost/powerforone/index.php/hauth/postfb?message=hey hello&returnurl=http://localhost/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
         }
 
