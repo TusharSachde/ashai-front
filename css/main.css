@@ -2247,3 +2247,58 @@ a.right.carousel-control {
     width: 100%;
     height: auto;
 }
+
+.fb-popup {
+    width: 40%;
+    height: 300px;
+    margin: 0;
+    background: white;
+    display: block;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fboverlay {
+    background-color: rgba(0, 0, 0, .4);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999999;
+}
+
+.padding10 {
+    padding: 0 10px;
+}
+
+.phead {
+    background-color: #f6f7f8;
+    border-bottom: 1px solid #e5e5e5;
+    -webkit-border-radius: 3px 3px 0 0;
+    color: #141823;
+    font-weight: bold;
+    line-height: 19px;
+    padding: 10px 12px;
+}
+
+.fb-popup input[type="text"] {
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+
+.share-info {
+    margin: 20px 0 0 0;
+    height: 165px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.post-btn {
+    background-color: #4e69a2;
+    border: 1px solid #435a8b;
+    color: #fff;
+}
