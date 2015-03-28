@@ -12,19 +12,29 @@
                     </div>
                 </div>
                 <div class="col-sm-8 contribut">
-                    <div class="text-center contri_time" style="width:55%">
+                    <!--
+                    <div class="text-center contri_time">
                         <p class="contributionimg"><b>{{project.times}}</b>
                         </p>
                     </div>
+-->
                     <div class="contribution">
+                        <div class="row">
+                            <div class="col-xs-8 text-center">
+                                <div class="">
+                                    <p class="contributionimg"><b>{{project.times}}</b>
+                                    </p>
+                                </div>
+                                <div>
+                                    {{project.timesinword}}
+                                </div>
+                            </div>
+                            <div class="col-xs-4"><img class="contri-img" ng-src="{{project.ngoimage | ngoimagepath}}" height="50px" width="50px">
+                            </div>
+                        </div>
 
-                        <div class="pull-left">
-                            <h6>{{project.timesinword}}</h6>
-                        </div>
-                        <div>
-                            <img ng-src="{{project.ngoimage | ngoimagepath}}" height="50px" width="50px">
-                        </div>
-                        <div class="clearfix"></div>
+
+
                     </div>
                 </div>
             </div>
@@ -138,11 +148,11 @@
 
                         <div class="clearfix"></div>
                         <div class="give-btn">
-<!--                            <button type="button" class="btn givbtn">-->
-<!--                                GIVE</button>-->
-                                <a href="https://www.instamojo.com/jagruti/demo-19616/" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>
-                                
-   <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
+                            <!--                            <button type="button" class="btn givbtn">-->
+                            <!--                                GIVE</button>-->
+                            <a href="https://www.instamojo.com/jagruti/demo-19616/" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>
+
+                            <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
                         </div>
                     </div>
                     <div class="checkbox check">
@@ -322,64 +332,63 @@
 </div>
 
 </div>
-<<<<<<< HEAD
-<div class="container-fluid" ng-show="facebookdiv">
-=======
-<div class="container-fluid" style="display:none;">
->>>>>>> origin/master
-    <div class="fboverlay">
-        <div class="fb-popup">
-            <div class="phead">Share This on Facebook<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidefacebook()"></i></span>
-            </div>
-            <div class="clearfix"></div>
-            <div class="padding10">
-                <form>
-                    <input type="text" placeholder="Say something about this...">
-                </form>
-                <div class="row share-info">
-                    <div class="col-xs-3">
-                        <img src="images/favicon.png" alt="">
-                    </div>
-                    <div class="col-xs-9">
-                        <div>
-                            <p>{{project.facebooktext}}</p>
+<<<<<<< HEAD <div class="container-fluid" ng-show="facebookdiv">
+    =======
+    <div class="container-fluid" style="display:none;">
+        >>>>>>> origin/master
+        <div class="fboverlay">
+            <div class="fb-popup">
+                <div class="phead">Share This on Facebook<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidefacebook()"></i></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="padding10">
+                    <form>
+                        <input type="text" placeholder="Say something about this...">
+                    </form>
+                    <div class="row share-info">
+                        <div class="col-xs-3">
+                            <img src="images/favicon.png" alt="">
+                        </div>
+                        <div class="col-xs-9">
+                            <div>
+                                <p>{{project.facebooktext}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="pull-right">
-                    <button type="submit" ng-click="hidefacebook()">Cancel</button>
-                    <button type="submit" class="post-btn" ng-click="facebookshare()">Post</button>
+                    <div class="pull-right">
+                        <button type="submit" ng-click="hidefacebook()">Cancel</button>
+                        <button type="submit" class="post-btn" ng-click="facebookshare()">Post</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-   
-   <div class="container-fluid" ng-show="twitterdiv">
-    <div class="fboverlay">
-        <div class="fb-popup">
-            <div class="phead">Share This on Twitter<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidetwitter()"></i></span>
-            </div>
-            <div class="clearfix"></div>
-            <div class="padding10">
-                <form>
-                    <input type="text" placeholder="Say something about this...">
-                </form>
-                <div class="row share-info">
-                    <div class="col-xs-3">
-                        <img src="images/favicon.png" alt="">
-                    </div>
-                    <div class="col-xs-9">
-                        <div>
-                            <p>{{project.twittertext}}</p>
+
+    <div class="container-fluid" ng-show="twitterdiv">
+        <div class="fboverlay">
+            <div class="fb-popup">
+                <div class="phead">Share This on Twitter<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidetwitter()"></i></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="padding10">
+                    <form>
+                        <input type="text" placeholder="Say something about this...">
+                    </form>
+                    <div class="row share-info">
+                        <div class="col-xs-3">
+                            <img src="images/favicon.png" alt="">
+                        </div>
+                        <div class="col-xs-9">
+                            <div>
+                                <p>{{project.twittertext}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="pull-right">
-                    <button type="submit" ng-click="hidetwitter()">Cancel</button>
-                    <button type="submit" class="post-btn" ng-click="twittershare()">Tweet</button>
+                    <div class="pull-right">
+                        <button type="submit" ng-click="hidetwitter()">Cancel</button>
+                        <button type="submit" class="post-btn" ng-click="twittershare()">Tweet</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

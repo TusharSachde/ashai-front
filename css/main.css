@@ -2370,3 +2370,9 @@ a.right.carousel-control {
 .social-links li a i{
     padding:11px 13px;
 }
+.contri-img{
+      width: auto;
+  height: 50px;
+  position: absolute;
+  top: 76px;
+}
