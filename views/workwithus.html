@@ -273,6 +273,7 @@
                       <input type="text" ng-model="form1.city" placeholder="City *" ng-class="allvalidation[4].validation" required>
                     <textarea ng-model="form1.message"  placeholder="Message *" ng-class="allvalidation[5].validation" required></textarea>
                     <button class="subbtn" ng-click="submitworkwithus(form1);">SEND</button>
+                    <div ng-class="message" ng-bind="textmessage"></div>
 <!--                </form>-->
             </div>
         </div>

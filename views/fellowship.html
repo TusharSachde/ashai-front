@@ -287,6 +287,7 @@
                     <input type="text" ng-model="form2.city" placeholder="City *" ng-class="allvalidation[4].validation" required>
                    <textarea ng-model="form2.message" placeholder="Message *" ng-class="allvalidation[5].validation" required ></textarea>
                    <button class="subbtn" ng-click="submitpfo(form2);">SEND</button>
+                   <div ng-class="message" ng-bind="textmessage"></div>
 <!--                   </form>-->
                     </div>
                </div>

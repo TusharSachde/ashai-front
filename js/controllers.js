@@ -1,4 +1,4 @@
-var adminurl = "http://localhost/powerforone/index.php/";
+var adminurl = "http://wohlig.co.in/powerforone/index.php/";
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute', 'ngSanitize']);
 
 phonecatControllers.controller('home',
@@ -183,11 +183,17 @@ phonecatControllers.controller('fellowship',
         $scope.form2 = {};
         $scope.navigation = NavigationService.getnav();
         var submitpfo = function(data, status) {
-//            console.log(data);
+            console.log(data);
+            if(data!="false"){
+                $scope.message = "all_set";
+                $scope.textmessage = "Saved successfully";
+            }else{
+                $scope.message = "error";
+                $scope.textmessage = "Error In Saving";
+            }
         }
         $scope.allvalidation = [];
         $scope.submitpfo = function(form2) {
-            console.log(form);
             //  VALIDATION
             $scope.allvalidation = [{
                 field: $scope.form2.name,
@@ -967,7 +973,14 @@ phonecatControllers.controller('workwithus',
         TemplateService.content = 'views/workwithus.html';
         $scope.navigation = NavigationService.getnav();
         var submitworkwithus = function(data, status) {
-//            console.log(data);
+            console.log(data);
+            if(data!="false"){
+                $scope.message = "all_set";
+                $scope.textmessage = "Saved successfully";
+            }else{
+                $scope.message = "error";
+                $scope.textmessage = "Error In Saving";
+            }
         }
 
         // NavigationService.submitworkwithus(form1).success(submitworkwithus);
@@ -975,7 +988,6 @@ phonecatControllers.controller('workwithus',
 
         $scope.allvalidation = [];
         $scope.submitworkwithus = function(form1) {
-            console.log(form);
             //  VALIDATION
             $scope.allvalidation = [{
                 field: $scope.form1.name,
@@ -1056,9 +1068,20 @@ phonecatControllers.controller('Contactus',
         TemplateService.content = 'views/Contactus.html';
         TemplateService.title = "Contact Us";
         $scope.form = {};
+        $scope.message = "";
+    $scope.textmessage = "";
         $scope.navigation = NavigationService.getnav();
         var submitcontactform = function(data, status) {
-//            console.log(data);
+            console.log(data);
+            if(data!="false"){
+                $scope.message = "all_set";
+                $scope.textmessage = "Saved successfully";
+            }else{
+                $scope.message = "error";
+                $scope.textmessage = "Error In Saving";
+            }
+            
+            
         }
         $scope.allvalidation = [];
 
@@ -1563,8 +1586,8 @@ phonecatControllers.controller('footer',
 
         //	ON NEWSLETTER
 
-        var submitnewsletter = function(data, status) {
-//            console.log(data);
+        var submitnewsletter1 = function(data, status) {
+            console.log(data);
         }
 
 
@@ -1581,7 +1604,7 @@ phonecatControllers.controller('footer',
             var check = formvalidation($scope.allvalidation);
 
             if (check) {
-                NavigationService.submitnewsletter(news).success(submitnewsletter);
+                NavigationService.submitnewsletter(news).success(submitnewsletter1);
             }
         }
     }
