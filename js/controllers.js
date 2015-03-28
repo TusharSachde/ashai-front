@@ -630,6 +630,8 @@ phonecatControllers.controller('campaign',
 
         //  DECLARATION
         $scope.project = [];
+        $scope.facebookdiv = false;
+        $scope.twitterdiv = false;
     
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -728,15 +730,27 @@ phonecatControllers.controller('campaign',
         NavigationService.displaytestmonial(displaytestmonial1);
 
         //  POST ON FACEBOOK
+        $scope.hidefacebook = function(){
+            $scope.facebookdiv = false;
+        }
+        $scope.facebookshow = function(){
+            $scope.facebookdiv = true;
+            $scope.twitterdiv = false;
+        }
         $scope.facebookshare = function(text) {
-            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext + "&returnurl=" + window.location.href+"&project="+$scope.project.id;
-            //            var ref = window.open('http://localhost/powerforone/index.php/hauth/postfb?message=hey hello&returnurl=http://localhost/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
+            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext + "&returnurl=" + window.location.href;
         }
 
         //  POST ON Twiter
+        $scope.hidetwitter = function(){
+            $scope.twitterdiv = false;
+        }
+        $scope.twittershow = function(){
+            $scope.facebookdiv = false;
+            $scope.twitterdiv = true;
+        }
         $scope.twittershare = function() {
             window.location.href = admin_url + "hauth/posttweet?message=" + $scope.project.twittertext + "&returnurl=" + window.location.href;
-            //            var ref = window.open('http://localhost/powerforone/index.php/hauth/posttweet?message=hey hello&returnurl=http://localhost/angular-powerforone/#/campaign/'+$routeParams.id, '_blank', 'location=yes');
         }
 
     }

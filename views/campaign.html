@@ -170,9 +170,9 @@
                     <div class="share"><i class="shareicon"></i><span>Raise Awareness</span>
                     </div>
                     <div class="sharebtn">
-                        <button type="button" class="btn btn-primary" ng-click="facebookshare()"><i class="fa fa-facebook fa-lg"></i><span>Share on Facebook</span>
+                        <button type="button" class="btn btn-primary" ng-click="facebookshow()"><i class="fa fa-facebook fa-lg"></i><span>Share on Facebook</span>
                         </button>
-                        <button type="button" class="btn btn-info" ng-click="twittershare()"> <i class="fa fa-twitter fa-lg"></i><span>Tweet on Twitter</span>
+                        <button type="button" class="btn btn-info" ng-click="twittershow()"> <i class="fa fa-twitter fa-lg"></i><span>Tweet on Twitter</span>
                         </button>
                     </div>
                     <div class="txt4">{{project.share}}</div>
@@ -322,10 +322,10 @@
 </div>
 
 </div>
-<div class="container-fluid">
+<div class="container-fluid" ng-show="facebookdiv">
     <div class="fboverlay">
-        <div class="fb-popup divhide">
-            <div class="phead">Share This on Facebook<span class="pull-right"><i class="fa fa-times"></i></span>
+        <div class="fb-popup">
+            <div class="phead">Share This on Facebook<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidefacebook()"></i></span>
             </div>
             <div class="clearfix"></div>
             <div class="padding10">
@@ -334,17 +334,46 @@
                 </form>
                 <div class="row share-info">
                     <div class="col-xs-3">
-                        <img src="../images/face.png" alt="">
+                        <img src="images/favicon.png" alt="">
                     </div>
                     <div class="col-xs-9">
                         <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantiumLorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam laudantium.</p>
+                            <p>{{project.facebooktext}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="pull-right">
-                    <button type="submit">Cancel</button>
-                    <button type="submit" class="post-btn">Post</button>
+                    <button type="submit" ng-click="hidefacebook()">Cancel</button>
+                    <button type="submit" class="post-btn" ng-click="facebookshare()">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
+   <div class="container-fluid" ng-show="twitterdiv">
+    <div class="fboverlay">
+        <div class="fb-popup">
+            <div class="phead">Share This on Twitter<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidetwitter()"></i></span>
+            </div>
+            <div class="clearfix"></div>
+            <div class="padding10">
+                <form>
+                    <input type="text" placeholder="Say something about this...">
+                </form>
+                <div class="row share-info">
+                    <div class="col-xs-3">
+                        <img src="images/favicon.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <div>
+                            <p>{{project.twittertext}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button type="submit" ng-click="hidetwitter()">Cancel</button>
+                    <button type="submit" class="post-btn" ng-click="twittershare()">Tweet</button>
                 </div>
             </div>
         </div>
