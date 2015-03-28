@@ -2357,7 +2357,7 @@ a.right.carousel-control {
 
 .share-info {
     margin: 20px 0 0 0;
-    height: 165px;
+    height: 170px;
     overflow-y: auto;
     position: relative;
 }
@@ -2375,4 +2375,17 @@ a.right.carousel-control {
   height: 50px;
   position: absolute;
   top: 76px;
+}
+.twit-info{
+    background: rgb(236,240,244);
+  padding: 10px;
+    height:170px;
+    overflow-y: auto;
+    position: relative;
+}
+.margintop{
+    margin-top:15px;
+}
+.thead{
+    color: rgb(121, 150, 179)!important;
 }

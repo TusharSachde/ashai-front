@@ -332,60 +332,54 @@
 </div>
 
 
-    <div class="container-fluid" ng-show="facebookdiv">
-        <div class="fboverlay">
-            <div class="fb-popup">
-                <div class="phead">Share This on facebook<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidefacebook()"></i></span>
+<div class="container-fluid" ng-show="facebookdiv">
+    <div class="fboverlay">
+        <div class="fb-popup">
+            <div class="phead">Share This on facebook<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidefacebook()"></i></span>
+            </div>
+            <div class="clearfix"></div>
+            <div class="padding10">
+                <form>
+                    <input type="text" placeholder="Say something about this...">
+                </form>
+                <div class="row share-info">
+                    <div class="col-xs-3">
+                        <img src="images/favicon.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <div>
+                            <p>{{project.facebooktext}}</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="clearfix"></div>
-                <div class="padding10">
-                    <form>
-                        <input type="text" placeholder="Say something about this...">
-                    </form>
-                    <div class="row share-info">
-                        <div class="col-xs-3">
-                            <img src="images/favicon.png" alt="">
-                        </div>
-                        <div class="col-xs-9">
-                            <div>
-                                <p>{{project.facebooktext}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pull-right">
-                        <button type="submit" ng-click="hidefacebook()">Cancel</button>
-                        <button type="submit" class="post-btn" ng-click="facebookshare()">Post</button>
-                    </div>
+                <div class="pull-right">
+                    <button type="submit" ng-click="hidefacebook()">Cancel</button>
+                    <button type="submit" class="post-btn" ng-click="facebookshare()">Post</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="container-fluid" ng-show="twitterdiv">
-        <div class="fboverlay">
-            <div class="fb-popup">
-                <div class="phead">Share This on Twitter<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidetwitter()"></i></span>
+</div>
+
+<div class="container-fluid" ng-show="twitterdiv">
+    <div class="fboverlay">
+        <div class="fb-popup">
+            <div class="phead thead text-center">Share on Twitter<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidetwitter()"></i></span>
+            </div>
+            <div class="clearfix"></div>
+            <div class="padding10">
+                <form>
+                    <input type="text" placeholder="Your Tweet...">
+                </form>
+                <div class="twit-info">
+
+                    <p>{{project.twittertext}}</p>
                 </div>
-                <div class="clearfix"></div>
-                <div class="padding10">
-                    <form>
-                        <input type="text" placeholder="Say something about this...">
-                    </form>
-                    <div class="row share-info">
-                        <div class="col-xs-3">
-                            <img src="images/favicon.png" alt="">
-                        </div>
-                        <div class="col-xs-9">
-                            <div>
-                                <p>{{project.twittertext}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pull-right">
-                        <button type="submit" ng-click="hidetwitter()">Cancel</button>
-                        <button type="submit" class="post-btn" ng-click="twittershare()">Tweet</button>
-                    </div>
+                <div class="pull-right margintop">
+                    <span>126</span>
+                    <button type="submit" class="post-btn" ng-click="twittershare()">Tweet</button>
                 </div>
             </div>
         </div>
     </div>
+</div>
