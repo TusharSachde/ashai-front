@@ -1545,6 +1545,13 @@ phonecatControllers.controller('footer',
 
         var submitnewsletter1 = function(data, status) {
             console.log(data);
+			if(data!="0"){
+                $scope.message = "all_set";
+                $scope.textmessage = "Saved successfully";
+            }else{
+                $scope.message = "error";
+                $scope.textmessage = "Error In Saving";
+            }
         }
 
 

@@ -126,7 +126,13 @@ var navigationservice = angular.module('navigationservice', [])
             return $http.post(admin_url + "json/createpfo",form2);
         },
 		submitnewsletter: function(news) {
-			     return $http.post(admin_url + "json/createnewsletter",news);
+				return $http({
+                url: admin_url + "json/createnewsletter",
+                method: "POST",
+                data: {
+					"email" : news.email
+                }
+            })
         }
     }
 });
