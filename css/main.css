@@ -1432,7 +1432,10 @@ ul.list-inline p {
 button.btn.btn-warning.btn-yellow:hover {
     background: #0E8B8B;
 }
-
+a.facebook:hover,a.twitter:hover,a.pinterest:hover,a.instagram:hover,a.linked{
+    color:#fff!important;
+}
+/*
 a.facebook:hover {
     color: #4870A6 !important;
 }
@@ -1448,6 +1451,7 @@ a.pinterest:hover {
 a.instagram:hover {
     color: rgb(77, 65, 17) !important;
 }
+*/
 
 img.logtext {
     padding: 10px 0px 0px 90px;
@@ -1457,9 +1461,11 @@ img.logtext {
     padding-right: 40px;
 }
 
+/*
 a.linked:hover {
     color: #007bb6 !important;
 }
+*/
 
 .logo2 {
     padding: 0px 0px 0px 70px;
@@ -1961,6 +1967,7 @@ p.or {
     color: #007bb6 !important;
 }
 
+/*
 .fa-facebook-square:before {
     color: #4870A6!important;
 }
@@ -1980,6 +1987,64 @@ p.or {
 .fa-linkedin:before {
     color: #007bb6 !important;
 }
+*/
+
+.fa-facebook{
+    background: rgba(0, 131, 201, 0.3);
+}
+.fa-facebook:hover{
+    background: #0083C9;
+    transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -linear-transition: all 3s ease;
+}
+.fa-twitter {
+  background: rgba(91, 188, 236, 0.3);
+}
+.fa-twitter:hover {
+  background: #00BBEF ;
+     transition: all 3s ease;
+     -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -linear-transition: all 3s ease;
+}
+.fa-pinterest{
+    background:rgba(203, 32, 39, 0.47);
+}
+.fa-pinterest:hover{
+    background: #CB2027;
+     transition: all 3s ease;
+     -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -linear-transition: all 3s ease;
+}
+.fa-instagram{
+    background: rgba(77, 65, 17, 0.56);
+}
+.fa-instagram:hover{
+    background: rgb(77, 65, 17);
+     transition: all 3s ease;
+     -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -linear-transition: all 3s ease;
+}
+.fa-linkedin{
+    background:  rgba(0, 123, 182, 0.37);
+}
+.fa-linkedin:hover{
+    background:  #007bb6;
+     transition: all 3s ease;
+     -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -linear-transition: all 3s ease;
+}
+
 
 .popup-indiandonar {
     display: none;
@@ -2301,4 +2366,7 @@ a.right.carousel-control {
     background-color: #4e69a2;
     border: 1px solid #435a8b;
     color: #fff;
+}
+.social-links li a i{
+    padding:11px 13px;
 }
