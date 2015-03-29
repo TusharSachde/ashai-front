@@ -33,10 +33,27 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu"></ul>
                         </div>
-
                     </nav>
-
+                    <!--
+                    <div class="hidden-xs hidden-sm headmargin pull-right" ng-if="login=='Login'">
+                        <a ng-click="onregister()" class="login cpointer">{{register | cut:true:8:' ...'}}</button>
+                        <a ng-click="onlogin()" class="login cpointer">{{login}}</a>
+                    </div>
+                    <div class="hidden-xs hidden-sm logout pos" ng-if="login=='Logout'">
+                        <span class="member_name cpointer">{{register}}</span>
+                        <div class="mem_logout">
+                            <div class="arrow_log"></div>
+                            <ul class="list-unstyled">
+                                <li><a ng-click="onregister()">My Profile</a>
+                                </li>
+                                <li><a ng-click="onlogin()">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+-->
                 </div>
+
 
                 <div class="col-xs-2 reg-set">
                     <div class="hidden-xs hidden-sm headmargin pull-right" ng-if="login=='Login'">
@@ -57,6 +74,7 @@
                         </div>
                     </div>
                 </div>
+
 
 
             </div>

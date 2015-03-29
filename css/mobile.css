@@ -1,4 +1,4 @@
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 1000px) {
     .bottom1 .causes {
         width: 60%;
         margin: 10px auto !important;
@@ -17,10 +17,12 @@
     img.logtext {
         padding: 10px 0px 0px 50px;
     }
+/*
     .helpbox {
-        width: 65%;
-        margin: 0 auto 30px auto!important;
-    }
+      width: 65%;
+      margin: 0 auto 30px auto!important;
+  }
+*/
     .salammum p {
         text-align: center!important;
         padding: 0!important;
@@ -90,6 +92,13 @@
     }
     .donation select.form-control.selectbg {
         width: 51%;
+    }
+    .give-btn {
+        margin: -1px 8px 0 14px;
+    }
+    .salammum p {
+        width: 165px;
+        margin: auto;
     }
 }
 
