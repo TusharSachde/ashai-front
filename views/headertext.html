@@ -39,24 +39,24 @@
                                 <a ng-click="onlogin()" class="login cpointer">{{login}}</a>
                             </div>
                             <div class="hidden-xs hidden-sm logout pos" ng-if="login=='Logout'">
-                                    <span class="member_name cpointer">{{register}}</span>
-                                    <div class="mem_logout">
-                                        <div class="arrow_log"></div>
-                                        <ul class="list-unstyled">
-                                            <li><a ng-click="onregister()">My Profile</a>
-                                            </li>
-                                            <li><a ng-click="onlogin()">Logout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <span class="member_name cpointer">{{register}}</span>
+                                <div class="mem_logout">
+                                    <div class="arrow_log"></div>
+                                    <ul class="list-unstyled">
+                                        <li><a ng-click="onregister()">My Profile</a>
+                                        </li>
+                                        <li><a ng-click="onlogin()">Logout</a>
+                                        </li>
+                                    </ul>
                                 </div>
+                            </div>
 
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="conatiner">
+            <div class="container">
                 <div class="head-on">
                     <div class="headerdynamic">
                         <h3 ng-bind-html="title | rawHtml"></h3>

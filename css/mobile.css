@@ -24,6 +24,9 @@
   }
 */
     
+    .middle h2 {
+        text-align: center;
+    }
     .fb-popup {
         width: 80%!important;
     }
@@ -32,7 +35,7 @@
         padding: 0!important;
     }
     .sliderheader {
-        background-position-y: -40px!important;
+        background-position-y: 72px!important;
     }
     body .head-on h3 {
         margin-top: 20%;

@@ -652,6 +652,7 @@ input[type="checkbox"]:checked {
     -o-background-size: cover!important;
     background-size: cover!important;
     background-position-y: -225px;
+    background-position-x: 50%;
     min-height: 220px;
     width: 100%;
 }
@@ -2164,7 +2165,7 @@ p.or {
 }
 
 .im-checkout {
-    margin: auto;
+    margin: auto!important;
 }
 
 .pagecategory>li.active span {
