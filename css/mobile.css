@@ -24,6 +24,9 @@
   }
 */
     
+    .fb-popup {
+        width: 80%!important;
+    }
     .salammum p {
         text-align: center!important;
         padding: 0!important;
@@ -71,7 +74,7 @@
         margin: 0 auto;
     }
     .LeftCont {
-        width: 65%;
+        width: 100%;
         margin: 20px auto 0 auto!important;
     }
     body .LeftCont .circle {

@@ -335,7 +335,8 @@
 <div class="container-fluid" ng-show="facebookdiv">
     <div class="fboverlay">
         <div class="fb-popup">
-            <div class="phead">Share This on facebook<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidefacebook()"></i></span>
+            <div class="phead">
+                <i class="fa fa-facebook"></i> Share This on facebook<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidefacebook()"></i></span>
             </div>
             <div class="clearfix"></div>
             <div class="padding10">
@@ -344,17 +345,17 @@
                 </form>
                 <div class="row share-info">
                     <div class="col-xs-3">
-                        <img src="images/favicon.png" alt="">
+                        <img src="images/favicon.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-xs-9">
-                        <div>
+                        <div class="fb-postcont">
                             <p>{{project.facebooktext}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="pull-right">
                     <button type="submit" ng-click="hidefacebook()">Cancel</button>
-                    <button type="submit" class="post-btn" ng-click="facebookshare()">Post</button>
+                    <a type="submit" class="post-btn" ng-click="facebookshare()" target="_new">Post</a>
                 </div>
             </div>
         </div>

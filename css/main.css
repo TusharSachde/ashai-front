@@ -186,8 +186,7 @@ ul.pagecategory {
 
 .causes {
     margin: 15px;
-    /*    padding: 12px 12px 0 12px;*/
-    
+    padding: 12px 12px 0 12px;
     border: 1px solid lightgray;
 }
 
@@ -953,12 +952,8 @@ img.Salaamlogo {
 }
 
 .salammum p {
-    width: 165px;
     text-align: center;
-}
-
-.give-btn {
-    margin: -1px 9px 0 14px;
+    padding: 0px 110px 0px 0px;
 }
 
 p.ngoname {
@@ -2155,6 +2150,7 @@ p.or {
 
 .cpointer {
     cursor: pointer;
+    padding-top: 4px;
 }
 
 .gallery_width {
@@ -2165,6 +2161,10 @@ p.or {
 
 .contribut {
     margin-top: 20px;
+}
+
+.im-checkout {
+    margin: auto;
 }
 
 .pagecategory>li.active span {
@@ -2360,10 +2360,9 @@ a.right.carousel-control {
 }
 
 .phead {
-    background-color: #f6f7f8;
-    border-bottom: 1px solid #e5e5e5;
-    -webkit-border-radius: 3px 3px 0 0;
-    color: #141823;
+    background-color: #4E69A2;
+    border-bottom: 1px solid #4E69A2;
+    color: #FFFFFF;
     font-weight: bold;
     line-height: 19px;
     padding: 10px 12px;
@@ -2376,8 +2375,9 @@ a.right.carousel-control {
 }
 
 .share-info {
-    margin: 20px 0 0 0;
-    height: 170px;
+    margin: 12px 0 12px 0px;
+    /* height: 160px; */
+    
     overflow-y: auto;
     position: relative;
 }
@@ -2386,10 +2386,19 @@ a.right.carousel-control {
     background-color: #4e69a2;
     border: 1px solid #435a8b;
     color: #fff;
+    padding: 5px 8px;
 }
 
 .social-links li a i {
     padding: 11px 13px;
+}
+
+.phead i.fa.fa-facebook {
+    color: rgb(78, 105, 162);
+    background: #fff;
+    padding: 4px 7px 2px 7px;
+    margin-right: 14px;
+    font-size: 18px;
 }
 
 .contri-img {
@@ -2405,6 +2414,26 @@ a.right.carousel-control {
     height: 170px;
     overflow-y: auto;
     position: relative;
+}
+
+.fb-postcont p {
+    height: 150px;
+}
+
+.thead {
+    color: rgb(255, 255, 255)!important;
+}
+
+.fb-postcont p {
+    height: 150px;
+}
+
+a.post-btn:hover {
+    color: #fff!important;
+}
+
+a.post-btn {
+    cursor: pointer;
 }
 
 .margintop {
