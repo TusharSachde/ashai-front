@@ -68,14 +68,14 @@
             <div class="row gallery_div" ng-if="projectimages">
                 <div class="col-xs-10">
                     <div class="galleryimg">
-                        <img ng-src="{{mainimage | ngoimagepath}}" width="100%" height="100%" alt="">
+                        <img ng-src="{{mainimage | ngoimagepath}}" alt="">
                     </div>
                 </div>
                 <div class="col-xs-2 gallery_width">
                     <ul class="list-unstyled">
                         <!--                    <li><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>-->
                         <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
-                            <img src="{{proimg.image | ngoimagepath}}" width="100%" height="100%" alt="" ng-click="tomainimage(proimg)">
+                            <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
                         </li>
                         <!--
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -113,7 +113,7 @@
                                     <input type="radio" ng-model="project.indiandoner" name="1">
                                 </div>
                                 <div class="col-md-10 popup">
-                                    <h5 class="keepit">Indian Donor [?]</h5>
+                                    <h5 class="keepit">Indian Citizen [?]</h5>
                                     <div class="popup-indiandonar">
                                         <div class="arrow-left"></div>Are you an Indian Citizen?</div>
                                 </div>
@@ -127,7 +127,7 @@
                                     <input type="radio" ng-model="project.foreigndoner" name="1">
                                 </div>
                                 <div class="col-md-10 popup">
-                                    <h5 class="keepit">Foreign Donor [?]</h5>
+                                    <h5 class="keepit">Foreign Citizen [?]</h5>
                                     <div class="popup-foreigndonar">
                                         <div class="arrow-left"></div>Are you an Foreign Citizen?</div>
                                 </div>

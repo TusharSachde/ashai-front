@@ -1,5 +1,5 @@
-//var admin_url = "http://wohlig.co.in/powerforone/index.php/";
- var admin_url = "http://localhost/powerforone/index.php/";
+var admin_url = "http://wohlig.co.in/powerforone/index.php/";
+// var admin_url = "http://localhost/powerforone/index.php/";
  var adminurl = "http://wohlig.co.in/powerforone/";
 // var adminurl = "http://localhost/powerforone/";
 var navigationservice = angular.module('navigationservice', [])

@@ -796,7 +796,7 @@ h2.commingsoon {
     height: 60px;
 }
 
-.col-md-9.causehelped {
+.causehelped {
     color: #65c6bb;
 }
 
@@ -806,11 +806,11 @@ h2.commingsoon {
     height: 500px;
 }
 
-.col-md-9.totaldonate {
+.totaldonate {
     color: #ffd65c;
 }
 
-.col-md-9.JoinedPfo {
+.JoinedPfo {
     color: #e0882f;
 }
 
@@ -859,7 +859,7 @@ ul.mypro {
     font-size: -10px;
 }
 
-.info p {
+.helpbox .info p {
     font-size: 14px;
     height: 105px;
     padding: 15px 0px;
@@ -1293,7 +1293,7 @@ object.embed-responsive-item {
     background: #fff;
 }
 
-.col-md-9.fontwt {
+.fontwt {
     font-weight: 500;
 }
 
@@ -1563,7 +1563,7 @@ a.linked:hover {
     /* padding: 5px 0; */
 }
 
-.gallerytag {
+.gallerytag+li {
     margin: 5px 0px 0px 0px;
 }
 
@@ -1947,7 +1947,7 @@ p.or {
     color: black;
     background: #05C7C7;
     margin: 0 1px;
-    padding: 7px 0px;
+    padding: 7px 10px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -2553,4 +2553,18 @@ span.glyphicon.glyphicon-chevron-right {
 	font-size: 4em;
 	color:white;
 	text-shadow: 2px 2px 2px #021124;
+}
+.gallerytag img{
+    width:100%;
+    height:auto;
+      cursor: pointer;
+
+}
+.myfb{
+    padding: 5px 9px;
+  color: white;
+}
+.mytwitt{
+    padding: 5px 6px;
+  color: white;
 }
