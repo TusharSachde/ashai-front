@@ -20,6 +20,20 @@ var navigationservice = angular.module('navigationservice', [])
         link:"#/fellowship",
         subnav: []
     }];
+    
+    var donation = [{
+        val:"500",
+        period:"One Time"
+    },{
+        val:"1000",
+        period:"Monthly"
+    },{
+        val:"1500",
+        period:"Quarterly"
+    },{
+        val:"3000",
+        period:"Yearly"
+    },];
 
     return {
         getnav: function() {
@@ -33,6 +47,10 @@ var navigationservice = angular.module('navigationservice', [])
          setprojectid:function(id)
           {
               $.jStorage.set("projectid",id);
+          },
+         getdonation:function()
+          {
+              return donation;
           },
          getprojectid:function(id)
           {

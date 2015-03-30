@@ -141,12 +141,9 @@
 
                         <div class="input-group">
                             <div class="input-group-addon bdr-right">Rs.</div>
-                            <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="500">
-                            <select class="form-control selectbg">
-                                <option>Monthly</option>
-                                <option>Quarterly</option>
-                                <option>Yearly</option>
-                                <option>One time</option>
+                            <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="">
+                            <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(pre)">
+                                <option ng-repeat="donate in donation" value="{{donate.val}}">{{donate.period}}</option>
                             </select>
                         </div>
 

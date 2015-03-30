@@ -635,6 +635,13 @@ phonecatControllers.controller('campaign',
         $scope.facebookdiv = false;
         $scope.twitterdiv = false;
         $scope.isLoading = true;
+        $scope.donation = NavigationService.getdonation();
+        $scope.amount = $scope.donation[0].val;
+    
+        $scope.changeperiod = function(donate){
+            console.log(donate);
+            $scope.amount = donate;
+        }
     
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
