@@ -754,7 +754,7 @@ phonecatControllers.controller('campaign',
             $scope.twitterdiv = true;
         }
         $scope.twittershare = function() {
-            window.location.href = admin_url + "hauth/posttweet?message=" + $scope.project.twittertext +"&project="+$scope.project.id+ "&returnurl=" + window.location.href;
+            window.location.href = admin_url + "hauth/posttweet?message=" + $scope.project.twittertext+" "+$scope.project.twitteraddon +"&project="+$scope.project.id+ "&returnurl=" + window.location.href;
         }
 
     }

@@ -376,15 +376,15 @@
             <div class="clearfix"></div>
             <div class="padding10">
                 <form>
-                    <input type="text" placeholder="Your Tweet...">
+                    <input type="text" ng-model="project.twitteraddon" placeholder="Your Tweet...">
                 </form>
                 <div class="twit-info">
 
-                    <p>{{project.twittertext}}</p>
+                    <p>{{project.twittertext+" "+project.twitteraddon}}</p>
                 </div>
                 <div class="pull-right margintop">
-                    <span>126</span>
-                    <button type="submit" class="post-btn" ng-click="twittershare()">Tweet</button>
+                    <span>{{140-(project.twittertext.length+1+project.twitteraddon.length)}}</span>
+                    <button type="submit" class="post-btn" ng-click="twittershare()" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
                 </div>
             </div>
         </div>
