@@ -222,8 +222,13 @@
 
                             <div class="info">
                                 <p>{{displayproject[2].cardtagline}}</p>
-                                <h5>{{displayproject[2].ngoname}}</h5>
-                                <img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}">
+                                <div class="row">
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}"></div>
+                                    <div class="col-xs-4"><h5>{{displayproject[2].ngoname}}</h5></div>
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}"></div>
+                                </div>
+                                
+                                
 
                                 <!--
                             <div class="elements row">
