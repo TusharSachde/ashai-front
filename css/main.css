@@ -2494,3 +2494,9 @@ a.post-btn {
 .thead {
     color: rgb(121, 150, 179)!important;
 }
+.ftr-error{
+    color:red;
+}
+.ftr-green{
+    color:green;
+}
