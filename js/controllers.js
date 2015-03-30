@@ -756,6 +756,13 @@ phonecatControllers.controller('campaign',
         $scope.twittershare = function() {
             window.location.href = admin_url + "hauth/posttweet?message=" + $scope.project.twittertext+" "+$scope.project.twitteraddon +"&project="+$scope.project.id+ "&returnurl=" + window.location.href;
         }
+        
+        //  TO CHECKOUT
+        $scope.tocheckout = function(id){
+            console.log(id);
+            NavigationService.setprojectid(id);
+            $location.url("/checkout");
+        }
 
     }
     //

@@ -1,6 +1,6 @@
 var admin_url = "http://wohlig.co.in/powerforone/index.php/";
-// var admin_url = "http://localhost/powerforone/index.php/";
- var adminurl = "http://wohlig.co.in/powerforone/";
+ var admin_url = "http://localhost/powerforone/index.php/";
+// var adminurl = "http://wohlig.co.in/powerforone/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
@@ -29,6 +29,14 @@ var navigationservice = angular.module('navigationservice', [])
           {
               var category = 0;
               $http.get(admin_url+ 'json/getprojectbycategory?category=' + category,{}).success(callback);
+          },
+         setprojectid:function(id)
+          {
+              $.jStorage.set("projectid",id);
+          },
+         getprojectid:function(id)
+          {
+              return $.jStorage.get("projectid");
           },
          getsingleblog:function(id)
           {
