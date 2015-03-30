@@ -655,6 +655,7 @@ input[type="checkbox"]:checked {
     background-position-x: 50%;
     min-height: 220px;
     width: 100%;
+    background: center no-repeat;
 }
 
 ul.list1 {
@@ -1404,7 +1405,7 @@ input[type="radio"]:checked {
 ul.list-inline p {
     text-align: center;
 }
-
+/*
 .form-horizontal select {
     font: inherit;
     width: 100%;
@@ -1420,6 +1421,54 @@ ul.list-inline p {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
+}
+*/
+
+.styled-select select::-ms-expand {
+    display: none;
+}
+
+.styled-select select {
+    background: transparent;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 200%;
+    border: 1px solid darkgrey;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    height: 40px;
+    font-size: 0.9em;
+    font-weight: 300;
+    -webkit-appearance: none;
+    color: #000;
+}
+
+select.form-control.selectbg::-ms-expand {
+    display: none;
+}
+
+a.page1:focus {
+    color: #05c7c7!important;
+    font-weight: 500;
+}
+
+a.page1.active {
+    color: #05c7c7;
+    font-weight: 500;
+}
+
+a.page1:hover {
+    color: #fff;
+}
+
+.styled-select {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    background: url("../images/downArrow.png") no-repeat #fff 98% 50%;
+    border: 0px solid #000;
 }
 
 .cat-justify.spacing {
@@ -2323,6 +2372,7 @@ a.right.carousel-control {
 
 .mem_logout ul li {
     padding: 4px 10px;
+    cursor: pointer;
 }
 
 .blog_img {

@@ -190,6 +190,12 @@
     }
 }
 
+@media screen and (max-width: 786px) {
+    .navbar-nav {
+        margin: 18.5px -15px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .contribution {
         width: 100%;
