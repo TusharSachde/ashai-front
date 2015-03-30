@@ -10,6 +10,8 @@ phonecatControllers.controller('home',
         TemplateService.header = 'views/header.html';
         $scope.navigation = NavigationService.getnav();
 
+        //  DECLARATION
+//        $scope.isLoading = true;
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
 //            console.log("auth auth auth");
@@ -632,6 +634,7 @@ phonecatControllers.controller('campaign',
         $scope.project = [];
         $scope.facebookdiv = false;
         $scope.twitterdiv = false;
+        $scope.isLoading = true;
     
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -714,6 +717,7 @@ phonecatControllers.controller('campaign',
                 $scope.mainimage = bigimg.image;
             }
             $scope.similarcauses = data.similarcauses;
+            $scope.isLoading = false;
 
         };
         NavigationService.getsingleproject($routeParams.id, displaystaticpage);

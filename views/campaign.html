@@ -12,17 +12,17 @@
                     </div>
                 </div>
                 <div class="col-sm-5 contribut">
-                    
+
                     <div class="text-center">
                         <p class="contributionimg"><b>{{project.times}}</b>
                         </p>
                     </div>
 
                     <div class="contribution">
-                    <span>{{project.timesinword}}</span>
-                    <img ng-src="{{project.ngoimage | ngoimagepath}}" height="50px" width="50px">
-                    
-<!--
+                        <span>{{project.timesinword}}</span>
+                        <img ng-src="{{project.ngoimage | ngoimagepath}}" height="50px" width="50px">
+
+                        <!--
                         <div class="row">
                             <div class="col-xs-8 text-center">
                                 <div class="">
@@ -101,7 +101,7 @@
             <div class="LeftCont">
                 <div class="donatecontentChange" id="atdonate">
 
-                    <div class="txt3"><i class="donate"></i> <span>Donate</span>
+                    <div class="txt3"><i class="donate"></i>  <span>Donate</span>
                     </div>
 
                     <div class="checkbox check">
@@ -141,7 +141,7 @@
 
                         <div class="input-group">
                             <div class="input-group-addon bdr-right">Rs.</div>
-                            <input type="text" class="form-control bdr-left" id="exampleInputAmount" placeholder="500">
+                            <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="500">
                             <select class="form-control selectbg">
                                 <option>Monthly</option>
                                 <option>Quarterly</option>
@@ -153,9 +153,10 @@
 
                         <div class="clearfix"></div>
                         <div class="give-btn">
-                            <!--                            <button type="button" class="btn givbtn">-->
-                            <!--                                GIVE</button>-->
-                            <a href="https://www.instamojo.com/jagruti/demo-19616/" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>
+                                                        <a href="#/checkout" class="btn givbtn">
+                                                            GIVE</a>
+<!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount=123.45" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>-->
+<!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount={{amount}}">GIVE</a>-->
 
                             <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
                         </div>
@@ -389,3 +390,8 @@
         </div>
     </div>
 </div>
+
+
+
+<div id="veil" ng-show="isLoading"></div>
+<div id="feedLoading" ng-show="isLoading">Loading...</div>
