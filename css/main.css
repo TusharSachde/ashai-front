@@ -615,7 +615,7 @@ span.icon.fa.fa-check.pull-right {
     text-align: center;
 }
 
-.check input[type="checkbox"] {
+.check input[type="checkbox"]:not(old) {
     border: 2px solid rgb(77, 213, 232);
     -webkit-appearance: none;
     width: 17px;
@@ -1016,7 +1016,7 @@ select.recurring {
     font-size: 12px;
 }
 
-.anonynimous input[type="checkbox"] {
+.anonynimous input[type="checkbox"]:not(old) {
     margin-top: 2px;
 }
 

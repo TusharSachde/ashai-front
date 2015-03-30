@@ -3,7 +3,8 @@
 @path-media: '../images';
 @font-face {
     font-family: 'Gotham';
-    src: url('@{path-fonts}/Gotham-Book.ttf') format('truetype');
+        src: url('@{path-fonts}/Gotham-Book.ttf') format('truetype');
+    src: url('@{path-fonts}/Gotham-Book.eot?#iefix') format('embedded-opentype');
     font-weight: 300;
 }
 
@@ -16,13 +17,15 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('@{path-fonts}/Gotham-Medium.ttf') format('truetype');
+        src: url('@{path-fonts}/Gotham-Medium.ttf') format('truetype');
+    src: url('@{path-fonts}/Gotham-Medium.eot?#iefix') format('embedded-opentype');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Gotham';
     src: url('@{path-fonts}/Gotham-Bold.ttf') format('truetype');
+    src: url('@{path-fonts}/Gotham-Bold.eot?#iefix') format('embedded-opentype');
     font-weight: 700;
 }
 
@@ -491,7 +494,6 @@ body {
             margin-left: -5px;
             -webkit-appearance: none;
         }
-       
         .input-group {
             margin-left: 14px;
         }
