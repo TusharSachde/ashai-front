@@ -2315,6 +2315,9 @@ a.right.carousel-control {
 .head-on.home p {
     padding-bottom: 20px;
 }
+.head-on h3{
+    font-weight:600!important;
+}
 
 .sharebtn i.fa.fa-facebook.fa-lg {
     background: #35508D;
@@ -2567,4 +2570,8 @@ span.glyphicon.glyphicon-chevron-right {
 .mytwitt{
     padding: 5px 6px;
   color: white;
+}
+.slider{
+    margin:50px 0px;
+    height:auto;
 }
