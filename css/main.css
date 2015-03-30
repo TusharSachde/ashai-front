@@ -547,9 +547,11 @@ span.icon.fa.fa-check.pull-right {
     borders-radius: 0px;
 }
 
+/*
 .contri_time {
     width: 55%;
 }
+*/
 
 .list-group-item.active,
 .list-group-item.active:hover,
@@ -701,7 +703,18 @@ h2.ng-scope {
 
 p.viewAll {
     text-align: center;
-    margin: 0px 0px 0px 0px;
+    margin: 0 auto;
+   color:#fff;
+    width: 10%;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+}
+p.viewAll:hover{
+    color:#fff;
+     background: rgb(5, 199, 199);
+    transition: all 300ms ease;
+    border-radius: 3px;
 }
 
 .row.mainCause {
@@ -848,8 +861,9 @@ ul.mypro {
 
 .info p {
     font-size: 14px;
-    height: 45px;
-    overflow: hidden;
+    height: 105px;
+    padding: 15px 0px;
+    overflow: auto;
     text-align: center;
 }
 
@@ -1021,6 +1035,10 @@ select.recurring {
     display: -moz-box;
     display: flex;
     text-align: center;
+    margin-top:20px;
+}
+.data-info{
+    padding:10px 0 5px 0;
 }
 
 .img1 {
@@ -1145,7 +1163,7 @@ ul.pagecategory>li,
     -ms-flex: 1;
     -moz-box-flex: 1;
     flex: 1;
-    cursor: pointer;
+/*    cursor: pointer;*/
     -webkit-transition: all 1s ease;
 }
 /*allflex*/
@@ -2048,11 +2066,11 @@ p.or {
 
 .fa-facebook:hover {
     background: #0083C9;
-    transition: all 3s ease;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    -linear-transition: all 3s ease;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -linear-transition: all 300ms ease;
 }
 
 .fa-twitter {
@@ -2061,11 +2079,11 @@ p.or {
 
 .fa-twitter:hover {
     background: #00BBEF;
-    transition: all 3s ease;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    -linear-transition: all 3s ease;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -linear-transition: all 300ms ease;
 }
 
 .fa-pinterest {
@@ -2074,24 +2092,24 @@ p.or {
 
 .fa-pinterest:hover {
     background: #CB2027;
-    transition: all 3s ease;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    -linear-transition: all 3s ease;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -linear-transition: all 300ms ease;
 }
 
 .fa-instagram {
-    background: rgba(77, 65, 17, 0.56);
+    background: rgba(170, 152, 81, 0.56);
 }
 
 .fa-instagram:hover {
     background: rgb(77, 65, 17);
-    transition: all 3s ease;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    -linear-transition: all 3s ease;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -linear-transition: all 300ms ease;
 }
 
 .fa-linkedin {
@@ -2100,11 +2118,11 @@ p.or {
 
 .fa-linkedin:hover {
     background: #007bb6;
-    transition: all 3s ease;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    -linear-transition: all 3s ease;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -linear-transition: all 300ms ease;
 }
 
 .popup-indiandonar {
@@ -2184,10 +2202,12 @@ p.or {
     padding: 15px 10px;
 }
 
+/*
 .contribution img {
     margin-top: -25px;
     margin-left: 10px;
 }
+*/
 
 .list1 .active {
     background-color: #05c7c7;
@@ -2452,12 +2472,14 @@ a.right.carousel-control {
     font-size: 18px;
 }
 
+/*
 .contri-img {
     width: auto;
     height: 50px;
     position: absolute;
     top: 76px;
 }
+*/
 
 .twit-info {
     background: rgb(236, 240, 244);
@@ -2494,9 +2516,20 @@ a.post-btn {
 .thead {
     color: rgb(121, 150, 179)!important;
 }
-.ftr-error{
-    color:red;
+
+.ftr-error {
+    color: red;
 }
-.ftr-green{
-    color:green;
+
+.ftr-green {
+    color: green;
+}
+span.glyphicon.glyphicon-chevron-left {
+    margin-left: -120px;
+    color:rgb(102, 102, 102);
+}
+
+span.glyphicon.glyphicon-chevron-right {
+    margin-right: -120px;
+    color:rgb(102, 102, 102);
 }
