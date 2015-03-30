@@ -771,17 +771,25 @@ phonecatControllers.controller('myprofile',
 
         $scope.projects = [];
         $scope.myInterval = 5000;
+        $scope.user = [];
 
         //  AUTHENTICATE
+        var usersuccess = function(data, status){
+            console.log(data);
+            $scope.user = data[0];
+        }
+    
         var authsuccess = function(data, status) {
 //            console.log("auth auth auth");
 //            console.log(data);
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
+                
             } else {
                 $scope.register = data.name;
                 $scope.login = "Logout";
+                NavigationService.getsingleuser().success(usersuccess);
             }
         }
         NavigationService.authenticate().success(authsuccess);
@@ -1151,7 +1159,7 @@ phonecatControllers.controller('login',
             if (data == "false") {
                 alert("Invalid Id Or Password");
             } else {
-                $location.url("/home");
+                $location.url("/myprofile");
             }
         }
 

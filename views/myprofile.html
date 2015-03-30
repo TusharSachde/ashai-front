@@ -13,7 +13,7 @@
             </div>
             <div class="col-md-6">
                 <div class="profile">
-                    <img src="images/nameProfile.png" alt=""><span>Name Profile</span>
+                    <img src="{{user.image | profileimagepath}}" alt=""><span>{{user.name}}</span>
 
                     <div class="info">
                         <div class="row">
@@ -21,7 +21,7 @@
                                 <div class="col-md-3">
                                     <p>Email</p>
                                 </div>
-                                <div class="col-md-9 fontwt">Shjekqskks@gmail.com
+                                <div class="col-md-9 fontwt">{{user.email}}
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                                 <div class="col-md-3">
                                     <p>Phone</p>
                                 </div>
-                                <div class="col-md-9 fontwt">93399999999
+                                <div class="col-md-9 fontwt">{{user.phone}}
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                                 <div class="col-md-3">
                                     <p>Address</p>
                                 </div>
-                                <div class="col-md-9 fontwt">Address Line1
+                                <div class="col-md-9 fontwt">{{user.address}}
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,7 @@
-var admin_url = "http://wohlig.co.in/powerforone/index.php/";
-// var admin_url = "http://localhost/powerforone/index.php/";
+//var admin_url = "http://wohlig.co.in/powerforone/index.php/";
+ var admin_url = "http://localhost/powerforone/index.php/";
+ var adminurl = "http://wohlig.co.in/powerforone/";
+// var adminurl = "http://localhost/powerforone/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
@@ -40,6 +42,10 @@ var navigationservice = angular.module('navigationservice', [])
           authenticate:function()
           {
               return $http.get(admin_url+ 'json/authenticate',{});
+          },
+          getsingleuser :function()
+          {
+              return $http.get(admin_url+ 'json/getsingleuser ',{});
           },
          getblog:function()
           {

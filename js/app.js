@@ -132,6 +132,16 @@ firstapp.filter('categoryimagepath', function () {
     };
 });
 
+firstapp.filter('profileimagepath', function () {
+    return function (input) {
+        if (input == null || input == '') {
+            return "http://wohlig.co.in/angular-powerforone/images/profile.png";
+        } else {
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
 firstapp.filter('testimonialimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
