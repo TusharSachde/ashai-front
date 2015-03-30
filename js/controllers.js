@@ -1309,17 +1309,25 @@ phonecatControllers.controller('checkout',
         TemplateService.content = 'views/checkout.html';
         TemplateService.title = "Checkout";
         $scope.navigation = NavigationService.getnav();
+    
+        //  DECLARATION
+        $scope.checkout = [];
 
         //  AUTHENTICATE
+        var usersuccess = function(data, status){
+            $scope.checkout = data[0];
+        }
         var authsuccess = function(data, status) {
 //            console.log("auth auth auth");
 //            console.log(data);
             if (data == "false") {
+                $location.url("/login");
                 $scope.register = "Register";
                 $scope.login = "Login";
             } else {
                 $scope.register = data.name;
                 $scope.login = "Logout";
+                NavigationService.getsingleuser().success(usersuccess);
             }
         }
         NavigationService.authenticate().success(authsuccess);
@@ -1343,6 +1351,12 @@ phonecatControllers.controller('checkout',
                 $scope.register = "Register";
                 $scope.login = "Login";
             }
+        }
+        
+        //  CHECKOUT PAY AND PROCEED
+        
+        $scope.payproceed = function(checkout){
+//            NavigationService.checkout(checkout)
         }
 
     }
