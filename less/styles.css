@@ -693,7 +693,7 @@ body .pic {
   overflow: hidden;
 }
 body .footernew {
-  padding: 10px 0;
+  padding: 15px 0 10px;
 }
 .bold {
   font-weight: 700 !important;

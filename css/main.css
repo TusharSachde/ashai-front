@@ -1163,6 +1163,9 @@ ul.pagecategory,
     display: inline-flex;
     width: 100%
 }
+.pagecategory li{
+    cursor: pointer;
+}
 
 .flexside,
 ul.pagecategory>li,
@@ -1514,6 +1517,7 @@ button.btn.btn-warning.btn-yellow:hover {
     background: #0E8B8B;
 }
 
+/*
 a.facebook:hover,
 a.twitter:hover,
 a.pinterest:hover,
@@ -1521,6 +1525,7 @@ a.instagram:hover,
 a.linked {
     color: #fff!important;
 }
+*/
 /*
 a.facebook:hover {
     color: #4870A6 !important;
@@ -2656,9 +2661,13 @@ a.pinterest i:hover {
         font-size: 14px;
   color: #605555;
    margin: 0;
+     padding: 10px 0;
   line-height: 180%;
   text-align: left;
     }
 .footernew ul{
     margin:0;
+}
+.disable-iframe{
+    opacity:0.2;
 }

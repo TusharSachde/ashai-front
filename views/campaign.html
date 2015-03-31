@@ -76,11 +76,16 @@
                         <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
                             <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
                         </li>
-                        
-                    <li class="gallerytag" ng-click="tovedio(project.video)"><iframe width="116" height="84" src="http://www.youtube.com/embed/XGSy3_Czz8k?iv_load_policy=3" frameborder="0">
-</iframe></li>
-                    <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
-<!--
+
+                        <li class="gallerytag" ng-click="tovedio(project.video)">
+                            <div class="disable-iframe">
+                                <iframe width="116" height="84" src="http://www.youtube.com/embed/XGSy3_Czz8k?iv_load_policy=3" frameborder="0">
+                                </iframe>
+                            </div>
+                        </li>
+                        <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt="">
+                        </li>
+                        <!--
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -297,11 +302,11 @@
                         <h3>{{similarcauses[2].name}}</h3>
                         <div class="info">
                             <p>{{similarcauses[2].cardtagline}}</p>
-<!--
+                            <!--
                             <h5>{{similarcauses[2].ngoname}}</h5>
                             <img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
 -->
-                         <div class="row">
+                            <div class="row">
                                 <div class="text-center">
                                     <img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
                                     <span style="margin-left:10px"><img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px"></span>
