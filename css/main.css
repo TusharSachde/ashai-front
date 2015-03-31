@@ -195,12 +195,11 @@ ul.pagecategory {
 }
 
 .causes .pic img {
-   
-  width: 100%;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  height: auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: auto;
 }
 
 .causes h3 {
@@ -1122,12 +1121,15 @@ span.shares {
     width: 85%;
     transition: all 300ms ease;
 }
-.blur{
-    opacity:0.2;
+
+.blur {
+    opacity: 0.2;
 }
-.donation-selected{
+
+.donation-selected {
     opacity: 1!important;
 }
+
 .check h5 {
     font-weight: 300;
     width: 200px;
@@ -1163,7 +1165,8 @@ ul.pagecategory,
     display: inline-flex;
     width: 100%
 }
-.pagecategory li{
+
+.pagecategory li {
     cursor: pointer;
 }
 
@@ -1516,7 +1519,6 @@ a.page1:hover {
 button.btn.btn-warning.btn-yellow:hover {
     background: #0E8B8B;
 }
-
 /*
 a.facebook:hover,
 a.twitter:hover,
@@ -2230,6 +2232,10 @@ p.or {
     position: relative;
 }
 
+.gallery_width ul li {
+    position: relative;
+}
+
 .contribut {
     margin-top: 20px;
 }
@@ -2500,7 +2506,7 @@ a.right.carousel-control {
 
 .twitt-head {
     background-color: #28a4c9!important;
-    color:#fff!important;
+    color: #fff!important;
     border: 1px solid #28a4c9!important;
 }
 
@@ -2638,41 +2644,60 @@ a.pinterest i:hover {
 .carousel-control {
     text-shadow: none;
 }
-.helpbox .proj-hd{
-    width:100%;
+
+.helpbox .proj-hd {
+    width: 100%;
     overflow: hidden;
-    height:80px;
+    height: 80px;
 }
-.helpbox .proj-hd h3
-{
+
+.helpbox .proj-hd h3 {
     font-size: 18px!important;
 }
+
 .carousel-indicators li {
-    border:1px solid grey;
+    border: 1px solid grey;
 }
+
 .carousel-indicators li.active {
-    border:1px solid grey;
+    border: 1px solid grey;
     background: grey;
 }
-.carousel-indicators{
-    bottom:-30px!important;
+
+.carousel-indicators {
+    bottom: -30px!important;
 }
- .slider .cont52{
-        font-size: 14px;
-  color: #605555;
-   margin: 0;
-     padding: 10px 0;
-  line-height: 180%;
-  text-align: left;
-    }
-.footernew ul{
-    margin:0;
+
+.slider .cont52 {
+    font-size: 14px;
+    color: #605555;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 180%;
+    text-align: left;
 }
-.video-icon{
-      position: absolute;
-  top: 40px;
-  color: rgb(188, 17, 17);
-  left: 50%;
-  transform: translatey(-50%);
+
+.footernew ul {
+    margin: 0;
 }
+
+.video-icon {
+    position: absolute;
+    top: 40px;
+    color: #fff;
+    left: 50%;
+    transform: translatey(-50%);
+}
+
+.play-circle {
+    height: 30px;
+    width: 30px;
+    background: black;
+    border-radius: 50%;
+}
+
+.playtriangle {
+    position: absolute;
+    top: 7px;
+    left: 10px;
 }
