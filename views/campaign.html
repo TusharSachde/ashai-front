@@ -70,8 +70,8 @@
                         <img ng-src="{{mainimage | ngoimagepath}}" alt="">
                     </div>
                     <div class="galleryimg">
-                    <div my-youtube code="code"></div>
-<!--                        <iframe width="360" height="215" src="{{'http://www.youtube.com/embed/'+project.video|trusted}}" frameborder="0" allowfullscreen></iframe>-->
+                        <div my-youtube code="code"></div>
+                        <!--                        <iframe width="360" height="215" src="{{'http://www.youtube.com/embed/'+project.video|trusted}}" frameborder="0" allowfullscreen></iframe>-->
                     </div>
                 </div>
                 <div class="col-xs-2 gallery_width">
@@ -81,12 +81,26 @@
                             <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
                         </li>
 
-                        <li class="gallerytag"><img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt="">
                         <li class="gallerytag">
+                           <div class="video-icon">
+                                    <div class="play-circle">
+                                        <i class="fa fa-play playtriangle"></i>
+                                    </div>
+                                </div>
+                           <img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt=""></li>
+                            <li class="gallerytag">
+                                <div class="video-icon">
+                                    <div class="play-circle">
+                                        <i class="fa fa-play playtriangle"></i>
+                                    </div>
+                                </div>
+                                <img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt="">
+                                <!--
                             <iframe width="116" height="84" src="http://www.youtube.com/embed/{{project.video}}">
                             </iframe>
-                        </li>
-                        <!--
+-->
+                            </li>
+                            <!--
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -109,7 +123,7 @@
             <div class="LeftCont">
                 <div class="donatecontentChange" id="atdonate" ng-if="project.donate == '1'">
 
-                    <div class="txt3"><i class="donate"></i>  <span>Donate</span>
+                    <div class="txt3"><i class="donate"></i> <span>Donate</span>
                     </div>
 
                     <div class="checkbox check">
@@ -229,7 +243,7 @@
             <p>SIMILAR CAUSES.</p>
             <div class="hrl"></div>
         </div>
-<!--        <p class="viewAll" ng-if="similarcauses!=''" ng-click="tocategory()">(View All)</p>-->
+        <!--        <p class="viewAll" ng-if="similarcauses!=''" ng-click="tocategory()">(View All)</p>-->
         <div class="bottom1">
             <div class="col-md-4 causelnk" ng-if="similarcauses[0]">
                 <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
