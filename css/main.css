@@ -2621,3 +2621,7 @@ a.pinterest i:hover {
 .form-fixhead {
     height: 40px;
 }
+
+.carousel-control {
+    text-shadow: none;
+}
