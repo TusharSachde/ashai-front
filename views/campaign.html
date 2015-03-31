@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="salammum">
-                        <img class="Salaamlogo" ng-src="{{project.ngoimage | projectbannerimagepath}}">
+                        <a href="http://{{project.ngowebsite}}"><img class="Salaamlogo" ng-src="{{project.ngoimage | projectbannerimagepath}}"></a>
                         <p>CAMPAIGN BY
                         </p>
                         <p class="ngoname nameng">{{project.ngoname}}
@@ -66,7 +66,7 @@
 
             <div class="row gallery_div" ng-if="projectimages">
                 <div class="col-xs-10">
-                    <div class="galleryimg">
+                    <div class="galleryimg" ng-show="!showvideo">
                         <img ng-src="{{mainimage | ngoimagepath}}" alt="">
                     </div>
                     <div class="galleryimg" ng-show="showvideo">
@@ -76,52 +76,22 @@
                 </div>
                 <div class="col-xs-2 gallery_width">
                     <ul class="list-unstyled">
-                        <!--                    <li><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>-->
-
-<<<<<<< HEAD
-                        <li class="gallerytag">
-                           
-                                    <div class="play-circle">
-                                        <i class="fa fa-play playtriangle"></i>
-                                    </div>
-                             
-                           <img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt=""></li>
-                            <li class="gallerytag">
-                                
-                                    <div class="play-circle">
-                                        <i class="fa fa-play playtriangle"></i>
-                                    </div>
-                              
-                                <img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt="">
-                                <!--
-                            <iframe width="116" height="84" src="http://www.youtube.com/embed/{{project.video}}">
-                            </iframe>
--->
-                            </li>
-                            <!--
-=======
-
                         <li class="gallerytag" ng-if="project.video!=''" ng-click="changevideo(project.video)">
-                            <div class="video-icon">
                                 <div class="play-circle">
                                     <i class="fa fa-play playtriangle"></i>
                                 </div>
-                            </div>
                             <img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt="">
                         </li>
                         <li class="gallerytag" ng-if="project.video2!=''" ng-click="changevideo(project.video2)">
-                            <div class="video-icon">
                                 <div class="play-circle">
                                     <i class="fa fa-play playtriangle"></i>
                                 </div>
-                            </div>
                             <img src="http://img.youtube.com/vi/{{project.video2}}/0.jpg" width="100%" height="100%" alt="">
                         </li>
                         <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
                             <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
                         </li>
-                        <!--
->>>>>>> origin/master
+<!--
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -129,6 +99,7 @@
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
 -->
+
 
                     </ul>
 
@@ -245,7 +216,7 @@
                 <div class="funded">
                     <h4>FUNDED </h4>
                     <div class="circle">
-                        <div class="circlepercnt">230%</div>
+                        <div class="circlepercnt">{{percent}}%</div>
                     </div>
                     <div class="Bordr">
                         <p>PLEDGED</p>

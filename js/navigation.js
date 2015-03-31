@@ -26,15 +26,15 @@ var navigationservice = angular.module('navigationservice', [])
         period:"One Time",
         select:"selected"
     },{
-        val:"1000",
+        val:"500",
         period:"Monthly",
         select:""
     },{
-        val:"1500",
+        val:"500",
         period:"Quarterly",
         select:""
     },{
-        val:"3000",
+        val:"500",
         period:"Yearly",
         select:""
     },];

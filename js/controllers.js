@@ -700,6 +700,12 @@ phonecatControllers.controller('campaign',
         $scope.amount = $scope.donation[0].val;
         $scope.pre = $scope.donation[0].val;
         $scope.donationdiv = "donation";    
+        $scope.showvideo = false;
+        $scope.playvideo = "";
+        $scope.changevideo = function(video){
+            $scope.playvideo = video;
+            $scope.showvideo = true;
+        }
         $scope.changeperiod = function(donate){
             $scope.amount = donate;
             $.jStorage.set("amount",donate);
@@ -766,6 +772,7 @@ phonecatControllers.controller('campaign',
         var displaystaticpage = function(data, status) {
             console.log("one campaign");
             console.log(data);
+            $scope.percent = data.percent;
             $scope.datapoint = data.datapoint;
             $scope.datapoint = partitionarray($scope.datapoint, 3);
             $scope.project = data.project;
@@ -790,6 +797,7 @@ phonecatControllers.controller('campaign',
                 $scope.mainimage = $scope.projectimages[0].image;
             }
             $scope.tomainimage = function(bigimg) {
+                $scope.showvideo = false;
                 $scope.mainimage = bigimg.image;
             }
             $scope.tovideo = function(video){
@@ -1700,9 +1708,11 @@ phonecatControllers.controller('footer',
 			if(data!="0"){
                 $scope.message = "all_set";
                 $scope.textmessage = "Saved successfully";
+                alert("Saved successfully");
             }else{
                 $scope.message = "error";
                 $scope.textmessage = "Error In Saving";
+                alert("Error In Saving");
             }
         }
 
