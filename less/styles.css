@@ -688,7 +688,9 @@ body .head-on h3 {
 }
 body .pic {
   margin: -12px -12px 0;
+  height: 200px;
   position: relative;
+  overflow: hidden;
 }
 body .footernew {
   padding: 15px 0;
