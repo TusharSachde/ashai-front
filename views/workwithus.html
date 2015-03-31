@@ -20,6 +20,7 @@
                     <input type="text" ng-model="form1.name" placeholder="Name *" ng-class="allvalidation[0].validation" required>
                     <input type="text" ng-model="form1.contact" placeholder="Number *" ng-class="allvalidation[1].validation" required>
                     <input type="text" ng-model="form1.email" placeholder="Email *" ng-class="allvalidation[2].validation" required>
+                    <div class="styled-select">
                     <select ng-model="form1.country"  name="" id="" ng-class="allvalidation[3].validation" required>
                         <option value="">Select Country</option>
                         <option value="Afganistan">Afghanistan</option>
@@ -270,6 +271,7 @@
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
+                     </div>
                       <input type="text" ng-model="form1.city" placeholder="City *" ng-class="allvalidation[4].validation" required>
                     <textarea ng-model="form1.message"  placeholder="Message *" ng-class="allvalidation[5].validation" required></textarea>
                     <button class="subbtn" ng-click="submitworkwithus(form1);">SEND</button>
