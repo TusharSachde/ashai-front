@@ -2600,3 +2600,7 @@ a.linked i:hover {
 ul.list-inline.social-links {
     text-align: center;
 }
+.forgot-pwd{
+    width:60%;
+    margin:0 auto;
+}

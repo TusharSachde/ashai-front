@@ -438,8 +438,8 @@ phonecatControllers.controller('forgot',
         $scope.template = TemplateService;
 //        $scope.menutitle = NavigationService.makeactive("Forgot");
 
-        TemplateService.header = 'views/headertext.html';
-        $scope.title = "Forgot Password";
+        TemplateService.header = 'views/headerblack.html';
+   
         TemplateService.content = 'views/forgot.html';
         TemplateService.title = "Blog";
         $scope.navigation = NavigationService.getnav();
