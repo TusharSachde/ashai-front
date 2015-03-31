@@ -2600,7 +2600,24 @@ a.linked i:hover {
 ul.list-inline.social-links {
     text-align: center;
 }
-.forgot-pwd{
-    width:60%;
-    margin:0 auto;
+
+.forgot-pwd {
+    width: 60%;
+    margin: 0 auto;
+}
+
+a.facebook i:hover,
+a.twitter i:hover,
+a.instagram i:hover,
+a.linked i:hover,
+a.pinterest i:hover {
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -linear-transition: all 300ms ease;
+}
+
+.form-fixhead {
+    height: 60px;
 }
