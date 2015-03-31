@@ -18,6 +18,10 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'works'
         }).
+          when('/forgot', {
+            templateUrl: 'views/template.html',
+            controller: 'forgot'
+        }).
          when('/fbpopup', {
             templateUrl: 'views/popup_template.html',
             controller: 'fbpopup'

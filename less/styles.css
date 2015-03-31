@@ -7,8 +7,7 @@
   ---------------------------------------------------*/
 @font-face {
   font-family: 'Gotham';
-  src: url('../fonts/Gotham-Book.ttf') format('truetype');
-  src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Gotham-Book.ttf') format('truetype'), url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype');
   font-weight: 300;
 }
 @font-face {
@@ -19,14 +18,12 @@
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('../fonts/Gotham-Medium.ttf') format('truetype');
-  src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Gotham-Medium.ttf') format('truetype'), url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype');
   font-weight: 500;
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('../fonts/Gotham-Bold.ttf') format('truetype');
-  src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Gotham-Bold.ttf') format('truetype'), url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype');
   font-weight: 700;
 }
 @font-face {
@@ -1369,7 +1366,7 @@ p.pull-right.abc {
 .all_set {
   background-color: #0b6b0b;
   color: #fff;
-  font-size: : 12px;
+  font-size: 12px;
   padding: 7px;
   margin-top: 10px;
 }
