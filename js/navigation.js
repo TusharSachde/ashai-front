@@ -56,6 +56,25 @@ var navigationservice = angular.module('navigationservice', [])
           {
               return $.jStorage.get("projectid");
           },
+         createfrontendorder:function(checkout)
+          {
+              return $http({
+                url: admin_url + "json/createfrontendorder",
+                method: "POST",
+                data: {
+					"name" : checkout.name,
+					"email" : checkout.email,
+                    "mobile" : checkout.mobile,
+                    "city" : checkout.city,
+                    "address" : checkout.address,
+                    "pan" : checkout.pan,
+                    "dob" : checkout.dob,
+                    "project" : checkout.project,
+                    "amount" : checkout.amount,
+                    "istax" : checkout.istax
+                }
+            })
+          },
          getsingleblog:function(id)
           {
               return $http.get(admin_url+ 'json/getsingleblog?id=' + id,{});

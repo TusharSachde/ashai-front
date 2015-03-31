@@ -698,10 +698,11 @@ phonecatControllers.controller('campaign',
         $scope.isLoading = true;
         $scope.donation = NavigationService.getdonation();
         $scope.amount = $scope.donation[0].val;
+        $scope.pre = $scope.donation[0].period;
     
         $scope.changeperiod = function(donate){
-            console.log(donate);
             $scope.amount = donate;
+            $.jStorage.set("amount",donate);
         }
     
         //  AUTHENTICATE
@@ -826,9 +827,10 @@ phonecatControllers.controller('campaign',
         }
         
         //  TO CHECKOUT
-        $scope.tocheckout = function(id){
+        $scope.tocheckout = function(id,name){
             console.log(id);
             NavigationService.setprojectid(id);
+            $.jStorage.set("projectname",name);
             $location.url("/checkout");
         }
 
@@ -1387,6 +1389,9 @@ phonecatControllers.controller('checkout',
     
         //  DECLARATION
         $scope.checkout = [];
+        $scope.checktax = function(check){
+//            $scope
+        }
 
         //  AUTHENTICATE
         var usersuccess = function(data, status){
@@ -1396,7 +1401,7 @@ phonecatControllers.controller('checkout',
 //            console.log("auth auth auth");
 //            console.log(data);
             if (data == "false") {
-                $location.url("/login");
+//                $location.url("/login");
                 $scope.register = "Register";
                 $scope.login = "Login";
             } else {
@@ -1429,9 +1434,45 @@ phonecatControllers.controller('checkout',
         }
         
         //  CHECKOUT PAY AND PROCEED
-        
+        var checkoutsuccess = function(data, status){
+            $.jStorage.set("order",data);
+            window.location.href = "https://www.instamojo.com/jagruti/demo-testing/?data_name="+$scope.checkout.name+"&data_email="+$scope.checkout.email+"&data_phone="+$scope.checkout.mobile+"&data_amount="+$scope.checkout.amount+"&data_Field_99651="+$scope.checkout.projectname+"&data_Field_99652="+data+"&data_readonly=data_amount&data_readonly=data_Field_99651&data_readonly=data_Field_99652";
+        }
         $scope.payproceed = function(checkout){
-//            NavigationService.checkout(checkout)
+            //  VALIDATION
+            $scope.allvalidation = [{
+                field: $scope.checkout.name,
+                validation: ""
+
+            },{
+                field: $scope.checkout.email,
+                validation: ""
+
+            },{
+                field: $scope.checkout.mobile,
+                validation: ""
+
+            },{
+                field: $scope.checkout.city,
+                validation: ""
+
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+            
+                checkout.project = NavigationService.getprojectid();
+                checkout.projectname = $.jStorage.get("projectname");
+                checkout.amount = $.jStorage.get("amount");
+                if(checkout.istax == true){
+                    checkout.istax = "1";
+                }else{
+                    checkout.istax = "0";
+                }
+                $scope.checkout = checkout;
+                NavigationService.createfrontendorder(checkout).success(checkoutsuccess);
+                
+            }
         }
 
     }

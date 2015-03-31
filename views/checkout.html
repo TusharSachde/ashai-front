@@ -6,32 +6,30 @@
                 <div class="signin text-center">
                     <h3 class="createtitle">Checkout</h3>
                     <div class="chkform text-center">
-                        <form>
-                           <input name="name" type="text" class="custom-input signin-input" ng-model="checkout.name" placeholder="Name">
+                           <input name="name" type="text" class="custom-input signin-input" ng-model="checkout.name"ng-class="allvalidation[0].validation" required placeholder="Name">
                             <br>
-                            <input name="email" class="custom-input signin-input" ng-model="checkout.email" placeholder="Email">
+                            <input name="email" class="custom-input signin-input" ng-model="checkout.email"ng-class="allvalidation[1].validation" required placeholder="Email">
                             <br>
-                            <input name="mobileNumber" class="custom-input signin-input" ng-model="checkout.phone" class="custom-input integer" placeholder="Mobile">
+                            <input name="mobileNumber" class="custom-input signin-input" ng-model="checkout.mobile" class="custom-input integer"ng-class="allvalidation[2].validation" required placeholder="Mobile">
                             <br>
-                            <input type="text" name="city" class="custom-input signin-input" ng-model="checkout.city" placeholder="City">
+                            <input type="text" name="city" class="custom-input signin-input" ng-model="checkout.city"ng-class="allvalidation[3].validation" required placeholder="City">
                             <br>
                             <div class="checkbox">
                                 <label>
-                                  <input type="checkbox">If you want your Tax Certificate 
+                                  <input type="checkbox" ng-model="checkout.istax" ng-click="checktax(checkout.istax)">If you want your Tax Certificate 
                                 </label>
                             </div>
-                            <div>
-                             <textarea class="custom-input signin-input" ng-model="checkout.address" placeholder="Address"></textarea>
+                            <div ng-show="checkout.istax==true">
+                             <textarea class="custom-input signin-input" ng-model="checkout.address"ng-class="allvalidation1[0].validation" required placeholder="Address"></textarea>
                             </div>
-                            <div>
-                              <input type="text" name="pcard" class="custom-input signin-input" ng-model="checkout.panno" placeholder="PAN number.">  
+                            <div ng-show="checkout.istax==true">
+                              <input type="text" name="pcard" class="custom-input signin-input"ng-class="allvalidation1[1].validation" required ng-model="checkout.pan" placeholder="PAN number.">  
                             </div>
-                             <div>
-                              <input type="date" name="bdate" class="custom-input signin-input" ng-model="checkout.dob" placeholder="birthday">  
+                             <div ng-show="checkout.istax==true">
+                              <input type="date" name="bdate" class="custom-input signin-input"ng-class="allvalidation1[2].validation" required ng-model="checkout.dob" placeholder="birthday">  
                             </div>
                             
                             <a ng-click="payproceed(checkout)" class="createacc"> Proceed and Pay </a>
-                        </form>
                     </div>
                 </div>
             </div>
