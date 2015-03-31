@@ -1125,6 +1125,9 @@ span.shares {
 }
 .donation-selected{
     opacity: 1!important;
+    margin: 0px 0px 10px 23px;
+    width: 85%;
+    transition: all 300ms ease;
 }
 .check h5 {
     font-weight: 300;
@@ -2634,5 +2637,9 @@ a.pinterest i:hover {
 .helpbox .proj-hd{
     width:100%;
     overflow: hidden;
-    height:100px;
+    height:80px;
+}
+.helpbox .proj-hd h3
+{
+    font-size: 18px!important;
 }
