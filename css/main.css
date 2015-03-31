@@ -2668,6 +2668,11 @@ a.pinterest i:hover {
 .footernew ul{
     margin:0;
 }
-.disable-iframe{
-    opacity:0.2;
+.video-icon{
+      position: absolute;
+  top: 40px;
+  color: rgb(188, 17, 17);
+  left: 50%;
+  transform: translatey(-50%);
+}
 }
