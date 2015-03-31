@@ -140,9 +140,23 @@
                             <h3>{{displayproject[0].tagline}}</h3>
 
                             <div class="info">
+                                <!--
                                 <p>{{displayproject[0].tagline}}</p>
+
                                 <h5>{{displayproject[0].ngoname}}</h5>
                                 <img ng-src="{{displayproject[0].ngoimage | ngoimagepath}}">
+-->
+                                <p>{{displayproject[0].cardtagline}}</p>
+
+                                <div class="row">
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[0].ngoimage | ngoimagepath}}">
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h5>{{displayproject[0].ngoname}}</h5>
+                                    </div>
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[0].ngoimage | ngoimagepath}}">
+                                    </div>
+                                </div>
 
                                 <!--
                             <div class="elements row">
@@ -181,10 +195,23 @@
                             <h3>{{displayproject[1].tagline}}</h3>
 
                             <div class="info">
+                                <!--
                                 <p>{{displayproject[1].tagline}}</p>
                                 <h5>{{displayproject[1].ngoname}}</h5>
                                 <img ng-src="{{displayproject[1].ngoimage | ngoimagepath}}">
+-->
 
+                                <p>{{displayproject[1].cardtagline}}</p>
+
+                                <div class="row">
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[1].ngoimage | ngoimagepath}}">
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h5>{{displayproject[1].ngoname}}</h5>
+                                    </div>
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[1].ngoimage | ngoimagepath}}">
+                                    </div>
+                                </div>
                                 <!--
                             <div class="elements row">
                                 <div class="col-xs-6">
@@ -222,13 +249,19 @@
 
                             <div class="info">
                                 <p>{{displayproject[2].cardtagline}}</p>
+
                                 <div class="row">
-                                    <div class="col-xs-4"><img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}"></div>
-                                    <div class="col-xs-4"><h5>{{displayproject[2].ngoname}}</h5></div>
-                                    <div class="col-xs-4"><img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}"></div>
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}">
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h5>{{displayproject[2].ngoname}}</h5>
+                                    </div>
+                                    <div class="col-xs-4"><img ng-src="{{displayproject[2].ngoimage | ngoimagepath}}">
+                                    </div>
                                 </div>
-                                
-                                
+
+
+
 
                                 <!--
                             <div class="elements row">
@@ -436,6 +469,3 @@ $(document).ready(function() {
 
 <div id="veil" ng-show="isLoading"></div>
 <div id="feedLoading" ng-show="isLoading" style="position: fixed !important; background: #000000 url(http://www.wingo.com/angular/AngularShieldLogo.png) no-repeat center;">Loading...</div>
-
-
-
