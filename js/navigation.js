@@ -23,16 +23,20 @@ var navigationservice = angular.module('navigationservice', [])
     
     var donation = [{
         val:"500",
-        period:"One Time"
+        period:"One Time",
+        select:"selected"
     },{
         val:"1000",
-        period:"Monthly"
+        period:"Monthly",
+        select:""
     },{
         val:"1500",
-        period:"Quarterly"
+        period:"Quarterly",
+        select:""
     },{
         val:"3000",
-        period:"Yearly"
+        period:"Yearly",
+        select:""
     },];
 
     return {

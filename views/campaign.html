@@ -109,7 +109,7 @@
 
                             <div class="row foregin">
                                 <div class="col-md-2 radanoyminous">
-                                    <input type="radio" ng-click="donnercheck(project.indiandoner)" name="1" value="{{project.indiandoner}}">
+                                    <input type="radio" ng-model="project.indiandoner" ng-click="donnercheck(project.indiandoner)" name="1" value="1">
                                 </div>
                                 <div class="col-md-10 popup">
                                     <h5 class="keepit">Indian Citizen [?]</h5>
@@ -138,13 +138,13 @@
 
 
                     </div>
-                    <div class="donation">
+                    <div class="donation" ng-class="donationdiv">
 
                         <div class="input-group">
                             <div class="input-group-addon bdr-right">Rs.</div>
                             <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="">
                             <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(pre)">
-                                <option ng-repeat="donate in donation" value="{{donate.val}}">{{donate.period}}</option>
+                                <option ng-repeat="donate in donation" value="{{donate.val}}" {{donate.select}}>{{donate.period}}</option>
                             </select>
                         </div>
 

@@ -698,8 +698,8 @@ phonecatControllers.controller('campaign',
         $scope.isLoading = true;
         $scope.donation = NavigationService.getdonation();
         $scope.amount = $scope.donation[0].val;
-        $scope.pre = $scope.donation[0].period;
-    
+        $scope.pre = $scope.donation[0].val;
+        $scope.donationdiv = "donation";    
         $scope.changeperiod = function(donate){
             $scope.amount = donate;
             $.jStorage.set("amount",donate);
@@ -707,6 +707,7 @@ phonecatControllers.controller('campaign',
         
         $scope.donnercheck = function(checkdonner){
             console.log(checkdonner);
+            $scope.donationdiv = "donation-selected";
         }
     
         //  AUTHENTICATE
@@ -769,9 +770,9 @@ phonecatControllers.controller('campaign',
             $scope.datapoint = partitionarray($scope.datapoint, 3);
             $scope.project = data.project;
             if($scope.project.indiandoner=="1"){
-                $scope.project.indiandoner = "1";
+                $scope.donationdiv = "donation-selected";
             }else{
-                $scope.project.indiandoner = "";
+                $scope.donationdiv = "blur";
             }
             $scope.bgimage = {
                 "background": 'url(http://wohlig.co.in/powerforone/uploads/' + $scope.project.cardimage + ') no-repeat',
