@@ -2642,3 +2642,13 @@ a.pinterest i:hover {
 {
     font-size: 18px!important;
 }
+.carousel-indicators li {
+    border:1px solid grey;
+}
+.carousel-indicators li.active {
+    border:1px solid grey;
+    background: grey;
+}
+.carousel-indicators{
+    bottom:-30px!important;
+}
