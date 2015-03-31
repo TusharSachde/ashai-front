@@ -546,7 +546,6 @@ span.icon.fa.fa-check.pull-right {
 .list-group-item:last-child {
     borders-radius: 0px;
 }
-
 /*
 .contri_time {
     width: 55%;
@@ -704,16 +703,22 @@ h2.ng-scope {
 p.viewAll {
     text-align: center;
     margin: 0 auto;
-   color:#fff;
+    color: #fff;
     width: 10%;
     padding: 5px;
     color: black;
     cursor: pointer;
 }
-p.viewAll:hover{
-    color:#fff;
-     background: rgb(5, 199, 199);
+
+p.viewAll:hover {
+    color: #fff;
+    background: rgb(5, 199, 199);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
     transition: all 300ms ease;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
 }
 
@@ -1035,10 +1040,11 @@ select.recurring {
     display: -moz-box;
     display: flex;
     text-align: center;
-    margin-top:20px;
+    margin-top: 20px;
 }
-.data-info{
-    padding:10px 0 5px 0;
+
+.data-info {
+    padding: 10px 0 5px 0;
 }
 
 .img1 {
@@ -1163,7 +1169,8 @@ ul.pagecategory>li,
     -ms-flex: 1;
     -moz-box-flex: 1;
     flex: 1;
-/*    cursor: pointer;*/
+    /*    cursor: pointer;*/
+    
     -webkit-transition: all 1s ease;
 }
 /*allflex*/
@@ -2059,11 +2066,7 @@ p.or {
     color: #007bb6 !important;
 }
 */
-
-.fa-facebook {
-    background: rgba(0, 131, 201, 0.3);
-}
-
+/*
 .fa-facebook:hover {
     background: #0083C9;
     transition: all 300ms ease;
@@ -2073,10 +2076,6 @@ p.or {
     -linear-transition: all 300ms ease;
 }
 
-.fa-twitter {
-    background: rgba(91, 188, 236, 0.3);
-}
-
 .fa-twitter:hover {
     background: #00BBEF;
     transition: all 300ms ease;
@@ -2084,10 +2083,6 @@ p.or {
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     -linear-transition: all 300ms ease;
-}
-
-.fa-pinterest {
-    background: rgba(203, 32, 39, 0.47);
 }
 
 .fa-pinterest:hover {
@@ -2112,10 +2107,6 @@ p.or {
     -linear-transition: all 300ms ease;
 }
 
-.fa-linkedin {
-    background: rgba(0, 123, 182, 0.37);
-}
-
 .fa-linkedin:hover {
     background: #007bb6;
     transition: all 300ms ease;
@@ -2123,7 +2114,7 @@ p.or {
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     -linear-transition: all 300ms ease;
-}
+}*/
 
 .popup-indiandonar {
     display: none;
@@ -2201,7 +2192,6 @@ p.or {
 .donation select option {
     padding: 15px 10px;
 }
-
 /*
 .contribution img {
     margin-top: -25px;
@@ -2294,6 +2284,7 @@ p.already {
 
 a.left.carousel-control {
     background-image: none;
+    /* cursor: pointer; */
 }
 
 a.right.carousel-control {
@@ -2315,8 +2306,9 @@ a.right.carousel-control {
 .head-on.home p {
     padding-bottom: 20px;
 }
-.head-on h3{
-    font-weight:600!important;
+
+.head-on h3 {
+    font-weight: 600!important;
 }
 
 .sharebtn i.fa.fa-facebook.fa-lg {
@@ -2464,7 +2456,7 @@ a.right.carousel-control {
 }
 
 .social-links li a i {
-    padding: 11px 13px;
+    font-size: 22px;
 }
 
 .phead i.fa.fa-facebook {
@@ -2474,7 +2466,6 @@ a.right.carousel-control {
     margin-right: 14px;
     font-size: 18px;
 }
-
 /*
 .contri-img {
     width: auto;
@@ -2527,51 +2518,81 @@ a.post-btn {
 .ftr-green {
     color: green;
 }
+
 span.glyphicon.glyphicon-chevron-left {
     margin-left: -120px;
-    color:rgb(102, 102, 102);
+    color: rgb(102, 102, 102);
 }
 
 span.glyphicon.glyphicon-chevron-right {
     margin-right: -120px;
-    color:rgb(102, 102, 102);
+    color: rgb(102, 102, 102);
 }
 
 #veil {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height:100%;
-	width:100%;
-	cursor: not-allowed;
-	filter: alpha(opacity=60);
-	opacity: 0.6;
-	background: #000000 url(http://www.wingo.com/angular/AngularShieldLogo.png) no-repeat center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: not-allowed;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    background: #000000 url(http://www.wingo.com/angular/AngularShieldLogo.png) no-repeat center;
 }
-#feedLoading {
-	position: absolute;
-	top:200px;
-	width:100%;
-	text-align: center;
-	font-size: 4em;
-	color:white;
-	text-shadow: 2px 2px 2px #021124;
-}
-.gallerytag img{
-    width:100%;
-    height:auto;
-      cursor: pointer;
 
+#feedLoading {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    color: white;
+    text-shadow: 2px 2px 2px #021124;
 }
-.myfb{
+
+.gallerytag img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.myfb {
     padding: 5px 9px;
-  color: white;
+    color: white;
 }
-.mytwitt{
+
+.mytwitt {
     padding: 5px 6px;
-  color: white;
+    color: white;
+    color: white;
 }
-.slider{
-    margin:50px 0px;
-    height:auto;
+
+.slider {
+    margin: 50px 0px;
+    height: auto;
+}
+
+a.facebook i {
+    color: #3B5998;
+}
+
+a.twitter i {
+    color: #00ACED;
+}
+
+a.instagram i {
+    color: #C51118;
+}
+
+a.linked i {
+    color: #;
+}
+
+a.pinterest i {
+    color: #CB2027;
+}
+
+a.linked i {
+    color: #007BB6;
 }
