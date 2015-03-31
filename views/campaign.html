@@ -69,18 +69,16 @@
                     <div class="galleryimg">
                         <img ng-src="{{mainimage | ngoimagepath}}" alt="">
                     </div>
-                    <div class="galleryimg">
-                        <div my-youtube code="code"></div>
+                    <div class="galleryimg" ng-show="showvideo">
+                        <div my-youtube code="playvideo"></div>
                         <!--                        <iframe width="360" height="215" src="{{'http://www.youtube.com/embed/'+project.video|trusted}}" frameborder="0" allowfullscreen></iframe>-->
                     </div>
                 </div>
                 <div class="col-xs-2 gallery_width">
                     <ul class="list-unstyled">
                         <!--                    <li><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>-->
-                        <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
-                            <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
-                        </li>
 
+<<<<<<< HEAD
                         <li class="gallerytag">
                            
                                     <div class="play-circle">
@@ -101,6 +99,29 @@
 -->
                             </li>
                             <!--
+=======
+
+                        <li class="gallerytag" ng-if="project.video!=''" ng-click="changevideo(project.video)">
+                            <div class="video-icon">
+                                <div class="play-circle">
+                                    <i class="fa fa-play playtriangle"></i>
+                                </div>
+                            </div>
+                            <img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt="">
+                        </li>
+                        <li class="gallerytag" ng-if="project.video2!=''" ng-click="changevideo(project.video2)">
+                            <div class="video-icon">
+                                <div class="play-circle">
+                                    <i class="fa fa-play playtriangle"></i>
+                                </div>
+                            </div>
+                            <img src="http://img.youtube.com/vi/{{project.video2}}/0.jpg" width="100%" height="100%" alt="">
+                        </li>
+                        <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
+                            <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
+                        </li>
+                        <!--
+>>>>>>> origin/master
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -123,7 +144,7 @@
             <div class="LeftCont">
                 <div class="donatecontentChange" id="atdonate" ng-if="project.donate == '1'">
 
-                    <div class="txt3"><i class="donate"></i> <span>Donate</span>
+                    <div class="txt3"><i class="donate"></i>  <span>Donate</span>
                     </div>
 
                     <div class="checkbox check">

@@ -144,6 +144,7 @@ firstapp.directive('myYoutube', function($sce) {
   };
 });
 
+
 firstapp.filter('categoryimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
