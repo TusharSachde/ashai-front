@@ -829,7 +829,7 @@ phonecatControllers.controller('campaign',
             $scope.twitterdiv = false;
         }
         $scope.facebookshare = function(text) {
-            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext +"&project="+$scope.project.id+ "&returnurl=" + window.location.href;
+            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext+" "+$scope.project.facebookaddon+"&project="+$scope.project.id+ "&returnurl=" + window.location.href;
         }
 
         //  POST ON Twiter

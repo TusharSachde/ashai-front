@@ -386,7 +386,7 @@
             <div class="clearfix"></div>
             <div class="padding10">
                 <form>
-                    <input type="text" placeholder="Say something about this...">
+                    <input type="text" ng-model="project.facebookaddon" placeholder="Say something about this...">
                 </form>
                 <div class="row share-info">
                     <div class="col-xs-3">
@@ -394,7 +394,7 @@
                     </div>
                     <div class="col-xs-9">
                         <div class="fb-postcont">
-                            <p>{{project.facebooktext}}</p>
+                            <p>{{project.facebooktext+" "+project.facebookaddon}}</p>
                         </div>
                     </div>
                 </div>
