@@ -2681,23 +2681,21 @@ a.pinterest i:hover {
     margin: 0;
 }
 
-.video-icon {
-    position: absolute;
-    top: 40px;
-    color: #fff;
-    left: 50%;
-    transform: translatey(-50%);
-}
-
 .play-circle {
     height: 30px;
     width: 30px;
     background: black;
     border-radius: 50%;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .playtriangle {
-    position: absolute;
-    top: 7px;
-    left: 10px;
+    text-align: center;
+    display: inherit;
+    line-height: 30px;
 }
