@@ -2573,26 +2573,30 @@ span.glyphicon.glyphicon-chevron-right {
     height: auto;
 }
 
-a.facebook i {
+a.facebook i:hover {
     color: #3B5998;
 }
 
-a.twitter i {
+a.twitter i:hover {
     color: #00ACED;
 }
 
-a.instagram i {
-    color: #C51118;
+a.instagram i:hover {
+    color: #2A5B83;
 }
 
 a.linked i {
-    color: #;
+    color: #858585;
 }
 
-a.pinterest i {
+a.pinterest i:hover {
     color: #CB2027;
 }
 
-a.linked i {
+a.linked i:hover {
     color: #007BB6;
+}
+
+ul.list-inline.social-links {
+    text-align: center;
 }
