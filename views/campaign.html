@@ -76,9 +76,11 @@
                         <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
                             <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
                         </li>
-                        <!--
+                        
+                    <li class="gallerytag" ng-click="tovedio(project.video)"><iframe width="116" height="84" src="http://www.youtube.com/embed/XGSy3_Czz8k?iv_load_policy=3" frameborder="0">
+</iframe></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
-                    <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
+<!--
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -86,6 +88,7 @@
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
 -->
+
                     </ul>
 
 
@@ -232,7 +235,7 @@
                                 <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                             </div>
                         </div>
-                        <h3>{{similarcauses[0].tagline}}</h3>
+                        <h3>{{similarcauses[0].name}}</h3>
                         <div class="info">
 
                             <p>{{similarcauses[0].cardtagline}}</p>
@@ -263,7 +266,7 @@
                                 <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                             </div>
                         </div>
-                        <h3>{{similarcauses[1].tagline}}</h3>
+                        <h3>{{similarcauses[1].name}}</h3>
                         <div class="info">
                             <p>{{similarcauses[1].cardtagline}}</p>
                             <!--
@@ -291,7 +294,7 @@
                                 <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
                             </div>
                         </div>
-                        <h3>{{similarcauses[2].tagline}}</h3>
+                        <h3>{{similarcauses[2].name}}</h3>
                         <div class="info">
                             <p>{{similarcauses[2].cardtagline}}</p>
 <!--

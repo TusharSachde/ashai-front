@@ -792,6 +792,9 @@ phonecatControllers.controller('campaign',
             $scope.tomainimage = function(bigimg) {
                 $scope.mainimage = bigimg.image;
             }
+            $scope.tovideo = function(video){
+                console.log(video);
+            }
             $scope.similarcauses = data.similarcauses;
             $scope.isLoading = false;
 
