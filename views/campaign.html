@@ -368,7 +368,7 @@
 <div class="container-fluid" ng-show="twitterdiv">
     <div class="fboverlay">
         <div class="fb-popup">
-            <div class="phead thead text-center">Share on Twitter<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidetwitter()"></i></span>
+            <div class="phead twitt-head text-center">Share on Twitter<span class="pull-right cpointer"><i class="fa fa-times" ng-click="hidetwitter()"></i></span>
             </div>
             <div class="clearfix"></div>
             <div class="padding10">
@@ -381,7 +381,7 @@
                 </div>
                 <div class="pull-right margintop">
                     <span>{{140-(project.twittertext.length+1+project.twitteraddon.length)}}</span>
-                    <button type="submit" class="post-btn" ng-click="twittershare()" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
+                    <button type="submit" class="post-btn twitt-head" ng-click="twittershare()" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
                 </div>
             </div>
         </div>

@@ -2487,8 +2487,10 @@ a.right.carousel-control {
     height: 150px;
 }
 
-.thead {
-    color: rgb(255, 255, 255)!important;
+.twitt-head {
+    background-color: #28a4c9!important;
+    color:#fff!important;
+    border: 1px solid #28a4c9!important;
 }
 
 .fb-postcont p {
