@@ -704,6 +704,10 @@ phonecatControllers.controller('campaign',
             $scope.amount = donate;
             $.jStorage.set("amount",donate);
         }
+        
+        $scope.donnercheck = function(checkdonner){
+            console.log(checkdonner);
+        }
     
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -764,9 +768,11 @@ phonecatControllers.controller('campaign',
             $scope.datapoint = data.datapoint;
             $scope.datapoint = partitionarray($scope.datapoint, 3);
             $scope.project = data.project;
-//            if($scope.project.indiandoner=="1"){
-//                $scope.project.indiandoner = true;
-//            }
+            if($scope.project.indiandoner=="1"){
+                $scope.project.indiandoner = "1";
+            }else{
+                $scope.project.indiandoner = "";
+            }
             $scope.bgimage = {
                 "background": 'url(http://wohlig.co.in/powerforone/uploads/' + $scope.project.cardimage + ') no-repeat',
                 "-webkit-background-size": 'cover',
