@@ -62,6 +62,7 @@ var navigationservice = angular.module('navigationservice', [])
           },
          createfrontendorder:function(checkout)
           {
+              console.log(checkout.name);
               return $http({
                 url: admin_url + "json/createfrontendorder",
                 method: "POST",

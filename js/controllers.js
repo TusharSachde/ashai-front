@@ -699,11 +699,13 @@ phonecatControllers.controller('campaign',
         $scope.donation = NavigationService.getdonation();
         $scope.amount = $scope.donation[0].val;
         $scope.pre = $scope.donation[0].val;
+        $.jStorage.set("amount",$scope.amount);
         $scope.donationdiv = "donation";    
         $scope.showvideo = false;
         $scope.playvideo = "";
         $scope.project.facebookaddon = "";
         $scope.project.twitteraddon = "";
+        $scope.anonymous = false;
         $scope.changevideo = function(video){
             $scope.playvideo = video;
             $scope.showvideo = true;
@@ -854,7 +856,7 @@ phonecatControllers.controller('campaign',
             console.log(id);
             NavigationService.setprojectid(id);
             $.jStorage.set("projectname",name);
-            $.jStorage.get("anonymous",$scope.anonymous);
+            $.jStorage.set("anonymous",$scope.anonymous);
             $location.url("/checkout");
         }
 
