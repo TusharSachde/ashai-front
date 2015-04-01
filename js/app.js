@@ -4,7 +4,6 @@ var firstapp = angular.module('firstapp', [
   'phonecatControllers',
   'templateservicemod',
     'navigationservice'
-  
 ]);
 
 firstapp.config(['$routeProvider',
