@@ -1729,7 +1729,7 @@ p.contributionimg {
 
 .contribution img {
     width: auto;
-    height: 50px;
+    height: 90px;
     overflow: hidden;
     display: inline;
 }
@@ -2747,4 +2747,14 @@ a.pinterest i:hover {
 }
 .causes .logo-margin{
     margin-top:-13px;
+}
+.sociallnk{
+    color: white;
+    padding: 3px 4px;
+}
+.lnkin{
+    background: rgb(72, 153, 192);
+}
+.fbook{
+    background: rgb(58, 87, 149);
 }
