@@ -799,7 +799,7 @@ phonecatControllers.controller('campaign',
             };
 
             $scope.projectimages = data.projectimages;
-            if ($scope.projectimages != '') {
+            if ($scope.projectimages != '' ) {
                 $scope.mainimage = $scope.projectimages[0].image;
             }
             $scope.tomainimage = function(bigimg) {

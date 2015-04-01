@@ -335,7 +335,7 @@
                             <img ng-src="{{testimonial.image | testimonialimagepath}}" class="test-img">
                         </div>
                         <div class="col-md-10 cont52">
-                            {{testimonial.name}} {{testimonial.content}}
+                            {{testimonial.name}} {{testimonial.content | cut:true:250:' ...'}}
                         </div>
                     </div>
                 </slide>
