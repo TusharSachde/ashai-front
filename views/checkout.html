@@ -20,13 +20,13 @@
                                 </label>
                             </div>
                             <div ng-show="checkout.istax==true">
-                             <textarea class="custom-input signin-input" ng-model="checkout.address"ng-class="allvalidation1[0].validation" required placeholder="Address"></textarea>
+                             <textarea class="custom-input signin-input" ng-model="checkout.address"ng-class="allvalidation[4].validation" required placeholder="Address"></textarea>
                             </div>
                             <div ng-show="checkout.istax==true">
-                              <input type="text" name="pcard" class="custom-input signin-input"ng-class="allvalidation1[1].validation" required ng-model="checkout.pan" placeholder="PAN number.">  
+                              <input type="text" name="pcard" class="custom-input signin-input"ng-class="allvalidation[5].validation" required ng-model="checkout.pan" placeholder="PAN number.">  
                             </div>
                              <div ng-show="checkout.istax==true">
-                              <input type="date" name="bdate" class="custom-input signin-input"ng-class="allvalidation1[2].validation" required ng-model="checkout.dob" placeholder="birthday">  
+                              <input type="date" name="bdate" class="custom-input signin-input"ng-class="allvalidation[6].validation" required ng-model="checkout.dob" placeholder="birthday">  
                             </div>
                             
                             <a ng-click="payproceed(checkout)" class="createacc"> Proceed and Pay </a>

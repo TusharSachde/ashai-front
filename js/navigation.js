@@ -75,7 +75,8 @@ var navigationservice = angular.module('navigationservice', [])
                     "dob" : checkout.dob,
                     "project" : checkout.project,
                     "amount" : checkout.amount,
-                    "istax" : checkout.istax
+                    "istax" : checkout.istax,
+                    "anonymous" : checkout.anonymous
                 }
             })
           },

@@ -71,7 +71,6 @@
                     </div>
                     <div class="galleryimg" ng-show="showvideo">
                         <div my-youtube code="playvideo"></div>
-                        <!--                        <iframe width="360" height="215" src="{{'http://www.youtube.com/embed/'+project.video|trusted}}" frameborder="0" allowfullscreen></iframe>-->
                     </div>
                 </div>
                 <div class="col-xs-2 gallery_width">
@@ -166,7 +165,7 @@
 
                         <div class="clearfix"></div>
                         <div class="give-btn">
-                            <a ng-click="tocheckout(project.id,project.name)" class="btn givbtn">
+                            <a ng-click="tocheckout(project.id,project.name)" class="btn givbtn" ng-disabled="disabledgive">
                                                             GIVE</a>
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount=123.45" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>-->
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount={{amount}}">GIVE</a>-->
@@ -178,7 +177,7 @@
                         <label class="anonynimous">
                             <div class="row monthly">
                                 <div class="col-md-2 radanoyminous">
-                                    <input type="checkbox">
+                                    <input type="checkbox" ng-model="anonymous">
                                 </div>
                                 <div class="col-md-10">
                                     <h5 class="keep">Keep It Anonymous</h5>

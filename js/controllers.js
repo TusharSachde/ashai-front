@@ -702,6 +702,8 @@ phonecatControllers.controller('campaign',
         $scope.donationdiv = "donation";    
         $scope.showvideo = false;
         $scope.playvideo = "";
+        $scope.project.facebookaddon = "";
+        $scope.project.twitteraddon = "";
         $scope.changevideo = function(video){
             $scope.playvideo = video;
             $scope.showvideo = true;
@@ -714,6 +716,7 @@ phonecatControllers.controller('campaign',
         $scope.donnercheck = function(checkdonner){
             console.log(checkdonner);
             $scope.donationdiv = "donation-selected";
+            $scope.disabledgive = "";
         }
     
         //  AUTHENTICATE
@@ -778,8 +781,10 @@ phonecatControllers.controller('campaign',
             $scope.project = data.project;
             if($scope.project.indiandoner=="1"){
                 $scope.donationdiv = "donation-selected";
+                $scope.disabledgive = "";
             }else{
                 $scope.donationdiv = "blur";
+                $scope.disabledgive = true;
             }
             $scope.bgimage = {
                 "background": 'url(http://wohlig.co.in/powerforone/uploads/' + $scope.project.cardimage + ') no-repeat',
@@ -849,6 +854,7 @@ phonecatControllers.controller('campaign',
             console.log(id);
             NavigationService.setprojectid(id);
             $.jStorage.set("projectname",name);
+            $.jStorage.get("anonymous",$scope.anonymous);
             $location.url("/checkout");
         }
 
@@ -1458,30 +1464,68 @@ phonecatControllers.controller('checkout',
         }
         $scope.payproceed = function(checkout){
             //  VALIDATION
-            $scope.allvalidation = [{
+            if($scope.checkout.istax!=true)
+            {
+                $scope.allvalidation = [{
+                    field: $scope.checkout.name,
+                    validation: ""
+
+                },{
+                    field: $scope.checkout.email,
+                    validation: ""
+
+                },{
+                    field: $scope.checkout.mobile,
+                    validation: ""
+
+                },{
+                    field: $scope.checkout.city,
+                    validation: ""
+
+                }];
+
+                var check = formvalidation($scope.allvalidation);
+            }else{
+                
+                $scope.allvalidation = [{
                 field: $scope.checkout.name,
                 validation: ""
 
-            },{
-                field: $scope.checkout.email,
-                validation: ""
+                },{
+                    field: $scope.checkout.email,
+                    validation: ""
 
-            },{
-                field: $scope.checkout.mobile,
-                validation: ""
+                },{
+                    field: $scope.checkout.mobile,
+                    validation: ""
 
-            },{
-                field: $scope.checkout.city,
-                validation: ""
+                },{
+                    field: $scope.checkout.city,
+                    validation: ""
 
-            }];
-            var check = formvalidation($scope.allvalidation);
+                },{
+                    field: $scope.checkout.address,
+                    validation: ""
+
+                },{
+                    field: $scope.checkout.pan,
+                    validation: ""
+
+                },{
+                    field: $scope.checkout.dob,
+                    validation: ""
+
+                }];
+                var check = formvalidation($scope.allvalidation);
+                
+            }
 
             if (check) {
             
                 checkout.project = NavigationService.getprojectid();
                 checkout.projectname = $.jStorage.get("projectname");
                 checkout.amount = $.jStorage.get("amount");
+                checkout.anonymous = $.jStorage.get("anonymous");
                 if(checkout.istax == true){
                     checkout.istax = "1";
                 }else{
