@@ -60,7 +60,7 @@ phonecatControllers.controller('home',
 
         var displayproject = function(data, status) {
 //            console.log(data.queryresult);
-//            console.log(data.queryresult);
+            console.log(data.queryresult);
             $scope.displayproject = data.queryresult;
         };
         NavigationService.displayfrmdb(displayproject);
@@ -183,14 +183,15 @@ phonecatControllers.controller('fellowship',
         TemplateService.content = 'views/fellowship.html';
         TemplateService.title = "The fellowship";
         $scope.form2 = {};
+        $scope.message = false;
         $scope.navigation = NavigationService.getnav();
         var submitpfo = function(data, status) {
             console.log(data);
             if(data!="0"){
-                $scope.message = "all_set";
+                $scope.message = true;
                 $scope.textmessage = "Saved successfully";
             }else{
-                $scope.message = "error";
+                $scope.message = false;
                 $scope.textmessage = "Error In Saving";
             }
         }
@@ -265,7 +266,6 @@ phonecatControllers.controller('aboutUs',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("About us");
         TemplateService.header = 'views/headertext.html';
-        $scope.title = "About Us";
         $scope.backgroundimg = "About-us.jpg"
         TemplateService.content = 'views/aboutus.html';
         TemplateService.title = "About Us";
@@ -311,7 +311,6 @@ phonecatControllers.controller('aboutUs',
 
         $scope.changeaboutus = function() {
             NavigationService.getsinglestaticpage(1).success(staticsuccess);
-            $scope.title = "About Us";
             $scope.aboutus = "active";
             $scope.team = "";
             $scope.faq = "";
@@ -319,7 +318,6 @@ phonecatControllers.controller('aboutUs',
         }
         $scope.changeteam = function() {
             NavigationService.getsinglestaticpage(3).success(staticsuccess);
-            $scope.title = "Our team";
             $scope.aboutus = "";
             $scope.team = "active";
             $scope.faq = "";
@@ -327,7 +325,6 @@ phonecatControllers.controller('aboutUs',
         }
         $scope.changefaq = function() {
             NavigationService.getsinglestaticpage(2).success(staticsuccess);
-            $scope.title = "FAQ";
             $scope.aboutus = "";
             $scope.team = "";
             $scope.faq = "active";
@@ -340,8 +337,9 @@ phonecatControllers.controller('aboutUs',
 
         //  GET ABOUT US
         var staticsuccess = function(data, status) {
-//            console.log(data);
+            console.log(data);
             $scope.content = data[0];
+            $scope.title = data[0].name;
             $scope.backgroundimg = data[0].bannerimage;
         }
         switch ($routeParams.id) {
@@ -605,7 +603,7 @@ phonecatControllers.controller('Explore',
         //  GET ALL PROJECT
 //        console.log($routeParams.id);
         var projectsuccess = function(data, status) {
-//            console.log(data);
+            console.log(data);
             $scope.projects = data.queryresult;
             $scope.projects = partitionarray($scope.projects, 3);
 //            console.log($scope.projects);
@@ -718,7 +716,7 @@ phonecatControllers.controller('campaign',
         $scope.donnercheck = function(checkdonner){
             console.log(checkdonner);
             $scope.donationdiv = "donation-selected";
-            $scope.disabledgive = "";
+            $scope.disabledgive = false;
         }
     
         //  AUTHENTICATE
@@ -778,12 +776,13 @@ phonecatControllers.controller('campaign',
             console.log("one campaign");
             console.log(data);
             $scope.percent = data.percent;
+            $scope.totalprojectamount = data.totalprojectamount;
             $scope.datapoint = data.datapoint;
             $scope.datapoint = partitionarray($scope.datapoint, 3);
             $scope.project = data.project;
             if($scope.project.indiandoner=="1"){
                 $scope.donationdiv = "donation-selected";
-                $scope.disabledgive = "";
+                $scope.disabledgive = false;
             }else{
                 $scope.donationdiv = "blur";
                 $scope.disabledgive = true;
@@ -1043,14 +1042,15 @@ phonecatControllers.controller('workwithus',
         $scope.form1 = {};
         $scope.backgroundimg = "Work-with-us.jpg";
         TemplateService.content = 'views/workwithus.html';
+        $scope.message = false;
         $scope.navigation = NavigationService.getnav();
         var submitworkwithus = function(data, status) {
             console.log(data);
             if(data!="0"){
-                $scope.message = "all_set";
+                $scope.message = true;
                 $scope.textmessage = "Saved successfully";
             }else{
-                $scope.message = "error";
+                $scope.message = false;
                 $scope.textmessage = "Error In Saving";
             }
         }
@@ -1140,16 +1140,16 @@ phonecatControllers.controller('Contactus',
         TemplateService.content = 'views/Contactus.html';
         TemplateService.title = "Contact Us";
         $scope.form = {};
-        $scope.message = "";
+        $scope.message = false;
     $scope.textmessage = "";
         $scope.navigation = NavigationService.getnav();
-        var submitcontactform = function(data, status) {
+        var submitcontactform1 = function(data, status) {
             console.log(data);
             if(data!="0"){
-                $scope.message = "all_set";
+                $scope.message = true;
                 $scope.textmessage = "Saved successfully";
             }else{
-                $scope.message = "error";
+                $scope.message = false;
                 $scope.textmessage = "Error In Saving";
             }
             
@@ -1184,7 +1184,7 @@ phonecatControllers.controller('Contactus',
             var check = formvalidation($scope.allvalidation);
 
             if (check) {
-                NavigationService.submitcontactform(form).success(submitcontactform);
+                NavigationService.submitcontactform(form).success(submitcontactform1);
             };
 
 

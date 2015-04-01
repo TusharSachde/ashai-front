@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-5">
             <div class="formprarmy content-page form-horizontal">
-                <div style="display:none;">
+                <div ng-if="!message">
                     <h2>APPLY NOW</h2>
                     <!--                <form class="form-horizontal">-->
                     <input type="text" ng-model="form1.name" placeholder="Name *" ng-class="allvalidation[0].validation" required>
@@ -278,9 +278,15 @@
                     <button class="subbtn" ng-click="submitworkwithus(form1);">SEND</button>
                     <!--                    <div ng-class="message" ng-bind="textmessage"></div>-->
                 </div>
+<<<<<<< HEAD
+                <div class="form-msg" ng-if="message">
+                   <img src="images/favicon.png" alt="">
+                    <p>Thank you for your message the team will get back to you in a maximum of 72 hours.</p>
+=======
                 <div class="form-msg">
                    <img src="images/thnq-msg.png" alt="">
                     <p>Thank you for your message.The team will get back to you within a maximum of 72 hours.</p>
+>>>>>>> origin/master
                 </div>
                 <!--                </form>-->
             </div>
