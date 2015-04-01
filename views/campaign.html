@@ -165,8 +165,8 @@
 
                         <div class="clearfix"></div>
                         <div class="give-btn">
-                            <a ng-click="tocheckout(project.id,project.name)" class="btn givbtn" ng-disabled="disabledgive">
-                                                            GIVE</a>
+                            <button ng-click="tocheckout(project.id,project.name)" class="btn givbtn" ng-disabled="disabledgive">
+                                                            GIVE</button>
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount=123.45" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>-->
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount={{amount}}">GIVE</a>-->
 
@@ -220,7 +220,7 @@
                     <div class="Bordr">
                         <p>PLEDGED</p>
                         <div class="txtpleded">
-                            <h4>{{project.contribution}}</h4>
+                            <h4> Rs. {{totalprojectamount}}</h4>
                         </div>
                     </div>
 
