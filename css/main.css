@@ -2722,3 +2722,6 @@ a.pinterest i:hover {
 .ftr-tweets{
     padding-right:4%;
 }
+.ftr-tweets p,.ftr-news p{
+    text-align: left;
+}

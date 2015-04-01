@@ -13,7 +13,7 @@
                     <ul class="list-unstyled">
                         <li><a href="#/aboutUs/1">About us</a>
                         </li>
-                        <li><a href="#/aboutUs/3">Team &amp; advisors</a>
+                        <li><a href="#/aboutUs/3">Team &amp; Advisors</a>
                         </li>
                         <li><a href="#/works">How it works</a>
                         </li>
@@ -39,12 +39,19 @@
                 <div class="col-md-3 ftr-news">
                     <h5>NEWSLETTER SIGNUP</h5>
                     <p>
-                        Sign up and be the first to receive the Newsletter.
+                        Find out how people's contributions are changing the world
+                        <div style="">
                         <input type="email" class="form-control emailEnter" placeholder="Enter your e-mail address *" ng-class="allvalidation[0].validation" required ng-model="news.email">
                         <button type="button" class="btn btn-warning btn-yellow" ng-click="submitnewsletter(news)">SIGNUP</button>
-                        <span class="ftr-error pull-right"  style="display:none;">Error in saving.</span>
+<!--                        <span class="ftr-error pull-right"  style="display:none;">Error in saving.</span>-->
+                        
 <!--                        <span class="ftr-green pull-right">Saved successful.</span>-->
-                        <div class="clearfix"></div>
+                      <div class="clearfix"></div>
+                       </div>
+                       <div>
+                           <p>Thank you for subscribing</p>
+                       </div>
+                        
                     </p>
                    
                 </div>
@@ -53,9 +60,6 @@
                             <ul class="list-unstyled">
                                 <li ng-repeat="cat in categories"><a href="#/explore/{{cat.id}}">{{cat.name}}</a>
                                 </li>
-                                <li>Environment & animal welfare</li>
-                                <li>Welfare of the Elderly</li>
-                                <li>Children</li>
                             </ul>
 <!--
                     <div class="row">
