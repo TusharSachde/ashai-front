@@ -31,10 +31,10 @@
                                     <div class="logo2">
                                         <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu" ng-hide="scrolled > greatHeight"></ul>
                                         <ul class="nav navbar-nav nav-power thin text-center inliner" ng-show="scrolled > greatHeight">
-                                            <li>
+                                            <li ng-if="project.donate == '1'">
                                                 <img src="images/donate123.png"><a ng-click="gotoElement('atdonate')">&nbsp; Donate</a>
                                             </li>
-                                            <li>
+                                            <li ng-if="project.raiseawareness == '1'">
                                                 <img src="images/share123.png"><a ng-click="gotoElement('atshare')">&nbsp; Raise awareness</a>
                                             </li>
                                         </ul>

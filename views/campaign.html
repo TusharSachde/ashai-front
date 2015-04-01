@@ -193,7 +193,7 @@
                     </div>
                 </div>
 
-                <div class="share" id="atshare">
+                <div class="share" id="atshare" ng-if="project.raiseawareness == '1'">
                     <div class="Bordr" ng-if="project.donate == '1'"></div>
                     <div class="share"><i class="shareicon"></i><span>Raise Awareness</span>
                     </div>
@@ -212,7 +212,7 @@
                     </div>
                 </div>
 
-                <div class="funded">
+                <div class="funded" ng-if="project.raiseawareness == '1' || project.donate == '1'">
                     <h4>FUNDED </h4>
                     <div class="circle">
                         <div class="circlepercnt">{{percent}}%</div>
