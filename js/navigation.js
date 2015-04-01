@@ -89,6 +89,10 @@ var navigationservice = angular.module('navigationservice', [])
           {
               return $http.get(admin_url+ 'json/viewstaticpage?id=' + id,{});
           },
+          getallcouponold:function()
+          {
+              return $http.get(admin_url+ 'json/getallcoupon',{});
+          },
           authenticate:function()
           {
               return $http.get(admin_url+ 'json/authenticate',{});

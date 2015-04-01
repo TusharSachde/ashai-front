@@ -1419,6 +1419,17 @@ phonecatControllers.controller('checkout',
 //            $scope
         }
 
+        
+        // THAKYOU PAGE
+        var staticsuccess = function(data, status){
+            console.log(data);
+            $scope.title = data[0].name;
+            $scope.page = data[0];
+            $scope.backgroundimg = data[0].bannerimage;
+        }
+        NavigationService.getsinglestaticpage(10).success(staticsuccess);
+    
+        
         //  AUTHENTICATE
         var usersuccess = function(data, status){
             $scope.checkout = data[0];
@@ -1596,7 +1607,7 @@ phonecatControllers.controller('thankyou',
         $scope.menutitle = NavigationService.makeactive("Thank You");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "thank you";
-        $scope.backgroundimg = "Thank-you.jpg";
+//        $scope.backgroundimg = "Thank-you.jpg";
         TemplateService.content = 'views/thankyou.html';
         TemplateService.title = "Thank you";
         $scope.navigation = NavigationService.getnav();
@@ -1615,6 +1626,22 @@ phonecatControllers.controller('thankyou',
         }
         NavigationService.authenticate().success(authsuccess);
 
+        // THAKYOU PAGE
+        var staticsuccess = function(data, status){
+            console.log(data);
+            $scope.title = data[0].name;
+            $scope.page = data[0];
+            $scope.backgroundimg = data[0].bannerimage;
+        }
+        NavigationService.getsinglestaticpage(9).success(staticsuccess);
+    
+        //  GET ALL COUPON
+        var couponsuccess = function(data, status){
+            console.log(data);
+            $scope.coupons = data;
+        }
+        NavigationService.getallcouponold().success(couponsuccess);
+    
         //  REGISTER CLICK
         $scope.onregister = function() {
             if ($scope.register == "Register") {
@@ -1702,7 +1729,7 @@ phonecatControllers.controller('footer',
         $scope.template = TemplateService;
 
         //  DECLARATION
-
+        $scope.message = false;
 
         //  ALL FOOTER
         var pagesuccess = function(data, status) {
@@ -1752,13 +1779,11 @@ phonecatControllers.controller('footer',
         var submitnewsletter1 = function(data, status) {
             console.log(data);
 			if(data!="0"){
-                $scope.message = "all_set";
+                $scope.message = true;
                 $scope.textmessage = "Saved successfully";
-                alert("Saved successfully");
             }else{
-                $scope.message = "error";
+                $scope.message = false;
                 $scope.textmessage = "Error In Saving";
-                alert("Error In Saving");
             }
         }
 

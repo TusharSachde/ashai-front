@@ -4,7 +4,7 @@
 
             <div class="col-md-12">
                 <div class="signin text-center">
-                    <h3 class="createtitle">Checkout</h3>
+                    <h3 class="createtitle" ng-bind-html="page.content | rawHtml"></h3>
                     <div class="chkform text-center">
                            <input name="name" type="text" class="custom-input signin-input" ng-model="checkout.name"ng-class="allvalidation[0].validation" required placeholder="Name">
                             <br>

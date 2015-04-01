@@ -218,6 +218,16 @@ firstapp.filter('ngoimagepath', function () {
     };
 });
 
+firstapp.filter('couponimagepath', function () {
+    return function (input) {
+        if (input == null || input == '') {
+            return "http://wohlig.co.in/angular-powerforone/images/pf_logo.png";
+        } else {
+            return "http://wohlig.co.in/powerforone/uploads/" + input;
+        }
+    };
+});
+
 firstapp.filter('fourletter', function () {
         return function (input) {
             return input.substring(0, 5);
