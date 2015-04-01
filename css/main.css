@@ -188,6 +188,7 @@ ul.pagecategory {
     margin: 15px;
     padding: 12px 12px 0 12px;
     border: 1px solid lightgray;
+    background-color: rgba(249, 249, 249, 0.3);
 }
 
 .pic {
@@ -1637,6 +1638,9 @@ button.btn.btn-warning.btn-yellow {
     text-align: justify;
     font-weight: 300;
 }
+.content-page{
+    line-height: 1.9;
+}
 
 .content-page h2 {
     text-transform: uppercase;
@@ -2740,4 +2744,7 @@ a.pinterest i:hover {
     font-weight: 600;
     margin:0;
      text-align: center;
+}
+.causes .logo-margin{
+    margin-top:-13px;
 }

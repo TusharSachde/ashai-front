@@ -543,6 +543,7 @@ body .bottom1 .causes {
   margin: 0 0 40px;
   padding: 12px 12px 0 12px;
   border: 1px solid lightgray;
+  height: 373px;
 }
 body .bottom1 .causes .pic img {
   margin: auto;
