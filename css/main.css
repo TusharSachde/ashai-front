@@ -866,7 +866,6 @@ ul.mypro {
 
 .helpbox .info p {
     font-size: 14px;
-    height: 105px;
     padding: 15px 0px;
     overflow: auto;
     text-align: center;
@@ -2652,7 +2651,10 @@ a.pinterest i:hover {
 .helpbox .proj-hd {
     width: 100%;
     overflow: hidden;
-    height: 80px;
+    height: 55px;
+}
+.helpbox .proj-hd h3{
+    margin:0;
 }
 
 .helpbox .proj-hd h3 {
