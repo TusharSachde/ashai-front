@@ -2725,3 +2725,19 @@ a.pinterest i:hover {
 .ftr-tweets p,.ftr-news p{
     text-align: left;
 }
+.news-thnq
+{
+    border-radius: 2px;
+  box-shadow: none;
+  padding: 6px 12px;
+ 
+  border: 0;
+  background: rgb(5, 199, 199);
+  color: white;
+  font-size: 12px;
+}
+.news-thnq p{
+    font-weight: 600;
+    margin:0;
+     text-align: center;
+}
