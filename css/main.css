@@ -2672,7 +2672,7 @@ a.pinterest i:hover {
     font-size: 14px;
     color: #605555;
     margin: 0;
-    padding: 10px 0;
+    padding: 40px 0;
     line-height: 180%;
     text-align: left;
 }
@@ -2701,13 +2701,24 @@ a.pinterest i:hover {
 }
 
 .form-msg {
-    font-size: 20px;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 15%;
-    transition: all 300ms ease;
+    font-size: 15px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 15%;
+  transition: all 300ms ease;
 }
 
 .form-msg p {
     text-align: center;
+}
+.ftr-category{
+    padding-left: 8%;
+}
+.ftr-news{
+    padding-left: 5%;
+}
+.ftr-tweets{
+    padding-right:4%;
 }
