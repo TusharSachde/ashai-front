@@ -15,7 +15,8 @@ phonecatControllers.controller('home',
         //  AUTHENTICATE
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
-            //            console.log(data);
+                        console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";

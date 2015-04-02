@@ -159,7 +159,7 @@ firstapp.filter('profileimagepath', function () {
         if (input == null || input == '') {
             return "http://wohlig.co.in/angular-powerforone/images/profile.png";
         } else {
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return input;
         }
     };
 });
