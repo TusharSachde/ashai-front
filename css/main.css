@@ -2802,3 +2802,6 @@ input[type="radio"] {
 input[type="radio"]:: -ms-expand {
     display: none;
 }
+.txt-padding{
+    padding-top: 10px!important;
+}
