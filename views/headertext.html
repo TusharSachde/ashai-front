@@ -39,7 +39,8 @@
                                 <a ng-click="onlogin() " class="login cpointer ">{{login}}</a>
                             </div>
                             <div class="hidden-xs hidden-sm logout pos " ng-if="login=='Logout' ">
-                                <span class="member_name cpointer ">{{register}}</span>
+                                <!--                                <span class="member_name cpointer ">{{register}}</span>-->
+                                <span class="member_name cpointer"><img src="{{userauth.image | profileimagepath}}" alt="" class="header-img">{{register}}</span>
                                 <div class="mem_logout ">
                                     <div class="arrow_log "></div>
                                     <ul class="list-unstyled ">
