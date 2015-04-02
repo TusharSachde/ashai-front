@@ -849,7 +849,7 @@ phonecatControllers.controller('campaign',
             $scope.twitterdiv = false;
         }
         $scope.facebookshare = function (text) {
-            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext + " " + $scope.project.facebookaddon + "&project=" + $scope.project.id + "&returnurl=" + window.location.href;
+            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext + " " + $scope.project.facebookaddon + "&project=" + $scope.project.id + "&returnurl=" + window.location.origin + window.location.pathname + "#/thankyou";
         }
 
         //  POST ON Twiter
@@ -861,7 +861,7 @@ phonecatControllers.controller('campaign',
             $scope.twitterdiv = true;
         }
         $scope.twittershare = function () {
-            window.location.href = admin_url + "hauth/posttweet?message=" + $scope.project.twittertext + " " + $scope.project.twitteraddon + "&project=" + $scope.project.id + "&returnurl=" + window.location.href;
+            window.location.href = admin_url + "hauth/posttweet?message=" + $scope.project.twittertext + " " + $scope.project.twitteraddon + "&project=" + $scope.project.id + "&returnurl=" + window.location.origin + window.location.pathname + "#/thankyou";
         }
 
         //  TO CHECKOUT
@@ -1438,6 +1438,9 @@ phonecatControllers.controller('checkout',
 
         //  DECLARATION
         $scope.checkout = [];
+        $scope.checkout.istax = false;
+        $scope.address = "";
+        $scope.dob = "";
         $scope.checktax = function (check) {
             //            $scope
         }
@@ -1457,7 +1460,7 @@ phonecatControllers.controller('checkout',
 
         //  AUTHENTICATE
         var usersuccess = function (data, status) {
-            $scope.checkout = data[0];
+            //$scope.checkout = data[0];
         }
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
@@ -1497,12 +1500,13 @@ phonecatControllers.controller('checkout',
 
         //  CHECKOUT PAY AND PROCEED
         var checkoutsuccess = function (data, status) {
+            $.jStorage.flush();
             $.jStorage.set("order", data);
             window.location.href = "https://www.instamojo.com/jagruti/demo-testing/?data_name=" + $scope.checkout.name + "&data_email=" + $scope.checkout.email + "&data_phone=" + $scope.checkout.mobile + "&data_amount=" + $scope.checkout.amount + "&data_Field_99651=" + $scope.checkout.projectname + "&data_Field_99652=" + data + "&data_readonly=data_amount&data_readonly=data_Field_99651&data_readonly=data_Field_99652";
         }
         $scope.payproceed = function (checkout) {
             //  VALIDATION
-            if ($scope.checkout.istax != true) {
+//            if ($scope.checkout.istax != true) {
                 $scope.allvalidation = [{
                     field: $scope.checkout.name,
                     validation: ""
@@ -1522,40 +1526,43 @@ phonecatControllers.controller('checkout',
                 }];
 
                 var check = formvalidation($scope.allvalidation);
-            } else {
-
-                $scope.allvalidation = [{
-                    field: $scope.checkout.name,
-                    validation: ""
-
-                }, {
-                    field: $scope.checkout.email,
-                    validation: ""
-
-                }, {
-                    field: $scope.checkout.mobile,
-                    validation: ""
-
-                }, {
-                    field: $scope.checkout.city,
-                    validation: ""
-
-                }, {
-                    field: $scope.checkout.address,
-                    validation: ""
-
-                }, {
-                    field: $scope.checkout.pan,
-                    validation: ""
-
-                }, {
-                    field: $scope.checkout.dob,
-                    validation: ""
-
-                }];
-                var check = formvalidation($scope.allvalidation);
-
-            }
+//            } else {
+//            console.log($scope.checkout);
+//
+//                $scope.allvalidation = [{
+//                    field: $scope.checkout.name,
+//                    validation: ""
+//
+//                }, {
+//                    field: $scope.checkout.email,
+//                    validation: ""
+//
+//                }, {
+//                    field: $scope.checkout.mobile,
+//                    validation: ""
+//
+//                }, {
+//                    field: $scope.checkout.city,
+//                    validation: ""
+//
+//                }, {
+//                    field: $scope.checkout.address,
+//                    validation: ""
+//
+//                }
+////                                        , {
+////                    field: $scope.checkout.pan,
+////                    validation: ""
+////
+////                }
+//                                        , {
+//                    field: $scope.checkout.dob,
+//                    validation: ""
+//
+//                }];
+//                var check = formvalidation($scope.allvalidation);
+//
+//            }
 
             if (check) {
 
@@ -1563,6 +1570,7 @@ phonecatControllers.controller('checkout',
                 checkout.projectname = $.jStorage.get("projectname");
                 checkout.amount = $.jStorage.get("amount");
                 checkout.anonymous = $.jStorage.get("anonymous");
+                checkout.pan = "0";
                 if (checkout.istax == true) {
                     checkout.istax = "1";
                 } else {
