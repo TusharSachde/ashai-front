@@ -21,7 +21,7 @@
 
                     <div class="contribution">
                         <span>{{project.timesinword}}</span>
-                        <img ng-src="{{project.advertiserimage | ngoimagepath}}">
+                        <a href="http://{{project.advertiserwebsite}}" target="_blank"><img ng-src="{{project.advertiserimage | ngoimagepath}}"></a>
 
                         <!--
                         <div class="row">
@@ -161,7 +161,7 @@
 
                         </label>
                     </div>
-                    <span class="t1"> Remember, your donation will be doubled by </span>
+                    <span class="t1"> Remember, {{project.remembersharevalue}} </span>
                     <div class="icon1">
                         <img src="{{project.advertiserimage | ngoimagepath}}" height="40px" width="40px">
                     </div>
@@ -180,7 +180,7 @@
                     <div class="txt4">{{project.share}}</div>
                     <span class="shares"> Shares</span>
                     <p class="txt5">1 Share=Rs.{{project.sharevalue}}</p>
-                    <span class="t1"> Remember, for every share {{corporate.name}} will donate Rs.{{project.sharevalue}}</span>
+                    <span class="t1"> Remember, {{project.timesinwordforshare}} Rs.{{project.sharevalue}}</span>
                     <div class="icon1">
                         <img src="{{project.advertiserimage | ngoimagepath}}" height="52px" width="auto">
                     </div>

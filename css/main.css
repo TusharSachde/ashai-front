@@ -60,7 +60,12 @@ p.NGOName {
 .profile {
     margin: 20px 0px 0px 0px;
 }
-
+img.header-img {
+  height: 45px;
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
 .rewardsdet {
     margin: 20px 0px 0px 0px;
 }
