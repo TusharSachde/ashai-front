@@ -4,87 +4,132 @@
 
         <div class="sliderheadercampaign" ng-style="bgimage">
 
-           <div class="container">
+            <div class="container">
                 <div class="fixhead"></div>
                 <div class="headerzindex head-fix">
-                   <div class="container">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <div class="logo">
-                                <a href="#/Home">
-                                    <img class="" src="images/logo.png" />
-                                </a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="logo">
+                                    <a href="#/Home">
+                                        <img class="" src="images/logo.png" />
+                                    </a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-xs-7">
-                            <nav class="navbar navbar-default nav-custom">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <div>
-                                        <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu" ng-hide="scrolled > greatHeight"></ul>
-                                        <ul class="nav navbar-nav nav-power thin text-center inliner" ng-show="scrolled > greatHeight">
-                                            <li ng-if="project.donate == '1'">
-                                                <img src="images/donate123.png"><a ng-click="gotoElement('atdonate')">&nbsp; Donate</a>
-                                            </li>
-                                            <li ng-if="project.raiseawareness == '1'">
-                                                <img src="images/share123.png"><a ng-click="gotoElement('atshare')">&nbsp; Raise awareness</a>
-                                            </li>
-                                        </ul>
+                            <div class="col-xs-7">
+                                <nav class="navbar navbar-default nav-custom">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
                                     </div>
-                                </div>
-                            </nav>
-                        </div>
 
-                        <div class="col-xs-2 reg-set">
-                            <div class="hidden-xs hidden-sm headmargin">
-                                <div class="padingregister" ng-if="login=='Login'">
-                                    <a ng-click="onregister()" class="login cpointer">{{register | cut:true:8:' ...'}}</button>
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <div>
+                                            <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu" ng-hide="scrolled > greatHeight"></ul>
+                                            <ul class="nav navbar-nav nav-power thin text-center inliner" ng-show="scrolled > greatHeight">
+                                                <li ng-if="project.donate == '1'">
+                                                    <img src="images/donate123.png"><a ng-click="gotoElement('atdonate')">&nbsp; Donate</a>
+                                                </li>
+                                                <li ng-if="project.raiseawareness == '1'">
+                                                    <img src="images/share123.png"><a ng-click="gotoElement('atshare')">&nbsp; Raise awareness</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="col-xs-2 reg-set">
+                                <div class="hidden-xs hidden-sm headmargin">
+                                    <div class="padingregister" ng-if="login=='Login'">
+                                        <a ng-click="onregister()" class="login cpointer">{{register | cut:true:8:' ...'}}</button>
                                     <a ng-click="onlogin()" class="login cpointer">{{login}}</a>
-                                </div>
-                                <div class="hidden-xs hidden-sm logout pos" ng-if="login=='Logout'">
-                                    <span class="member_name cpointer">{{register}}</span>
-                                    <div class="mem_logout">
-                                        <div class="arrow_log"></div>
-                                        <ul class="list-unstyled">
-                                            <li><a ng-click="onregister()">My Profile</a>
-                                            </li>
-                                            <li><a ng-click="onlogin()">Logout</a>
-                                            </li>
-                                        </ul>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm logout pos" ng-if="login=='Logout'">
+                                        <span class="member_name cpointer">{{register}}</span>
+                                        <div class="mem_logout">
+                                            <div class="arrow_log"></div>
+                                            <ul class="list-unstyled">
+                                                <li><a ng-click="onregister()">My Profile</a>
+                                                </li>
+                                                <li><a ng-click="onlogin()">Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-3 col-xs-6 pull-right">
                         <div class="helpbox text-center">
-                           <div class="proj-hd">
-                            <h3>{{project.name}}</h3>
+                            <div class="proj-hd">
+                                <h3>{{project.name}}</h3>
                             </div>
                             <div class="info">
                                 <p>{{project.tagline}}</p>
                                 <div class="datapoint1" ng-repeat="datap in datapoint">
                                     <div class="row">
+
+                                        <!--
                                         <div class="col-xs-4" ng-repeat="data in datap">
                                             <div class="img1">
                                                 <img src="{{data.image | ngoimagepath}}" alt="">
-                                                <!--                                       <i class="icon-star"></i>-->
+                                                                                       <i class="icon-star"></i>
                                                 <div class="data-info">{{data.name}}</div>
                                             </div>
                                         </div>
+-->
+
+                                        
+                                        <div class="">
+                                            <ul class="list-inline cam-datapoints">
+                                                <li ng-repeat="data in datap">
+                                                    <div class="img1">
+                                                        <img src="{{data.image | ngoimagepath}}" alt="" height="50px" width="50px">
+                                                     
+                                                        <div class="data-info">{{data.name}}</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+<!--
+                                        <div>
+                                            <ul class="list-inline cam-datapoints">
+                                                <li>
+                                                    <div class="img1">
+                                                        <img src="http://wohlig.co.in/powerforone/uploads/B6NfXkfIQAAhD8b.jpg" alt="" height="50px" width="50px">
+
+                                                        <div class="data-info ng-binding">Guidestar Verify</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="img1">
+                                                        <img src="http://wohlig.co.in/powerforone/uploads/B6NfXkfIQAAhD8b.jpg" alt="" height="50px" width="50px">
+
+                                                        <div class="data-info ng-binding">Verify</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="img1">
+                                                        <img src="http://wohlig.co.in/powerforone/uploads/B6NfXkfIQAAhD8b.jpg" alt="" height="50px" width="50px">
+
+                                                        <div class="data-info ng-binding">Guidestar</div>
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+-->
                                     </div>
                                 </div>
 
@@ -92,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
 
     </div>
