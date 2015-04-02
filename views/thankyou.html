@@ -30,10 +30,24 @@
 -->
         <div class="container text-center margin-top-bot e-vouchers">
             <div class="row">
+<!--
                 <div class="col-xs-3" ng-repeat="coupon in coupons">
-<!--                    <img src="images/pf_logo.png" alt="pepper-fry" class="image-responsive">-->
+                    <img src="images/pf_logo.png" alt="pepper-fry" class="image-responsive">
                     <img src="{{coupon.image | couponimagepath}}" alt="pepper-fry" class="image-responsive" height="66px" width="200px">
                 </div>
+-->
+                <ul class="list-inline cupn">
+                    <li ng-repeat="coupon in coupons"><img src="{{coupon.image | couponimagepath}}" alt="pepper-fry" class="image-responsive"></li>
+                </ul>
+
+<!--
+                <ul class="list-inline cupn">
+                    <li><img src="images/pf_logo.png" alt="pepper-fry" class="image-responsive"></li>
+                    <li><img src="images/pf_logo.png" alt="pepper-fry" class="image-responsive"></li>
+                    <li><img src="images/pf_logo.png" alt="pepper-fry" class="image-responsive"></li>
+                    <li><img src="images/pf_logo.png" alt="pepper-fry" class="image-responsive"></li>
+                </ul>
+-->
 <!--
                 <div class="col-xs-3">
                     <img src="images/pf_logo.png" alt="pepper-fry" class="image-responsive">

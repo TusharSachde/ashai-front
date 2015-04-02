@@ -2805,3 +2805,17 @@ input[type="radio"]:: -ms-expand {
 .txt-padding{
     padding-top: 10px!important;
 }
+.cupn{
+    display:inline-flex;
+    width:100%;
+    text-align: center;
+    margin:0;
+}
+.cupn li{
+    flex:1;
+  -moz-box-flex:1;
+}
+.cupn img{
+    height:66px;
+    width:200px;
+}
