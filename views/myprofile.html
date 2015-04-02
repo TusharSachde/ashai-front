@@ -13,7 +13,7 @@
             </div>
             <div class="col-md-6">
                 <div class="profile">
-                    <img src="{{user.image | profileimagepath}}" alt=""><span>{{user.name}}</span>
+                    <img src="{{user.image | profileimagepath}}" alt="" class="header-img"><span>{{user.name}}</span>
 
                     <div class="info">
                         <div class="row">
@@ -65,7 +65,7 @@
                                 <div class="col-xs-4">
                                     <p>Total Donation Made</p>
                                 </div>
-                                <div class="col-xs-8 fontwt totaldonate">10000000002</div>
+                                <div class="col-xs-8 fontwt totaldonate">{{order.amount}}</div>
                             </div>
                         </div>
                         <div class="row">
@@ -83,7 +83,7 @@
             <div class="col-md-4">
 
 
-                <div class="view1">Contributed</div>
+                <div class="view1" ng-if="projects != ''">Contributed</div>
                 <div class="slider">
                     <carousel interval="myInterval">
                         <slide active="slide.active" ng-repeat="pro in projects">

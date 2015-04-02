@@ -134,6 +134,7 @@ phonecatControllers.controller('works',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -233,6 +234,7 @@ phonecatControllers.controller('fellowship',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -290,6 +292,7 @@ phonecatControllers.controller('aboutUs',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -404,6 +407,7 @@ phonecatControllers.controller('blog',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -465,6 +469,7 @@ phonecatControllers.controller('forgot',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -523,6 +528,7 @@ phonecatControllers.controller('bloginner',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -580,6 +586,7 @@ phonecatControllers.controller('Explore',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -739,6 +746,7 @@ phonecatControllers.controller('campaign',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -880,7 +888,7 @@ phonecatControllers.controller('campaign',
 );
 
 phonecatControllers.controller('myprofile',
-    function ($scope, TemplateService, NavigationService, $location) {
+    function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("My Profile");
         $scope.title = "My Profile";
@@ -898,12 +906,15 @@ phonecatControllers.controller('myprofile',
         //  AUTHENTICATE
         var usersuccess = function (data, status) {
             console.log(data);
-            $scope.user = data[0];
+            $scope.user = data.user[0];
+            $scope.projects = data.project;
+            $scope.order = data.order;
         }
 
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -936,12 +947,17 @@ phonecatControllers.controller('myprofile',
                 $scope.login = "Login";
             }
         }
+        
+        //  GET MY PROFILE PAGE
+        var staticsuccess = function (data, status) {
+            $scope.content = data[0];
+            //            $scope.backgroundimg = data[0].bannerimage;
+            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            console.log($scope.backgroundimg);
 
-        var projectsuccess = function (data, status) {
-            $scope.projects = data.queryresult;
-            //            console.log($scope.projects);
         }
-        NavigationService.getprojectbycategoryarray(1).success(projectsuccess);
+        NavigationService.getsinglestaticpage(12).success(staticsuccess);
+
     }
 );
 
@@ -960,6 +976,7 @@ phonecatControllers.controller('rewards',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -1010,6 +1027,7 @@ phonecatControllers.controller('termsandcondition',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -1110,6 +1128,7 @@ phonecatControllers.controller('workwithus',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -1216,6 +1235,7 @@ phonecatControllers.controller('Contactus',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -1273,6 +1293,7 @@ phonecatControllers.controller('login',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data != "false") {
                 $location.url("/home");
             }
@@ -1329,6 +1350,7 @@ phonecatControllers.controller('register',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data != "false") {
                 $location.url("/home");
             }
@@ -1384,6 +1406,7 @@ phonecatControllers.controller('policy',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -1467,6 +1490,7 @@ phonecatControllers.controller('checkout',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 //                $location.url("/login");
                 $scope.register = "Register";
@@ -1601,6 +1625,7 @@ phonecatControllers.controller('faq',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -1650,6 +1675,7 @@ phonecatControllers.controller('thankyou',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
@@ -1717,6 +1743,7 @@ phonecatControllers.controller('Teampage',
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
+            $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
                 $scope.login = "Login";
