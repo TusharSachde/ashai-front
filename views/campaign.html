@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="salammum">
-                        <a href="http://{{project.ngowebsite}}" target="_blank"><img class="Salaamlogo" ng-src="{{project.ngoimage | projectbannerimagepath}}"></a>
+                        <a href="http://{{project.ngowebsite}}" target="_blank"><img class="Salaamlogo" ng-src="{{project.ngoimage | projectbannerimagepath}}">
+                        </a>
                         <p>CAMPAIGN BY
                         </p>
                         <p class="ngoname nameng">{{project.ngoname}}
@@ -76,21 +77,21 @@
                 <div class="col-xs-2 gallery_width">
                     <ul class="list-unstyled">
                         <li class="gallerytag" ng-if="project.video!=''" ng-click="changevideo(project.video)">
-                                <div class="play-circle">
-                                    <i class="fa fa-play playtriangle"></i>
-                                </div>
+                            <div class="play-circle">
+                                <i class="fa fa-play playtriangle"></i>
+                            </div>
                             <img src="http://img.youtube.com/vi/{{project.video}}/0.jpg" width="100%" height="100%" alt="">
                         </li>
                         <li class="gallerytag" ng-if="project.video2!=''" ng-click="changevideo(project.video2)">
-                                <div class="play-circle">
-                                    <i class="fa fa-play playtriangle"></i>
-                                </div>
+                            <div class="play-circle">
+                                <i class="fa fa-play playtriangle"></i>
+                            </div>
                             <img src="http://img.youtube.com/vi/{{project.video2}}/0.jpg" width="100%" height="100%" alt="">
                         </li>
                         <li class="gallerytag" ng-repeat="proimg in projectimages | orderBy : 'order'">
                             <img src="{{proimg.image | ngoimagepath}}" alt="" ng-click="tomainimage(proimg)">
                         </li>
-<!--
+                        <!--
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
                     <li class="gallerytag"><img src="images/educationgallery.jpg" width="100%" height="100%" alt=""></li>
@@ -114,7 +115,7 @@
             <div class="LeftCont">
                 <div class="donatecontentChange" id="atdonate" ng-if="project.donate == '1'">
 
-                    <div class="txt3"><i class="donate"></i>  <span>Donate</span>
+                    <div class="txt3"><i class="donate"></i> <span>Donate</span>
                     </div>
 
                     <div class="checkbox check">
@@ -123,7 +124,7 @@
 
                             <div class="row foregin">
                                 <div class="col-md-2 radanoyminous">
-                                    <input type="radio" ng-model="project.indiandoner" ng-click="donnercheck(project.indiandoner)" name="1" value="1">
+                                    <input type="radio" ng-model="project.indiandoner" ng-click="donnercheck(project.indiandoner)" name="1" value="1" class="radiobutton">
                                 </div>
                                 <div class="col-md-10 popup">
                                     <h5 class="keepit">Indian Citizen [?]</h5>
@@ -166,7 +167,7 @@
                         <div class="clearfix"></div>
                         <div class="give-btn">
                             <button ng-click="tocheckout(project.id,project.name)" class="btn givbtn" ng-disabled="disabledgive">
-                                                            GIVE</button>
+                                GIVE</button>
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount=123.45" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>-->
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount={{amount}}">GIVE</a>-->
 
