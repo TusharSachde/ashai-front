@@ -194,6 +194,12 @@
     .navbar-nav {
         margin: 18.5px -15px;
     }
+    .ftr-category {
+        padding-left: 16px!important;
+    }
+    .ftr-news {
+        padding-left: 0!important;
+    }
 }
 
 @media screen and (max-width: 400px) {

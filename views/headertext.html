@@ -1,51 +1,51 @@
 <header>
     <div class="header">
-        <div class="sliderheader border-yellow" style="background-image: url({{backgroundimg | bannerimagepath}});">
+        <div class="sliderheader border-yellow" ng-style="{'background-image':backgroundimg} ">
 
             <div class="headerzindex head-fix ">
-                <div class="container">
+                <div class="container ">
                     <div class="row ">
-                        <div class="col-xs-3">
-                            <div class="logo">
-                                <a href="#/Home">
-                                    <img src="images/logo.png" />
+                        <div class="col-xs-3 ">
+                            <div class="logo ">
+                                <a href="#/Home ">
+                                    <img src="images/logo.png " />
                                 </a>
                             </div>
                         </div>
 
-                        <div class="col-xs-7">
-                            <nav class="navbar navbar-default nav-custom">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
+                        <div class="col-xs-7 ">
+                            <nav class="navbar navbar-default nav-custom ">
+                                <div class="navbar-header ">
+                                    <button type="button " class="navbar-toggle collapsed " data-toggle="collapse " data-target="#bs-example-navbar-collapse-1 ">
+                                        <span class="sr-only ">Toggle navigation</span>
+                                        <span class="icon-bar "></span>
+                                        <span class="icon-bar "></span>
+                                        <span class="icon-bar "></span>
                                     </button>
                                 </div>
 
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
 
-                                    <ul class="nav navbar-nav nav-power thin text-center" ng-include="template.menu"></ul>
+                                    <ul class="nav navbar-nav nav-power thin text-center " ng-include="template.menu "></ul>
 
                                 </div>
                             </nav>
                         </div>
 
-                        <div class="col-xs-2 reg-set">
-                            <div class="hidden-xs hidden-sm headmargin pull-right" ng-if="login=='Login'">
+                        <div class="col-xs-2 reg-set ">
+                            <div class="hidden-xs hidden-sm headmargin pull-right " ng-if="login=='Login' ">
 
-                                <a ng-click="onregister()" class="login cpointer">{{register | cut:true:8:' ...'}}</button>
-                                <a ng-click="onlogin()" class="login cpointer">{{login}}</a>
+                                <a ng-click="onregister() " class="login cpointer ">{{register | cut:true:8:' ...'}}</button>
+                                <a ng-click="onlogin() " class="login cpointer ">{{login}}</a>
                             </div>
-                            <div class="hidden-xs hidden-sm logout pos" ng-if="login=='Logout'">
-                                <span class="member_name cpointer">{{register}}</span>
-                                <div class="mem_logout">
-                                    <div class="arrow_log"></div>
-                                    <ul class="list-unstyled">
-                                        <li><a ng-click="onregister()">My Profile</a>
+                            <div class="hidden-xs hidden-sm logout pos " ng-if="login=='Logout' ">
+                                <span class="member_name cpointer ">{{register}}</span>
+                                <div class="mem_logout ">
+                                    <div class="arrow_log "></div>
+                                    <ul class="list-unstyled ">
+                                        <li><a ng-click="onregister() ">My Profile</a>
                                         </li>
-                                        <li><a ng-click="onlogin()">Logout</a>
+                                        <li><a ng-click="onlogin() ">Logout</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -56,10 +56,10 @@
                 </div>
             </div>
 
-            <div class="container">
-                <div class="head-on">
-                    <div class="headerdynamic">
-                        <h3 ng-bind-html="title | rawHtml"></h3>
+            <div class="container ">
+                <div class="head-on ">
+                    <div class="headerdynamic ">
+                        <h3 ng-bind-html="title | rawHtml "></h3>
                     </div>
                 </div>
 
@@ -67,7 +67,7 @@
 
         </div>
     </div>
-    <div class="headerfixed">
+    <div class="headerfixed ">
 
     </div>
 </header>
