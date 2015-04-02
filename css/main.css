@@ -1039,7 +1039,7 @@ select.recurring {
     display: -moz-box;
     display: flex;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .data-info {
@@ -1119,6 +1119,9 @@ span.shares {
 .donation {
     margin: 0px 0px 10px 23px;
     width: 85%;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
     transition: all 300ms ease;
 }
 
@@ -1190,10 +1193,10 @@ ul.pagecategory>li,
 .flexside img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease;
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
     height: 550px;
     width: auto;
 }
@@ -1209,10 +1212,10 @@ ul.pagecategory>li,
 }
 
 .flexside {
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease;
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -1222,6 +1225,12 @@ ul.pagecategory>li,
     -webkit-flex-basis: 4%;
     -ms-flex-preferred-size: 4%;
     flex-basis: 20%;
+    /*
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
+*/
 }
 
 object.embed-responsive-item {
@@ -1637,7 +1646,8 @@ button.btn.btn-warning.btn-yellow {
     text-align: justify;
     font-weight: 300;
 }
-.content-page{
+
+.content-page {
     line-height: 1.9;
 }
 
@@ -2136,7 +2146,7 @@ p.or {
     display: none;
     height: 60px;
     position: absolute;
-    width: 150px;
+    width: 115px;
     left: 82%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -2146,6 +2156,7 @@ p.or {
     padding: 7px;
     background-color: #fff;
     z-index: 9999999;
+    font-size: 13px;
 }
 
 .popup-foreigndonar {
@@ -2172,7 +2183,7 @@ p.or {
 .arrow-left {
     width: 0;
     position: absolute;
-    left: -7%;
+    left: -9%;
     height: 0;
     top: 21px;
     border-top: 10px solid transparent;
@@ -2651,10 +2662,11 @@ a.pinterest i:hover {
 .helpbox .proj-hd {
     width: 100%;
     overflow: hidden;
-    height: 55px;
+    /*    height: 55px;*/
 }
-.helpbox .proj-hd h3{
-    margin:0;
+
+.helpbox .proj-hd h3 {
+    margin: 0;
 }
 
 .helpbox .proj-hd h3 {
@@ -2691,12 +2703,18 @@ a.pinterest i:hover {
     height: 30px;
     width: 30px;
     background: black;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     border-radius: 50%;
     line-height: 30px;
     position: absolute;
     top: 50%;
     color: #fff;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -2708,55 +2726,79 @@ a.pinterest i:hover {
 
 .form-msg {
     font-size: 15px;
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-  padding: 10px;
-  margin-top: 15%;
-  transition: all 300ms ease;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 15%;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
 }
 
 .form-msg p {
     text-align: center;
 }
-.ftr-category{
+
+.ftr-category {
     padding-left: 8%;
 }
-.ftr-news{
+
+.ftr-news {
     padding-left: 5%;
 }
-.ftr-tweets{
-    padding-right:4%;
+
+.ftr-tweets {
+    padding-right: 4%;
 }
-.ftr-tweets p,.ftr-news p{
+
+.ftr-tweets p,
+.ftr-news p {
     text-align: left;
 }
-.news-thnq
-{
+
+input[type="radio"] {
+    outline: none;
+}
+
+.news-thnq {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     border-radius: 2px;
-  box-shadow: none;
-  padding: 6px 12px;
- 
-  border: 0;
-  background: rgb(5, 199, 199);
-  color: white;
-  font-size: 12px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 6px 12px;
+    border: 0;
+    background: rgb(5, 199, 199);
+    color: white;
+    font-size: 12px;
 }
-.news-thnq p{
+
+.news-thnq p {
     font-weight: 600;
-    margin:0;
-     text-align: center;
+    margin: 0;
+    text-align: center;
 }
-.causes .logo-margin{
-    margin-top:-13px;
+
+.causes .logo-margin {
+    margin-top: -13px;
 }
-.sociallnk{
+
+.sociallnk {
     color: white;
     padding: 3px 4px;
 }
-.lnkin{
+
+.lnkin {
     background: rgb(72, 153, 192);
 }
-.twit{
+
+.twit {
     background: rgb(44, 170, 225);
+}
+
+input[type="radio"]:: -ms-expand {
+    display: none;
 }
