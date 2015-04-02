@@ -262,14 +262,15 @@ phonecatControllers.controller('fellowship',
                     $scope.login = "Login";
                 }
             }
-            //        var staticsuccess = function (data, status) {
-            //            console.log(data);
-            //            $scope.content = data[0];
-            //            $scope.title = data[0].name;
-            //            //            $scope.backgroundimg = data[0].bannerimage;
-            //            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
-            //            console.log($scope.backgroundimg);
-            //        }
+                    var staticsuccess = function (data, status) {
+                        console.log(data);
+                        $scope.content = data[0];
+                        $scope.title = data[0].name;
+                        //            $scope.backgroundimg = data[0].bannerimage;
+                        $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+                        console.log($scope.backgroundimg);
+                    }
+                    NavigationService.getsinglestaticpage(11).success(staticsuccess);
     }
 
 );
