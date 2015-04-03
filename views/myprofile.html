@@ -13,9 +13,18 @@
             </div>
             <div class="col-md-6">
                 <div class="profile">
-                    <img src="{{user.image | profileimagepath}}" alt="" class="header-img"><span>{{user.name}}</span>
+<!--                    <img src="{{user.image | profileimagepath}}" alt="" class="header-img"><span>{{user.name}}</span>-->
 
                     <div class="info">
+                       <div class="row">
+                            <div class="name">
+                                <div class="col-xs-4">
+                                    <img src="{{user.image | profileimagepath}}" alt="" class="header-img">
+                                </div>
+                                <div class="col-xs-8 fontwt">{{user.name}}
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="name">
                                 <div class="col-xs-4">
