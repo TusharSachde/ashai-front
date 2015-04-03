@@ -261,6 +261,14 @@ firstapp.filter('rawHtml', ['$sce', function($sce){
   };
 }]);
 
+firstapp.run( function($rootScope, $location,$window) {
+   $rootScope.$watch(function() { 
+      return $location.path(); 
+    },
+    function(a){  
+      $window.scrollTo(0,0);
+    });
+});
 function partitionarray(myarray, number) {
             var arrlength = myarray.length;
             var newarray = [];
