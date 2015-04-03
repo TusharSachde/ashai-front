@@ -724,8 +724,8 @@ phonecatControllers.controller('campaign',
         $scope.donationdiv = "donation";
         $scope.showvideo = false;
         $scope.playvideo = "";
-        $scope.project.facebookaddon = "";
-        $scope.project.twitteraddon = "";
+        $scope.facebookaddon = "";
+        $scope.twitteraddon = "";
         $scope.anonymous = false;
         $scope.changevideo = function (video) {
             $scope.playvideo = video;
@@ -859,7 +859,8 @@ phonecatControllers.controller('campaign',
             $scope.twitterdiv = false;
         }
         $scope.facebookshare = function (text) {
-            window.location.href = admin_url + "hauth/postfb?message=" + $scope.project.facebooktext + " " + $scope.project.facebookaddon + "&project=" + $scope.project.id + "&returnurl=" + window.location.origin + window.location.pathname + "#/thankyou";
+            console.log(text);
+            window.location.href = admin_url + "hauth/postfb?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + window.location.origin + window.location.pathname + "#/thankyou";
         }
 
         //  POST ON Twiter
@@ -870,8 +871,8 @@ phonecatControllers.controller('campaign',
             $scope.facebookdiv = false;
             $scope.twitterdiv = true;
         }
-        $scope.twittershare = function () {
-            window.location.href = admin_url + "hauth/posttweet?message=" + $scope.project.twittertext + " " + $scope.project.twitteraddon + "&project=" + $scope.project.id + "&returnurl=" + window.location.origin + window.location.pathname + "#/thankyou";
+        $scope.twittershare = function (text) {
+            window.location.href = admin_url + "hauth/posttweet?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + window.location.origin + window.location.pathname + "#/thankyou";
         }
 
         //  TO CHECKOUT
