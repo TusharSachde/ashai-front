@@ -1072,7 +1072,7 @@ phonecatControllers.controller('termsandcondition',
     }
 );
 phonecatControllers.controller('workwithus',
-    function($scope, TemplateService, NavigationService, $routeParams, $filter) {
+    function($scope, TemplateService, NavigationService ,$location,$routeParams, $filter) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Work With Us";
