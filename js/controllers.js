@@ -1173,7 +1173,7 @@ phonecatControllers.controller('workwithus',
 );
 
 phonecatControllers.controller('Contactus',
-    function ($scope, TemplateService, NavigationService, $routeParams, $filter) {
+    function ($scope, TemplateService, NavigationService,$location, $routeParams, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.header = 'views/headertext.html';

@@ -26,7 +26,7 @@
                 <div ng-if="!message">
                     <h2>GET IN TOUCH</h2>
 
-                    <!--                <form class="form-horizontal">-->
+                                    <form class="frm-bdr" ng-submit="submitcontactform(form);">
                     <input type="text" ng-model="form.name" placeholder="Name *" ng-class="allvalidation[0].validation" required>
                     <input type="text" ng-model="form.contact" placeholder="Number *" ng-class="allvalidation[1].validation" required>
                     <input type="text" ng-model="form.email" placeholder="Email *" ng-class="allvalidation[2].validation" required>
@@ -285,7 +285,7 @@
                     <input type="text" placeholder="City *" ng-model="form.city" ng-class="allvalidation[4].validation" required>
                     <textarea placeholder="Message *" ng-model="form.message" ng-class="allvalidation[5].validation" required></textarea>
 
-                    <button class="subbtn" ng-click="submitcontactform(form);">SEND</button>
+                    <button type="submit" class="subbtn" ng-click="submitcontactform(form);">SEND</button>
 
                     <!--                <div ng-class="message" ng-bind="textmessage"></div>-->
                 </div>
@@ -296,7 +296,7 @@
                 <!--                    <div class="all_set" ng-if="message='true'">All the best</div>-->
                 <!--                    <div  class="error" ng-if="message='false'">Please try again</div>-->
 
-                <!--                </form>-->
+                                </form>
             </div>
         </div>
 

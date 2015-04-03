@@ -2852,3 +2852,6 @@ input[type="radio"]:: -ms-expand {
     height:50px;
     width:50px;
 }
+form.ng-invalid.ng-dirty.frm-bdr{
+    border:none!important;
+}

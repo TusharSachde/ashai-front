@@ -7,6 +7,7 @@
                 <div class="signin">
                     <h3 class="createtitle">Create an account</h3>
                     <div class="signinor">
+                          <form class="frm-bdr" ng-submit="createuser(user)">
                            <input type="text" class="custom-input signin-input" ng-model="user.name" placeholder="Name *" ng-class="allvalidation[0].validation" required>
                            
                             <br>
@@ -15,7 +16,8 @@
                            
                             <input type="password" class="custom-input signin-input" ng-model="user.password" placeholder="Password" ng-class="allvalidation[2].validation" required>
                             <br>
-                            <a class="createacc cpointer" ng-click="createuser(user)"> CREATE AN ACCOUNT </a>
+                            <button type="submit" class="createacc cpointer"> CREATE AN ACCOUNT </button>
+                            </form>
                     </div>
                 </div>
             </div>

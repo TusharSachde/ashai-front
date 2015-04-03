@@ -1272,10 +1272,10 @@ textarea.custom-input.signin-input {
 .radio label {
   font-weight: 300;
 }
-a.createacc:hover {
+button.createacc:hover {
   background-color: #32c7c7;
 }
-a.createacc {
+button.createacc {
   background: #4cd8d8;
   color: white;
   text-transform: capitalize;
@@ -1288,6 +1288,7 @@ a.createacc {
   font-size: 15px;
   text-align: center;
   height: 45px;
+  border: none;
 }
 .btnsoc {
   font-size: 15px;
