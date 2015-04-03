@@ -157,7 +157,7 @@ firstapp.filter('categoryimagepath', function () {
 firstapp.filter('profileimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/profile.png";
+            return "http://wohlig.co.in/angular-powerforone/images/dp.jpg";
         } else {
             return input;
         }
