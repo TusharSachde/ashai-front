@@ -7,13 +7,13 @@
                 <div class="signin">
                     <h3 class="createtitle">Login</h3>
                     <div class="signinor">
-<!--                        <form>-->
+                        <form ng-submit="userlogin(user)">
                             <input type="email" class="custom-input signin-input" ng-model="user.email" placeholder="Enter your email *" ng-class="allvalidation[0].validation" required>
                             <br>
                             <input type="password" class="custom-input signin-input" ng-model="user.password" placeholder="Password *" ng-class="allvalidation[1].validation" required>
                             <br>
-                            <a class="createacc cpointer" ng-click="userlogin(user)"> Login</a>
-<!--                        </form>-->
+                            <button type="submit" class="createacc cpointer" ng-click="userlogin(user)"> Login</button>
+                        </form>
                     </div>
                 </div>
             </div>

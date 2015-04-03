@@ -32,7 +32,7 @@ phonecatControllers.controller('home',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -150,7 +150,7 @@ phonecatControllers.controller('works',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -250,7 +250,7 @@ phonecatControllers.controller('fellowship',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -308,7 +308,7 @@ phonecatControllers.controller('aboutUs',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -423,7 +423,7 @@ phonecatControllers.controller('blog',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -485,7 +485,7 @@ phonecatControllers.controller('forgot',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -544,7 +544,7 @@ phonecatControllers.controller('bloginner',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -602,7 +602,7 @@ phonecatControllers.controller('Explore',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -762,7 +762,7 @@ phonecatControllers.controller('campaign',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -934,7 +934,7 @@ phonecatControllers.controller('myprofile',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -994,7 +994,7 @@ phonecatControllers.controller('rewards',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1045,7 +1045,7 @@ phonecatControllers.controller('termsandcondition',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1146,7 +1146,7 @@ phonecatControllers.controller('workwithus',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1253,7 +1253,7 @@ phonecatControllers.controller('Contactus',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1312,7 +1312,7 @@ phonecatControllers.controller('login',
             if (data == "false") {
                 alert("Invalid Id Or Password");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1425,7 +1425,7 @@ phonecatControllers.controller('policy',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1511,7 +1511,7 @@ phonecatControllers.controller('checkout',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1644,7 +1644,7 @@ phonecatControllers.controller('faq',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1711,7 +1711,7 @@ phonecatControllers.controller('thankyou',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
@@ -1762,7 +1762,7 @@ phonecatControllers.controller('Teampage',
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
-                $location.url("/myprofile");
+                $location.url("/home");
             }
         }
 
