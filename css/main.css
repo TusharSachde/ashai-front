@@ -135,7 +135,7 @@ ul.pagecategory {
     background: #f9f9f9;
     padding: 5px 0;
     width: 100%;
-    z-index: 99;
+    z-index: 95;
     position: fixed;
     left: 0;
 }
@@ -2393,6 +2393,9 @@ a.right.carousel-control {
     -moz-border-radius: 3px;
     border-radius: 3px;
     z-index: 9999999999;
+}
+.black{
+    color:black!important;
 }
 
 .mem_logout a {
