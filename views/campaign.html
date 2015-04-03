@@ -392,11 +392,11 @@
                 </form>
                 <div class="twit-info">
 
-                    <p>{{project.twittertext+" "+project.twitteraddon}}</p>
+                    <p>{{project.twittertext+" "+twitteraddon}}</p>
                 </div>
                 <div class="pull-right margintop">
                     <span>{{140-(project.twittertext.length+1+twitteraddon.length)}}</span>
-                    <button type="submit" class="post-btn twitt-head" ng-click="twittershare(project.twittertext+' '+project.twitteraddon)" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
+                    <button type="submit" class="post-btn twitt-head" ng-click="twittershare(project.twittertext+' '+twitteraddon)" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
                 </div>
             </div>
         </div>
