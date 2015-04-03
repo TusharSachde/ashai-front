@@ -359,7 +359,7 @@
             <div class="clearfix"></div>
             <div class="padding10">
                 <form>
-                    <input type="text" ng-model="facebookaddon" placeholder="Say something about this...">
+                    <input type="text" ng-model="project.facebookaddon" placeholder="Say something about this...">
                 </form>
                 <div class="row share-info">
                     <div class="col-xs-3">
@@ -367,13 +367,13 @@
                     </div>
                     <div class="col-xs-9">
                         <div class="fb-postcont">
-                            <p>{{project.facebooktext+" "+facebookaddon}}</p>
+                            <p>{{project.facebooktext+" "+project.facebookaddon}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="pull-right">
                     <button type="submit" ng-click="hidefacebook()">Cancel</button>
-                    <a type="submit" class="post-btn" ng-click="facebookshare(project.facebooktext+' '+facebookaddon)">Post</a>
+                    <a type="submit" class="post-btn" ng-click="facebookshare(project.facebooktext+' '+project.facebookaddon)" target="_new">Post</a>
                 </div>
             </div>
         </div>
@@ -388,15 +388,15 @@
             <div class="clearfix"></div>
             <div class="padding10">
                 <form>
-                    <input type="text" ng-model="twitteraddon" placeholder="Your Tweet...">
+                    <input type="text" ng-model="project.twitteraddon" placeholder="Your Tweet...">
                 </form>
                 <div class="twit-info">
 
-                    <p>{{project.twittertext+" "+twitteraddon}}</p>
+                    <p>{{project.twittertext+" "+project.twitteraddon}}</p>
                 </div>
                 <div class="pull-right margintop">
                     <span>{{140-(project.twittertext.length+1+twitteraddon.length)}}</span>
-                    <button type="submit" class="post-btn twitt-head" ng-click="twittershare(project.twittertext+' '+twitteraddon)" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
+                    <button type="submit" class="post-btn twitt-head" ng-click="twittershare(project.twittertext+' '+project.twitteraddon)" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
                 </div>
             </div>
         </div>

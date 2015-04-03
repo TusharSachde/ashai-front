@@ -724,8 +724,8 @@ phonecatControllers.controller('campaign',
         $scope.donationdiv = "donation";
         $scope.showvideo = false;
         $scope.playvideo = "";
-        $scope.facebookaddon = "";
-        $scope.twitteraddon = "";
+        $scope.project.facebookaddon = "";
+        $scope.project.twitteraddon = "";
         $scope.anonymous = false;
         $scope.changevideo = function (video) {
             $scope.playvideo = video;
@@ -872,6 +872,7 @@ phonecatControllers.controller('campaign',
             $scope.twitterdiv = true;
         }
         $scope.twittershare = function (text) {
+            console.log(text);
             window.location.href = admin_url + "hauth/posttweet?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + window.location.origin + window.location.pathname + "#/thankyou";
         }
 
