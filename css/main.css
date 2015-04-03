@@ -2379,7 +2379,7 @@ a.right.carousel-control {
     position: absolute;
     display: none;
     width: 70%;
-    left: 50%;
+    left: 66%;
     -webkit-transform: translatex(-50%);
     -moz-transform: translatex(-50%);
     -ms-transform: translatex(-50%);
@@ -2387,7 +2387,7 @@ a.right.carousel-control {
     transform: translatex(-50%);
     background: #000;
     color: #fff;
-    top: 28px;
+    top: 43px;
     padding: 7px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
