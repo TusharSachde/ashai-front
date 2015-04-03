@@ -60,12 +60,20 @@ p.NGOName {
 .profile {
     margin: 20px 0px 0px 0px;
 }
-img.header-img {
-  height: 45px;
-  width: 40px;
-  border-radius: 100%;
-  margin-right: 10px;
+
+.header-img {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    margin-right: 10px;
+    float: left;
 }
+
+.header-img {
+    height: auto;
+    width: 100%;
+}
+
 .rewardsdet {
     margin: 20px 0px 0px 0px;
 }
@@ -194,7 +202,7 @@ ul.pagecategory {
     padding: 12px 12px 0 12px;
     border: 1px solid lightgray;
     background-color: rgba(249, 249, 249, 0.3);
-    height:373px;
+    height: 373px;
 }
 
 .pic {
@@ -1200,9 +1208,11 @@ ul.pagecategory>li,
     filter: grayscale(100%);
     /* -webkit-filter: grayscale(100%); */
     /* -webkit-transition: all 700ms ease; */
+    
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
     /* transition: all 700ms ease; */
+    
     height: 550px;
     width: auto;
 }
@@ -1210,6 +1220,7 @@ ul.pagecategory>li,
 .flexside:hover img {
     filter: grayscale(0);
     /* -webkit-filter: grayscale(0); */
+    
     position: relative;
 }
 
@@ -2395,8 +2406,9 @@ a.right.carousel-control {
     border-radius: 3px;
     z-index: 9999999999;
 }
-.black{
-    color:black!important;
+
+.black {
+    color: black!important;
 }
 
 .mem_logout a {
@@ -2609,7 +2621,7 @@ span.glyphicon.glyphicon-chevron-right {
 .mytwitt {
     padding: 5px 6px;
     color: white;
-  background: rgb(44, 170, 225);
+    background: rgb(44, 170, 225);
 }
 
 .slider {
@@ -2792,8 +2804,9 @@ input[type="radio"] {
     margin: 0;
     text-align: center;
 }
-.news-error{
-     -webkit-border-radius: 2px;
+
+.news-error {
+    -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
     -webkit-box-shadow: none;
@@ -2801,12 +2814,13 @@ input[type="radio"] {
     box-shadow: none;
     padding: 6px 12px;
     border: 0;
-    background:#d14836;
+    background: #d14836;
     color: white;
     font-size: 12px;
 }
-.news-error{
-     font-weight: 600;
+
+.news-error {
+    font-weight: 600;
     margin: 0;
     text-align: center;
 }
@@ -2831,27 +2845,33 @@ input[type="radio"] {
 input[type="radio"]:: -ms-expand {
     display: none;
 }
-.txt-padding{
+
+.txt-padding {
     padding-top: 10px!important;
 }
-.cupn{
-    display:inline-flex;
-    width:100%;
+
+.cupn {
+    display: inline-flex;
+    width: 100%;
     text-align: center;
-    margin:0;
+    margin: 0;
 }
-.cupn li{
-    flex:1;
-  -moz-box-flex:1;
+
+.cupn li {
+    flex: 1;
+    -moz-box-flex: 1;
 }
-.cupn img{
-    height:66px;
-    width:200px;
+
+.cupn img {
+    height: 66px;
+    width: 200px;
 }
-.cam-datapoints img{
-    height:50px;
-    width:50px;
+
+.cam-datapoints img {
+    height: 50px;
+    width: 50px;
 }
-form.ng-invalid.ng-dirty.frm-bdr{
-    border:none!important;
+
+form.ng-invalid.ng-dirty.frm-bdr {
+    border: none!important;
 }
