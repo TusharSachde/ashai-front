@@ -15,7 +15,7 @@ phonecatControllers.controller('home',
         //  AUTHENTICATE
         var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
-                        console.log(data);
+            console.log(data);
             $scope.userauth = data;
             if (data == "false") {
                 $scope.register = "Register";
@@ -256,24 +256,24 @@ phonecatControllers.controller('fellowship',
 
         //  LOGIN CLICK
         $scope.onlogin = function () {
-                if ($scope.login == "Login") {
-                    $location.url("/login");
-                    //                console.log("login");
-                } else {
-                    NavigationService.logout();
-                    $scope.register = "Register";
-                    $scope.login = "Login";
-                }
+            if ($scope.login == "Login") {
+                $location.url("/login");
+                //                console.log("login");
+            } else {
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
             }
-                    var staticsuccess = function (data, status) {
-                        console.log(data);
-                        $scope.content = data[0];
-                        $scope.title = data[0].name;
-                        //            $scope.backgroundimg = data[0].bannerimage;
-                        $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
-                        console.log($scope.backgroundimg);
-                    }
-                    NavigationService.getsinglestaticpage(11).success(staticsuccess);
+        }
+        var staticsuccess = function (data, status) {
+            console.log(data);
+            $scope.content = data[0];
+            $scope.title = data[0].name;
+            //            $scope.backgroundimg = data[0].bannerimage;
+            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            console.log($scope.backgroundimg);
+        }
+        NavigationService.getsinglestaticpage(11).success(staticsuccess);
     }
 
 );
@@ -947,7 +947,7 @@ phonecatControllers.controller('myprofile',
                 $scope.login = "Login";
             }
         }
-        
+
         //  GET MY PROFILE PAGE
         var staticsuccess = function (data, status) {
             $scope.content = data[0];
@@ -1396,9 +1396,10 @@ phonecatControllers.controller('policy',
     function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("policy");
-        TemplateService.header = 'views/headerblack.html';
-        $scope.title = "register";
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "Privacy policy";
         TemplateService.content = 'views/policy.html';
+        $scope.backgroundimg = "T&C.jpg";
         TemplateService.title = "Privacy Policy";
         $scope.navigation = NavigationService.getnav();
 
@@ -1532,63 +1533,63 @@ phonecatControllers.controller('checkout',
         }
         $scope.payproceed = function (checkout) {
             //  VALIDATION
-//            if ($scope.checkout.istax != true) {
-                $scope.allvalidation = [{
-                    field: $scope.checkout.name,
-                    validation: ""
+            //            if ($scope.checkout.istax != true) {
+            $scope.allvalidation = [{
+                field: $scope.checkout.name,
+                validation: ""
 
                 }, {
-                    field: $scope.checkout.email,
-                    validation: ""
+                field: $scope.checkout.email,
+                validation: ""
 
                 }, {
-                    field: $scope.checkout.mobile,
-                    validation: ""
+                field: $scope.checkout.mobile,
+                validation: ""
 
                 }, {
-                    field: $scope.checkout.city,
-                    validation: ""
+                field: $scope.checkout.city,
+                validation: ""
 
                 }];
 
-                var check = formvalidation($scope.allvalidation);
-//            } else {
-//            console.log($scope.checkout);
-//
-//                $scope.allvalidation = [{
-//                    field: $scope.checkout.name,
-//                    validation: ""
-//
-//                }, {
-//                    field: $scope.checkout.email,
-//                    validation: ""
-//
-//                }, {
-//                    field: $scope.checkout.mobile,
-//                    validation: ""
-//
-//                }, {
-//                    field: $scope.checkout.city,
-//                    validation: ""
-//
-//                }, {
-//                    field: $scope.checkout.address,
-//                    validation: ""
-//
-//                }
-////                                        , {
-////                    field: $scope.checkout.pan,
-////                    validation: ""
-////
-////                }
-//                                        , {
-//                    field: $scope.checkout.dob,
-//                    validation: ""
-//
-//                }];
-//                var check = formvalidation($scope.allvalidation);
-//
-//            }
+            var check = formvalidation($scope.allvalidation);
+            //            } else {
+            //            console.log($scope.checkout);
+            //
+            //                $scope.allvalidation = [{
+            //                    field: $scope.checkout.name,
+            //                    validation: ""
+            //
+            //                }, {
+            //                    field: $scope.checkout.email,
+            //                    validation: ""
+            //
+            //                }, {
+            //                    field: $scope.checkout.mobile,
+            //                    validation: ""
+            //
+            //                }, {
+            //                    field: $scope.checkout.city,
+            //                    validation: ""
+            //
+            //                }, {
+            //                    field: $scope.checkout.address,
+            //                    validation: ""
+            //
+            //                }
+            ////                                        , {
+            ////                    field: $scope.checkout.pan,
+            ////                    validation: ""
+            ////
+            ////                }
+            //                                        , {
+            //                    field: $scope.checkout.dob,
+            //                    validation: ""
+            //
+            //                }];
+            //                var check = formvalidation($scope.allvalidation);
+            //
+            //            }
 
             if (check) {
 
