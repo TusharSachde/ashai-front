@@ -17,6 +17,12 @@
     img.logtext {
         padding: 10px 0px 0px 50px;
     }
+     .pad-up {
+  padding: 15px 0;
+  float: none!important;
+  text-align: center;
+}
+    
     /*
     .helpbox {
       width: 65%;
@@ -114,6 +120,12 @@
         width: 90%!important;
         margin: 10px auto !important;
     }
+    p.viewAll{
+        width:30%!important;
+    }
+    .pic{
+        height:140px!important;
+    }
     .gallery_width {
         height: auto;
     }
@@ -136,7 +148,7 @@
         padding-bottom: 0!important;
         font-size: 12px;
     }
-    .text-right.pad-up {
+    .pad-up {
         padding: 15px 0;
         float: none!important;
         text-align: center;
@@ -198,8 +210,13 @@
         padding-left: 16px!important;
     }
     .ftr-news {
-        padding-left: 0!important;
+        padding-left: 15px!important;
     }
+    .pad-up {
+  padding: 15px 0;
+  float: none!important;
+  text-align: center;
+}
 }
 
 @media screen and (max-width: 400px) {
@@ -209,4 +226,17 @@
     .contribut {
         width: 100%;
     }
+    .pic{
+        height:140px!important;
+    }
+}
+@media screen (min-width: 1000px) and (max-width: 1024px){
+ .pic{
+        height:185px!important;
+    }
+    .pad-up {
+  padding: 15px 0;
+  float: none!important;
+  text-align: center;
+}
 }

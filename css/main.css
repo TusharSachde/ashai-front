@@ -2575,12 +2575,10 @@ a.post-btn {
 }
 
 span.glyphicon.glyphicon-chevron-left {
-    margin-left: -120px;
     color: rgb(102, 102, 102);
 }
 
 span.glyphicon.glyphicon-chevron-right {
-    margin-right: -120px;
     color: rgb(102, 102, 102);
 }
 
@@ -2874,4 +2872,12 @@ input[type="radio"]:: -ms-expand {
 
 form.ng-invalid.ng-dirty.frm-bdr {
     border: none!important;
+}
+
+.carousel-control {
+    width: auto!important;
+}
+.info p{
+    height:35px;
+        overflow: hidden;
 }
