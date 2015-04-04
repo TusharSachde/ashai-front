@@ -909,6 +909,11 @@ phonecatControllers.controller('myprofile',
             $scope.user = data.user[0];
             $scope.projects = data.project;
             $scope.order = data.order;
+            $scope.causehelped = data.causehelped;
+            $scope.facebookshares = data.facebookshares;
+            $scope.fellowship = data.fellowship;
+            $scope.totalprojects = data.totalprojects;
+            $scope.twittershares = data.twittershares;
         }
 
         var authsuccess = function(data, status) {
