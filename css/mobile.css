@@ -6,10 +6,13 @@
     .head-on.home {
         width: 80%!important;
     }
-    .home-video{
-        display:none!important;
+    .home-video {
+        display: none!important;
     }
-    .mobile-homebg{
+    .chkform {
+        width: 70%!important;
+    }
+    .mobile-homebg {
         display: block!important;
     }
     .navbar-toggle {
@@ -17,14 +20,15 @@
     }
     body .cont52 {
         width: 80%;
-        margin: 0 auto !important;;
+        margin: 0 auto !important;
+        ;
         text-align: justify;
     }
     img.logtext {
         padding: 10px 0px 0px 50px;
     }
     .pad-up {
-        padding: 15px 0;
+        padding: 10px 0;
         float: none!important;
         text-align: center;
         width: 100%;
@@ -49,7 +53,7 @@
         padding: 0!important;
     }
     .sliderheader {
-        background-position-y: 72px!important;
+        /*        background-position-y: 72px!important;*/
     }
     body .head-on h3 {
         margin-top: 20%;
@@ -163,7 +167,7 @@
         text-align: justify;
     }
     .pad-up {
-        padding: 15px 0;
+        padding: 10px 0;
         float: none!important;
         text-align: center;
     }
@@ -234,13 +238,13 @@
     .bottom1 .causes {
         width: 60%;
         margin: 20px auto !important;
-        height:auto!important;
+        height: auto!important;
     }
     p.viewAll {
         width: 30%!important;
     }
     .pad-up {
-        padding: 15px 0;
+        padding: 10px 0;
         float: none!important;
         text-align: center;
     }
@@ -256,15 +260,21 @@
     .pic {
         height: 140px!important;
     }
+    .chkform {
+        width: 100%!important;
+    }
 }
 
-@media screen (min-width: 999px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .pic {
         height: 185px!important;
     }
-    .pad-up {
-        padding: 15px 0;
-        float: none!important;
-        text-align: center;
+    .popup-indiandonar {
+        width: 95px!important;
+        font-size: 10px!important;
+        height: 53px!important;
+    }
+    .chkform {
+        width: 70%!important;
     }
 }
