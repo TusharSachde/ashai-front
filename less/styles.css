@@ -435,11 +435,9 @@ body .LeftCont .circle {
 }
 body .LeftCont .check {
   text-align: left;
-  margin-top: -13px;
-  padding-left: 10%;
+  padding-left: 10px;
 }
 body .LeftCont .check label {
-  margin-left: 10px;
   padding: 10px;
 }
 body .LeftCont .check input.checkbox {

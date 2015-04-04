@@ -881,7 +881,7 @@ ul.mypro {
 .helpbox .info p {
     font-size: 14px;
     padding: 15px 0px;
-    overflow: auto;
+/*    overflow: auto;*/
     text-align: center;
 }
 
@@ -1131,8 +1131,8 @@ span.shares {
 }
 
 .donation {
-    margin: 0px 0px 10px 23px;
-    width: 85%;
+    margin: 0px;
+    width: 100%;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
