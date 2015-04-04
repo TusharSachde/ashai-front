@@ -17,12 +17,21 @@
     img.logtext {
         padding: 10px 0px 0px 50px;
     }
-     .pad-up {
-  padding: 15px 0;
-  float: none!important;
-  text-align: center;
+    .pad-up {
+        padding: 15px 0;
+        float: none!important;
+        text-align: center;
+        width: 100%;
+    }
+     p.viewAll {
+        width: 30%!important;
+    }
+    .ftr-news {
+  padding-left: 15px!important;
 }
-    
+    .ftr-category {
+  padding-left:15px!important;
+}
     /*
     .helpbox {
       width: 65%;
@@ -120,11 +129,11 @@
         width: 90%!important;
         margin: 10px auto !important;
     }
-    p.viewAll{
-        width:30%!important;
+    p.viewAll {
+        width: 30%!important;
     }
-    .pic{
-        height:140px!important;
+    .pic {
+        height: 140px!important;
     }
     .gallery_width {
         height: auto;
@@ -212,11 +221,18 @@
     .ftr-news {
         padding-left: 15px!important;
     }
+    .bottom1 .causes {
+        width: 60%;
+        margin: 20px auto !important;
+    }
+    p.viewAll {
+        width: 30%!important;
+    }
     .pad-up {
-  padding: 15px 0;
-  float: none!important;
-  text-align: center;
-}
+        padding: 15px 0;
+        float: none!important;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -226,17 +242,18 @@
     .contribut {
         width: 100%;
     }
-    .pic{
-        height:140px!important;
+    .pic {
+        height: 140px!important;
     }
 }
-@media screen (min-width: 1000px) and (max-width: 1024px){
- .pic{
-        height:185px!important;
+
+@media screen (min-width: 999px) and (max-width: 1024px) {
+    .pic {
+        height: 185px!important;
     }
     .pad-up {
-  padding: 15px 0;
-  float: none!important;
-  text-align: center;
-}
+        padding: 15px 0;
+        float: none!important;
+        text-align: center;
+    }
 }
