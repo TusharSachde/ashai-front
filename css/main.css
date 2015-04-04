@@ -2711,7 +2711,7 @@ a.pinterest i:hover {
     font-size: 14px;
     color: #605555;
     margin: 0;
-    padding: 40px 0;
+    padding: 40px 10px;
     line-height: 180%;
     text-align: left;
 }
@@ -2880,4 +2880,11 @@ form.ng-invalid.ng-dirty.frm-bdr {
 .info p{
     height:35px;
         overflow: hidden;
+}
+.mobile-homebg{
+    display:none;
+}
+.mobile-homebg img{
+    width:auto;
+    height:auto;
 }

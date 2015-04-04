@@ -6,12 +6,18 @@
     .head-on.home {
         width: 80%!important;
     }
+    .home-video{
+        display:none!important;
+    }
+    .mobile-homebg{
+        display: block!important;
+    }
     .navbar-toggle {
         margin-right: -50px;
     }
     body .cont52 {
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto !important;;
         text-align: justify;
     }
     img.logtext {
@@ -23,22 +29,15 @@
         text-align: center;
         width: 100%;
     }
-     p.viewAll {
+    p.viewAll {
         width: 30%!important;
     }
     .ftr-news {
-  padding-left: 15px!important;
-}
+        padding-left: 15px!important;
+    }
     .ftr-category {
-  padding-left:15px!important;
-}
-    /*
-    .helpbox {
-      width: 65%;
-      margin: 0 auto 30px auto!important;
-  }
-*/
-    
+        padding-left: 15px!important;
+    }
     .middle h2 {
         text-align: center;
     }
@@ -128,6 +127,7 @@
     .bottom1 .causes {
         width: 90%!important;
         margin: 10px auto !important;
+        height: auto!important;
     }
     p.viewAll {
         width: 30%!important;
@@ -156,6 +156,11 @@
     .head-on.home p {
         padding-bottom: 0!important;
         font-size: 12px;
+    }
+    body .cont52 {
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
     }
     .pad-up {
         padding: 15px 0;
@@ -221,9 +226,15 @@
     .ftr-news {
         padding-left: 15px!important;
     }
+    body .cont52 {
+        width: 80%;
+        margin: 0 auto!important;
+        text-align: justify;
+    }
     .bottom1 .causes {
         width: 60%;
         margin: 20px auto !important;
+        height:auto!important;
     }
     p.viewAll {
         width: 30%!important;
