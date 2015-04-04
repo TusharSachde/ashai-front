@@ -269,6 +269,9 @@
     .pic {
         height: 185px!important;
     }
+    .rights{
+        text-align: center!important;
+    }
     .popup-indiandonar {
         width: 95px!important;
         font-size: 10px!important;
