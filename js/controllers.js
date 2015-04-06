@@ -947,6 +947,7 @@ phonecatControllers.controller('myprofile',
                 NavigationService.logout();
                 $scope.register = "Register";
                 $scope.login = "Login";
+                $location.url("/home");
             }
         }
 
