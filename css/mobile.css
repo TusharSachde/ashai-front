@@ -143,6 +143,29 @@
         padding:0px!important;
         border:none!important;
     }
+    .holder{
+         padding:0px!important;
+        border:none!important;
+    }
+    a.fb,a.twit,a.pin{
+        display:block;
+    }
+    a.socio-btn{
+        margin: 10px 0!important;
+    }
+    .story91{
+        font-size: 10px!important;
+    }
+    ol.nxt1cont{
+        font-size: 12px!important;
+        line-height: 2;
+    }
+    .dear{
+        font-size: 20px!important;
+    }
+    .forgot-pwd{
+        width:100%!important;
+    }
     body .head-on h3 {
         margin-top: 25%;
     }
@@ -236,6 +259,9 @@
     .ftr-news {
         padding-left: 15px!important;
     }
+    .dear{
+        font-size: 38px!important;
+    }
     body .cont52 {
         width: 80%;
         margin: 0 auto!important;
@@ -271,10 +297,13 @@
         width: 100%;
     }
     .pic {
-        height: 68px!important;
+        height: 140px!important;
     }
     .chkform {
         width: 100%!important;
+    }
+    .exp-fixhead{
+        height: 35px!important;
     }
 }
 
@@ -284,7 +313,9 @@
         font-size: 10px!important;
         height: 53px!important;
     }
+/*
     .chkform {
         width: 70%!important;
     }
+*/
 }
