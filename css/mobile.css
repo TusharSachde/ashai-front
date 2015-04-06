@@ -139,6 +139,10 @@
         padding:0px!important;
         overflow: hidden;
     }
+    .holder1{
+        padding:0px!important;
+        border:none!important;
+    }
     body .head-on h3 {
         margin-top: 25%;
     }
