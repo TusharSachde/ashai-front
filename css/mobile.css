@@ -27,12 +27,7 @@
     img.logtext {
         padding: 10px 0px 0px 50px;
     }
-    .pad-up {
-        padding: 10px 0;
-        float: none!important;
-        text-align: center;
-        width: 100%;
-    }
+ 
     p.viewAll {
         width: 30%!important;
     }
@@ -119,7 +114,7 @@
         width: 51%;
     }
     .give-btn {
-        margin: -1px 8px 0 14px;
+        margin: -1px 8px 0 14px!important;
     }
     .salammum p {
         width: 165px;
@@ -140,16 +135,23 @@
         height: 140px!important;
     }
     .gallery_width {
-        height: auto;
-    }
-    .gallery_width {
-        height: 290px!important;
+        height: auto!important;
+        padding:0px!important;
+        overflow: hidden;
     }
     body .head-on h3 {
         margin-top: 25%;
     }
+    .playtriangle{
+        line-height: 10px!important;
+  font-size: 5px;
+    }
+    .play-circle{
+          height: 10px!important;
+  width: 10px!important;
+    }
     .galleryimg img {
-        height: 290px!important;
+        height: auto!important;
     }
     .thunderheart .list-inline li {
         display: block!important;
@@ -235,8 +237,14 @@
         margin: 0 auto!important;
         text-align: justify;
     }
+    .thunderheart .list-inline li {
+        display: block!important;
+    }
+     .thunderheart .list-inline {
+        display: block!important;
+    }
     .bottom1 .causes {
-        width: 60%;
+        width: 100%;
         margin: 20px auto !important;
         height: auto!important;
     }
@@ -253,12 +261,13 @@
 @media screen and (max-width: 400px) {
     .contribution {
         width: 100%;
+        text-align: center;
     }
     .contribut {
         width: 100%;
     }
     .pic {
-        height: 140px!important;
+        height: 68px!important;
     }
     .chkform {
         width: 100%!important;
@@ -266,12 +275,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .pic {
-        height: 185px!important;
-    }
-    .rights{
-        text-align: center!important;
-    }
     .popup-indiandonar {
         width: 95px!important;
         font-size: 10px!important;
