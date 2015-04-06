@@ -37,9 +37,11 @@
     .ftr-category {
         padding-left: 15px!important;
     }
+/*
     .middle h2 {
         text-align: center;
     }
+*/
     .fb-popup {
         width: 80%!important;
     }
@@ -251,7 +253,7 @@
 
 @media screen and (max-width: 786px) {
     .navbar-nav {
-        margin: 18.5px -15px;
+        margin: 0px -15px;
     }
     .ftr-category {
         padding-left: 16px!important;
@@ -296,6 +298,14 @@
     .contribut {
         width: 100%;
     }
+    .navbar-collapse{
+        border-top: none!important;
+  -webkit-box-shadow: none!important;
+        box-shadow: none!important;
+    }
+    .nav > li + li{
+        margin-left:0px!important;
+    }
     .pic {
         height: 140px!important;
     }
@@ -304,6 +314,12 @@
     }
     .exp-fixhead{
         height: 35px!important;
+    }
+    .pagecategory>li.active span{
+        padding:  10px 7px 13px 7px!important;
+    }
+    .pagecategory li{
+        padding: 10px 0px!important;
     }
 }
 
