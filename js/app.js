@@ -269,6 +269,13 @@ firstapp.run( function($rootScope, $location,$window) {
       $window.scrollTo(0,0);
     });
 });
+//firstapp.directive("chat", function() {
+//    return {
+//        restrict: "E",
+//        replace: "true",
+//        templateUrl: "templates/chat1.html"
+//    }
+//})
 function partitionarray(myarray, number) {
             var arrlength = myarray.length;
             var newarray = [];

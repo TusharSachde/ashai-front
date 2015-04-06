@@ -908,8 +908,12 @@ phonecatControllers.controller('myprofile',
             console.log(data);
             $scope.user = data.user[0];
             $scope.projects = data.project;
+            $scope.causehelped = [];
             $scope.order = data.order;
-            $scope.causehelped = data.causehelped;
+            if(data.causehelped == ""){
+            $scope.causehelped.causehelped = "0";
+            }else{
+            $scope.causehelped = data.causehelped;}
             $scope.facebookshares = data.facebookshares;
             $scope.fellowship = data.fellowship;
             $scope.totalprojects = data.totalprojects;
@@ -945,7 +949,6 @@ phonecatControllers.controller('myprofile',
         $scope.onlogin = function() {
             if ($scope.login == "Login") {
                 $location.url("/login");
-                //                console.log("login");
             } else {
                 NavigationService.logout();
                 $scope.register = "Register";
