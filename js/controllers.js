@@ -626,7 +626,6 @@ phonecatControllers.controller('Explore',
         //  GET ALL PROJECT
         //        console.log($routeParams.id);
         var projectsuccess = function(data, status) {
-            console.log(data);
             $scope.projects = data.queryresult;
             $scope.projects = partitionarray($scope.projects, 3);
             //            console.log($scope.projects);
@@ -652,27 +651,22 @@ phonecatControllers.controller('Explore',
 
         //  TO CATEGORY FILTER
         $scope.tocategory = function(cat) {
-
             if ($scope.catg.length == 0) {
                 $scope.catg.push(cat);
-                //                console.log("in push");
-                //                console.log($scope.catg);
             } else {
                 for (var i = 0; i < $scope.catg.length; i++) {
                     if ($scope.catg[i].id == cat.id) {
                         $scope.catg.splice(i, 1);
                         $scope.in = 0;
+                        break;
                     } else {
                         $scope.in = 1;
-
                     }
                 }
 
                 if ($scope.in == 1) {
                     $scope.catg.push(cat);
                 }
-                //                console.log("in else part");
-                //                console.log($scope.catg);
             }
             if ($scope.catg == '') {
                 $scope.catid = 0;
