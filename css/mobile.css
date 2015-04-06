@@ -169,7 +169,7 @@
         width:100%!important;
     }
     body .head-on h3 {
-        margin-top: 25%;
+        margin-top: 40%;
     }
     .playtriangle{
         line-height: 10px!important;
@@ -305,6 +305,9 @@
     }
     .nav > li + li{
         margin-left:0px!important;
+    }
+    .btnsoc{
+        padding-left: 40px!important;
     }
     .pic {
         height: 140px!important;
