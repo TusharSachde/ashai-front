@@ -945,6 +945,7 @@ phonecatControllers.controller('myprofile',
                 $location.url("/login");
             } else {
                 NavigationService.logout();
+                console.log("loged out");
                 $scope.register = "Register";
                 $scope.login = "Login";
                 $location.url("/home");
