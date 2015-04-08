@@ -170,7 +170,7 @@ phonecatControllers.controller('works',
         //  GET WORKS PAGE
         var staticsuccess = function(data, stauts) {
             $scope.content = data[0];
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
             //            $scope.backgroundimg = data[0].bannerimage;
         }
@@ -270,7 +270,7 @@ phonecatControllers.controller('fellowship',
             $scope.content = data[0];
             $scope.title = data[0].name;
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
         }
         NavigationService.getsinglestaticpage(11).success(staticsuccess);
@@ -956,7 +956,7 @@ phonecatControllers.controller('myprofile',
         var staticsuccess = function(data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
 
         }
@@ -1067,7 +1067,7 @@ phonecatControllers.controller('termsandcondition',
         var staticsuccess = function(data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
 
         }
@@ -1167,7 +1167,7 @@ phonecatControllers.controller('workwithus',
         var staticsuccess = function(data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
         }
         NavigationService.getsinglestaticpage(5).success(staticsuccess);
@@ -1273,9 +1273,10 @@ phonecatControllers.controller('Contactus',
 
 
         var staticsuccess = function(data, status) {
+            console.log(data);
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
         }
         NavigationService.getsinglestaticpage(6).success(staticsuccess);
@@ -1447,7 +1448,7 @@ phonecatControllers.controller('policy',
         var staticsuccess = function(data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
         }
         NavigationService.getsinglestaticpage(8).success(staticsuccess);
@@ -1482,7 +1483,7 @@ phonecatControllers.controller('checkout',
             $scope.title = data[0].name;
             $scope.page = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
         }
         NavigationService.getsinglestaticpage(10).success(staticsuccess);
@@ -1697,7 +1698,7 @@ phonecatControllers.controller('thankyou',
             $scope.title = data[0].name;
             $scope.page = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
         }
         NavigationService.getsinglestaticpage(9).success(staticsuccess);
 
