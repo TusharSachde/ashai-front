@@ -2895,3 +2895,6 @@ form.ng-invalid.ng-dirty.frm-bdr {
 .carousel-indicators{
     z-index: 5;
 }
+.tag p{
+    height: auto!important;
+}

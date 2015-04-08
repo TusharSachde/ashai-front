@@ -1534,7 +1534,7 @@ phonecatControllers.controller('checkout',
         var checkoutsuccess = function(data, status) {
             $.jStorage.flush();
             $.jStorage.set("order", data);
-            window.location.href = "https://www.instamojo.com/Powerforone/powerforone/?data_name=" + $scope.checkout.name + "&data_email=" + $scope.checkout.email + "&data_phone=" + $scope.checkout.mobile + "&data_amount=" + $scope.checkout.amount + "&data_Field_43272=" + $scope.checkout.projectname + "&data_Field_43273=" + data + "&data_readonly=data_amount&data_readonly=data_Field_43272 &data_readonly=data_Field_43273";
+            window.location.href = "https://www.instamojo.com/Powerforone/powerforone/?data_name=" + $scope.checkout.name + "&data_email=" + $scope.checkout.email + "&data_phone=" + $scope.checkout.mobile + "&data_amount=" + $scope.checkout.amount + "&data_Field_43272=" + $scope.checkout.projectname + "&data_hidden=data_Field_43273&data_Field_43273=" + data + "&data_readonly=data_amount&data_readonly=data_Field_43272&data_readonly=data_Field_43273&intent=buy&embed=form";
         }
         $scope.payproceed = function(checkout) {
             //  VALIDATION
