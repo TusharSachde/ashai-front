@@ -145,6 +145,7 @@ firstapp.directive('myYoutube', function($sce) {
 
 
 firstapp.filter('categoryimagepath', function () {
+    
     return function (input) {
         if (input == null || input == '') {
             return "http://wohlig.co.in/angular-powerforone/images/categoryimg/childwelfare.jpg";
