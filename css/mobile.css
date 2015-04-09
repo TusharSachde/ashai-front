@@ -295,6 +295,9 @@
         width: 100%;
         text-align: center;
     }
+    .videoht{
+    height:auto!important;
+    }
     .contribut {
         width: 100%;
     }

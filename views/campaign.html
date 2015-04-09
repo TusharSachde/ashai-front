@@ -54,7 +54,9 @@
                         <img ng-src="{{mainimage | ngoimagepath}}" alt="">
                     </div>
                     <div class="galleryimg" ng-show="showvideo">
+                       <div class="videoht">
                         <div my-youtube code="playvideo"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-2 gallery_width">
@@ -131,7 +133,7 @@
                         <div class="input-group">
                             <div class="input-group-addon bdr-right">Rs.</div>
                             <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="">
-                            <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(pre)">
+                            <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(pre)" ngrepeatcallback>
                                 <option ng-repeat="donate in donation" value="{{donate.val}}" {{donate.select}}>{{donate.period}}</option>
                             </select>
                         </div>

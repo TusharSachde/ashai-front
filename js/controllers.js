@@ -1,4 +1,4 @@
-var adminurl = "http://wohlig.co.in/powerforone/index.php/";
+var adminurl = "http://www.powerforone.org/admin/index.php/";
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute', 'ngSanitize']);
 
 phonecatControllers.controller('home',
@@ -358,7 +358,7 @@ phonecatControllers.controller('aboutUs',
             $scope.content = data[0];
             $scope.title = data[0].name;
             //            $scope.backgroundimg = data[0].bannerimage;
-            $scope.backgroundimg = "url(" + $filter('bannerimagepath')(data[0].bannerimage) + ")";
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
         }
         switch ($routeParams.id) {
@@ -806,7 +806,7 @@ phonecatControllers.controller('campaign',
                 $scope.disabledgive = true;
             }
             $scope.bgimage = {
-                "background": 'url(http://wohlig.co.in/powerforone/uploads/' + $scope.project.cardimage + ') no-repeat',
+                "background": 'url(http://www.powerforone.org/admin/uploads/' + $scope.project.cardimage + ') no-repeat',
                 "-webkit-background-size": 'cover',
                 "-moz-background-size": 'cover',
                 "-o-background-size": 'cover',
@@ -1273,7 +1273,6 @@ phonecatControllers.controller('Contactus',
 
 
         var staticsuccess = function(data, status) {
-            console.log(data);
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
