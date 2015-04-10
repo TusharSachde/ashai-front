@@ -1,4 +1,8 @@
 // JavaScript Document
+
+var frontend="http://www.powerforone.org/";
+var backend="http://www.powerforone.org/admin/";
+
 var firstapp = angular.module('firstapp', [
   'ngRoute',
   'phonecatControllers',
@@ -144,14 +148,12 @@ firstapp.directive('myYoutube', function($sce) {
 });
 
 
-
 firstapp.filter('categoryimagepath', function () {
-    
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/categoryimg/childwelfare.jpg";
+            return frontend+"images/categoryimg/childwelfare.jpg";
         } else {
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return backend+"uploads/" + input;
         }
     };
 });
@@ -159,7 +161,7 @@ firstapp.filter('categoryimagepath', function () {
 firstapp.filter('profileimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/dp.jpg";
+            return frontend+"images/dp.jpg";
         } else {
             return input;
         }
@@ -169,9 +171,9 @@ firstapp.filter('profileimagepath', function () {
 firstapp.filter('testimonialimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/face.png";
+            return frontend+"images/face.png";
         } else {
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return backend+"uploads/" + input;
         }
     };
 });
@@ -179,9 +181,9 @@ firstapp.filter('testimonialimagepath', function () {
 firstapp.filter('projectbannerimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/salaam_bombay.png";
+            return frontend+"images/salaam_bombay.png";
         } else {
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return backend+"uploads/" + input;
         }
     };
 });
@@ -189,9 +191,9 @@ firstapp.filter('projectbannerimagepath', function () {
 firstapp.filter('cardimageimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/salaam_bombay.png";
+            return frontend+"images/salaam_bombay.png";
         } else {
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return backend+"uploads/" + input;
         }
     };
 });
@@ -199,12 +201,12 @@ firstapp.filter('cardimageimagepath', function () {
 firstapp.filter('bannerimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/salaam_bombay.png";
+            return frontend+"images/salaam_bombay.png";
         } else {
             if(input == "learn_more.png"){
                 return "images/backgrounds/"+input;
             }else{
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return backend+"uploads/" + input;
             }
         }
     };
@@ -213,9 +215,9 @@ firstapp.filter('bannerimagepath', function () {
 firstapp.filter('ngoimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/face.png";
+            return frontend+"images/face.png";
         } else {
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return backend+"uploads/" + input;
         }
     };
 });
@@ -223,9 +225,9 @@ firstapp.filter('ngoimagepath', function () {
 firstapp.filter('couponimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return "http://wohlig.co.in/angular-powerforone/images/pf_logo.png";
+            return frontend+"images/pf_logo.png";
         } else {
-            return "http://wohlig.co.in/powerforone/uploads/" + input;
+            return backend+"uploads/" + input;
         }
     };
 });

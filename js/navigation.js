@@ -1,4 +1,4 @@
-var admin_url = "http://wohlig.co.in/powerforone/index.php/";
+var admin_url = "http://www.powerforone.org/admin/index.php/";
 // var admin_url = "http://localhost/powerforone/index.php/";
 // var adminurl = "http://wohlig.co.in/powerforone/";
 var navigationservice = angular.module('navigationservice', [])
@@ -24,19 +24,23 @@ var navigationservice = angular.module('navigationservice', [])
     var donation = [{
         val: "500",
         period: "One Time",
-        select: "selected"
+        select: "selected",
+        name: "0"
     }, {
         val: "500",
         period: "Monthly",
-        select: ""
+        select: "",
+        name: "1"
     }, {
         val: "500",
         period: "Quarterly",
-        select: ""
+        select: "",
+        name: "2"
     }, {
         val: "500",
         period: "Yearly",
-        select: ""
+        select: "",
+        name: "3"
     }, ];
 
     return {
@@ -72,7 +76,8 @@ var navigationservice = angular.module('navigationservice', [])
                     "project": checkout.project,
                     "amount": checkout.amount,
                     "istax": checkout.istax,
-                    "anonymous": checkout.anonymous
+                    "anonymous": checkout.anonymous,
+                    "give": checkout.give
                 }
             })
         },

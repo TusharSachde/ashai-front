@@ -54,8 +54,8 @@
                         <img ng-src="{{mainimage | ngoimagepath}}" alt="">
                     </div>
                     <div class="galleryimg" ng-show="showvideo">
-                       <div class="videoht">
-                        <div my-youtube code="playvideo"></div>
+                    	<div class="videoht">
+                        	<div my-youtube code="playvideo"></div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                         <div class="input-group">
                             <div class="input-group-addon bdr-right">Rs.</div>
                             <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="">
-                            <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(pre)" ngrepeatcallback>
+                            <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(amount,pre)">
                                 <option ng-repeat="donate in donation" value="{{donate.val}}" {{donate.select}}>{{donate.period}}</option>
                             </select>
                         </div>
@@ -182,7 +182,7 @@
                     <div class="txt4">{{project.share}}</div>
                     <span class="shares"> Shares</span>
                     <p class="txt5">1 Share=Rs.{{project.sharevalue}}</p>
-                    <span class="t1"> Remember, {{project.timesinwordforshare}} Rs.{{project.sharevalue}}</span>
+                    <span class="t1"> Remember, {{project.timesinwordforshare}}</span>
                     <div class="icon1">
                         <img src="{{project.advertiserimage | ngoimagepath}}" height="52px" width="auto">
                     </div>
@@ -302,7 +302,8 @@
         </div>
     </div>
 
-   <div class="slider">
+    <div class="container">
+        <div class="slider">
             <carousel interval="myInterval">
                 <slide ng-repeat="testimonial in testimonials" active="slide.active">
                     <div class="row">
@@ -316,6 +317,36 @@
                 </slide>
             </carousel>
         </div>
+
+        <!--
+            <wrap-owlcarousel class="owl-carousel testimonials" data-options="{autoPlay: true, stopOnHover: true,
+            slideSpeed : 300, paginationSpeed : 400,pagination:false, singleItem : true}">
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src="images/face.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="cont52">
+                            {{testimonial1.content}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src="images/face.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="cont52">
+                            {{testimonial1.content}}
+                        </div>
+                    </div>
+                </div>
+
+            </wrap-owlcarousel>
+-->
+
+
+    </div>
 
 
 </div>
