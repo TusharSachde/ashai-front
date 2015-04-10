@@ -187,15 +187,15 @@ phonecatControllers.controller('fellowship',
         TemplateService.content = 'views/fellowship.html';
         TemplateService.title = "The fellowship";
         $scope.form2 = {};
-        $scope.message = false;
+        $scope.message = 0;
         $scope.navigation = NavigationService.getnav();
         var submitpfo = function(data, status) {
             console.log(data);
             if (data != "0") {
-                $scope.message = true;
+                $scope.message = 1;
                 $scope.textmessage = "Saved successfully";
             } else {
-                $scope.message = false;
+                $scope.message = 2;
                 $scope.textmessage = "Error In Saving";
             }
         }
@@ -1798,7 +1798,7 @@ phonecatControllers.controller('footer',
         $scope.template = TemplateService;
 
         //  DECLARATION
-        $scope.message = false;
+        $scope.message = 0;
 
         //  ALL FOOTER
         var pagesuccess = function(data, status) {
@@ -1848,10 +1848,10 @@ phonecatControllers.controller('footer',
         var submitnewsletter1 = function(data, status) {
             console.log(data);
             if (data != "0") {
-                $scope.message = true;
+                $scope.message = 1;
                 $scope.textmessage = "Saved successfully";
             } else {
-                $scope.message = false;
+                $scope.message = 2;
                 $scope.textmessage = "Error In Saving";
             }
         }

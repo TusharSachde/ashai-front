@@ -57,7 +57,7 @@
                     <h5>NEWSLETTER SIGNUP</h5>
                     <p>
                         Find out how people's contributions are changing the world
-                        <div ng-if="!message">
+                        <div ng-if="message==0">
                             <input type="email" class="form-control emailEnter" placeholder="Enter your e-mail address *" ng-class="allvalidation[0].validation" required ng-model="news.email">
                             <button type="button" class="btn btn-warning btn-yellow" ng-click="submitnewsletter(news)">SIGNUP</button>
                             <!--                        <span class="ftr-error pull-right"  style="display:none;">Error in saving.</span>-->
@@ -65,8 +65,13 @@
                             <!--                        <span class="ftr-green pull-right">Saved successful.</span>-->
                             <div class="clearfix"></div>
                         </div>
-                        <div class="news-thnq" ng-if="message">
+                        
+                        <div class="news-thnq" ng-if="message==1">
                             <p>Thank you for Subscribing!</p>
+                        </div>
+                        
+                        <div class="news-error" ng-if="message==2">
+                            <p>You have already Subscribed!</p>
                         </div>
 
                     </p>

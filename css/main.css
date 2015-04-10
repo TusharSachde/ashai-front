@@ -2901,3 +2901,7 @@ form.ng-invalid.ng-dirty.frm-bdr {
 .videoht{
 height:468px;
 }
+.form-msg-error
+{
+color:#d14836;
+}
