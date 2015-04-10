@@ -174,7 +174,7 @@ phonecatControllers.controller('works',
             console.log($scope.backgroundimg);
             //            $scope.backgroundimg = data[0].bannerimage;
         }
-        NavigationService.getsinglestaticpage(4).success(staticsuccess);
+        NavigationService.getsinglestaticpage(13).success(staticsuccess);
     }
 );
 phonecatControllers.controller('fellowship',
@@ -710,10 +710,11 @@ phonecatControllers.controller('campaign',
         $scope.project = [];
         $scope.facebookdiv = false;
         $scope.twitterdiv = false;
-        $scope.isLoading = true;
+//        $scope.isLoading = true;
         $scope.donation = NavigationService.getdonation();
         $scope.amount = $scope.donation[0].val;
-        $scope.pre = $scope.donation[0].val;
+        $scope.pre = $scope.donation[0].name;
+        $.jStorage.set("give", $scope.pre);
         $.jStorage.set("amount", $scope.amount);
         $scope.donationdiv = "donation";
         $scope.showvideo = false;
@@ -725,9 +726,10 @@ phonecatControllers.controller('campaign',
             $scope.playvideo = video;
             $scope.showvideo = true;
         }
-        $scope.changeperiod = function(donate) {
+        $scope.changeperiod = function(donate, give) {
             $scope.amount = donate;
             $.jStorage.set("amount", donate);
+            $.jStorage.set("give", give);
         }
 
         $scope.donnercheck = function(checkdonner) {
@@ -1601,7 +1603,7 @@ phonecatControllers.controller('checkout',
                 checkout.projectname = $.jStorage.get("projectname");
                 checkout.amount = $.jStorage.get("amount");
                 checkout.anonymous = $.jStorage.get("anonymous");
-                checkout.pan = "0";
+                checkout.give = $.jStorage.get("give");
                 if (checkout.istax == true) {
                     checkout.istax = "1";
                 } else {

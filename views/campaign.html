@@ -134,7 +134,7 @@
                             <div class="input-group-addon bdr-right">Rs.</div>
                             <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="">
                             <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(amount,pre)">
-                                <option ng-repeat="donate in donation" value="{{donate.val}}" {{donate.select}}>{{donate.period}}</option>
+                                <option ng-repeat="donate in donation" value="{{donate.name}}" {{donate.select}}>{{donate.period}}</option>
                             </select>
                         </div>
 
@@ -219,7 +219,7 @@
                             <img ng-src="{{similarcauses[0].image | projectbannerimagepath}}">
 
                             <div class="mumbai-in">
-                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>{{similarcauses[0].location}}</h5>
                             </div>
                         </div>
                         <h3>{{similarcauses[0].name}}</h3>
@@ -250,7 +250,7 @@
                             <img ng-src="{{similarcauses[1].image | projectbannerimagepath}}">
 
                             <div class="mumbai-in">
-                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>{{similarcauses[1].location}}</h5>
                             </div>
                         </div>
                         <h3>{{similarcauses[1].name}}</h3>
@@ -278,7 +278,7 @@
                             <img ng-src="{{similarcauses[2].image | projectbannerimagepath}}">
 
                             <div class="mumbai-in">
-                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>Mumbai, IN</h5>
+                                <h5><span><i class="fa fa-map-marker"></i>&nbsp;</span>{{similarcauses[2].location}}</h5>
                             </div>
                         </div>
                         <h3>{{similarcauses[2].name}}</h3>
