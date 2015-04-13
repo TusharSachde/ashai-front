@@ -6,6 +6,7 @@
                 <div class="signin text-center">
                     <h3 class="createtitle" ng-bind-html="page.content | rawHtml"></h3>
                     <div class="chkform text-center">
+                          <form class="frm-bdr" ng-submit="payproceed(checkout)">
                            <input name="name" type="text" class="custom-input signin-input" ng-model="checkout.name"ng-class="allvalidation[0].validation" required placeholder="Name *">
                             <br>
                             <input name="email" class="custom-input signin-input" ng-model="checkout.email"ng-class="allvalidation[1].validation" required placeholder="Email *">
@@ -32,7 +33,7 @@
                             </div>
 -->
                             
-                            <button ng-click="payproceed(checkout)" class="createacc cpointer"> Proceed &amp; Pay </button>
+                            <button type="submit" class="createacc cpointer"> Proceed &amp; Pay </button>
                     </div>
                 </div>
             </div>
