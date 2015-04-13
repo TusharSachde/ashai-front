@@ -1372,7 +1372,7 @@ phonecatControllers.controller('register',
         var registersuccess = function(data, status) {
             //            console.log(data);
             if (data == "false") {
-                alert("Enable To Create User");
+                alert("User With this Email Id Already Exists.");
             } else {
                 $location.url("/login");
             }

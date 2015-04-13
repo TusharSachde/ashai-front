@@ -2904,4 +2904,12 @@ height:468px;
 .form-msg-error
 {
 color:#d14836;
+    text-align: center;
+}
+.form-msg-error p{
+    text-align: center!important;
+}
+.thankyou-img img{
+    width:100px;
+    height:auto;
 }
