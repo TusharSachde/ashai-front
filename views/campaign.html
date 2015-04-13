@@ -397,7 +397,7 @@
                     <p>{{project.twittertext+" "+project.twitteraddon}}</p>
                 </div>
                 <div class="pull-right margintop">
-                    <span>{{140-(project.twittertext.length+1+twitteraddon.length)}}</span>
+                    <span>{{140-(project.twittertext.length+1+project.twitteraddon.length)}}</span>
                     <button type="submit" class="post-btn twitt-head" ng-click="twittershare(project.twittertext+' '+project.twitteraddon)" ng-disabled="(140-(project.twittertext.length+1+project.twitteraddon.length))<0">Tweet</button>
                 </div>
             </div>

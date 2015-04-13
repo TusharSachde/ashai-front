@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="formprarmy form-horizontal">
-                            <div ng-if="message==2">
+                            <div ng-if="message==0">
                                 <h2>APPLY NOW</h2>
                                 <form class="frm-bdr" ng-submit="submitpfo(form2);">
 
@@ -298,7 +298,7 @@
                                 <a href="#/Home"><img src="images/thnq-msg.png" alt=""></a>
                                 <p>Thank you for your message.The team will get back to you in a maximum of 72 hours.</p>
                             </div> 
-                            <div class="form-msg form-msg-error thankyou-img" ng-if="message==0">
+                            <div class="form-msg form-msg-error thankyou-img" ng-if="message==2">
                                 <a href="#/Home"><img src="images/thnq-msg.png" alt=""></a>
                                 <p>You have already subscribed to Fellowship.</p>
                             </div>
