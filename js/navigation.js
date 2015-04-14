@@ -159,6 +159,9 @@ var navigationservice = angular.module('navigationservice', [])
             }
             return menuname;
         },
+        forgotpassword: function (form) {
+            return $http.post(admin_url + "email/forgotpassword", form);
+        },
         submitcontactform: function (form) {
             return $http.post(admin_url + "json/createcontactus", form);
         },
@@ -175,6 +178,13 @@ var navigationservice = angular.module('navigationservice', [])
                 data: {
                     "email": news.email
                 }
+            })
+        },
+        forgotpasswordsubmit: function (forgot) {
+            return $http({
+                url: admin_url + "json/forgotpasswordsubmit",
+                method: "POST",
+                data: forgot
             })
         }
     }

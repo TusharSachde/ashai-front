@@ -472,6 +472,7 @@ phonecatControllers.controller('forgot',
 
         //  DECLARATIONS
         $scope.blogs = [];
+        $scope.user = [];
 
         //  AUTHENTICATE
         var authsuccess = function (data, status) {
@@ -508,14 +509,22 @@ phonecatControllers.controller('forgot',
                 $scope.login = "Login";
             }
         }
-
-        //  GET ALL BLOGS
-        var blogsuccess = function (data, status) {
-            //            console.log(data);
-            $scope.blogs = data.queryresult;
+        
+        //  ON FORGOT CLICK
+        var forgotsuccess = function(data, status){
+            console.log(data);
         }
-        NavigationService.getblog().success(blogsuccess);
+        $scope.forgotpass = function(user){
+            $scope.allvalidation = [{
+                field: $scope.user.email,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
 
+            if (check) {
+                NavigationService.forgotpassword(user).success(forgotsuccess);
+            };
+        }
 
     }
 );
