@@ -2476,3 +2476,8 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: 200px;
     height: auto;
 }
+.tax-msg p{
+    width:70%;
+    margin:0 auto;
+    text-align:center;
+}
