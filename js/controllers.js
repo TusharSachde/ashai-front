@@ -362,21 +362,21 @@ phonecatControllers.controller('aboutUs',
             console.log($scope.backgroundimg);
         }
         switch ($routeParams.id) {
-        case "1":
+        case "aboutus":
             {
-                NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                NavigationService.getsinglestaticpage(1).success(staticsuccess);
                 $scope.aboutus = "active";
                 break;
             }
-        case "2":
+        case "faq":
             {
-                NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                NavigationService.getsinglestaticpage(2).success(staticsuccess);
                 $scope.faq = "active";
                 break;
             }
-        case "3":
+        case "team":
             {
-                NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                NavigationService.getsinglestaticpage(3).success(staticsuccess);
                 $scope.team = "active";
                 break;
             }

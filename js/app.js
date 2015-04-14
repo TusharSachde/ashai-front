@@ -96,7 +96,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'fellowship'
         }).
-        when('/aboutUs/:id', {
+        when('/pages/:id', {
             templateUrl: 'views/template.html',
             controller: 'aboutUs'
         }).
