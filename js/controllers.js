@@ -1022,7 +1022,7 @@ phonecatControllers.controller('termsandcondition',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Terms & Condition");
         TemplateService.header = 'views/headertext.html';
-        $scope.title = "Terms & Condition";
+        $scope.title = "Terms & Conditions";
         $scope.backgroundimg = "T&C.jpg";
         TemplateService.content = 'views/terms.html';
         TemplateService.title = "Terms";
