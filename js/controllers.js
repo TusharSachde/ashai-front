@@ -2,7 +2,7 @@ var adminurl = "http://www.powerforone.org/admin/index.php/";
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'MyApp', 'ngRoute', 'ngSanitize']);
 
 phonecatControllers.controller('home',
-    function($scope, TemplateService, NavigationService, $location) {
+    function ($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Home");
         $scope.title = "Home";
@@ -13,7 +13,7 @@ phonecatControllers.controller('home',
         //  DECLARATION
         //        $scope.isLoading = true;
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             console.log(data);
             $scope.userauth = data;
@@ -28,7 +28,7 @@ phonecatControllers.controller('home',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -37,7 +37,7 @@ phonecatControllers.controller('home',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -59,14 +59,14 @@ phonecatControllers.controller('home',
 
         $scope.slides[0].active = "active";
 
-        var displayproject = function(data, status) {
+        var displayproject = function (data, status) {
             //            console.log(data.queryresult);
             console.log(data.queryresult);
             $scope.displayproject = data.queryresult;
         };
         NavigationService.displayfrmdb(displayproject);
 
-        var displaytestmonial1 = function(data, status) {
+        var displaytestmonial1 = function (data, status) {
 
             //            console.log("testimonial");
             //            console.log(data);
@@ -77,7 +77,7 @@ phonecatControllers.controller('home',
         NavigationService.displaytestmonial(displaytestmonial1);
 
         //  GET ALL CATEGORY
-        var allcategoriessuccess = function(data, status) {
+        var allcategoriessuccess = function (data, status) {
             //            console.log("categories");
             //            console.log(data);
             $scope.categories = data.queryresult;
@@ -86,12 +86,12 @@ phonecatControllers.controller('home',
 
         //  VIEW ALL PROJECT
 
-        $scope.gotoexplore = function() {
+        $scope.gotoexplore = function () {
             $location.url("/explore/0");
         }
 
         //  TO EXPLORE PAGE
-        $scope.toexplore = function(cat) {
+        $scope.toexplore = function (cat) {
             $location.url("/explore/" + cat.id);
         }
 
@@ -119,7 +119,7 @@ phonecatControllers.controller('home',
     });
 
 phonecatControllers.controller('works',
-    function($scope, TemplateService, NavigationService, $routeParams, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $routeParams, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("How it works");
         $scope.title = "How it works";
@@ -131,7 +131,7 @@ phonecatControllers.controller('works',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -146,7 +146,7 @@ phonecatControllers.controller('works',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -155,7 +155,7 @@ phonecatControllers.controller('works',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -168,7 +168,7 @@ phonecatControllers.controller('works',
 
 
         //  GET WORKS PAGE
-        var staticsuccess = function(data, stauts) {
+        var staticsuccess = function (data, stauts) {
             $scope.content = data[0];
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
             console.log($scope.backgroundimg);
@@ -178,7 +178,7 @@ phonecatControllers.controller('works',
     }
 );
 phonecatControllers.controller('fellowship',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("The fellowship");
         TemplateService.header = 'views/headertext.html';
@@ -189,7 +189,7 @@ phonecatControllers.controller('fellowship',
         $scope.form2 = {};
         $scope.message = 0;
         $scope.navigation = NavigationService.getnav();
-        var submitpfo = function(data, status) {
+        var submitpfo = function (data, status) {
             console.log(data);
             if (data != "0") {
                 $scope.message = 1;
@@ -201,7 +201,7 @@ phonecatControllers.controller('fellowship',
         }
 
         $scope.allvalidation = [];
-        $scope.submitpfo = function(form2) {
+        $scope.submitpfo = function (form2) {
             //  VALIDATION
             $scope.allvalidation = [{
                 field: $scope.form2.name,
@@ -231,7 +231,7 @@ phonecatControllers.controller('fellowship',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -246,7 +246,7 @@ phonecatControllers.controller('fellowship',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -255,7 +255,7 @@ phonecatControllers.controller('fellowship',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -265,7 +265,7 @@ phonecatControllers.controller('fellowship',
                 $scope.login = "Login";
             }
         }
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             console.log(data);
             $scope.content = data[0];
             $scope.title = data[0].name;
@@ -278,7 +278,7 @@ phonecatControllers.controller('fellowship',
 
 );
 phonecatControllers.controller('aboutUs',
-    function($scope, TemplateService, NavigationService, $routeParams, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $routeParams, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("About us");
         TemplateService.header = 'views/headertext.html';
@@ -289,7 +289,7 @@ phonecatControllers.controller('aboutUs',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -304,7 +304,7 @@ phonecatControllers.controller('aboutUs',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -313,7 +313,7 @@ phonecatControllers.controller('aboutUs',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -326,21 +326,21 @@ phonecatControllers.controller('aboutUs',
 
         //        $scope.aboutus = "active";
 
-        $scope.changeaboutus = function() {
+        $scope.changeaboutus = function () {
             NavigationService.getsinglestaticpage(1).success(staticsuccess);
             $scope.aboutus = "active";
             $scope.team = "";
             $scope.faq = "";
 
         }
-        $scope.changeteam = function() {
+        $scope.changeteam = function () {
             NavigationService.getsinglestaticpage(3).success(staticsuccess);
             $scope.aboutus = "";
             $scope.team = "active";
             $scope.faq = "";
 
         }
-        $scope.changefaq = function() {
+        $scope.changefaq = function () {
             NavigationService.getsinglestaticpage(2).success(staticsuccess);
             $scope.aboutus = "";
             $scope.team = "";
@@ -353,7 +353,7 @@ phonecatControllers.controller('aboutUs',
         $scope.content = [];
 
         //  GET ABOUT US
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             console.log(data);
             $scope.content = data[0];
             $scope.title = data[0].name;
@@ -362,24 +362,24 @@ phonecatControllers.controller('aboutUs',
             console.log($scope.backgroundimg);
         }
         switch ($routeParams.id) {
-            case "1":
-                {
-                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
-                    $scope.aboutus = "active";
-                    break;
-                }
-            case "2":
-                {
-                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
-                    $scope.faq = "active";
-                    break;
-                }
-            case "3":
-                {
-                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
-                    $scope.team = "active";
-                    break;
-                }
+        case "1":
+            {
+                NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                $scope.aboutus = "active";
+                break;
+            }
+        case "2":
+            {
+                NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                $scope.faq = "active";
+                break;
+            }
+        case "3":
+            {
+                NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                $scope.team = "active";
+                break;
+            }
         }
 
         //  GET ONE PAGE
@@ -390,7 +390,7 @@ phonecatControllers.controller('aboutUs',
 
 
 phonecatControllers.controller('blog',
-    function($scope, TemplateService, NavigationService, $location, $filter, $sce) {
+    function ($scope, TemplateService, NavigationService, $location, $filter, $sce) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Blog");
 
@@ -404,7 +404,7 @@ phonecatControllers.controller('blog',
         $scope.blogs = [];
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -419,7 +419,7 @@ phonecatControllers.controller('blog',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -428,7 +428,7 @@ phonecatControllers.controller('blog',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -440,7 +440,7 @@ phonecatControllers.controller('blog',
         }
 
         //  GET ALL BLOGS
-        var blogsuccess = function(data, status) {
+        var blogsuccess = function (data, status) {
             //            console.log(data);
             $scope.blogs = data.queryresult;
         }
@@ -449,10 +449,15 @@ phonecatControllers.controller('blog',
 
     }
 );
-
+phonecatControllers.controller('resetpswd', function ($scope, TemplateService) {
+    $scope.template = TemplateService;
+    TemplateService.header = 'views/headerblack.html';
+    TemplateService.content = 'views/resetpswd.html';
+    //    $scope.navigation = NavigationService.getnav();
+});
 
 phonecatControllers.controller('forgot',
-    function($scope, TemplateService, NavigationService, $location, $filter, $sce) {
+    function ($scope, TemplateService, NavigationService, $location, $filter, $sce) {
         $scope.template = TemplateService;
         //        $scope.menutitle = NavigationService.makeactive("Forgot");
 
@@ -466,7 +471,7 @@ phonecatControllers.controller('forgot',
         $scope.blogs = [];
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -481,7 +486,7 @@ phonecatControllers.controller('forgot',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -490,7 +495,7 @@ phonecatControllers.controller('forgot',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -502,7 +507,7 @@ phonecatControllers.controller('forgot',
         }
 
         //  GET ALL BLOGS
-        var blogsuccess = function(data, status) {
+        var blogsuccess = function (data, status) {
             //            console.log(data);
             $scope.blogs = data.queryresult;
         }
@@ -513,7 +518,7 @@ phonecatControllers.controller('forgot',
 );
 
 phonecatControllers.controller('bloginner',
-    function($scope, TemplateService, NavigationService, $location, $routeParams) {
+    function ($scope, TemplateService, NavigationService, $location, $routeParams) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Blog");
 
@@ -525,7 +530,7 @@ phonecatControllers.controller('bloginner',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -540,7 +545,7 @@ phonecatControllers.controller('bloginner',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -549,7 +554,7 @@ phonecatControllers.controller('bloginner',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -561,7 +566,7 @@ phonecatControllers.controller('bloginner',
         }
 
         //  GET SINGLE BLOG
-        var singleblog = function(data, status) {
+        var singleblog = function (data, status) {
             //            console.log(data);
             $scope.blog = data[0];
         }
@@ -572,7 +577,7 @@ phonecatControllers.controller('bloginner',
 
 
 phonecatControllers.controller('Explore',
-    function($scope, TemplateService, NavigationService, $routeParams, $location) {
+    function ($scope, TemplateService, NavigationService, $routeParams, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Explore projects");
         $scope.title = "Explore projects";
@@ -583,7 +588,7 @@ phonecatControllers.controller('Explore',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -598,7 +603,7 @@ phonecatControllers.controller('Explore',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -607,7 +612,7 @@ phonecatControllers.controller('Explore',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -625,7 +630,7 @@ phonecatControllers.controller('Explore',
 
         //  GET ALL PROJECT
         //        console.log($routeParams.id);
-        var projectsuccess = function(data, status) {
+        var projectsuccess = function (data, status) {
             $scope.projects = data.queryresult;
             $scope.projects = partitionarray($scope.projects, 3);
             //            console.log($scope.projects);
@@ -633,7 +638,7 @@ phonecatControllers.controller('Explore',
         NavigationService.getprojectbycategoryarray($routeParams.id).success(projectsuccess);
 
         //  GET ALL CATEGORY
-        var allcategoriessuccess = function(data, status) {
+        var allcategoriessuccess = function (data, status) {
             //            console.log("categories");
             //            console.log(data);
             $scope.categories = data.queryresult;
@@ -650,7 +655,7 @@ phonecatControllers.controller('Explore',
         NavigationService.getallcategory().success(allcategoriessuccess);
 
         //  TO CATEGORY FILTER
-        $scope.tocategory = function(cat) {
+        $scope.tocategory = function (cat) {
             if ($scope.catg.length == 0) {
                 $scope.catg.push(cat);
             } else {
@@ -686,7 +691,7 @@ phonecatControllers.controller('Explore',
         }
 
         //  GET ALL CATEGORY ON ALL
-        $scope.getallproject = function() {
+        $scope.getallproject = function () {
             for (var i = 0; i < $scope.categories.length; i++) {
                 $scope.categories[i].active = "";
             }
@@ -697,7 +702,7 @@ phonecatControllers.controller('Explore',
 );
 
 phonecatControllers.controller('campaign',
-    function($scope, TemplateService, NavigationService, $window, $location, $anchorScroll, anchorSmoothScroll, $routeParams, $window) {
+    function ($scope, TemplateService, NavigationService, $window, $location, $anchorScroll, anchorSmoothScroll, $routeParams, $window) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Campaign");
         $scope.title = "Campaign";
@@ -710,7 +715,7 @@ phonecatControllers.controller('campaign',
         $scope.project = [];
         $scope.facebookdiv = false;
         $scope.twitterdiv = false;
-//        $scope.isLoading = true;
+        //        $scope.isLoading = true;
         $scope.donation = NavigationService.getdonation();
         $scope.amount = $scope.donation[0].val;
         $scope.pre = $scope.donation[0].name;
@@ -722,24 +727,24 @@ phonecatControllers.controller('campaign',
         $scope.project.facebookaddon = "";
         $scope.project.twitteraddon = "";
         $scope.anonymous = false;
-        $scope.changevideo = function(video) {
+        $scope.changevideo = function (video) {
             $scope.playvideo = video;
             $scope.showvideo = true;
         }
-        $scope.changeperiod = function(donate, give) {
+        $scope.changeperiod = function (donate, give) {
             $scope.amount = donate;
             $.jStorage.set("amount", donate);
             $.jStorage.set("give", give);
         }
 
-        $scope.donnercheck = function(checkdonner) {
+        $scope.donnercheck = function (checkdonner) {
             console.log(checkdonner);
             $scope.donationdiv = "donation-selected";
             $scope.disabledgive = false;
         }
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -754,7 +759,7 @@ phonecatControllers.controller('campaign',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -763,7 +768,7 @@ phonecatControllers.controller('campaign',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -775,24 +780,24 @@ phonecatControllers.controller('campaign',
         }
 
         //   TO CATEGORY PAGE
-        $scope.tocategory = function() {
+        $scope.tocategory = function () {
             $location.url("/explore/" + $scope.project.category);
         }
 
         //        console.log($routeParams.id);
 
-        angular.element($window).bind("scroll", function() {
+        angular.element($window).bind("scroll", function () {
             $scope.scrolled = this.pageYOffset;
             $scope.greatHeight = angular.element('.sliderheadercampaign').height() - angular.element('.headerzindex').height();
             $scope.$apply();
         });
         $scope.myinterval = 5000;
-        $scope.gotoElement = function(id) {
+        $scope.gotoElement = function (id) {
             $location.hash(id);
             //            $anchorScroll();
             anchorSmoothScroll.scrollTo(id);
         }
-        var displaystaticpage = function(data, status) {
+        var displaystaticpage = function (data, status) {
             console.log("one campaign");
             console.log(data);
             $scope.percent = data.percent;
@@ -822,11 +827,11 @@ phonecatControllers.controller('campaign',
             if ($scope.projectimages != '') {
                 $scope.mainimage = $scope.projectimages[0].image;
             }
-            $scope.tomainimage = function(bigimg) {
+            $scope.tomainimage = function (bigimg) {
                 $scope.showvideo = false;
                 $scope.mainimage = bigimg.image;
             }
-            $scope.tovideo = function(video) {
+            $scope.tovideo = function (video) {
                 console.log(video);
             }
             $scope.similarcauses = data.similarcauses;
@@ -836,7 +841,7 @@ phonecatControllers.controller('campaign',
         NavigationService.getsingleproject($routeParams.id, displaystaticpage);
 
         //  TESTIMONIALS
-        var displaytestmonial1 = function(data, status) {
+        var displaytestmonial1 = function (data, status) {
 
             //            console.log("testimonial");
             //            console.log(data);
@@ -847,44 +852,44 @@ phonecatControllers.controller('campaign',
         NavigationService.displaytestmonial(displaytestmonial1);
 
         //  POST ON FACEBOOK
-        $scope.hidefacebook = function() {
+        $scope.hidefacebook = function () {
             $scope.facebookdiv = false;
         }
-        $scope.facebookshow = function() {
+        $scope.facebookshow = function () {
             $scope.facebookdiv = true;
             $scope.twitterdiv = false;
         }
-        $scope.facebookshare = function(text) {
+        $scope.facebookshare = function (text) {
             console.log(text);
             window.location.href = admin_url + "hauth/postfb?message=" + text + "&project=" + $scope.project.id + "&returnurl=http://www.powerforone.org/thankyou";
         }
 
         //  POST ON Twiter
-        $scope.hidetwitter = function() {
+        $scope.hidetwitter = function () {
             $scope.twitterdiv = false;
         }
-        $scope.twittershow = function() {
+        $scope.twittershow = function () {
             $scope.facebookdiv = false;
             $scope.twitterdiv = true;
         }
-        $scope.twittershare = function(text) {
+        $scope.twittershare = function (text) {
             console.log(text);
             window.location.href = admin_url + "hauth/posttweet?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + "&returnurl=http://www.powerforone.org/thankyou";
         }
 
         //  TO CHECKOUT
-        $scope.tocheckout = function(id, name) {
+        $scope.tocheckout = function (id, name) {
             console.log(id);
             NavigationService.setprojectid(id);
             $.jStorage.set("projectname", name);
             $.jStorage.set("anonymous", $scope.anonymous);
             $location.url("/checkout");
         }
-    }    //
+    } //
 );
 
 phonecatControllers.controller('myprofile',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("My Profile");
         $scope.title = "My Profile";
@@ -900,23 +905,24 @@ phonecatControllers.controller('myprofile',
         $scope.user = [];
 
         //  AUTHENTICATE
-        var usersuccess = function(data, status) {
+        var usersuccess = function (data, status) {
             console.log(data);
             $scope.user = data.user[0];
             $scope.projects = data.project;
             $scope.causehelped = [];
             $scope.order = data.order;
-            if(data.causehelped == ""){
-            $scope.causehelped.causehelped = "0";
-            }else{
-            $scope.causehelped = data.causehelped;}
+            if (data.causehelped == "") {
+                $scope.causehelped.causehelped = "0";
+            } else {
+                $scope.causehelped = data.causehelped;
+            }
             $scope.facebookshares = data.facebookshares;
             $scope.fellowship = data.fellowship;
             $scope.totalprojects = data.totalprojects;
             $scope.twittershares = data.twittershares;
         }
 
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -933,7 +939,7 @@ phonecatControllers.controller('myprofile',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -942,7 +948,7 @@ phonecatControllers.controller('myprofile',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
             } else {
@@ -955,7 +961,7 @@ phonecatControllers.controller('myprofile',
         }
 
         //  GET MY PROFILE PAGE
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
@@ -968,7 +974,7 @@ phonecatControllers.controller('myprofile',
 );
 
 phonecatControllers.controller('rewards',
-    function($scope, $location, TemplateService, NavigationService, $location) {
+    function ($scope, $location, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Rewards");
         TemplateService.header = 'views/headerblack.html';
@@ -979,7 +985,7 @@ phonecatControllers.controller('rewards',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -994,7 +1000,7 @@ phonecatControllers.controller('rewards',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1003,7 +1009,7 @@ phonecatControllers.controller('rewards',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1018,7 +1024,7 @@ phonecatControllers.controller('rewards',
 );
 
 phonecatControllers.controller('termsandcondition',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Terms & Condition");
         TemplateService.header = 'views/headertext.html';
@@ -1030,7 +1036,7 @@ phonecatControllers.controller('termsandcondition',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1045,7 +1051,7 @@ phonecatControllers.controller('termsandcondition',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1054,7 +1060,7 @@ phonecatControllers.controller('termsandcondition',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1066,7 +1072,7 @@ phonecatControllers.controller('termsandcondition',
         }
 
         //  GET TERMS AND CONDITION PAGE
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
@@ -1078,7 +1084,7 @@ phonecatControllers.controller('termsandcondition',
     }
 );
 phonecatControllers.controller('workwithus',
-    function($scope, TemplateService, NavigationService ,$location,$routeParams, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $routeParams, $filter) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
         $scope.title = "Work With Us";
@@ -1087,7 +1093,7 @@ phonecatControllers.controller('workwithus',
         TemplateService.content = 'views/workwithus.html';
         $scope.message = false;
         $scope.navigation = NavigationService.getnav();
-        var submitworkwithus = function(data, status) {
+        var submitworkwithus = function (data, status) {
             console.log(data);
             if (data != "0") {
                 $scope.message = true;
@@ -1102,7 +1108,7 @@ phonecatControllers.controller('workwithus',
 
 
         $scope.allvalidation = [];
-        $scope.submitworkwithus = function(form1) {
+        $scope.submitworkwithus = function (form1) {
             //  VALIDATION
             $scope.allvalidation = [{
                 field: $scope.form1.name,
@@ -1131,7 +1137,7 @@ phonecatControllers.controller('workwithus',
         };
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1146,7 +1152,7 @@ phonecatControllers.controller('workwithus',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1155,7 +1161,7 @@ phonecatControllers.controller('workwithus',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1166,7 +1172,7 @@ phonecatControllers.controller('workwithus',
             }
         }
 
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
@@ -1177,7 +1183,7 @@ phonecatControllers.controller('workwithus',
 );
 
 phonecatControllers.controller('Contactus',
-    function ($scope, TemplateService, NavigationService,$location, $routeParams, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $routeParams, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.header = 'views/headertext.html';
@@ -1189,7 +1195,7 @@ phonecatControllers.controller('Contactus',
         $scope.message = false;
         $scope.textmessage = "";
         $scope.navigation = NavigationService.getnav();
-        var submitcontactform1 = function(data, status) {
+        var submitcontactform1 = function (data, status) {
             console.log(data);
             if (data != "0") {
                 $scope.message = true;
@@ -1205,7 +1211,7 @@ phonecatControllers.controller('Contactus',
 
         //        ngToast.create('A toast message...');
 
-        $scope.submitcontactform = function(form) {
+        $scope.submitcontactform = function (form) {
             console.log(form);
             //  VALIDATION
             $scope.allvalidation = [{
@@ -1238,7 +1244,7 @@ phonecatControllers.controller('Contactus',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1253,7 +1259,7 @@ phonecatControllers.controller('Contactus',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1262,7 +1268,7 @@ phonecatControllers.controller('Contactus',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1274,7 +1280,7 @@ phonecatControllers.controller('Contactus',
         }
 
 
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
@@ -1285,7 +1291,7 @@ phonecatControllers.controller('Contactus',
 );
 
 phonecatControllers.controller('login',
-    function($scope, TemplateService, NavigationService, $location) {
+    function ($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("login");
         TemplateService.header = 'views/headerblack.html';
@@ -1296,7 +1302,7 @@ phonecatControllers.controller('login',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1311,7 +1317,7 @@ phonecatControllers.controller('login',
         $scope.user = [];
 
         //  ON LOGIN
-        var loginsuccess = function(data, status) {
+        var loginsuccess = function (data, status) {
             //            console.log(data);
             if (data == "false") {
                 alert("Invalid Id Or Password");
@@ -1321,7 +1327,7 @@ phonecatControllers.controller('login',
         }
 
         $scope.allvalidation = [];
-        $scope.userlogin = function(user) {
+        $scope.userlogin = function (user) {
 
             $scope.allvalidation = [{
                 field: $scope.user.email,
@@ -1342,7 +1348,7 @@ phonecatControllers.controller('login',
 
 
 phonecatControllers.controller('register',
-    function($scope, TemplateService, NavigationService, $location) {
+    function ($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("register");
         TemplateService.header = 'views/headerblack.html';
@@ -1353,7 +1359,7 @@ phonecatControllers.controller('register',
 
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1369,7 +1375,7 @@ phonecatControllers.controller('register',
         $scope.allvalidation = [];
 
         //  ON REGISTER
-        var registersuccess = function(data, status) {
+        var registersuccess = function (data, status) {
             //            console.log(data);
             if (data == "false") {
                 alert("User With this Email Id Already Exists.");
@@ -1377,7 +1383,7 @@ phonecatControllers.controller('register',
                 $location.url("/login");
             }
         }
-        $scope.createuser = function(user) {
+        $scope.createuser = function (user) {
             $scope.allvalidation = [{
                 field: $scope.user.name,
                 validation: ""
@@ -1399,7 +1405,7 @@ phonecatControllers.controller('register',
 );
 
 phonecatControllers.controller('policy',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("policy");
         TemplateService.header = 'views/headertext.html';
@@ -1410,7 +1416,7 @@ phonecatControllers.controller('policy',
         $scope.navigation = NavigationService.getnav();
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1425,7 +1431,7 @@ phonecatControllers.controller('policy',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1434,7 +1440,7 @@ phonecatControllers.controller('policy',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1446,7 +1452,7 @@ phonecatControllers.controller('policy',
         }
 
         //  GET TERMS AND CONDITION PAGE
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             $scope.content = data[0];
             //            $scope.backgroundimg = data[0].bannerimage;
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
@@ -1458,7 +1464,7 @@ phonecatControllers.controller('policy',
 );
 
 phonecatControllers.controller('checkout',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("checkout");
         TemplateService.header = 'views/headertext.html';
@@ -1473,13 +1479,13 @@ phonecatControllers.controller('checkout',
         $scope.checkout.istax = false;
         $scope.address = "";
         $scope.dob = "";
-        $scope.checktax = function(check) {
+        $scope.checktax = function (check) {
             //            $scope
         }
 
 
         // THAKYOU PAGE
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             console.log(data);
             $scope.title = data[0].name;
             $scope.page = data[0];
@@ -1491,10 +1497,10 @@ phonecatControllers.controller('checkout',
 
 
         //  AUTHENTICATE
-        var usersuccess = function(data, status) {
+        var usersuccess = function (data, status) {
             //$scope.checkout = data[0];
         }
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1511,7 +1517,7 @@ phonecatControllers.controller('checkout',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1520,7 +1526,7 @@ phonecatControllers.controller('checkout',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1532,12 +1538,12 @@ phonecatControllers.controller('checkout',
         }
 
         //  CHECKOUT PAY AND PROCEED
-        var checkoutsuccess = function(data, status) {
+        var checkoutsuccess = function (data, status) {
             $.jStorage.flush();
             $.jStorage.set("order", data);
             window.location.href = "https://www.instamojo.com/Powerforone/powerforone/?data_name=" + $scope.checkout.name + "&data_email=" + $scope.checkout.email + "&data_phone=" + $scope.checkout.mobile + "&data_amount=" + $scope.checkout.amount + "&data_Field_43272=" + $scope.checkout.projectname + "&data_hidden=data_Field_43273&data_Field_43273=" + data + "&data_readonly=data_amount&data_readonly=data_Field_43272&data_readonly=data_Field_43273&intent=buy&embed=form";
         }
-        $scope.payproceed = function(checkout) {
+        $scope.payproceed = function (checkout) {
             //  VALIDATION
             //            if ($scope.checkout.istax != true) {
             $scope.allvalidation = [{
@@ -1619,7 +1625,7 @@ phonecatControllers.controller('checkout',
 );
 
 phonecatControllers.controller('faq',
-    function($scope, TemplateService, NavigationService, $location) {
+    function ($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("faq");
         TemplateService.header = 'views/headerblack.html';
@@ -1629,7 +1635,7 @@ phonecatControllers.controller('faq',
         $scope.navigation = NavigationService.getnav();
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1644,7 +1650,7 @@ phonecatControllers.controller('faq',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1653,7 +1659,7 @@ phonecatControllers.controller('faq',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1668,7 +1674,7 @@ phonecatControllers.controller('faq',
 );
 
 phonecatControllers.controller('thankyou',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function ($scope, TemplateService, NavigationService, $location, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Thank You");
         TemplateService.header = 'views/headertext.html';
@@ -1679,7 +1685,7 @@ phonecatControllers.controller('thankyou',
         $scope.navigation = NavigationService.getnav();
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1694,7 +1700,7 @@ phonecatControllers.controller('thankyou',
         NavigationService.authenticate().success(authsuccess);
 
         // THAKYOU PAGE
-        var staticsuccess = function(data, status) {
+        var staticsuccess = function (data, status) {
             console.log(data);
             $scope.title = data[0].name;
             $scope.page = data[0];
@@ -1704,14 +1710,14 @@ phonecatControllers.controller('thankyou',
         NavigationService.getsinglestaticpage(9).success(staticsuccess);
 
         //  GET ALL COUPON
-        var couponsuccess = function(data, status) {
+        var couponsuccess = function (data, status) {
             console.log(data);
             $scope.coupons = data;
         }
         NavigationService.getallcouponold().success(couponsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1720,7 +1726,7 @@ phonecatControllers.controller('thankyou',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1735,7 +1741,7 @@ phonecatControllers.controller('thankyou',
 );
 
 phonecatControllers.controller('Teampage',
-    function($scope, TemplateService, NavigationService, $location) {
+    function ($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
 
         $scope.menutitle = NavigationService.makeactive("Team Page");
@@ -1747,7 +1753,7 @@ phonecatControllers.controller('Teampage',
         $scope.navigation = NavigationService.getnav();
 
         //  AUTHENTICATE
-        var authsuccess = function(data, status) {
+        var authsuccess = function (data, status) {
             //            console.log("auth auth auth");
             //            console.log(data);
             $scope.userauth = data;
@@ -1762,7 +1768,7 @@ phonecatControllers.controller('Teampage',
         NavigationService.authenticate().success(authsuccess);
 
         //  REGISTER CLICK
-        $scope.onregister = function() {
+        $scope.onregister = function () {
             if ($scope.register == "Register") {
                 $location.url("/register");
             } else {
@@ -1771,7 +1777,7 @@ phonecatControllers.controller('Teampage',
         }
 
         //  LOGIN CLICK
-        $scope.onlogin = function() {
+        $scope.onlogin = function () {
             if ($scope.login == "Login") {
                 $location.url("/login");
                 //                console.log("login");
@@ -1785,7 +1791,7 @@ phonecatControllers.controller('Teampage',
     }
 );
 phonecatControllers.controller('headerctrl',
-    function($scope, TemplateService) {
+    function ($scope, TemplateService) {
         $scope.template = TemplateService;
 
         $scope.demo = "fsdfasfa";
@@ -1794,49 +1800,49 @@ phonecatControllers.controller('headerctrl',
 );
 
 phonecatControllers.controller('footer',
-    function($scope, TemplateService, $location, NavigationService) {
+    function ($scope, TemplateService, $location, NavigationService) {
         $scope.template = TemplateService;
 
         //  DECLARATION
         $scope.message = 0;
 
         //  ALL FOOTER
-        var pagesuccess = function(data, status) {
+        var pagesuccess = function (data, status) {
             //            console.log(data);
             $scope.pages = data;
         }
         NavigationService.getstaticpages().success(pagesuccess);
 
         //  TO OTHER PAGES
-        $scope.topages = function(page) {
+        $scope.topages = function (page) {
             switch (page.id) {
-                case "1":
-                case "2":
-                case "3":
-                    {
-                        $location.url("/aboutUs/" + page.id);
-                        break;
-                    }
-                case "4":
-                    {
-                        $location.url("/works/" + page.id);
-                        break;
-                    }
-                case "5":
-                    {
-                        $location.url("/workwithus/" + page.id);
-                        break;
-                    }
-                case "6":
-                    {
-                        $location.url("/contactus/" + page.id);
-                        break;
-                    }
+            case "1":
+            case "2":
+            case "3":
+                {
+                    $location.url("/aboutUs/" + page.id);
+                    break;
+                }
+            case "4":
+                {
+                    $location.url("/works/" + page.id);
+                    break;
+                }
+            case "5":
+                {
+                    $location.url("/workwithus/" + page.id);
+                    break;
+                }
+            case "6":
+                {
+                    $location.url("/contactus/" + page.id);
+                    break;
+                }
             }
         }
 
         //  GET ALL CATEGORY
-        var allcategoriessuccess = function(data, status) {
+        var allcategoriessuccess = function (data, status) {
             //            console.log("categories");
             //            console.log(data);
             $scope.categories = data.queryresult;
@@ -1845,7 +1851,7 @@ phonecatControllers.controller('footer',
 
         //	ON NEWSLETTER
 
-        var submitnewsletter1 = function(data, status) {
+        var submitnewsletter1 = function (data, status) {
             console.log(data);
             if (data != "0") {
                 $scope.message = 1;
@@ -1859,7 +1865,7 @@ phonecatControllers.controller('footer',
 
         $scope.allvalidation = [];
         $scope.news = [];
-        $scope.submitnewsletter = function(news) {
+        $scope.submitnewsletter = function (news) {
             //            console.log(news);
             //  VALIDATION
             $scope.allvalidation = [{
