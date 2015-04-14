@@ -449,11 +449,14 @@ phonecatControllers.controller('blog',
 
     }
 );
-phonecatControllers.controller('resetpswd', function ($scope, TemplateService) {
+phonecatControllers.controller('resetpswd', function ($scope, TemplateService, NavigationService, $location, $filter, $sce) {
     $scope.template = TemplateService;
     TemplateService.header = 'views/headerblack.html';
     TemplateService.content = 'views/resetpswd.html';
     //    $scope.navigation = NavigationService.getnav();
+    TemplateService.title = "ResetPassword";
+    $scope.navigation = NavigationService.getnav();
+    $scope.blogs = [];
 });
 
 phonecatControllers.controller('forgot',
@@ -462,9 +465,8 @@ phonecatControllers.controller('forgot',
         //        $scope.menutitle = NavigationService.makeactive("Forgot");
 
         TemplateService.header = 'views/headerblack.html';
-
         TemplateService.content = 'views/forgot.html';
-        TemplateService.title = "Blog";
+        TemplateService.title = "forgotpassword";
         $scope.navigation = NavigationService.getnav();
 
         //  DECLARATIONS
