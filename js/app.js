@@ -25,7 +25,7 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'forgot'
         }).
-        when('/resetpswd', {
+        when('/resetpswd/:id', {
                 templateUrl: 'views/template.html',
                 controller: 'resetpswd'
             }).

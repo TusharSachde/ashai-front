@@ -449,7 +449,7 @@ phonecatControllers.controller('blog',
 
     }
 );
-phonecatControllers.controller('resetpswd', function ($scope, TemplateService, NavigationService, $location, $filter, $sce) {
+phonecatControllers.controller('resetpswd', function ($scope, TemplateService, NavigationService, $location, $filter, $sce, $routeParams) {
     $scope.template = TemplateService;
     TemplateService.header = 'views/headerblack.html';
     TemplateService.content = 'views/resetpswd.html';
@@ -457,6 +457,7 @@ phonecatControllers.controller('resetpswd', function ($scope, TemplateService, N
     TemplateService.title = "ResetPassword";
     $scope.navigation = NavigationService.getnav();
     $scope.blogs = [];
+    console.log($routeParams.id);
 });
 
 phonecatControllers.controller('forgot',
