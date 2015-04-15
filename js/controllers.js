@@ -332,6 +332,7 @@ phonecatControllers.controller('aboutUs',
             $scope.aboutus = "active";
             $scope.team = "";
             $scope.faq = "";
+            $location.url("/pages/aboutus");
 
         }
         $scope.changeteam = function() {
@@ -339,6 +340,7 @@ phonecatControllers.controller('aboutUs',
             $scope.aboutus = "";
             $scope.team = "active";
             $scope.faq = "";
+            $location.url("/pages/team");
 
         }
         $scope.changefaq = function() {
@@ -346,6 +348,7 @@ phonecatControllers.controller('aboutUs',
             $scope.aboutus = "";
             $scope.team = "";
             $scope.faq = "active";
+            $location.url("/pages/faq");
 
         }
 
@@ -1563,14 +1566,15 @@ phonecatControllers.controller('checkout',
             //$scope.checkout = data[0];
         }
         var authsuccess = function(data, status) {
-            //            console.log("auth auth auth");
-            //            console.log(data);
+                        console.log("auth auth auth");
+                        console.log(data);
             $scope.userauth = data;
             if (data == "false") {
                 //                $location.url("/login");
                 $scope.register = "Register";
                 $scope.login = "Login";
             } else {
+                $scope.checkout = data;
                 $scope.register = data.name;
                 $scope.login = "Logout";
                 NavigationService.getsingleuser().success(usersuccess);
