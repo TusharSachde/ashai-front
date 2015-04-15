@@ -2446,8 +2446,9 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: auto!important;
 }
 .info p {
-    height: 35px;
+    height: 40px;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .mobile-homebg {
     display: none;

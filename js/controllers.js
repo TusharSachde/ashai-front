@@ -8,6 +8,7 @@ phonecatControllers.controller('home',
         $scope.title = "Home";
         TemplateService.content = 'views/home.html';
         TemplateService.header = 'views/header.html';
+     TemplateService.title = "Home";
         $scope.navigation = NavigationService.getnav();
 
         //  DECLARATION
@@ -1090,7 +1091,7 @@ phonecatControllers.controller('termsandcondition',
         $scope.title = "Terms & Conditions";
         $scope.backgroundimg = "T&C.jpg";
         TemplateService.content = 'views/terms.html';
-        TemplateService.title = "Terms";
+        TemplateService.title = "Terms & Conditions";
         $scope.navigation = NavigationService.getnav();
 
 
@@ -1146,10 +1147,12 @@ phonecatControllers.controller('workwithus',
     function($scope, TemplateService, NavigationService, $location, $routeParams, $filter) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
+    $scope.menutitle = NavigationService.makeactive("Work with us");
         $scope.title = "Work With Us";
         $scope.form1 = {};
         $scope.backgroundimg = "Work-with-us.jpg";
         TemplateService.content = 'views/workwithus.html';
+     TemplateService.title = "Work with us";
         $scope.message = false;
         $scope.navigation = NavigationService.getnav();
         var submitworkwithus = function(data, status) {
