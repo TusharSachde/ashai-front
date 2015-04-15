@@ -2446,8 +2446,9 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: auto!important;
 }
 .info p {
-    height: 35px;
+    height: 40px;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .mobile-homebg {
     display: none;
@@ -2473,6 +2474,17 @@ form.ng-invalid.ng-dirty.frm-bdr {
     text-align: center!important;
 }
 .thankyou-img img {
-    width: 100px;
+    width: 200px;
     height: auto;
+}
+.tax-msg p{
+    width:70%;
+    margin:0 auto;
+    text-align:center;
+}
+.greenmsg{
+    color: green;
+}
+.redmsg{
+    color: red;
 }

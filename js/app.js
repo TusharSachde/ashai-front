@@ -1,7 +1,7 @@
 // JavaScript Document
 
-var frontend="http://www.powerforone.org/";
-var backend="http://www.powerforone.org/admin/";
+var frontend = "http://www.powerforone.org/";
+var backend = "http://www.powerforone.org/admin/";
 
 var firstapp = angular.module('firstapp', [
   'ngRoute',
@@ -21,62 +21,70 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'works'
         }).
-          when('/forgot', {
+        when('/forgot', {
             templateUrl: 'views/template.html',
             controller: 'forgot'
         }).
-         when('/fbpopup', {
+        when('/resetpswd/:id', {
+                templateUrl: 'views/template.html',
+                controller: 'resetpswd'
+            }).
+            //        when('/resetpswd', {
+            //     templateUrl: 'views/template.html',
+            //     controller: 'resetpswd'
+            // }).
+        when('/fbpopup', {
             templateUrl: 'views/popup_template.html',
             controller: 'fbpopup'
         }).
-        
+
         when('/blog', {
             templateUrl: 'views/template.html',
             controller: 'blog'
         }).
-        
-         when('/bloginner/:id', {
+
+        when('/bloginner/:id', {
             templateUrl: 'views/template.html',
             controller: 'bloginner'
         }).
-        
+
         when('/login', {
             templateUrl: 'views/template.html',
             controller: 'login'
         }).
-        
-        
-          when('/register', {
+
+
+        when('/register', {
             templateUrl: 'views/template.html',
             controller: 'register'
         }).
-        
+
         when('/checkout', {
             templateUrl: 'views/template.html',
             controller: 'checkout'
         }).
-        
+
         when('/faq', {
             templateUrl: 'views/template.html',
             controller: 'faq'
         }).
-        
-        
-         when('/workwithus', {
+
+
+        when('/workwithus', {
             templateUrl: 'views/template.html',
             controller: 'workwithus'
         }).
-         when('/teampage', {
+        when('/teampage', {
             templateUrl: 'views/template.html',
             controller: 'Teampage'
         }).
-        
-         when('/policy', {
+
+        when('/policy', {
             templateUrl: 'views/template.html',
             controller: 'policy'
         }).
-        
-         when('/thankyou', {
+
+        when('/thankyou', {
             templateUrl: 'views/template.html',
             controller: 'thankyou'
         }).
@@ -88,11 +96,11 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'fellowship'
         }).
-         when('/aboutUs/:id', {
+        when('/pages/:id', {
             templateUrl: 'views/template.html',
             controller: 'aboutUs'
         }).
-         when('/explore/:id', {
+        when('/explore/:id', {
             templateUrl: 'views/template.html',
             controller: 'Explore'
         }).
@@ -104,56 +112,58 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'myprofile'
         }).
-         when('/rewards', {
+        when('/rewards', {
             templateUrl: 'views/template.html',
             controller: 'rewards'
         }).
-         when('/termsandcondition', {
+        when('/termsandcondition', {
             templateUrl: 'views/template.html',
             controller: 'termsandcondition'
         }).
         otherwise({
             redirectTo: '/home'
         });
-      
-    
+
+
   }]);
 
-firstapp.directive('wrapOwlcarousel', function () {  
-    return {  
-        restrict: 'E',  
-        link: function (scope, element, attrs) {  
-            var options = scope.$eval($(element).attr('data-options'));  
-            $(element).owlCarousel(options);  
-        }  
-    };  
-});  
+firstapp.directive('wrapOwlcarousel', function () {
+    return {
+        restrict: 'E',
+        link: function (scope, element, attrs) {
+            var options = scope.$eval($(element).attr('data-options'));
+            $(element).owlCarousel(options);
+        }
+    };
+});
 
 
-firstapp.directive('myYoutube', function($sce) {
-  return {
-    restrict: 'EA',
-    scope: { code:'=' },
-    replace: true,
-    template: '<iframe style="overflow:hidden;height:100%;width:100%" width="100%" height="100%" src="{{url}}" frameborder="0" allowfullscreen></iframe>',
-    link: function (scope) {
-        console.log('here');
-        scope.$watch('code', function (newVal) {
-           if (newVal) {
-               scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + newVal);
-           }
-        });
-    }
-  };
+firstapp.directive('myYoutube', function ($sce) {
+    return {
+        restrict: 'EA',
+        scope: {
+            code: '='
+        },
+        replace: true,
+        template: '<iframe style="overflow:hidden;height:100%;width:100%" width="100%" height="100%" src="{{url}}" frameborder="0" allowfullscreen></iframe>',
+        link: function (scope) {
+            console.log('here');
+            scope.$watch('code', function (newVal) {
+                if (newVal) {
+                    scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + newVal);
+                }
+            });
+        }
+    };
 });
 
 
 firstapp.filter('categoryimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/categoryimg/childwelfare.jpg";
+            return frontend + "images/categoryimg/childwelfare.jpg";
         } else {
-            return backend+"uploads/" + input;
+            return backend + "uploads/" + input;
         }
     };
 });
@@ -161,7 +171,7 @@ firstapp.filter('categoryimagepath', function () {
 firstapp.filter('profileimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/dp.jpg";
+            return frontend + "images/dp.jpg";
         } else {
             return input;
         }
@@ -171,9 +181,9 @@ firstapp.filter('profileimagepath', function () {
 firstapp.filter('testimonialimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/face.png";
+            return frontend + "images/face.png";
         } else {
-            return backend+"uploads/" + input;
+            return backend + "uploads/" + input;
         }
     };
 });
@@ -181,9 +191,9 @@ firstapp.filter('testimonialimagepath', function () {
 firstapp.filter('projectbannerimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/salaam_bombay.png";
+            return frontend + "images/salaam_bombay.png";
         } else {
-            return backend+"uploads/" + input;
+            return backend + "uploads/" + input;
         }
     };
 });
@@ -191,9 +201,9 @@ firstapp.filter('projectbannerimagepath', function () {
 firstapp.filter('cardimageimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/salaam_bombay.png";
+            return frontend + "images/salaam_bombay.png";
         } else {
-            return backend+"uploads/" + input;
+            return backend + "uploads/" + input;
         }
     };
 });
@@ -201,12 +211,12 @@ firstapp.filter('cardimageimagepath', function () {
 firstapp.filter('bannerimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/salaam_bombay.png";
+            return frontend + "images/salaam_bombay.png";
         } else {
-            if(input == "learn_more.png"){
-                return "images/backgrounds/"+input;
-            }else{
-            return backend+"uploads/" + input;
+            if (input == "learn_more.png") {
+                return "images/backgrounds/" + input;
+            } else {
+                return backend + "uploads/" + input;
             }
         }
     };
@@ -215,9 +225,9 @@ firstapp.filter('bannerimagepath', function () {
 firstapp.filter('ngoimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/face.png";
+            return frontend + "images/face.png";
         } else {
-            return backend+"uploads/" + input;
+            return backend + "uploads/" + input;
         }
     };
 });
@@ -225,53 +235,53 @@ firstapp.filter('ngoimagepath', function () {
 firstapp.filter('couponimagepath', function () {
     return function (input) {
         if (input == null || input == '') {
-            return frontend+"images/pf_logo.png";
+            return frontend + "images/pf_logo.png";
         } else {
-            return backend+"uploads/" + input;
+            return backend + "uploads/" + input;
         }
     };
 });
 
 firstapp.filter('fourletter', function () {
-        return function (input) {
-            return input.substring(0, 5);
+    return function (input) {
+        return input.substring(0, 5);
 
-        };
-    });
+    };
+});
 
 firstapp.filter('cut', function () {
-        return function (value, wordwise, max, tail) {
-            if (!value) return '';
+    return function (value, wordwise, max, tail) {
+        if (!value) return '';
 
-            max = parseInt(max, 10);
-            if (!max) return value;
-            if (value.length <= max) return value;
+        max = parseInt(max, 10);
+        if (!max) return value;
+        if (value.length <= max) return value;
 
-            value = value.substr(0, max);
-            if (wordwise) {
-                var lastspace = value.lastIndexOf(' ');
-                if (lastspace != -1) {
-                    value = value.substr(0, lastspace);
-                }
+        value = value.substr(0, max);
+        if (wordwise) {
+            var lastspace = value.lastIndexOf(' ');
+            if (lastspace != -1) {
+                value = value.substr(0, lastspace);
             }
+        }
 
-            return value + (tail || ' …');
-        };
-    });
+        return value + (tail || ' …');
+    };
+});
 
-firstapp.filter('rawHtml', ['$sce', function($sce){
-  return function(val) {
-    return $sce.trustAsHtml(val);
-  };
+firstapp.filter('rawHtml', ['$sce', function ($sce) {
+    return function (val) {
+        return $sce.trustAsHtml(val);
+    };
 }]);
 
-firstapp.run( function($rootScope, $location,$window) {
-   $rootScope.$watch(function() { 
-      return $location.path(); 
-    },
-    function(a){  
-      $window.scrollTo(0,0);
-    });
+firstapp.run(function ($rootScope, $location, $window) {
+    $rootScope.$watch(function () {
+            return $location.path();
+        },
+        function (a) {
+            $window.scrollTo(0, 0);
+        });
 });
 //firstapp.directive("chat", function() {
 //    return {
@@ -281,20 +291,20 @@ firstapp.run( function($rootScope, $location,$window) {
 //    }
 //})
 function partitionarray(myarray, number) {
-            var arrlength = myarray.length;
-            var newarray = [];
-            var j = -1;
-            for (var i = 0; i < arrlength; i++) {
-                if (i % number == 0) {
-                    j++;
-                    newarray[j] = [];
-                }
-                newarray[j].push(myarray[i]);
-            }
-            return newarray;
-        };
+    var arrlength = myarray.length;
+    var newarray = [];
+    var j = -1;
+    for (var i = 0; i < arrlength; i++) {
+        if (i % number == 0) {
+            j++;
+            newarray[j] = [];
+        }
+        newarray[j].push(myarray[i]);
+    }
+    return newarray;
+};
 
-var formvalidation = function(allvalidation) {
+var formvalidation = function (allvalidation) {
     var isvalid2 = true;
     for (var i = 0; i < allvalidation.length; i++) {
         console.log("checking");

@@ -8,6 +8,7 @@ phonecatControllers.controller('home',
         $scope.title = "Home";
         TemplateService.content = 'views/home.html';
         TemplateService.header = 'views/header.html';
+     TemplateService.title = "Home";
         $scope.navigation = NavigationService.getnav();
 
         //  DECLARATION
@@ -331,6 +332,7 @@ phonecatControllers.controller('aboutUs',
             $scope.aboutus = "active";
             $scope.team = "";
             $scope.faq = "";
+            $location.url("/pages/aboutus");
 
         }
         $scope.changeteam = function() {
@@ -338,6 +340,7 @@ phonecatControllers.controller('aboutUs',
             $scope.aboutus = "";
             $scope.team = "active";
             $scope.faq = "";
+            $location.url("/pages/team");
 
         }
         $scope.changefaq = function() {
@@ -345,6 +348,7 @@ phonecatControllers.controller('aboutUs',
             $scope.aboutus = "";
             $scope.team = "";
             $scope.faq = "active";
+            $location.url("/pages/faq");
 
         }
 
@@ -362,21 +366,21 @@ phonecatControllers.controller('aboutUs',
             console.log($scope.backgroundimg);
         }
         switch ($routeParams.id) {
-            case "1":
+            case "aboutus":
                 {
-                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                    NavigationService.getsinglestaticpage(1).success(staticsuccess);
                     $scope.aboutus = "active";
                     break;
                 }
-            case "2":
+            case "faq":
                 {
-                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                    NavigationService.getsinglestaticpage(2).success(staticsuccess);
                     $scope.faq = "active";
                     break;
                 }
-            case "3":
+            case "team":
                 {
-                    NavigationService.getsinglestaticpage($routeParams.id).success(staticsuccess);
+                    NavigationService.getsinglestaticpage(3).success(staticsuccess);
                     $scope.team = "active";
                     break;
                 }
@@ -449,7 +453,52 @@ phonecatControllers.controller('blog',
 
     }
 );
+phonecatControllers.controller('resetpswd', function($scope, TemplateService, NavigationService, $location, $filter, $sce, $routeParams) {
+    $scope.template = TemplateService;
+    TemplateService.header = 'views/headerblack.html';
+    TemplateService.content = 'views/resetpswd.html';
+    //    $scope.navigation = NavigationService.getnav();
+    TemplateService.title = "ResetPassword";
+    $scope.navigation = NavigationService.getnav();
+    $scope.mesg = "";
+    $scope.pass = {};
+    $scope.checkpass = {};
+    $scope.msgcolor = "";
+    
+    var forgotsuccess = function(data, status){
+        console.log(data);
+        if(data=='1'){
+//            $location.url("/login");
+            $scope.mesg = "Paassword changed successfully";
+            $scope.msgcolor = "greenmsg";
+        }else{
+            $scope.mesg = "Fail to reset password";
+            $scope.msgcolor = "redmsg";
+        }
+    }
+    
+    $scope.resetpass = function(pass) {
 
+        if (pass.password === pass.confpassword) {
+            $scope.allvalidation = [{
+                field: $scope.pass.password,
+                validation: ""
+            }, {
+                field: $scope.pass.confpassword,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.forgotpasswordsubmit(pass.password,$routeParams.id).success(forgotsuccess);
+            };
+        } else {
+            $scope.mesg = "Please enter the same value again.";
+            $scope.msgcolor = "redmsg";
+        }
+    }
+
+});
 
 phonecatControllers.controller('forgot',
     function($scope, TemplateService, NavigationService, $location, $filter, $sce) {
@@ -457,13 +506,15 @@ phonecatControllers.controller('forgot',
         //        $scope.menutitle = NavigationService.makeactive("Forgot");
 
         TemplateService.header = 'views/headerblack.html';
-
         TemplateService.content = 'views/forgot.html';
-        TemplateService.title = "Blog";
+        TemplateService.title = "forgotpassword";
         $scope.navigation = NavigationService.getnav();
 
         //  DECLARATIONS
         $scope.blogs = [];
+        $scope.user = [];
+        $scope.msg = '';
+        $scope.msgcolor = "";
 
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -501,13 +552,29 @@ phonecatControllers.controller('forgot',
             }
         }
 
-        //  GET ALL BLOGS
-        var blogsuccess = function(data, status) {
-            //            console.log(data);
-            $scope.blogs = data.queryresult;
+        //  ON FORGOT CLICK
+        var forgotsuccess = function(data, status) {
+            console.log(data);
+            if(data == "true"){
+                $scope.msg = "Please check your email";
+                $scope.msgcolor = "greenmsg";
+            }else{
+                $scope.msg = "Can not send Email , Try again";
+                $scope.msgcolor = "redmsg";
+            }
+            
         }
-        NavigationService.getblog().success(blogsuccess);
+        $scope.forgotpass = function(user) {
+            $scope.allvalidation = [{
+                field: $scope.user.email,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
 
+            if (check) {
+                NavigationService.forgotpassword(user).success(forgotsuccess);
+            };
+        }
 
     }
 );
@@ -710,7 +777,7 @@ phonecatControllers.controller('campaign',
         $scope.project = [];
         $scope.facebookdiv = false;
         $scope.twitterdiv = false;
-//        $scope.isLoading = true;
+        //        $scope.isLoading = true;
         $scope.donation = NavigationService.getdonation();
         $scope.amount = $scope.donation[0].val;
         $scope.pre = $scope.donation[0].name;
@@ -788,7 +855,7 @@ phonecatControllers.controller('campaign',
         });
         $scope.myinterval = 5000;
         $scope.gotoElement = function(id) {
-            $location.hash(id);
+//            $location.hash(id);
             //            $anchorScroll();
             anchorSmoothScroll.scrollTo(id);
         }
@@ -873,14 +940,15 @@ phonecatControllers.controller('campaign',
         }
 
         //  TO CHECKOUT
-        $scope.tocheckout = function(id, name) {
+        $scope.tocheckout = function(amount, id, name) {
             console.log(id);
             NavigationService.setprojectid(id);
             $.jStorage.set("projectname", name);
+            $.jStorage.set("amount", amount);
             $.jStorage.set("anonymous", $scope.anonymous);
             $location.url("/checkout");
         }
-    }    //
+    } //
 );
 
 phonecatControllers.controller('myprofile',
@@ -906,10 +974,11 @@ phonecatControllers.controller('myprofile',
             $scope.projects = data.project;
             $scope.causehelped = [];
             $scope.order = data.order;
-            if(data.causehelped == ""){
-            $scope.causehelped.causehelped = "0";
-            }else{
-            $scope.causehelped = data.causehelped;}
+            if (data.causehelped == "") {
+                $scope.causehelped.causehelped = "0";
+            } else {
+                $scope.causehelped = data.causehelped;
+            }
             $scope.facebookshares = data.facebookshares;
             $scope.fellowship = data.fellowship;
             $scope.totalprojects = data.totalprojects;
@@ -1022,10 +1091,10 @@ phonecatControllers.controller('termsandcondition',
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Terms & Condition");
         TemplateService.header = 'views/headertext.html';
-        $scope.title = "Terms & Condition";
+        $scope.title = "Terms & Conditions";
         $scope.backgroundimg = "T&C.jpg";
         TemplateService.content = 'views/terms.html';
-        TemplateService.title = "Terms";
+        TemplateService.title = "Terms & Conditions";
         $scope.navigation = NavigationService.getnav();
 
 
@@ -1078,13 +1147,15 @@ phonecatControllers.controller('termsandcondition',
     }
 );
 phonecatControllers.controller('workwithus',
-    function($scope, TemplateService, NavigationService ,$location,$routeParams, $filter) {
+    function($scope, TemplateService, NavigationService, $location, $routeParams, $filter) {
         $scope.template = TemplateService;
         TemplateService.header = 'views/headertext.html';
+    $scope.menutitle = NavigationService.makeactive("Work with us");
         $scope.title = "Work With Us";
         $scope.form1 = {};
         $scope.backgroundimg = "Work-with-us.jpg";
         TemplateService.content = 'views/workwithus.html';
+     TemplateService.title = "Work with us";
         $scope.message = false;
         $scope.navigation = NavigationService.getnav();
         var submitworkwithus = function(data, status) {
@@ -1177,7 +1248,7 @@ phonecatControllers.controller('workwithus',
 );
 
 phonecatControllers.controller('Contactus',
-    function ($scope, TemplateService, NavigationService,$location, $routeParams, $filter) {
+    function($scope, TemplateService, NavigationService, $location, $routeParams, $filter) {
         $scope.template = TemplateService;
         $scope.menutitle = NavigationService.makeactive("Contact Us");
         TemplateService.header = 'views/headertext.html';
@@ -1495,14 +1566,15 @@ phonecatControllers.controller('checkout',
             //$scope.checkout = data[0];
         }
         var authsuccess = function(data, status) {
-            //            console.log("auth auth auth");
-            //            console.log(data);
+                        console.log("auth auth auth");
+                        console.log(data);
             $scope.userauth = data;
             if (data == "false") {
                 //                $location.url("/login");
                 $scope.register = "Register";
                 $scope.login = "Login";
             } else {
+                $scope.checkout = data;
                 $scope.register = data.name;
                 $scope.login = "Logout";
                 NavigationService.getsingleuser().success(usersuccess);

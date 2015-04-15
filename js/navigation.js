@@ -77,7 +77,8 @@ var navigationservice = angular.module('navigationservice', [])
                     "amount": checkout.amount,
                     "istax": checkout.istax,
                     "anonymous": checkout.anonymous,
-                    "give": checkout.give
+                    "give": checkout.give,
+                    "referral": checkout.referral
                 }
             })
         },
@@ -158,6 +159,9 @@ var navigationservice = angular.module('navigationservice', [])
             }
             return menuname;
         },
+        forgotpassword: function (form) {
+            return $http.get(admin_url + "email/forgotpassword?email="+form.email, {});
+        },
         submitcontactform: function (form) {
             return $http.post(admin_url + "json/createcontactus", form);
         },
@@ -173,6 +177,18 @@ var navigationservice = angular.module('navigationservice', [])
                 method: "POST",
                 data: {
                     "email": news.email
+                }
+            })
+        },
+        forgotpasswordsubmit: function (password,id) {
+            console.log(password);
+            console.log(id);
+            return $http({
+                url: admin_url + "json/forgotpasswordsubmit",
+                method: "POST",
+                data: {
+                    "password":password,
+                    "hashcode":id
                 }
             })
         }
