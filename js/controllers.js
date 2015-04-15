@@ -459,13 +459,17 @@ phonecatControllers.controller('resetpswd', function($scope, TemplateService, Na
     $scope.mesg = "";
     $scope.pass = {};
     $scope.checkpass = {};
+    $scope.msgcolor = "";
     
     var forgotsuccess = function(data, status){
         console.log(data);
         if(data=='1'){
-            $location.url("/login");
+//            $location.url("/login");
+            $scope.mesg = "Paassword changed successfully";
+            $scope.msgcolor = "greenmsg";
         }else{
             $scope.mesg = "Fail to reset password";
+            $scope.msgcolor = "redmsg";
         }
     }
     
@@ -486,6 +490,7 @@ phonecatControllers.controller('resetpswd', function($scope, TemplateService, Na
             };
         } else {
             $scope.mesg = "Please enter the same value again.";
+            $scope.msgcolor = "redmsg";
         }
     }
 
@@ -504,7 +509,8 @@ phonecatControllers.controller('forgot',
         //  DECLARATIONS
         $scope.blogs = [];
         $scope.user = [];
-    $scope.msg = '';
+        $scope.msg = '';
+        $scope.msgcolor = "";
 
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -547,8 +553,10 @@ phonecatControllers.controller('forgot',
             console.log(data);
             if(data == "true"){
                 $scope.msg = "Please check your email";
+                $scope.msgcolor = "greenmsg";
             }else{
                 $scope.msg = "Can not send Email , Try again";
+                $scope.msgcolor = "redmsg";
             }
             
         }
@@ -928,10 +936,11 @@ phonecatControllers.controller('campaign',
         }
 
         //  TO CHECKOUT
-        $scope.tocheckout = function(id, name) {
+        $scope.tocheckout = function(amount, id, name) {
             console.log(id);
             NavigationService.setprojectid(id);
             $.jStorage.set("projectname", name);
+            $.jStorage.set("amount", amount);
             $.jStorage.set("anonymous", $scope.anonymous);
             $location.url("/checkout");
         }

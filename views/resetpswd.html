@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="forgot-pwd text-center">
                     <h3 class="createtitle">Reset Password</h3>
-                    <h6>{{mesg}}</h6>
+                    <h6 ng-class="msgcolor">{{mesg}}</h6>
                     <div>
                         <!--                        <form>-->
                         <input type="password" class="custom-input signin-input" ng-model="pass.password" placeholder="Enter New Password *" ng-class="allvalidation[0].validation" required>

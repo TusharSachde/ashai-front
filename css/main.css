@@ -2481,3 +2481,9 @@ form.ng-invalid.ng-dirty.frm-bdr {
     margin:0 auto;
     text-align:center;
 }
+.greenmsg{
+    color: green;
+}
+.redmsg{
+    color: red;
+}
