@@ -453,7 +453,7 @@ phonecatControllers.controller('blog',
 
     }
 );
-phonecatControllers.controller('resetpswd', function($scope, TemplateService, NavigationService, $location, $filter, $sce, $routeParams) {
+phonecatControllers.controller('resetpswd', function($scope, TemplateService, NavigationService, $location, $filter, $sce, $routeParams, $timeout) {
     $scope.template = TemplateService;
     TemplateService.header = 'views/headerblack.html';
     TemplateService.content = 'views/resetpswd.html';
@@ -471,6 +471,9 @@ phonecatControllers.controller('resetpswd', function($scope, TemplateService, Na
 //            $location.url("/login");
             $scope.mesg = "Paassword changed successfully";
             $scope.msgcolor = "alert alert-success";
+            $timeout(function () {
+                $location.url("/login"); //close the popup after 3 seconds for some reason
+            }, 1500);
         }else{
             $scope.mesg = "Fail to reset password";
             $scope.msgcolor = "alert alert-danger";
