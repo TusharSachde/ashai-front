@@ -196,7 +196,8 @@
                     <div class="Bordr">
                         <p>PLEDGED</p>
                         <div class="txtpleded">
-                            <h4> Rs. {{totalprojectamount}}</h4>
+                            <h4 ng-if="totalprojectamount"> Rs. {{totalprojectamount}}</h4>
+                            <h4 ng-if="!totalprojectamount"> Rs. 0</h4>
                         </div>
                     </div>
 
@@ -234,7 +235,7 @@
                             <div class="row">
                                 <div class="text-center">
                                     <img ng-src="{{similarcauses[0].ngoimage | ngoimagepath}}" height="50px" width="50px">
-                                    <span style="margin-left:10px"><img ng-src="{{similarcauses[0].ngoimage | ngoimagepath}}" height="50px" width="50px"></span>
+                                    <span style="margin-left:10px"><img ng-src="{{similarcauses[0].advertiserimage | ngoimagepath}}" height="50px" width="50px"></span>
                                 </div>
                             </div>
 
@@ -244,7 +245,7 @@
             </div>
 
             <div class="col-md-4 causelnk" ng-if="similarcauses[1]">
-                <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
+                <a href="#/campaign/{{similarcauses[1].similarprojectid}}">
                     <div class="causes text-center">
                         <div class="pic">
                             <img ng-src="{{similarcauses[1].image | projectbannerimagepath}}">
@@ -263,7 +264,7 @@
                             <div class="row">
                                 <div class="text-center">
                                     <img ng-src="{{similarcauses[1].ngoimage | ngoimagepath}}" height="50px" width="50px">
-                                    <span style="margin-left:10px"><img ng-src="{{similarcauses[1].ngoimage | ngoimagepath}}" height="50px" width="50px"></span>
+                                    <span style="margin-left:10px"><img ng-src="{{similarcauses[1].advertiserimage | ngoimagepath}}" height="50px" width="50px"></span>
                                 </div>
                             </div>
 
@@ -272,7 +273,7 @@
                 </a>
             </div>
             <div class="col-md-4 causelnk" ng-if="similarcauses[2]">
-                <a href="#/campaign/{{similarcauses[0].similarprojectid}}">
+                <a href="#/campaign/{{similarcauses[2].similarprojectid}}">
                     <div class="causes text-center">
                         <div class="pic">
                             <img ng-src="{{similarcauses[2].image | projectbannerimagepath}}">
@@ -291,7 +292,7 @@
                             <div class="row">
                                 <div class="text-center">
                                     <img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px">
-                                    <span style="margin-left:10px"><img ng-src="{{similarcauses[2].ngoimage | ngoimagepath}}" height="50px" width="50px"></span>
+                                    <span style="margin-left:10px"><img ng-src="{{similarcauses[2].advertiserimage | ngoimagepath}}" height="50px" width="50px"></span>
                                 </div>
                             </div>
 

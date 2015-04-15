@@ -470,10 +470,10 @@ phonecatControllers.controller('resetpswd', function($scope, TemplateService, Na
         if(data=='1'){
 //            $location.url("/login");
             $scope.mesg = "Paassword changed successfully";
-            $scope.msgcolor = "greenmsg";
+            $scope.msgcolor = "alert alert-success";
         }else{
             $scope.mesg = "Fail to reset password";
-            $scope.msgcolor = "redmsg";
+            $scope.msgcolor = "alert alert-danger";
         }
     }
     
@@ -494,7 +494,7 @@ phonecatControllers.controller('resetpswd', function($scope, TemplateService, Na
             };
         } else {
             $scope.mesg = "Please enter the same value again.";
-            $scope.msgcolor = "redmsg";
+            $scope.msgcolor = "alert alert-danger";
         }
     }
 
@@ -557,10 +557,10 @@ phonecatControllers.controller('forgot',
             console.log(data);
             if(data == "true"){
                 $scope.msg = "Please check your email";
-                $scope.msgcolor = "greenmsg";
+                $scope.msgcolor = "alert alert-success";
             }else{
                 $scope.msg = "Can not send Email , Try again";
-                $scope.msgcolor = "redmsg";
+                $scope.msgcolor = "alert alert-danger";
             }
             
         }
@@ -1449,7 +1449,7 @@ phonecatControllers.controller('register',
             if (data == "false") {
                 alert("User With this Email Id Already Exists.");
             } else {
-                $location.url("/login");
+                $location.url("/home");
             }
         }
         $scope.createuser = function(user) {
