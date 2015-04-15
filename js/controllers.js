@@ -923,7 +923,9 @@ phonecatControllers.controller('campaign',
         }
         $scope.facebookshare = function(text) {
             console.log(text);
-            window.location.href = admin_url + "hauth/postfb?message=" + text + "&project=" + $scope.project.id + "&returnurl=http://www.powerforone.org/thankyou";
+            text=encodeURIComponent(text);
+            var link=encodeURIComponent("http://www.powerforone.org/thankyou");
+            window.location.href = admin_url + "hauth/postfb?message=" + text + "&project=" + $scope.project.id + "&returnurl="+link;
         }
 
         //  POST ON Twiter
@@ -936,7 +938,9 @@ phonecatControllers.controller('campaign',
         }
         $scope.twittershare = function(text) {
             console.log(text);
-            window.location.href = admin_url + "hauth/posttweet?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + "&returnurl=http://www.powerforone.org/thankyou";
+            text=encodeURIComponent(text);
+            var link=encodeURIComponent("http://www.powerforone.org/thankyou");
+            window.location.href = admin_url + "hauth/posttweet?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + "&returnurl="+link;
         }
 
         //  TO CHECKOUT
