@@ -855,7 +855,7 @@ phonecatControllers.controller('campaign',
         });
         $scope.myinterval = 5000;
         $scope.gotoElement = function(id) {
-            $location.hash(id);
+//            $location.hash(id);
             //            $anchorScroll();
             anchorSmoothScroll.scrollTo(id);
         }
