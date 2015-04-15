@@ -462,11 +462,16 @@ phonecatControllers.controller('resetpswd', function($scope, TemplateService, Na
     
     var forgotsuccess = function(data, status){
         console.log(data);
+        if(data=='1'){
+            $location.url("/login");
+        }else{
+            $scope.mesg = "Fail to reset password";
+        }
     }
     
-    $scope.resetpass = function(password,confpassword) {
+    $scope.resetpass = function(pass) {
 
-        if (password === confpassword) {
+        if (pass.password === pass.confpassword) {
             $scope.allvalidation = [{
                 field: $scope.pass.password,
                 validation: ""
@@ -477,9 +482,7 @@ phonecatControllers.controller('resetpswd', function($scope, TemplateService, Na
             var check = formvalidation($scope.allvalidation);
 
             if (check) {
-                $scope.checkpass.password = password;
-                $scope.checkpass.hashcode = $routeParams.id;
-                NavigationService.forgotpasswordsubmit($scope.checkpass).success(forgotsuccess);
+                NavigationService.forgotpasswordsubmit(pass.password,$routeParams.id).success(forgotsuccess);
             };
         } else {
             $scope.mesg = "Please enter the same value again.";
@@ -501,6 +504,7 @@ phonecatControllers.controller('forgot',
         //  DECLARATIONS
         $scope.blogs = [];
         $scope.user = [];
+    $scope.msg = '';
 
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -541,6 +545,12 @@ phonecatControllers.controller('forgot',
         //  ON FORGOT CLICK
         var forgotsuccess = function(data, status) {
             console.log(data);
+            if(data == "true"){
+                $scope.msg = "Please check your email";
+            }else{
+                $scope.msg = "Can not send Email , Try again";
+            }
+            
         }
         $scope.forgotpass = function(user) {
             $scope.allvalidation = [{

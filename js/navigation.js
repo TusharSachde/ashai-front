@@ -160,7 +160,7 @@ var navigationservice = angular.module('navigationservice', [])
             return menuname;
         },
         forgotpassword: function (form) {
-            return $http.post(admin_url + "email/forgotpassword", form);
+            return $http.get(admin_url + "email/forgotpassword?email="+form.email, {});
         },
         submitcontactform: function (form) {
             return $http.post(admin_url + "json/createcontactus", form);
@@ -180,11 +180,16 @@ var navigationservice = angular.module('navigationservice', [])
                 }
             })
         },
-        forgotpasswordsubmit: function (forgot) {
+        forgotpasswordsubmit: function (password,id) {
+            console.log(password);
+            console.log(id);
             return $http({
                 url: admin_url + "json/forgotpasswordsubmit",
                 method: "POST",
-                data: forgot
+                data: {
+                    "password":password,
+                    "hashcode":id
+                }
             })
         }
     }
