@@ -149,6 +149,17 @@ var navigationservice = angular.module('navigationservice', [])
                 }
             });
         },
+        sendwelcomeemail: function (thankyou) {
+            return $http({
+                url: admin_url + "json/sendwelcomeemail",
+                method: "POST",
+                data: {
+                    'name': thankyou.name,
+                    'email': thankyou.email,
+                    'hashcode': thankyou.hashcode
+                }
+            });
+        },
         makeactive: function (menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {

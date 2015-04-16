@@ -927,7 +927,7 @@ phonecatControllers.controller('campaign',
         $scope.facebookshare = function(text) {
             console.log(text);
             text=encodeURIComponent(text);
-            var link=encodeURIComponent("http://www.powerforone.org/thankyou");
+            var link=encodeURIComponent("http://www.powerforone.org/thankyou_share");
             window.location.href = admin_url + "hauth/postfb?message=" + text + "&project=" + $scope.project.id + "&returnurl="+link;
         }
 
@@ -942,7 +942,7 @@ phonecatControllers.controller('campaign',
         $scope.twittershare = function(text) {
             console.log(text);
             text=encodeURIComponent(text);
-            var link=encodeURIComponent("http://www.powerforone.org/thankyou");
+            var link=encodeURIComponent("http://www.powerforone.org/thankyou_share");
             window.location.href = admin_url + "hauth/posttweet?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + "&returnurl="+link;
         }
 
@@ -1814,9 +1814,9 @@ phonecatControllers.controller('thankyou',
 );
 
 phonecatControllers.controller('Thankyoushare',
-    function($scope, TemplateService, NavigationService, $location, $filter) {
+    function($scope, TemplateService, NavigationService, $location, $filter, $routeParams) {
         $scope.template = TemplateService;
-        $scope.menutitle = NavigationService.makeactive("Thank You Share");
+        $scope.menutitle = NavigationService.makeactive("Thank You");
         TemplateService.header = 'views/headertext.html';
         $scope.title = "thank you";
         //        $scope.backgroundimg = "Thank-you.jpg";
@@ -1824,6 +1824,10 @@ phonecatControllers.controller('Thankyoushare',
         TemplateService.title = "Thank you";
         $scope.navigation = NavigationService.getnav();
 
+        //  DECLARATION
+        $scope.thankyou = [];
+        $scope.allvalidation = [];
+    
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
             //            console.log("auth auth auth");
@@ -1847,7 +1851,7 @@ phonecatControllers.controller('Thankyoushare',
             //            $scope.backgroundimg = data[0].bannerimage;
             $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
         }
-        NavigationService.getsinglestaticpage(9).success(staticsuccess);
+        NavigationService.getsinglestaticpage(14).success(staticsuccess);
 
         //  GET ALL COUPON
         var couponsuccess = function(data, status) {
@@ -1876,7 +1880,28 @@ phonecatControllers.controller('Thankyoushare',
                 $scope.login = "Login";
             }
         }
+        
+        //  ON THANKYOU SUBMIT
+        var thankyousuccess = function(data, status){
+            console.log(data);
+        }
+        $scope.thankyousubmit = function(thankyou){
+            $scope.allvalidation = [{
+                field: $scope.thankyou.name,
+                validation: ""
 
+            },{
+                field: $scope.thankyou.email,
+                validation: ""
+
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                $scope.thankyou.hashcode = $routeParams.hashcode;
+                NavigationService.sendwelcomeemail($scope.thankyou).success(thankyousuccess);
+            }
+        }
     }
 );
 

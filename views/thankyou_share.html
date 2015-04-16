@@ -17,20 +17,20 @@
 
 <div class="container">
     <div class="row">
-<!--
         <div ng-bind-html="page.content | rawHtml">
 
         </div>
--->
+<!--
         <ol class="nxt1cont">
             <li>Ishaan&nbsp;Kapoor will be your point of contact you can call him on +91-9833289081 for any questions you may have.</li>
             <li>We will send you two&nbsp;reports via email highlighting the utilisation of funds and the impact made.</li>
             <li>Follow us on our social media where you will see updates on the work we are doing.</li>
             <li>Please share your Name & Email Address for Reports on the Impact & Utilization of the funds.</li>
         </ol>
-        <form class="form-inline" style="margin-left:45px">
-            <input type="text" class="custom-input signin-input width10" placeholder="Name *">
-            <input type="text" class="custom-input signin-input width10" placeholder="Email *">
+-->
+        <form class="form-inline" style="margin-left:45px" ng-submit="thankyousubmit(thankyou)">
+            <input type="text" class="custom-input signin-input width10" placeholder="Name *" ng-model="thankyou.name" ng-class="allvalidation[0].validation" required>
+            <input type="text" class="custom-input signin-input width10" placeholder="Email *" ng-model="thankyou.email" ng-class="allvalidation[1].validation" required>
             <button type="submit" class="createacc cpointer width10">Submit</button>
         </form>
         <!--
