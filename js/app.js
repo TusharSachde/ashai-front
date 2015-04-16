@@ -88,6 +88,10 @@ firstapp.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'thankyou'
         }).
+        when('/thankyou_share', {
+            templateUrl: 'views/thankyou_share.html',
+            controller: 'Thankyoushare'
+        }).
         when('/contactus', {
             templateUrl: 'views/template.html',
             controller: 'Contactus'

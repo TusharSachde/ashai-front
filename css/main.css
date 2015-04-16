@@ -2457,6 +2457,10 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: auto;
     height: auto;
 }
+.width10{
+    width:15%!important;
+    display: inline-block!important;
+}
 .carousel-indicators {
     z-index: 5;
 }

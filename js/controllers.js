@@ -1813,6 +1813,74 @@ phonecatControllers.controller('thankyou',
     }
 );
 
+phonecatControllers.controller('Thankyoushare',
+    function($scope, TemplateService, NavigationService, $location, $filter) {
+        $scope.template = TemplateService;
+        $scope.menutitle = NavigationService.makeactive("Thank You Share");
+        TemplateService.header = 'views/headertext.html';
+        $scope.title = "thank you";
+        //        $scope.backgroundimg = "Thank-you.jpg";
+        TemplateService.content = 'views/thankyou_share.html';
+        TemplateService.title = "Thank you";
+        $scope.navigation = NavigationService.getnav();
+
+        //  AUTHENTICATE
+        var authsuccess = function(data, status) {
+            //            console.log("auth auth auth");
+            //            console.log(data);
+            $scope.userauth = data;
+            if (data == "false") {
+                $scope.register = "Register";
+                $scope.login = "Login";
+            } else {
+                $scope.register = data.name;
+                $scope.login = "Logout";
+            }
+        }
+        NavigationService.authenticate().success(authsuccess);
+
+        // THAKYOU PAGE
+        var staticsuccess = function(data, status) {
+            console.log(data);
+            $scope.title = data[0].name;
+            $scope.page = data[0];
+            //            $scope.backgroundimg = data[0].bannerimage;
+            $scope.backgroundimg = "url('" + $filter('bannerimagepath')(data[0].bannerimage) + "')";
+        }
+        NavigationService.getsinglestaticpage(9).success(staticsuccess);
+
+        //  GET ALL COUPON
+        var couponsuccess = function(data, status) {
+            console.log(data);
+            $scope.coupons = data;
+        }
+        NavigationService.getallcouponold().success(couponsuccess);
+
+        //  REGISTER CLICK
+        $scope.onregister = function() {
+            if ($scope.register == "Register") {
+                $location.url("/register");
+            } else {
+                $location.url("/myprofile");
+            }
+        }
+
+        //  LOGIN CLICK
+        $scope.onlogin = function() {
+            if ($scope.login == "Login") {
+                $location.url("/login");
+                //                console.log("login");
+            } else {
+                NavigationService.logout();
+                $scope.register = "Register";
+                $scope.login = "Login";
+            }
+        }
+
+    }
+);
+
+
 phonecatControllers.controller('Teampage',
     function($scope, TemplateService, NavigationService, $location) {
         $scope.template = TemplateService;
