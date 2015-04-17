@@ -1013,20 +1013,14 @@ ul.pagecategory>li,
 /*allflex*/
 
 .flexside img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    /* -webkit-filter: grayscale(100%); */
-    /* -webkit-transition: all 700ms ease; */
-    -moz-transition: all 700ms ease;
-    -o-transition: all 700ms ease;
-    /* transition: all 700ms ease; */
+     -webkit-transition: all 700ms ease;
+     -moz-transition: all 700ms ease;
+     -o-transition: all 700ms ease;
+     transition: all 700ms ease; 
     height: 550px;
     width: auto;
 }
 .flexside:hover img {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-    /* -webkit-filter: grayscale(0); */
     position: relative;
 }
 .flexside+.flexside {
@@ -2448,6 +2442,7 @@ form.ng-invalid.ng-dirty.frm-bdr {
 .info p {
     height: 40px;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
 }
 .mobile-homebg {
