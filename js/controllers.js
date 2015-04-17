@@ -927,7 +927,7 @@ phonecatControllers.controller('campaign',
         $scope.facebookshare = function(text) {
             console.log(text);
             text=encodeURIComponent(text);
-            var link=encodeURIComponent("http://www.powerforone.org/thankyou_share");
+            var link=encodeURIComponent("http://www.powerforone.org/#/thankyou_share");
             window.location.href = admin_url + "hauth/postfb?message=" + text + "&project=" + $scope.project.id + "&returnurl="+link;
         }
 
@@ -942,7 +942,7 @@ phonecatControllers.controller('campaign',
         $scope.twittershare = function(text) {
             console.log(text);
             text=encodeURIComponent(text);
-            var link=encodeURIComponent("http://www.powerforone.org/thankyou_share");
+            var link=encodeURIComponent("http://www.powerforone.org/#/thankyou_share");
             window.location.href = admin_url + "hauth/posttweet?message=" + text + "&project=" + $scope.project.id + "&returnurl=" + "&returnurl="+link;
         }
 
@@ -1827,6 +1827,7 @@ phonecatControllers.controller('Thankyoushare',
         //  DECLARATION
         $scope.thankyou = [];
         $scope.allvalidation = [];
+        $scope.mesg = "";
     
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -1884,6 +1885,13 @@ phonecatControllers.controller('Thankyoushare',
         //  ON THANKYOU SUBMIT
         var thankyousuccess = function(data, status){
             console.log(data);
+            if(data == "1"){
+                $scope.mesg = "Please check your email";
+                $scope.msgcolor = "alert alert-success";
+            }else{
+                $scope.mesg = "Can not send Email, try again";
+                $scope.msgcolor = "alert alert-danger";
+            }
         }
         $scope.thankyousubmit = function(thankyou){
             $scope.allvalidation = [{
