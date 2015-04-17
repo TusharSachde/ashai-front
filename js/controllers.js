@@ -780,12 +780,14 @@ phonecatControllers.controller('campaign',
         $scope.project = [];
         $scope.facebookdiv = false;
         $scope.twitterdiv = false;
+        $scope.allvalidation = [];
         //        $scope.isLoading = true;
         $scope.donation = NavigationService.getdonation();
-        $scope.amount = $scope.donation[0].val;
+        $scope.dont = [];
+        $scope.dont.amount = $scope.donation[0].val;
         $scope.pre = $scope.donation[0].name;
         $.jStorage.set("give", $scope.pre);
-        $.jStorage.set("amount", $scope.amount);
+        $.jStorage.set("amount", $scope.dont.amount);
         $scope.donationdiv = "donation";
         $scope.showvideo = false;
         $scope.playvideo = "";
@@ -797,7 +799,7 @@ phonecatControllers.controller('campaign',
             $scope.showvideo = true;
         }
         $scope.changeperiod = function(donate, give) {
-            $scope.amount = donate;
+            $scope.dont.amount = donate;
             $.jStorage.set("amount", donate);
             $.jStorage.set("give", give);
         }
@@ -948,12 +950,20 @@ phonecatControllers.controller('campaign',
 
         //  TO CHECKOUT
         $scope.tocheckout = function(amount, id, name) {
-            console.log(id);
-            NavigationService.setprojectid(id);
-            $.jStorage.set("projectname", name);
-            $.jStorage.set("amount", amount);
-            $.jStorage.set("anonymous", $scope.anonymous);
-            $location.url("/checkout");
+            $scope.allvalidation = [{
+                field: $scope.dont.amount,
+                validation: ""
+            }];
+            var check = formvalidation($scope.allvalidation);
+
+            if (check) {
+                NavigationService.setprojectid(id);
+                $.jStorage.set("projectname", name);
+                $.jStorage.set("amount", amount);
+                $.jStorage.set("anonymous", $scope.anonymous);
+                $location.url("/checkout");
+            };
+            
         }
     } //
 );

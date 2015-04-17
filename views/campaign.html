@@ -132,7 +132,7 @@
 
                         <div class="input-group">
                             <div class="input-group-addon bdr-right">Rs.</div>
-                            <input type="text" class="form-control bdr-left" ng-model="amount" id="exampleInputAmount" placeholder="">
+                            <input type="text" class="form-control bdr-left" ng-model="dont.amount" ng-pattern="/^[10-9][0-9]+$/" placeholder=""ng-class="allvalidation[0].validation" required>
                             <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(amount,pre)">
                                 <option ng-repeat="donate in donation" value="{{donate.name}}" {{donate.select}}>{{donate.period}}</option>
                             </select>
