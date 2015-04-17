@@ -1013,10 +1013,10 @@ ul.pagecategory>li,
 /*allflex*/
 
 .flexside img {
-    -webkit-transition: all 700ms ease;
-    -moz-transition: all 700ms ease;
-    -o-transition: all 700ms ease;
-    transition: all 700ms ease;
+     -webkit-transition: all 700ms ease;
+     -moz-transition: all 700ms ease;
+     -o-transition: all 700ms ease;
+     transition: all 700ms ease; 
     height: 550px;
     width: auto;
 }
@@ -1087,17 +1087,10 @@ object.embed-responsive-item {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
     z-index: 1;
-    -webkit-transition: all 300ms ease-in;
-    -moz-transition: all 300ms ease-in;
-    -o-transition: all 300ms ease-in;
-    transition: all 300ms ease-in;
-}
-.black-overlay:hover {
-    background: rgba(0, 0, 0, 0.3);
 }
 .imgslider {
     position: relative;
@@ -2459,8 +2452,8 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: auto;
     height: auto;
 }
-.width10 {
-    width: 15%!important;
+.width10{
+    width:15%!important;
     display: inline-block!important;
 }
 .carousel-indicators {
@@ -2483,14 +2476,14 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: 200px;
     height: auto;
 }
-.tax-msg p {
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
+.tax-msg p{
+    width:70%;
+    margin:0 auto;
+    text-align:center;
 }
-.greenmsg {
+.greenmsg{
     color: green;
 }
-.redmsg {
+.redmsg{
     color: red;
 }
