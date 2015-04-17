@@ -130,6 +130,12 @@
         margin: 10px auto !important;
         height: auto!important;
     }
+    .causes h3{
+        height:auto!important;
+    }
+    .info p{
+        height:auto!important;
+    }
     p.viewAll {
         width: 30%!important;
     }
@@ -300,6 +306,12 @@
     .contribution {
         width: 100%;
         text-align: center;
+    }
+     .causes h3{
+        height:auto!important;
+    }
+    .info p{
+        height:auto!important;
     }
     .videoht{
     height:auto!important;
