@@ -1837,7 +1837,7 @@ phonecatControllers.controller('Thankyoushare',
         //  DECLARATION
         $scope.thankyou = [];
         $scope.allvalidation = [];
-        $scope.mesg = "";
+        $scope.mesg = 0;
     
         //  AUTHENTICATE
         var authsuccess = function(data, status) {
@@ -1896,11 +1896,9 @@ phonecatControllers.controller('Thankyoushare',
         var thankyousuccess = function(data, status){
             console.log(data);
             if(data == "1"){
-                $scope.mesg = "Please check your email";
-                $scope.msgcolor = "alert alert-success";
+                $scope.mesg = 1;
             }else{
-                $scope.mesg = "Can not send Email, try again";
-                $scope.msgcolor = "alert alert-danger";
+                $scope.mesg = 2;
             }
         }
         $scope.thankyousubmit = function(thankyou){
