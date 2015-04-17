@@ -20,7 +20,7 @@
         <div ng-bind-html="page.content | rawHtml">
 
         </div>
-<!--
+        <!--
         <ol class="nxt1cont">
             <li>Ishaan&nbsp;Kapoor will be your point of contact you can call him on +91-9833289081 for any questions you may have.</li>
             <li>We will send you two&nbsp;reports via email highlighting the utilisation of funds and the impact made.</li>
@@ -28,13 +28,23 @@
             <li>Please share your Name & Email Address for Reports on the Impact & Utilization of the funds.</li>
         </ol>
 -->
-       <p ng-show="msg || msg!=''" ng-class="msgcolor">{{msg}}</h6>
-        <form class="form-inline" style="margin-left:45px" ng-submit="thankyousubmit(thankyou)">
-            <input type="text" class="custom-input signin-input width10" placeholder="Name *" ng-model="thankyou.name" ng-class="allvalidation[0].validation" required>
-            <input type="text" class="custom-input signin-input width10" placeholder="Email *" ng-model="thankyou.email" ng-class="allvalidation[1].validation" required>
-            <button type="submit" class="createacc cpointer width10">Submit</button>
-        </form>
-        <!--
+        <p ng-show="msg || msg!=''" ng-class="msgcolor">{{msg}}</h6>
+            <form class="form-inline frm-bdr" style="margin-left:45px" ng-submit="thankyousubmit(thankyou)">
+                <input type="text" class="custom-input signin-input width10" placeholder="Name *" ng-model="thankyou.name" ng-class="allvalidation[0].validation" required>
+                <input type="text" class="custom-input signin-input width10" placeholder="Email *" ng-model="thankyou.email" ng-class="allvalidation[1].validation" required>
+                <button type="submit" class="createacc cpointer width10">Submit</button>
+            </form>
+            <div class="form-msg thankyou-img" ng-if="message">
+                <a href="#/Home"><img src="images/thnq-msg.png" alt="">
+                </a>
+                <p>Thank you for your message the team will get back to you in a maximum of 72 hours.</p>
+            </div>
+            <div class="form-msg form-msg-error thankyou-img" ng-if="message==2">
+                <a href="#/Home"><img src="images/thnq-msg.png" alt="">
+                </a>
+                <p>You have already subscribed to Fellowship.</p>
+            </div>
+            <!--
         <ol class="nxt1cont">
             <li>XYZ will be your point of contact you can call for any questions you have to regarding anything.</li>
             <li>We will send you regular reports via email.</li>
