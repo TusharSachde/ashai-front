@@ -7,14 +7,15 @@
                     <h3 class="createtitle" ng-bind-html="page.content | rawHtml"></h3>
                     <div class="chkform text-center">
                           <form class="frm-bdr" ng-submit="payproceed(checkout)">
-                           <input name="name" type="text" class="custom-input signin-input" ng-model="checkout.name"ng-class="allvalidation[0].validation" required placeholder="Name *">
+                           <input name="name" type="text" class="custom-input signin-input" ng-model="checkout.name"ng-class="allvalidation[0].validation" required placeholder="Name*">
                             <br>
-                            <input name="email" class="custom-input signin-input" ng-model="checkout.email"ng-class="allvalidation[1].validation" required placeholder="Email *">
+                            <input name="email" class="custom-input signin-input" ng-model="checkout.email"ng-class="allvalidation[1].validation" required placeholder="Email*">
                             <br>
-                            <input name="mobileNumber" class="custom-input signin-input" ng-model="checkout.mobile" class="custom-input integer"ng-class="allvalidation[2].validation" required placeholder="Mobile *">
+                            <input name="mobileNumber" class="custom-input signin-input" ng-model="checkout.mobile" class="custom-input integer"ng-class="allvalidation[2].validation" required placeholder="Mobile*">
                             <br>
-                            <input type="text" name="city" class="custom-input signin-input" ng-model="checkout.city"ng-class="allvalidation[3].validation" required placeholder="City *">
+                            <input type="text" name="city" class="custom-input signin-input" ng-model="checkout.city"ng-class="allvalidation[3].validation" required placeholder="City*">
                             <br>
+                            <input type="text" name="" class="custom-input signin-input" ng-model="checkout.referral" placeholder="Referral Code">  <br>
                            
                             <div class="tax-msg"><p>Please fill in the following details if you would like your Tax Certificate</p></div>
                           
@@ -27,9 +28,6 @@
                              <div>
                               <input name="bdate" class="custom-input signin-input" ng-model="checkout.dob" placeholder="Birthday" onfocus="(this.type='date')" onblur="(this.type='text')">  
                             </div>
-                            <div>
-                              <input type="text" name="" class="custom-input signin-input" ng-model="checkout.referral" placeholder="Referral Code">  
-                            </div>
 <!--
                             <div class="checkbox">
                                 <label>
@@ -37,7 +35,7 @@
                                 </label>
                             </div>
 -->
-                            
+                            <label class="check"><input type="checkbox" required> I agree to the Terms &amp; Conditions &amp; Privacy Policy</label>
                             <button type="submit" class="createacc cpointer"> Proceed &amp; Pay </button>
                     </div>
                 </div>
