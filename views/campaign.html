@@ -133,7 +133,7 @@
                         <div class="input-group">
                             <div class="input-group-addon bdr-right">Rs.</div>
                             <input type="text" class="form-control bdr-left" ng-model="dont.amount" ng-pattern="/^[10-9][0-9]+$/" placeholder=""ng-class="allvalidation[0].validation" required>
-                            <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(amount,pre)">
+                            <select class="form-control selectbg" ng-model="pre" ng-change="changeperiod(dont.amount,pre)">
                                 <option ng-repeat="donate in donation" value="{{donate.name}}" {{donate.select}}>{{donate.period}}</option>
                             </select>
                         </div>
@@ -141,7 +141,7 @@
 
                         <div class="clearfix"></div>
                         <div class="give-btn">
-                            <button ng-click="tocheckout(amount,project.id,project.name)" class="btn givbtn" ng-disabled="disabledgive">
+                            <button ng-click="tocheckout(dont.amount,project.id,project.name)" class="btn givbtn" ng-disabled="disabledgive">
                                 GIVE</button>
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount=123.45" rel="im-checkout" data-behavior="remote" data-style="light" data-text="GIVE" data-token="4ce05ad37d7997d2eaaba6bd8d27ee07"></a>-->
                             <!--                            <a href="https://www.instamojo.com/jagruti/demo-19616/?data_amount={{amount}}">GIVE</a>-->
