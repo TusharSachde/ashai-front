@@ -1013,10 +1013,10 @@ ul.pagecategory>li,
 /*allflex*/
 
 .flexside img {
-     -webkit-transition: all 700ms ease;
-     -moz-transition: all 700ms ease;
-     -o-transition: all 700ms ease;
-     transition: all 700ms ease; 
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
     height: 550px;
     width: auto;
 }
@@ -2153,6 +2153,8 @@ a.right.carousel-control {
 }
 .fb-postcont p {
     height: 150px;
+    text-align: left;
+    font-size: 12px;
 }
 .twitt-head {
     background-color: #28a4c9!important;
@@ -2161,6 +2163,8 @@ a.right.carousel-control {
 }
 .fb-postcont p {
     height: 150px;
+    text-align: left;
+    font-size: 12px;
 }
 a.post-btn:hover {
     color: #fff!important;
@@ -2452,8 +2456,8 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: auto;
     height: auto;
 }
-.width10{
-    width:15%!important;
+.width10 {
+    width: 15%!important;
     display: inline-block!important;
 }
 .carousel-indicators {
@@ -2476,14 +2480,14 @@ form.ng-invalid.ng-dirty.frm-bdr {
     width: 200px;
     height: auto;
 }
-.tax-msg p{
-    width:70%;
-    margin:0 auto;
-    text-align:center;
+.tax-msg p {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
 }
-.greenmsg{
+.greenmsg {
     color: green;
 }
-.redmsg{
+.redmsg {
     color: red;
 }
